@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "run_id": "pre-vectorization",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted review; not independently human-validated)",
+  "review_method": "Each answer was read against both frozen rubric criteria and the referenced rule/card passages. Citation IDs alone were not treated as proof of correctness. No second call to the answering Qwen model was used as a grader.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "8e0bc1096eed4561c921ed1cfc63424b736bbb210b74158171c7d32f5833f3ef",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the activated mana ability cannot be responded to and resolves without the stack, supported by CR 605.3b. The additional spell-response distinction is consistent with priority rules."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "0240f68fc41f7121a0719f1f6595ff9f8ecf9f3c82b7ee0dc03ef56bf36f8132",
+      "criteria": {
+        "02-hold-priority.1": false,
+        "02-hold-priority.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Correctly says the instant does not immediately resolve, but explicitly declines to answer who receives priority and never explains the all-players-pass condition. Both authored requirements remain unmet. Retrieval omitted CR 117.3c and 117.4; this is an evidence-limited abstention, not a false positive."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "191da7c4e69889205f0b071e9b25ec267d56cb35f7b83867ef259a4661219706",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No card draw; the only target is illegal and the whole spell does not resolve. CR 608.2b and Defiant Strike Oracle text/card ruling support the result. The wording about casting an ability is imprecise, but does not change the adjudication."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "5583c4d4e2170d466830ae1ccdd191562554e9e88506169dbc720ce74d10f987",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly deals 2 damage to the surviving legal target while ignoring the illegal target; CR 608.2b supports both requirements."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "27db72b5e57c98c97b974b3e3142c0b591f87c7d7fd505bc1f12297f36df14cc",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly allows 2 damage to the undamaged blocker and 4 to the player. The explanation distinguishes assignment from indestructibility in this combat. CR 702.19b supports the assignment; the reference group for the explicit indestructible definition (702.12b) was missed, so retrieval recall is only 50% despite a correct ruling."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "06-deathtouch-trample.1": false,
+        "06-deathtouch-trample.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No visible final answer was returned. The model exhausted its output limit; the app emitted length/empty-answer warnings. Retrieval also missed CR 702.2c. This is a failed request for evaluation purposes, not a correct abstention."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No visible final answer; output-limit and empty-answer warnings. Retrieval omitted both required rule groups, 704.5f and 702.12b. Neither answer criterion can receive credit."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "08-commander-dies.1": false,
+        "08-commander-dies.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No visible final answer; output-limit and empty-answer warnings. All expected evidence was retrieved, including the graveyard-to-command-zone rule and dies definition, so the generation failure cannot be explained solely by a retrieval miss."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "26626b60e1ed47a2ada6afba035fa2593965132886589083ae79cb7ab17e37f1",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Gives {4} additional tax and explicitly excludes the cast from hand; CR 903.8 supports both."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "370c6e57b80962778fab05cf345c2c928d381f04f5b30a7e87d403c8e4ba6176",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says Blood Artist does not trigger because Rest in Peace replaces the graveyard move with exile. The card text and CR 700.4 establish the result even though canonical replacement rule 614.6 was not retrieved."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "11-token-doublers.1": false,
+        "11-token-doublers.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No visible final answer; the output limit was reached. Both card texts were retrieved but CR 614.5, which explains each replacement effect applies only once, was missed. Record the generation failure without inferring that retrieval alone caused it."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "0763333d1125fb3ed442a50caba9ca8862aa4d52478bc89238033e3bb2d6f0a2",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly assigns the choice to the affected player under CR 616.1 and calculates both 3\u00d72+1=7 and (3+1)\u00d72=8. The ordinary-replacement assumptions remove the special-order exceptions."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "0b988e104c6cb550734407880e5aafd2547b6be7252da7115ea4dc33f6bd4f79",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly puts Alice\u2019s trigger on first and Bob\u2019s on top, resolving Bob\u2019s first. CR 603.3b and the retrieved 603.3 support the stacking explanation. The authored generic stack-resolution group was missed, illustrating that canonical evidence recall is not equivalent to answer accuracy."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "318680f015a7102a0689cbdb96f3ee206bf45ef16b17b0f96d18da69776615a5",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly gives 2/2 independent of entry order. The answer explains base-setting in 7b before Anthem\u2019s 7c modifier, using the Humility card ruling and CR 613.4c. It missed canonical 613.4b but obtained the relevant base-setting information from the card ruling."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "c7ad7b547c9bdeba7d122de1059f6ae1f9d7d14322c7807e95e8747b7daa2bc3",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly allows the player\u2019s own Giant Growth to target their hexproof creature. CR 702.11b restricts opponents only; the final legality caveat is appropriate."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "16-first-strike-blocker.1": false,
+        "16-first-strike-blocker.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No visible final answer; output-limit and empty-answer warnings. The reference that a blocked attacker without blockers assigns no damage (CR 510.1c) was not retrieved."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "17-token-blink.1": false,
+        "17-token-blink.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No visible final answer; output-limit and empty-answer warnings. Retrieval missed both token rules, including the prohibition on a token changing zones again before state-based actions."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "90097084d2bbfb77de4311186d7277da8ec11506a388c05fed1bff7a69b7f276",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly allows the sacrifice ability and distinguishes tap/untap-symbol restrictions from other activation costs. CR 302.6 directly supports the explanation."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "f9a19d009b25009aeeeab5f22cb41b6eeed3dbd9d92fc1dbcc14f2b8b35e3e27",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says there is no response window before choosing one legendary permanent to keep. It identifies the legend rule as a state-based action under CR 704.5j. The canonical timing rule 704.3 was missed by retrieval, but the timing conclusion is correct."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "900d626efa7f67a4977aece030cf2781a1ae19ebfd594904806a00284bcb11a9",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Asks for the creature, removal spell, and protection quality, so both clarification criteria pass. However, the extra assurance that a damage spell is safe against protection from everything/the opponent is too broad without knowing the spell: protection prevents damage (702.16e), and unpreventable damage bypasses prevention (615.12 in the same frozen corpus). This unsupported blanket assurance prevents a fully-correct grade; citation-ID validity alone would miss it."
+    }
+  ]
+}
