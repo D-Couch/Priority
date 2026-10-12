@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "run_id": "token-budget",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted review; not independently human-validated)",
+  "review_method": "Read every answer against the frozen rubric and rule passages. Evaluate extra claims as well as the main ruling. No answering-model self-grading; not independent human validation. Completion is separately required by correct_and_complete.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "9316954de0f5727887f491be91ffdc98ba079f4d171c9e4a2d76e6be4e514c8b",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct activated mana ability ruling, immediate resolution, and supporting rules."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "866a8124c498038add35724cf5922e54ce800d71602ea1cd02625885e3f0fe5d",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct caster priority and all-player passing. Canonical 117.4 was omitted by packing, but 608.1 directly supplies the passing condition."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "19b8b52f695ca35a5be1cb484e45400df5b595acb03d30b04d0c9a337d4a78bd",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no draw with sole target illegal and whole spell not resolving."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "32221ec6d421a2c219cba863b973004f751f3838932b109268c202696cd94c99",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct remaining legal target takes damage and partial illegality does not stop resolution."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "80f715b5f40272e158a31d76bf84f8e5df95dc14f4f6e723906d03e61b1c4bbb",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/4 assignment and indestructibility distinction with both operative definitions."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "affd0dfc8bf7aa65039016d4037bbb2055b52204c14b4783455bb41c7c906298",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct maximum 4 and explicit nonzero deathtouch assignment rule."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "2f1ca4073009079db0a04ea468aa38bf51850686ff631a2b6f9296bbe2cfbe29",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 0/0, graveyard, and distinction from destruction; both previously missing definitions are now present."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "1a95bb6c7714412b00b7f5f982dda783ca35cf4d055ef95a7b14f16583fe925c",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Both requested conclusions and explanations are correct and complete. However, the unsolicited caveat says a triggered ability still resolves while the part targeting the moved commander fizzles. This is too broad: an ability with all targets illegal does not resolve (608.2b); some triggers cannot be put on the stack if required targets cannot be chosen (603.3d). The extra universal resolution assurance prevents full correctness."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "e9caa5fc142a3aca980bb5c659d3b76566dedd48f6bf8ed4a0fb30fcf3a95d8f",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct additional 4 and excludes hand cast. Citation ID now correct."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "a656b1d245f3c2345d1c347782efb3b15ca202a781d135162b52dadbe8fbbd1a",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no Blood Artist trigger, exile replaces graveyard entry, and no dies event. Now finishes normally."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "56d4b24dcd0c2b149999e139207b3b88c4d87da6624a3659f6acf1b1804e3399",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct four tokens and each replacement applies once to the event. Now finishes normally."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "321fb65fbc209937eac5ee90fb11de76b2b92875a5c6ab772a8e3155be989383",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected-player choice, both arithmetic orders, and once-per-effect restriction."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "1adb32a82a9f1912939fea205d4fde9d3c51b13ad9ff0208fb52a8882c31f244",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct APNAP order and last-in-first-out resolution with supporting sources."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "7692f6d3a465c1484a53156bcdbaaa4055bbc7ca8b8996da6ab3f9756dd4d554",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/2 and sublayer order regardless of timestamps."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "f96ca0714ad1852cdba2037858f547ab3e27ef1fa04e3ac11faeee6563b4e136",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct own-creature targeting and opponents-only hexproof restriction."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "282bfd59c7b6326f14cd64db220321399bd8bf6d547add83edcb0aa1cb9238b5",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no second-step player damage and explicit continued blocked status without trample."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "58dc2ab933371e883bb5a36c2e123e8470ad06245168611698e3263581127ea6",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct immediate prohibition on changing zones again and later cessation at the next state-based check; no incorrect interruption of resolution."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "5390cb2b3f64e5a4736b6966fe13c025bae5be2bcc874e5cda5ffee2fd24f741",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct sacrifice activation and tap/untap-symbol distinction."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "44d0af811a1fccf688f0205dd17078cee77c433e9b9c4e36c3e1cb9914fcc926",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no response window, explicit state-based checks before priority, and choice of one legendary permanent. Uses alternative timing evidence 117.5 rather than canonical reference 704.3."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "43b143ab1ce054c8a8ec68e7bb7707fa0d0df3adf35caac3aae935b11fde292e",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Asks both clarifications but again asserts protection only prevents targeting, not untargeted effects, contradicting the damage-prevention bullet. Non-targeted damage can be prevented by protection; the unsupported generalization prevents full correctness."
+    }
+  ]
+}
