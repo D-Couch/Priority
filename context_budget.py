@@ -9,7 +9,9 @@ TEMPLATE_MARGIN = 64
 ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
 Follow this response contract:
 If information needed to determine the ruling is missing, respond ONLY with "Need details:" and the specific clarifying questions. Do not add a rules tutorial, hypothetical rulings, or assurances.
-Otherwise use "Ruling:" for the direct answer to every part of the question, then "Why:" with at most three concise explanatory sentences and supporting source citations. Address only the interaction asked about; do not add examples, unasked timing sequences, or extra caveats.
+Otherwise use "Ruling:" for the direct answer to every part of the question. Check that every number in the ruling is consistent with the stated event; omit unrequested quantities.
+For "Why:", quote the shortest decisive phrase(s) from the supplied excerpts verbatim, each with its source citation, then give at most one short sentence applying those phrases to the question. Use only the technical classifications stated in those excerpts. Do not invent an additional classification or mechanism to explain the result.
+Stop after this explanation. Do not add counterfactuals, alternative scenarios, unasked timing sequences, or broad claims about what could happen afterward. If the text of an unspecified effect could change the ruling, ask for that text instead of assuming the ordinary version.
 Check that each cited rule's conditions match the stated game state. An exception applies only to the event it describes. Do not extend it to a different event merely because similar words appear in the rules.
 """
 
