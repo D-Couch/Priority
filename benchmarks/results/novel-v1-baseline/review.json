@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "run_id": "novel-v1-baseline",
+  "suite_sha256": "53ca3961a9e5c6a625959d85a43f01a09785968d0aabecba949720f5bcb2272a",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "Each answer was checked against the frozen criteria and supplied Comprehensive Rules excerpts. Evidence-recall misses were distinguished from ruling correctness when an equivalent direct rule was supplied. Request errors receive an error outcome. This exploratory AI-authored suite still requires independent judge validation.",
+  "results": [
+    {
+      "case_id": "n01-bestow-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "d734bf6573f7514cab83b057d780876b01f0beb665ba772e56458c9fc3f16f5f",
+      "criteria": {
+        "n01-bestow-illegal-target.1": true,
+        "n01-bestow-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says an illegal target ends bestowed status and the spell resolves as a creature; 702.103e and 608.3b support the outcome."
+    },
+    {
+      "case_id": "n02-mutate-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "c751cf8960d9b036e1ee302b099e85e33a3c3cdb51ecadce2c08768fd277bc85",
+      "criteria": {
+        "n02-mutate-illegal-target.1": true,
+        "n02-mutate-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct conclusion and entry as a creature spell are directly supported by 608.3b/608.3a, even though the specifically expected 702.140b excerpt was not retrieved."
+    },
+    {
+      "case_id": "n03-saga-final-chapter",
+      "repeat": 1,
+      "answer_sha256": "b7e2650cc1453206d57997b015a5969a3107615d052c351eb3a9c83f73b21881",
+      "criteria": {
+        "n03-saga-final-chapter.1": true,
+        "n03-saga-final-chapter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the Saga is not sacrificed while its chapter ability remains on the stack and identifies the SBA. It quotes 704.5s, which directly states this rule, although the rubric expected 714.4; this is an evidence-label omission documented in the addendum."
+    },
+    {
+      "case_id": "n04-prototype-graveyard",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "n04-prototype-graveyard.1": false,
+        "n04-prototype-graveyard.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Request failed with “No final answer returned”; no substantive ruling was available to grade."
+    },
+    {
+      "case_id": "n05-overload-hexproof",
+      "repeat": 1,
+      "answer_sha256": "6d226eabbc6f7ccfe13bfb83b1cd45ed7be790ffaf4bff54ee6d3b7a546f4268",
+      "criteria": {
+        "n05-overload-hexproof.1": true,
+        "n05-overload-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: overload changes target to each, removing target requirements, so the hexproof creature can be affected."
+    },
+    {
+      "case_id": "n06-level-up",
+      "repeat": 1,
+      "answer_sha256": "d1459c4c91138302dd7fb31643ede6ddaa5eae7cae5552cd6763f93da44ba0c9",
+      "criteria": {
+        "n06-level-up.1": true,
+        "n06-level-up.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says level up may be activated regardless of current level-counter count and mentions sorcery timing."
+    },
+    {
+      "case_id": "n07-keyword-counter",
+      "repeat": 1,
+      "answer_sha256": "b7faf2ed6eb91673002d541ecd32251c3041484f32be0d5ce94aef750f8a936f",
+      "criteria": {
+        "n07-keyword-counter.1": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that a flying keyword counter grants flying."
+    },
+    {
+      "case_id": "n08-adventure-exile",
+      "repeat": 1,
+      "answer_sha256": "6549c587e2b4221a3d30166c70dc13776313d7aa946fd15c2f416d604c22c4d5",
+      "criteria": {
+        "n08-adventure-exile.1": true,
+        "n08-adventure-exile.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly distinguishes the permission to play the exiled card from permission to cast it as an Adventure."
+    },
+    {
+      "case_id": "n09-foretell-turn",
+      "repeat": 1,
+      "answer_sha256": "cf8af09fa909abbda126d60cdafb39c40cc9c8f9f7d97d5eec8d4d4c605e8eb0",
+      "criteria": {
+        "n09-foretell-turn.1": true,
+        "n09-foretell-turn.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the card may be cast after the turn it was foretold ends, not during that turn."
+    },
+    {
+      "case_id": "n10-suspend-last-counter",
+      "repeat": 1,
+      "answer_sha256": "d0d40b5948cd3db0195e41053d7a3fbf508788e8e0d0285222e9c1aad4687d1f",
+      "criteria": {
+        "n10-suspend-last-counter.1": true,
+        "n10-suspend-last-counter.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correctly says casting is optional and without paying its mana cost if able, but then incorrectly says the card’s mana cost becomes zero; suspend waives payment and does not change the card’s mana cost."
+    },
+    {
+      "case_id": "n11-morph-special-action",
+      "repeat": 1,
+      "answer_sha256": "c3bed851940f02d121940bcf085761c8b7e725013a9fa794ccba64faa148eb8a",
+      "criteria": {
+        "n11-morph-special-action.1": true,
+        "n11-morph-special-action.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies turning a morph permanent face up as a special action available with priority and not using the stack."
+    },
+    {
+      "case_id": "n12-dfc-returned",
+      "repeat": 1,
+      "answer_sha256": "3f3c1cffc28afca16e6817a05d35505e34d07e6e9fd82c1ebcdf996e8aed4936",
+      "criteria": {
+        "n12-dfc-returned.1": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says a double-faced card entering from a non-stack zone enters front face up by default."
+    },
+    {
+      "case_id": "n13-afterlife-exile",
+      "repeat": 1,
+      "answer_sha256": "3b14ce5f6c639b03bcf2843d80887465b9972eeb86af32fc64b218c1e5c0b1c9",
+      "criteria": {
+        "n13-afterlife-exile.1": true,
+        "n13-afterlife-exile.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says direct exile does not satisfy afterlife’s battlefield-to-graveyard trigger condition."
+    },
+    {
+      "case_id": "n14-enlist-sickness",
+      "repeat": 1,
+      "answer_sha256": "603dfb97db82501e879f7fa8702be30f40334d052c0291489bdcd1fa4be019b9",
+      "criteria": {
+        "n14-enlist-sickness.1": true,
+        "n14-enlist-sickness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly applies enlist’s haste-or-continuous-control requirement to the creature tapped for the optional attack cost."
+    },
+    {
+      "case_id": "n15-mentor-target",
+      "repeat": 1,
+      "answer_sha256": "4676a20e913917a2773cc492f1f1d47dc7a0a32ae09c11d56471d2037842200d",
+      "criteria": {
+        "n15-mentor-target.1": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The target ruling is correct, but it calls mentor’s triggered ability “replacement text,” incorrectly classifying the mechanic; 702.134a defines mentor as a triggered ability."
+    },
+    {
+      "case_id": "n16-convoke-summoning-sickness",
+      "repeat": 1,
+      "answer_sha256": "600f8d33e23c94b86db5134c331c92a412225cbcef112f98f7a3dc55538134c6",
+      "criteria": {
+        "n16-convoke-summoning-sickness.1": true,
+        "n16-convoke-summoning-sickness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says a newly controlled creature can be tapped for convoke and distinguishes that cost from activating its own tap ability."
+    },
+    {
+      "case_id": "n17-casualty-copy",
+      "repeat": 1,
+      "answer_sha256": "b520a0e300132994dc9713d6ebb2de5a5bd5a396a2458243a6b88f8cf397359a",
+      "criteria": {
+        "n17-casualty-copy.1": true,
+        "n17-casualty-copy.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly applies Casualty 2 and explains that the copy may use new targets."
+    },
+    {
+      "case_id": "n18-myriad-tokens",
+      "repeat": 1,
+      "answer_sha256": "05668dd69ca9aef73e01ee7b8ec949cd29918ce901b4b185974a438555e75153",
+      "criteria": {
+        "n18-myriad-tokens.1": true,
+        "n18-myriad-tokens.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the two Myriad tokens are exiled at end of combat."
+    },
+    {
+      "case_id": "n19-totem-armor",
+      "repeat": 1,
+      "answer_sha256": "aa9a55e6fc759c63afa6259bf560e07f512c6447841214a4b8f2c710dc100e66",
+      "criteria": {
+        "n19-totem-armor.1": true,
+        "n19-totem-armor.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that totem/umbra armor replaces destruction, removes marked damage, and destroys the Aura instead."
+    },
+    {
+      "case_id": "n20-bolster",
+      "repeat": 1,
+      "answer_sha256": "b999cfbd6720bb18e345116f2c09c35719febdaa8af1fb778280191d17976283",
+      "criteria": {
+        "n20-bolster.1": true,
+        "n20-bolster.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly chooses one creature tied for least toughness and places both counters on that creature."
+    }
+  ]
+}
