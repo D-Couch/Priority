@@ -288,7 +288,8 @@ def append_semantic_rules(sources, semantic_numbers, rule_bodies, limit=24):
     for number in semantic_numbers:
         if number in rule_bodies and number not in lexical_numbers:
             extras.append({'id':'CR '+number,'title':'Rule '+number,'kind':'rule',
-                           'text':rule_bodies[number],'url':'/api/rules/'+number})
+                           'text':rule_bodies[number],'url':'/api/rules/'+number,
+                           'semantic_only':True})
             lexical_numbers.add(number)
         if len(extras) == limit:
             break

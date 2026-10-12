@@ -58,6 +58,16 @@ if __name__ == '__main__':
     unittest.main()
 
 class RelevantRulingTests(unittest.TestCase):
+    def test_vector_only_rules_are_lower_priority_than_lexical_rules(self):
+        from context_budget import source_groups
+        sources = [
+            {'id':'CR 510.1','kind':'rule','text':'Lexical combat rule.'},
+            {'id':'CR 506.4b','kind':'rule','text':'Lexical rule about tapping blockers.'},
+            {'id':'CR 701.14a','kind':'rule','text':'Semantic suggestion.','semantic_only':True},
+        ]
+        packed = [s['id'] for group in source_groups(sources) for s in group]
+        self.assertLess(packed.index('CR 506.4b'),packed.index('CR 701.14a'))
+
     def test_relevant_ruling_precedes_broad_rules_without_duplicates(self):
         from context_budget import source_groups
         sources = [
