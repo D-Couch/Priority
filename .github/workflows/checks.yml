@@ -16,3 +16,10 @@ jobs:
         run: python3 benchmark.py validate
       - name: Run regression tests
         run: python3 -m unittest -v
+      - name: Validate held-out suite references
+        run: python3 benchmark.py validate --suite benchmarks/heldout-v1/scenarios.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check citation presentation
+        run: node test_citations.mjs

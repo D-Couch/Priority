@@ -1,3 +1,4 @@
+import {linkableCitations} from './citations.mjs';
 import htm from './vendor/htm.js';
 const {useState,useEffect,useRef}=React;
 const html=htm.bind(React.createElement);
@@ -40,7 +41,7 @@ function App(){
   }catch(e){if(e.name==='AbortError')edit(m=>({...m,failed:true,warnings:['Response stopped.']}));else {setError(e.message);edit(m=>({...m,failed:true,warnings:[e.message]}));}}
   finally{setBusy(false);abort.current=null;}
  }
- function inline(text,sources){return text.split(/(\[(?:CR \d{3}(?:\.\d+[a-z]?)?|C\d+)\]|\*\*[^*]+\*\*|`[^`]+`)/g).map((part,i)=>{const match=part.match(/^\[([^\]]+)\]$/);if(match){const s=sources.find(s=>s.id===match[1]);return s?html`<button key=${i} className="citation" onClick=${()=>setSource(s)}>${match[1]}</button>`:html`<span key=${i} className="unverified" title="Citation not found in retrieved sources">${part}</span>`;}if(part.startsWith('**'))return html`<strong key=${i}>${part.slice(2,-2)}</strong>`;if(part.startsWith('`'))return html`<code key=${i}>${part.slice(1,-1)}</code>`;return part;});}
+ function inline(text,sources){return linkableCitations(text,sources).split(/(\[(?:CR \d{3}(?:\.\d+[a-z]?)?|C\d+)\]|\*\*[^*]+\*\*|`[^`]+`)/g).map((part,i)=>{const match=part.match(/^\[([^\]]+)\]$/);if(match){const s=sources.find(s=>s.id===match[1]);return s?html`<button key=${i} className="citation" onClick=${()=>setSource(s)}>${match[1]}</button>`:html`<span key=${i} className="unverified" title="Citation not found in retrieved sources">${part}</span>`;}if(part.startsWith('**'))return html`<strong key=${i}>${part.slice(2,-2)}</strong>`;if(part.startsWith('`'))return html`<code key=${i}>${part.slice(1,-1)}</code>`;return part;});}
  function answerBody(m){return m.content.split(/\n\s*\n/).map((p,i)=>html`<p key=${i}>${inline(p.replace(/^#{1,3}\s/gm,''),m.sources||[])}</p>`);}
  const ready=status?.connected&&status?.knowledge?.rules_count;
  return html`<div className="app">
