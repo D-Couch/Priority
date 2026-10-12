@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "leave-game-phrase-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "Reused a prior criterion/citation review only where the answer and the full packed source list were byte-identical; manually reviewed new answers and evidence. Clarification is not abstention. Citation support is evaluated against packed excerpts.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "352910dfa7f3f143a49ef1619821387f1d4db4fe1c6f4ae9dcfa0ba35b52f588",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct Alice/Bob/Charlie stacking and reverse resolution. CR 805.7 is a shared-team-turn rule, not the ordinary multiplayer rule; citation does not support its application here."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "f27ed04bdb122c3fde0df24f89e74e9d4cb241f596cb394c667fcee99875562d",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct no win; CR 603.4 and Felidar ruling support checking again at resolution."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "244e47ca2d57931c94c704772ceff4904f16716404fc6a45bceaf85b338e42d0",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct independent trigger and search. CR 603.3/405.4 establish stack objects but do not explicitly support independence from the removed source; canonical 113.7a omitted."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "b1a77fe46b93006dd5ee8504da8b19fa876f9e83477d7de1ae043695bff0c7d8",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct exile replacement prevents dies trigger; Oracle and card ruling establish it."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "9068eb393196b5182a6f2de7a64257055ff40274d38e0f3a8bcfb8394970e2a7",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Three triggers, including itself; CR 603.10a and Blood Artist ruling support simultaneous deaths."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "2ca63d62bd0939996464c1775b07eb92845e8160aab4fb0f7f1a6fb26681a905",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Zero life; lifelink requires damage actually dealt under CR 702.15b."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "e0e5f0066e3d4f3e70214282bd19717d50a0ccf6ad1fbd4eef37fd6df4b34860",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Totals are correct, but infect and lifelink are incorrectly called replacement effects. CR 702.90b/702.15b describe damage results, not replacement effects."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "6fe085a07d34fe57e2f58c065b4fdfcd3966683ed0852ce78f06ad16a3103b8d",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Wrath destroys; cited protection clauses do not stop nontargeting destruction."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "c1925cdb4a97c9d76325bb766cbd307dbb63edcd3d4b407306da377d5a1fef4f",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Aura goes to owner graveyard as SBA, directly supported by CR 702.16c."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "8044e88691f147bd2946b9aa398c4d6d8665b51fcfe48bf03e21bf6dab3f1b4d",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Own Giant Growth is allowed; hexproof only restricts opponent-controlled targeting."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "6590d3adac358dca2b3f4d56b26485b5dca3130d722dca2a0e68d210c4e43581",
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Ward triggers without countering uncounterable Decay; correct resolution, supported by Oracle and dated ruling."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "ef45160457c2b7945dfa95f7976a0808794075b2cf7893c3dbdfb3573d2c1c75",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct morph special action and normal triggered ability despite split second; relevant clauses cited."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "e95c2a541b7ba8422935ee7ad74599562104797b00d97d799734a42eefff580e",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct no response during cost payment. New explanation overstates that the damage amount is locked and unaffected by anything afterward; last-known power is fixed, but later damage replacement/prevention effects can affect actual damage. The ruling supports power, not that broad assertion."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "fb33a410f7ee4c01df2417f3b9cbe45be9a08823c492fe864b43b38403a04dcb",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct exile and no draw. Flashback citation supports exile; CR 608.2c is a resolution-instructions rule, not support for the claimed countered-spell rule (701.5a)."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "3cda589983bce1e2e3d501c5858bbfb74baeefc63a45e10c4afcec47a2269560",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct no rebound because countered spell never resolves; graveyard answer includes harmless qualification about counter effects."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "c52a8139c99fa391ceaae41328ee8a0d9ab0d9e317c7d734063ef22a2f65b499",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct no persist trigger; checks pre-death counter state using persist definition and C6 card ruling."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "9923fb3ecded8249ef674b5ceaa9954e186146ff16a1454c043b7f3b384f1c0e",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct no undying; explicitly uses CR 704.8 pre-SBA state. Frozen evidence group erroneously names 704.7; see addendum, no rubric changes."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "d89905d6c6ea1a1c42eeb0a4885cd57e813b75034b98800eda959ffb0533aafc",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct returned object is new and Bolt has no legal target; Cloudshift ruling and 608.2b support answer."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "b693d0094afcb80f52c6aa8b0880ba1460bd919e02db37801d34ac0c6d590f49",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct equip timing, but falsely adds that +10/+10 would not save the creature from 3 damage if it could equip. Increasing toughness can prevent lethal damage; Oracle does not support this counterfactual."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "6810f2ce023cc810819e3ad953b6c768e7a82eec764396f08bd66084d3c9f0a7",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Fixed: allows newly controlled creature to crew and cites the previously omitted C12 ruling. Correctly distinguishes another permanent’s cost from own tap-symbol ability."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "5657aa6462a50a88571650b285052664f80c1ed12d410b6174189dadee32d2f9",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct new Vehicle cannot attack without haste; card ruling and haste definition support it."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "edda54061b37488087ac7849861a3e4abebc39e476368cf952c3ab20534fac07",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct blocker remains blocking and deals normal damage; cited combat rules support results, though direct 506.4b omitted."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "9b70643de6a398bc4bf6066bbeddf6886198e4c31fcd9c27f856c73e8fe0185f",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct damage amounts and survivor, but says 4/4 survives with 1 damage. It has 3 damage marked, not 1. This is a factual contradiction despite correct core rubric conclusions."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "51c88970004bbef1f23c51d2eed171c8318f6e2a7348d16691dd94ebbe8f539b",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that Bob-owned Control Magic leaves and Alice regains control of her creature; CR 800.4a directly includes the matching example and supports the claims."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "cf91c34b0a0a0add15faac157e24c1c4e77216d415b9cb8550fbc0804028cece",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Bob-owned Lightning Bolt leaves when he leaves, so it cannot resolve. CR 800.4a directly supports this; 608.2m is correctly distinguished as a different situation after resolution begins."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "5cf63a0363e539ac127ae917712064126c2318f970166373434517016d5874d1",
+      "criteria": {
+        "h26-commander-control.1": false,
+        "h26-commander-control.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Reused identical prior answer and packed evidence review: Unnecessary abstention; same commander deals cumulative 21 regardless of controller. CR 903.10a omitted from context."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "f3f66d0894609bb1312c1e549012e9540cb0f259591742047254f1dce18dad5b",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct command-zone option is a hand/library replacement effect under 903.9b, not the graveyard/exile SBA."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "24c249555faac16f33c9a0bb00f8b4fb2471492a90c97d97d7eb17fc30c80098",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct affected opponent chooses; both 8 and 10 with matching orders, supported by Oracle and 616.1."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "37789524b2e961366eb1d28dc6cc2067820e74151611246878791af510977df0",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Correct no loss merely for empty library; attempted draw condition explicitly cited."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "f1bfc360f5abd4e21ce19fa189be5f5a15689d8f54480e55f541a96d8d7086df",
+      "criteria": {
+        "h30-ambiguous-combat.1": true,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Appropriate clarification asks about trample and attacker/blocker stats, without inventing a total."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "f52fed6e0c4d31e3812dcfff541fa3f76117d6c52e2c356d69df3393f6158c95",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Fails frozen clarification criteria: gives unconditional answer without asking copy effect/enchantment details. 707.2 describes ordinary copy values but includes exceptions; unspecified effects could affect those values."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "3ad3257b67d6ada9a6968d9f12cf99a3e12dd718b2c4f5660e0cc2d0a07e33fc",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reused identical prior answer and packed evidence review: Appropriate clarification asks exact effects and original count; no invented number."
+    }
+  ]
+}

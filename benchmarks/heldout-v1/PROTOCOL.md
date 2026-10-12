@@ -36,3 +36,5 @@ Matched seed-43 lexical controls scored 27/32 heldout and 20/20 original. The le
 ## Targeted CR 800.4a retrieval failure
 
 The first topic matcher for leaving-game questions did not match the frozen h25 phrasing “Bob loses and leaves before Bolt resolves.” Its seed-42 full-suite run did not retrieve CR 800.4a and did not fix the abstention. See `results/leave-game-rule-heldout/analysis.md`; this negative run is retained. The follow-up broadens phrasing based on the missed linguistic form, without changing benchmark labels.
+
+The corrected lexical matcher in `leave-game-phrase-heldout` retrieves and packs CR 800.4a for h25 and changes the answer from an unnecessary abstention to the supported ruling. The matched seed-42 original suite remains 20/20. This is one descriptive replication; unrelated held-out outcomes varied, so only the directly inspected h25 result is attributed to the targeted retrieval change.
