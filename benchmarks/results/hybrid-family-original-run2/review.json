@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "hybrid-family-original-run2",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "Read every answer against frozen criteria and source passages; explicitly grade criteria, factual contradictions and citation support. Correct clarification is not abstention. Citation support is separate from ruling correctness; a correct conclusion with wrong terminology is not fully correct. See the suite reference addendum.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct activated mana ability cannot be responded to; 605.3b and 605.1a directly support it.",
+      "answer_sha256": "a702f15e37ca1c4a5b912a356f13b1b9f9f4e6242f791e332842facfa653b24a"
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct caster retains priority and all-player-pass sequence; cited priority/stack rules support both.",
+      "answer_sha256": "b449f0d67290f24161454fcde22b597be3d1ef012d56c77cc74750b44b7df7b7"
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no card when all targets are illegal; 608.2b and Defiant Strike ruling support it.",
+      "answer_sha256": "6e81c59419c73a440553ce7c413439a2d44683022a9b0e62129773f7511e0919"
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct remaining legal target takes 2 damage; 608.2b explains partial target legality.",
+      "answer_sha256": "8c9d3182dd664637d5653e7ba34c0a10121a57acd2dfd61247129d5b8ba7fc17"
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct trample assignment to indestructible blocker and player; cited example supports distinction between lethal assignment and damage dealt.",
+      "answer_sha256": "4bf553e8b441eefc57c4c4c8e90069763a0c2bf44cf06d82bef67ab51bbf76df"
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct one deathtouch damage satisfies trample assignment and leaves four for player.",
+      "answer_sha256": "fd63ac1bb69501c29bfdf745d96f6abb268a454ce65f491edaeb42a208d172f7"
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrect and unsafe: claims a 0/0 creature survives. CR 704.5f sends a creature with toughness 0 or less to its owner\u2019s graveyard regardless of damage or indestructible. Hybrid candidate selection omitted 704.5f even though the lexical source set contains it.",
+      "answer_sha256": "37af2ebd0294683a05dc1cdab6c0ee597375a292735db2103c547e104bca2002"
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct commander dies trigger occurs on battlefield-to-graveyard move before command-zone SBA; cited rules support timing.",
+      "answer_sha256": "e26c770aaa8932ceebd0de495048478267936fc178a55718e4564ef2f850de4f"
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct commander tax is four; counts only prior command-zone casts.",
+      "answer_sha256": "2363a6982f388abf149dc54cdeabb2771b06fd97849eee5ebc0fe83407ff0730"
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct Rest in Peace replaces graveyard event and prevents dies trigger.",
+      "answer_sha256": "af4ad09a5786bc2a37ff1acd5bfb9e6d5035ecf932bc094a4655c0f509cd2628"
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct two token doublers yield four once each with no loop.",
+      "answer_sha256": "c61f98387507cd04877d51c2dd833bc7cf2ac7a641209a765bbf12e34b827136"
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected player chooses and arithmetic 7 or 8 is correct.",
+      "answer_sha256": "a89a57187126ba15ae352682299e0ad0b4ad2fa8ae531ad856e59b3d19a0e660"
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct Bob APNAP trigger is on top and resolves first.",
+      "answer_sha256": "80375c174397f5e0854a2d6d84bdbe71bca4bf3c2e3b269597dc78deaf055bda"
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct Humility/Anthem produces 2/2 independent of timestamp.",
+      "answer_sha256": "6a5d81fcb2331204df4901ed71167dff945af6aa6c840cad45cce4268cf47069"
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct own hexproof creature can be targeted by own Giant Growth.",
+      "answer_sha256": "22850e25e329806ec4b61bad92092a25a08bcfd5ef3302aec2e5f1223d13fe9b"
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct blocked attacker without trample assigns no second-step damage to player.",
+      "answer_sha256": "5d9e0a7c5f702c5d7efad50dea56f9f78c1f03c24515e4846c11fe360a55d99d"
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct token cannot return and only ceases as subsequent SBA.",
+      "answer_sha256": "a316ecf1defa5531d77e842f9eee31fd678ad37ef981dc6032d9e20d6283a08a"
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct sacrifice ability without tap-symbol cost can be activated despite summoning sickness.",
+      "answer_sha256": "3e4f1ac371a04c686bb31ef8df129503ca4202619d5f46087d29858e98902d66"
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct legend-rule SBA occurs before priority; no response window.",
+      "answer_sha256": "bde7e88e3bafe9fc10508d2d1bc5416c84faf408c5804f206830a837c946aa0f"
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Appropriate clarification asks protection quality and removal spell/characteristics. Minor UI defect: closing `[[Exact Card Name]]` markup is missing in question 2; no rules error.",
+      "answer_sha256": "48d85aa9cd78bd21fc5627ae0170de0919b98764e88e16e71ff96c4a2678d3a1"
+    }
+  ]
+}
