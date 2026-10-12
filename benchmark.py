@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Versioned end-to-end benchmark; use the real chat handler, never feed it labels."""
 import argparse
-from contextlib import closing
+from contextlib import closing, contextmanager
 from datetime import datetime, timezone
 import gzip
 import hashlib
@@ -14,6 +14,7 @@ import shutil
 import sqlite3
 import statistics
 import subprocess
+import tempfile
 import threading
 import time
 import urllib.request
@@ -289,6 +290,28 @@ def runtime():
     return result
 
 
+@contextmanager
+def frozen_corpus():
+    """Keep benchmark reads isolated from live knowledge updates."""
+    archive=BENCH/'corpus/baseline.sqlite.gz'
+    manifest=read(BENCH/'corpus/manifest.json')
+    if sha(archive)!=manifest['archive_sha256']:
+        raise ValueError('Frozen corpus archive checksum mismatch')
+    old_db,old_connect=knowledge.DB,knowledge.connect
+    with tempfile.TemporaryDirectory(prefix='mtg-benchmark-') as directory:
+        database=Path(directory)/'knowledge.sqlite'
+        with gzip.open(archive,'rb') as src,database.open('wb') as dst:
+            shutil.copyfileobj(src,dst)
+        if sha(database)!=manifest['database_sha256']:
+            raise ValueError('Frozen corpus database checksum mismatch')
+        knowledge.DB=database
+        knowledge.connect=lambda path=database:old_connect(path)
+        try:
+            yield database
+        finally:
+            knowledge.DB,knowledge.connect=old_db,old_connect
+
+
 def run_benchmark(args):
     suite=read(SUITE)
     validate_suite(suite)
@@ -400,7 +423,8 @@ def main():
     sub.add_parser('validate')
     p=sub.add_parser('restore-corpus');p.add_argument('--output',required=True)
     args=parser.parse_args()
-    if args.command=='run':run_benchmark(args)
+    if args.command=='run':
+        with frozen_corpus():run_benchmark(args)
     elif args.command=='validate':
         validate_suite(read(SUITE));print('Validated 20 scenarios, frozen reference passages, and card IDs.')
     elif args.command=='review':

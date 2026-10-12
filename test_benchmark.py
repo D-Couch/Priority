@@ -7,6 +7,18 @@ class BenchmarkTests(unittest.TestCase):
     def case(self):
         return {'id':'case','criteria':[{'id':'one'},{'id':'two'}], 'evidence_groups':[{'label':'a','any_of':['CR 1','CR 2']},{'label':'card','any_of':['CARD Example']} ]}
 
+    def test_frozen_corpus_leaves_live_database_unchanged(self):
+        original=benchmark.knowledge.DB
+        original_hash=benchmark.sha(original) if original.exists() else None
+        with benchmark.frozen_corpus() as path:
+            self.assertNotEqual(path,original)
+            self.assertEqual(benchmark.sha(path),benchmark.read(benchmark.BENCH/'corpus/manifest.json')['database_sha256'])
+            with benchmark.closing(benchmark.knowledge.connect()) as conn:
+                self.assertGreater(conn.execute('SELECT count(*) FROM rules').fetchone()[0],3000)
+        self.assertEqual(benchmark.knowledge.DB,original)
+        self.assertFalse(path.exists())
+        self.assertEqual(benchmark.sha(original) if original.exists() else None,original_hash)
+
     def test_evidence_alternatives_do_not_reward_irrelevant_context(self):
         sources=[{'id':'CR 2','kind':'rule','title':'Rule 2','text':'x'},{'id':'CR 3','kind':'rule','title':'Rule 3','text':'irrelevant'}]
         result=benchmark.measure_evidence(self.case(),sources,'Example [CR 999.1]')
