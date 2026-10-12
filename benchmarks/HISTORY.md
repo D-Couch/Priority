@@ -4,4 +4,5 @@ Each report identifies the implementation commit tested. Results are committed a
 
 | Run | Tested commit | Reviewed correct | Evidence recall | Median s |
 | --- | --- | --- | --- | --- |
+| [low-reasoning](results/low-reasoning/report.md) | `6a176bd62b` | 16/20 reviewed | 63.3% | 12.37 |
 | [pre-vectorization](results/pre-vectorization/report.md) | `98cd7e4318` | 12/20 reviewed | 63.3% | 20.02 |

@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "run_id": "low-reasoning",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted review; not independently human-validated)",
+  "review_method": "Read all answers against frozen criteria and source passages; evaluated substantive claims separately from citation-ID validity. No answering-model self-grading. Single seeded run, not a reliability estimate.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "6ec850136d1759cba788300bec7da00ef1bc77720eec1b710d9e128e580f432c",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct mana-ability ruling and immediate resolution without the stack."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "da337869721cb8817116672f44384650e4d8fad3a36bdfc3c449c1d4460a427e",
+      "criteria": {
+        "02-hold-priority.1": false,
+        "02-hold-priority.2": false
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Declines to establish who receives priority without supporting excerpts. Does not explain all players passing in succession. Evidence-limited abstention."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "012a7808e91be8c750f2cea049bba3adcf25c646c0feeea3579ce0b5ab7ac044",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly denies drawing because the only target is illegal and the entire spell does not resolve."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "ef657aa5d77a37509b170172fe7e47f68095055535c0c5ecc4ef5b6c16ebd668",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly resolves against the remaining legal target for 2 damage."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "b1a438f7233def7e87408ca9e79e1a8bd323e0170885ccdcfd34252c80975e1f",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/4 assignment and distinction between lethal assignment and indestructibility."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "9b752b04b0e149c6860b32698f9a32beba191a4236b7abc7039f67bccdb6b5da",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 1/4 assignment using deathtouch. The canonical deathtouch assignment rule is still absent from retrieval; correct conclusion does not establish complete citation support."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "a6a7308f390292de3f13757edf8298b9af1489f839cd5d75f2dd7d8c9433f9a1",
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrect survival ruling, arithmetic (3/3 minus 3/3 is 0/0, not 0/3), and zero-toughness action characterized as destruction. Confident misinformation replaces the previous empty response."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "82f742e8d7a3522f4f4d1f2f66463296db153e41d659f8467b1fb22aadbb0ef7",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct graveyard entry, dies triggers, and subsequent optional command-zone move as a state-based action."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "5f2db70b3ddd099e18921469847c0b9527fcd273187738c4aad8a95fc9a93c33",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct additional tax of 4 excluding the hand cast. Uses nonexistent [C1] for CR 903.8: substantive criteria pass, but citation-ID precision separately records this defect."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "9be72738c8fbfeeb8fc3230a2a8325d5f4489d0a45506183e7ce493c6c27a6ce",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct exile replacement and no dies trigger, supported by Oracle text and dies definition."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "28fd9bc95326ca10363dc2e6abe74f0d104c8641a608d44ba46e6731371bb34f",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct four tokens and no recursion. Describes multiplication once rather than the precise sequential replacement process; in this two-doubler context it conveys each effect applies once."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "8900367bba1a94cf4e033d67c20b290b0a9d729bad97ace810b1e4c9c98baee0",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected-player choice and both arithmetic orders yielding 7 or 8."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "8cfb16333cb54c35e58fd2b43d6b69567b108d3558fb9d39e9df42f1bd291ec2",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct APNAP stacking and Bob resolving first."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "adaa042e365f69003f93233ac8969e22e3f3fe076432b249f1fe0c7512cab355",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/2 and base-setting before modification independently of timestamps."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "a69f20e33bb3ab2a3a03a139cde1bb01e67cec38057d4d7d5045d6deac3219db",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct own-creature targeting because hexproof restricts opponents."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "65aeab9e02141d15fe00f855ca8b9180a91098716c2ee4167678abd6deb2b9ca",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no player damage and no remaining blocker to assign to without trample. The explanation conveys continued blocked status implicitly. Read the attacking-creature restriction in the stated blocked-combat context, not as a rule for unblocked attackers."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "c41198f6810c7f0c13cff00c904ceb7dbfe8fa42dd81a7e58beb1a9b8b566920",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": false
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct no return, but incorrectly says the token immediately ceases to exist during resolution. Misses the prohibition on changing zones again before state-based actions. Cites the wrong unprovided rule number."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "70b2548b3a91a3a6e4e65a7d78d12a5a1b99da8b8f34e1b972db72a1dda639bc",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct sacrifice activation without tap/untap-symbol restriction."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "6c189a3ec7d48c5c42ebd820acc25e0d561bdd0840706b19580d62469b700f82",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct legend action before priority and no response window. General immediate-check phrasing is imprecise; the explicit sequence correctly specifies after resolution, before priority."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "43a1872a4cab02cbc93675124b3997da114a9e088f19b7ee178ea0129fd85e9b",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Asks for protection quality and spell, but asserts a red removal spell means the creature is safe. Non-targeted destruction can still remove it. This unsupported assurance fails full correctness despite satisfying both clarification criteria."
+    }
+  ]
+}
