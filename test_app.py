@@ -1,9 +1,15 @@
 import unittest
 import re
 import knowledge
+import server
 
 
 class KnowledgeTests(unittest.TestCase):
+    def test_lm_studio_openai_effort_names(self):
+        self.assertEqual(server.OPENAI_REASONING_EFFORTS['off'], 'none')
+        self.assertEqual(server.OPENAI_REASONING_EFFORTS['on'], 'xhigh')
+        self.assertEqual(server.OPENAI_REASONING_EFFORTS['low'], 'low')
+
     def test_rule_families_do_not_cross_numeric_prefixes(self):
         self.assertTrue(knowledge._related_rule('702.2c', '702.2'))
         self.assertFalse(knowledge._related_rule('702.20a', '702.2'))
