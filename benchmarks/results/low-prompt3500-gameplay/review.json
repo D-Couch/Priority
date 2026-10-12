@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "low-prompt3500-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against frozen scenario criteria and supplied rule/card excerpts; not independent judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "d4dece201d04588d71250f1137ef288925d5f044e149f56ba5cf1b3988725c6a",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct ruling and explanation; cited CR 605.3b supports the mana-ability rule."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "6e55b60f52f232bb6f0d72632b21080e73a11e57a7e5a2410121ea8b2c14f2f3",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct priority and resolution sequence; citations support both claims."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "4124c4f3a7a35dcad515f01b7ab67a95215759d86645ea03acfbceb3829c7f2a",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: all targets are illegal, so the spell does not resolve and no card is drawn; card ruling supports this."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "5e0ff2f1c10594ef928f5ed36d219fe112a22334edf5b835c83965a5a6171157",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the remaining legal target is affected because not all targets are illegal."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "324c9642d007115f7efced90f692280189d1481a84da636ef5543350933a0883",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct assignment; indestructible does not change lethal damage assignment for trample."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "109e0321e9dc0c0c7d6fdf7b476566298dc75c148ff050a3a0f03e243efb34f7",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: one deathtouch damage is lethal for trample assignment, leaving four for the player."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "74d130d3bc35406c7973dc072d024639019a071d38b56242cd3d50994c0cb3dc",
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrect. Indestructible does not prevent the state-based action for toughness zero or less; the creature goes to its owner\u2019s graveyard. Both criteria fail."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "9b9104108f1cd959a7d310381fef0f52f842390f08f5d896dd7038493288f30f",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the commander reaches the graveyard, dies triggers occur, then its owner may move it to the command zone under the stated rule version."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "8e817d6040392e3fb62db3f31aec9b00ab91c63ac8b261f69c6acddb1bf24778",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: only the two prior command-zone casts count, for {4}."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "4db415468cfc874fec271ca8424d8834bbdda98ddf8bc1beb8aaea0a3686bd02",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Rest in Peace replaces the graveyard event with exile, so the creature does not die and Blood Artist does not trigger."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "703e440e7363e82f1d00a4c68b93b645a42e1b375ae01a810ca07f92af0a8461",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the two replacement effects produce four tokens and do not loop."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "44a6c4a4b02d58defb9021104008a439e302f4430f92c4f2eadc482269123b4f",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct chooser and arithmetic for both replacement orders."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "cd28136056a06cc0ec3c23c8c649496d2b324dc13f866e2e1f57a4c511a5830f",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The outcome and APNAP stacking explanation are substantively correct, but cited CR 405.3 does not establish the APNAP triggered-ability ordering; the key CR 603.3b excerpt was omitted. Treat as unsupported and not fully correct under the evidence-grounded review."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "c792dce11f33f9598c12cd2d5c3f86df817d9d1691f75d247598fb5c7240b590",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct layer ordering yields 2/2 independent of timestamp."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "ecd985b35a07978d87c2bf7702c443486fd99f9ce6f574dbb8f306d20054bcf9",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: hexproof restricts opponents, not the controller."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "a34492185d22a3e246f7285746e9126baa645320cc74278c2b3330ba26e490b8",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the attacker remains blocked and has no trample, so assigns no damage to the player in the second step."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "ced09468b9005c1de24311a355afc08b9f7eee540448cc75a334aeb6179af45c",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: a token that left the battlefield cannot change zones again and will cease to exist at the next state-based-action check."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "1d77f94e32da4c2db6e5f4fbeba6bcd187b15bbdffbd4657ad54c95e8dbb7990",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: a sacrifice-only cost is not restricted by summoning sickness."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "17138d8c578e61ad96fcc611d2c670deae9186772df60d168317eae2a0b8d281",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: state-based actions occur before priority and the legend choice is made without a response window."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "d0825867ff7ab98e55cca5c3f2f37ab864aa95a9ef9b3580917b402c7bd96768",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct clarification request; the protection quality and removal spell are needed."
+    }
+  ]
+}
