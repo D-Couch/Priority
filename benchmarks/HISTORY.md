@@ -14,6 +14,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [answer-contract](results/answer-contract/report.md) | `1432d4563f` | 19/20 | 19 | 1 | 93.8% | 12.11 |
 | [atomic-sections](results/atomic-sections/report.md) | `b486636207` | 20/20 | 20 | 0 | 96.2% | 10.21 |
 | [atomic-sections-seed43](results/atomic-sections-seed43/report.md) | `47ceb48a2f` | 20/20 | 20 | 0 | 96.2% | 9.95 |
+| [heldout-baseline](results/heldout-baseline/report.md) | `e184b2efaf` | 25/32 | 25 | 0 | 75.5% | 10.91 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
