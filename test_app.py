@@ -3,6 +3,12 @@ import knowledge
 
 
 class KnowledgeTests(unittest.TestCase):
+    def test_rule_families_do_not_cross_numeric_prefixes(self):
+        self.assertTrue(knowledge._related_rule('702.2c', '702.2'))
+        self.assertFalse(knowledge._related_rule('702.20a', '702.2'))
+        self.assertTrue(knowledge._related_rule('117.3c', '117'))
+        self.assertFalse(knowledge._related_rule('1170.3c', '117'))
+
     def test_parser_keeps_subrules_and_examples(self):
         text='100. General\n\n100.1 First rule.\nExample: an example.\n\n100.1a Subrule.\n\n100.2 Next.\n'
         rules=knowledge.parse_rules(text)

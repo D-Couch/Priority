@@ -147,7 +147,7 @@ TOPICS = [
 ]
 
 
-def retrieve(messages, card_ids):
+def _retrieve_lexical(messages, card_ids):
     if not DB.exists():
         raise ValueError('Download the rules and cards using “Update knowledge” first.')
     # Recent user turns preserve the subject of short follow-up questions.
@@ -206,6 +206,64 @@ def retrieve(messages, card_ids):
             if row:
                 sources.append({'id':'CR '+number, 'kind':'rule', 'title':'Rule '+number, 'text':row['body'], 'url':'/api/rules/'+number})
         return sources
+
+
+def _related_rule(number,root):
+    return number==root or (number.startswith(root+'.') if '.' not in root else bool(re.fullmatch(re.escape(root)+r'[a-z]?',number)))
+
+def retrieve(messages,card_ids):
+    initial=_retrieve_lexical(messages,card_ids)
+    question='\n'.join([m['content'] for m in messages if m['role']=='user'][-3:])
+    search=question+'\n'+'\n'.join(s['text'] for s in initial if s['kind']=='card')
+    rules=[s for s in initial if s['kind']=='rule'];cards=[s for s in initial if s['kind']!='rule']
+    with closing(connect()) as conn:
+        allrules={r['number']:r['body'] for r in conn.execute('SELECT * FROM rules')}
+        candidates={s['id'][3:]:1/(i+1) for i,s in enumerate(rules)}
+        families=[]
+        for root,heading in allrules.items():
+            if re.fullmatch(r'702\.\d+',root) and re.search(r'(?<!\w)'+re.escape(heading)+r'(?!\w)',search,re.I):
+                families.append((root,[n for n in allrules if _related_rule(n,root)]))
+        for pattern,roots in TOPICS:
+            if re.search(pattern,search,re.I):
+                for root in roots:
+                    family=[n for n in allrules if _related_rule(n,root)]
+                    if family:families.append((root,family))
+        terms=list(dict.fromkeys(t for t in re.findall(r'[a-zA-Z]{3,}',search.lower()) if t not in STOP))[:70]
+        query=' OR '.join('"'+t+'"' for t in terms)
+        ranked=[r['number'] for r in conn.execute('SELECT number FROM rules_fts WHERE rules_fts MATCH ? ORDER BY bm25(rules_fts)',(query,))] if query else []
+        mandatory=[]
+        for root,family in families:
+            familyset=set(family)
+            is_keyword=root.startswith('702.')
+            heading=allrules.get(root,'').lower()
+            if is_keyword and not re.search(r'(?<!\w)'+re.escape(heading)+r'(?!\w)',search,re.I):
+                continue
+            if is_keyword:
+                mandatory.extend(family)
+            direct=[n for n in family if re.fullmatch(re.escape(root)+r'\.\d+',n)]
+            # Keep the section's immediate definitions as well as its highest-ranked leaves.
+            selected=(direct if len(direct)<=16 else [])+[n for n in ranked if n in familyset][:8]
+            for i,n in enumerate(selected):candidates[n]=candidates.get(n,0)+1/(i+1)
+        ordered=sorted(candidates,key=candidates.get,reverse=True)
+        # Keep keyword families, parent definitions, and adjacent clauses together.
+        # Fixed candidate limits bound expansion; no benchmark answers are used.
+        chosen=[]
+        def add(n):
+            if n in allrules and n not in chosen:chosen.append(n)
+        for n in mandatory:add(n)
+        for n in ordered[:32]:add(n)
+        for n in list(chosen):
+            if re.search(r'[a-z]$',n):
+                for offset in (-1,1):add(n[:-1]+chr(ord(n[-1])+offset))
+            else:
+                children=[k for k in allrules if _related_rule(k,n)]
+                if len(children)<=8:
+                    for k in children:add(k)
+        for n in list(chosen):
+            parent=re.sub(r'[a-z]$','',n)
+            if parent!=n:add(parent)
+        return cards+[{'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':allrules[n],'url':'/api/rules/'+n} for n in chosen[:64]]
+
 
 
 if __name__ == '__main__':
