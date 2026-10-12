@@ -64,6 +64,12 @@ class BenchmarkTests(unittest.TestCase):
         self.assertEqual(benchmark.validate_comparison(old,new,['sampling.reasoning_effort']),[])
         new['results'][0]['sampling']['temperature']=.7
         self.assertIn('sampling',benchmark.validate_comparison(old,new,['sampling.reasoning_effort']))
+
+    def test_prompt_budget_experiment_requires_explicit_allowance(self):
+        old={'suite_sha256':'s','references_sha256':'r','corpus_sha256':'c','model':'m','model_runtime':{},'seeds':[42],'repeats':1,'mode':'full','case_order':['a'],'warmup':True,'retrieval':{'mode':'lexical'},'context_budget':{'max_prompt_tokens':4600},'status':'complete','expected_attempts':1,'results':[{'sampling':{'temperature':0.1}}]}
+        new={**old,'context_budget':{'max_prompt_tokens':2800}}
+        self.assertIn('context_budget',benchmark.validate_comparison(old,new))
+        self.assertEqual(benchmark.validate_comparison(old,new,['context_budget.max_prompt_tokens']),[])
         with self.assertRaisesRegex(ValueError,'Unsupported'):
             benchmark.validate_comparison(old,new,['corpus_sha256'])
 

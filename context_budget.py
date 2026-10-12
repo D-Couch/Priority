@@ -6,6 +6,7 @@ from urllib.parse import urlparse
 
 OUTPUT_TOKENS = 3500
 TEMPLATE_MARGIN = 64
+MAX_PROMPT_TOKENS = 2800
 ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
 Follow this response contract:
 If information needed to determine the ruling is missing, respond ONLY with "Need details:" and the specific clarifying questions. Do not add a rules tutorial, hypothetical rulings, or assurances.
@@ -75,7 +76,7 @@ def source_groups(sources, question=''):
 
 
 def pack_context(system, sources, history, count_tokens, context_length):
-    limit = context_length - OUTPUT_TOKENS - TEMPLATE_MARGIN
+    limit = min(context_length - OUTPUT_TOKENS - TEMPLATE_MARGIN, MAX_PROMPT_TOKENS)
     history = list(history)
     dropped_turns = 0
     while count_tokens(make_messages(system, [], history)) > limit and len(history) > 1:
@@ -97,7 +98,7 @@ def pack_context(system, sources, history, count_tokens, context_length):
         raise ValueError('No complete reference excerpt fits alongside this conversation. Start a new conversation or load a larger context in LM Studio.')
     messages = make_messages(system, selected, history)
     prompt_tokens = count_tokens(messages)
-    return messages, selected, {'context_length': context_length, 'prompt_tokens': prompt_tokens,
+    return messages, selected, {'context_length': context_length, 'max_prompt_tokens': limit, 'prompt_tokens': prompt_tokens,
                                'reserved_output_tokens': OUTPUT_TOKENS, 'template_margin': TEMPLATE_MARGIN,
                                'omitted_sources': len(sources) - len(selected), 'omitted_turns': dropped_turns}
 

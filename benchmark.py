@@ -22,6 +22,7 @@ import urllib.error
 
 import knowledge
 import server
+import context_budget
 
 ROOT = Path(__file__).resolve().parent
 BENCH = ROOT / 'benchmarks'
@@ -230,7 +231,7 @@ def write_history():
     (BENCH/'HISTORY.md').write_text('\n'.join(lines))
 
 
-EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval'}
+EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens'}
 
 
 def validate_comparison(old, new, allow_changes=()):
@@ -238,6 +239,7 @@ def validate_comparison(old, new, allow_changes=()):
     for key in ['suite_sha256','references_sha256','corpus_sha256','model','model_runtime','seeds','repeats','mode','case_order','warmup']:
         if old.get(key)!=new.get(key):issues.append(key)
     if 'retrieval' not in allow_changes and old.get('retrieval',{'mode':'lexical'}) != new.get('retrieval',{'mode':'lexical'}):issues.append('retrieval')
+    if 'context_budget.max_prompt_tokens' not in allow_changes and old.get('context_budget') != new.get('context_budget'):issues.append('context_budget')
     unknown = set(allow_changes) - EXPERIMENT_FIELDS
     if unknown:
         raise ValueError('Unsupported experimental variables: '+', '.join(sorted(unknown)))
@@ -269,6 +271,11 @@ def compare(old, new, allow_changes=()):
         for field in sorted(allow_changes):
             if field == 'retrieval':
                 lines[4:4] = [f"- `retrieval`: {old.get('retrieval', {'mode':'lexical'})} → {new.get('retrieval')}"]
+                continue
+            if field == 'context_budget.max_prompt_tokens':
+                before=old.get('context_budget',{}).get('max_prompt_tokens','unlimited/model limit')
+                after=new.get('context_budget',{}).get('max_prompt_tokens','unlimited/model limit')
+                lines[4:4] = [f"- `{field}`: {before} → {after}"]
                 continue
             key=field.removeprefix('sampling.')
             values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
@@ -359,6 +366,7 @@ def run_benchmark(args):
          'environment':{'python':platform.python_version(),'sqlite':sqlite3.sqlite_version,'os':platform.system(),'machine':platform.machine()},
          'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','context_budget.py','vector_search.py','requirements.txt','benchmark.py']},
          'retrieval':__import__('vector_search').configuration(),
+         'context_budget':{'max_prompt_tokens':context_budget.MAX_PROMPT_TOKENS},
          'mode':args.mode,'repeats':args.repeats,'seeds':seeds,'case_order':[c['id'] for c in suite['cases']],
          'expected_attempts':len(suite['cases'])*args.repeats,'warmup':args.mode=='full','results':[]}
     current={}

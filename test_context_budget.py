@@ -1,5 +1,5 @@
 import unittest
-from context_budget import pack_context, make_messages, OUTPUT_TOKENS, TEMPLATE_MARGIN
+from context_budget import pack_context, make_messages, OUTPUT_TOKENS, TEMPLATE_MARGIN, MAX_PROMPT_TOKENS
 
 
 def count(messages):
@@ -17,6 +17,15 @@ def source(identifier, body, kind='rule'):
 
 
 class ContextBudgetTests(unittest.TestCase):
+    def test_prompt_token_ceiling(self):
+        sources = [source(f'CR {100+i}.1', str(i) * 900) for i in range(10)]
+        messages, chosen, info = pack_context('Judge', sources,
+            [{'role': 'user', 'content': 'Question'}], count,
+            MAX_PROMPT_TOKENS + OUTPUT_TOKENS + TEMPLATE_MARGIN + 1000)
+        self.assertLessEqual(count(messages), MAX_PROMPT_TOKENS)
+        self.assertLess(len(chosen), len(sources))
+        self.assertEqual(info['max_prompt_tokens'], MAX_PROMPT_TOKENS)
+
     def test_output_reserve_and_complete_excerpts(self):
         sources = [source('CR 101.1', 'x' * 100), source('CR 202.2', 'y' * 900)]
         history = [{'role': 'user', 'content': 'Question'}]
