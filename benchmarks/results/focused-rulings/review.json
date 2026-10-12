@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-rulings",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted review; not independently human-validated)",
+  "review_method": "Read every answer against frozen criteria and passages. Extra claims and incorrect rule application count against correctness even when source IDs are valid. No Qwen self-grading; AI-assisted review, not independent human validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "e36b356a54327047438a25c612539ce0673ab0d2c434d3f4b594d74d96f3f468",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct activated mana ability ruling, immediate resolution, and supporting rules."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "e0743151ef39d2bff5d53ed2fbaad37a3f64a111d0e4bb4e92c0083f89ef2131",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct priority returned to caster and all players passing. Both canonical references now fit; same mean recall conceals changing coverage between cases."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "238f384b9394761d6d0b9c91a0120b64643784ad879f0dd6b12a0a4d8f305658",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no draw with sole target illegal and whole spell not resolving."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "6e0530ff462725778b0f92dd2b3263f5d8f70cbfd6f056a69333d0718d4a33c8",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct remaining legal target takes damage and partial illegality does not stop resolution."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "5fb11d9d94fc6d2b969c41439c37012412ef0472efa9ce836b4d57cc4a7f1561",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/4 assignment and indestructibility distinction with both operative definitions."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "cc23d461b2337711c9e72cd1b7c4f034fb855005d06098ff21c5f7439a2f65ff",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct maximum 4 and explicit nonzero deathtouch assignment rule."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "5f5889fac304a5a62fa616607dd3ab757b734b36845a01fefc1b69dafde0f27a",
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrectly keeps a 0/0 alive. Both operative rules were provided, but the answer extends indestructibility\u2019s lethal-damage exception to zero toughness. This is a rule-application failure despite complete evidence."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "c661ba0af2d0cf9a9ac42217d91e3cfc7b807883862d218f9c4b28b6de0dc312",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct both conclusions with graveyard entry, dies trigger, and subsequent command-zone state-based action. The unsupported extra targeted-ability caveat is gone."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "16f6325be43f3c32cdf69d432c02e879198d693360be69974b9c8f8c38d24272",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct additional 4 and excludes hand cast. Citation ID now correct."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "46f42be209094066799f49c3fa0e8b0526c46ea59a6ac54c62c60df455098779",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no Blood Artist trigger, exile replaces graveyard entry, and no dies event. Now finishes normally."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "d23c2bc0c6a811755fdfe38788c27f7b66060493558bbc9a4c74febeb3a5cd94",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct four tokens and each replacement applies once to the event. Now finishes normally."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "207decf73f3e9f8adeed371451e83ebd2f0b0f6f75e8cefde9e038a59b502c6c",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected-player choice, both arithmetic orders, and once-per-effect restriction."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "18979c982c2331792545dcd1704951797ab477b40184f5afa5f26dacdd519fad",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct APNAP order and last-in-first-out resolution with supporting sources."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "d8b0cc00aa1290364050fbf0e151fd87c329cde1c21eecb4430ad7422e635f2a",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/2 and sublayer order regardless of timestamps."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "2bf1a455f1bd8e25d454db884e43019a61cc1354d88ab703b948641985144f75",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct own-creature targeting and opponents-only hexproof restriction."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "4b7b6ea5800734523f3866a4f8264d9949b562e83cadc7231aa3b0a849fbe4ce",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no second-step player damage and explicit continued blocked status without trample."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "08baf6b9375f09212aac2dc7588a36f0c192391def3ab89c562565221bb0657e",
+      "criteria": {
+        "17-token-blink.1": false,
+        "17-token-blink.2": false
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrectly returns the token during resolution. Packing omitted 111.8 after the longer prompt changed the remaining budget, leaving only 111.7. The answer mistakes existence before state-based checks for permission to change zones again."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "d72929506c73649333dcf7f921226c922ed3961b75eb2c2b8ea2e6fc26a3658d",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct sacrifice activation and tap/untap-symbol distinction."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "443ffe2ed9ab894ef80ca2a6706012e5094c66e7d39242f4cfa922ef105a0a60",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no response window, explicit state-based checks before priority, and choice of one legendary permanent. Uses alternative timing evidence 117.5 rather than canonical reference 704.3."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "604328a3f6e8b14a59659ea15f83798b28967448f5dccb370b7ed84460701eb3",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Asks both clarifications, but still offers hypothetical rulings and broadly says protection does not help if removal does not target. This remains false for preventable non-targeted damage of the relevant quality."
+    }
+  ]
+}
