@@ -5,8 +5,8 @@
   "created_at": "2026-10-12T21:55:57.860853+00:00",
   "status": "complete",
   "git": {
-    "commit": "f5324aafb986251d25be1500d4bfbd15006725a3",
-    "tree": "b7cae0e0d8b3995404bc7be7dc552e2d3838bcd1",
+    "commit": "9acdbc3a36fabd68f3a42ef9be95f22b06570bcb",
+    "tree": "b7cae0e0d8b3995404bc7be7dc552e2d3838bcd",
     "dirty": false
   },
   "suite_path": "benchmarks/heldout-v1/scenarios.json",

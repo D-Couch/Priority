@@ -1,6 +1,6 @@
 # heldout-v1 verification 2026-10-12 → commander-damage-heldout
 
-Implementation `0079f3e44cdab453a26a1b3e4f1cefc90c6d0102` → `f5324aafb986251d25be1500d4bfbd15006725a3`
+Implementation `61bb104897f1aee2c425c7fec97902b918cbebaa` → `9acdbc3a36fabd68f3a42ef9be95f22b06570bcb`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |
