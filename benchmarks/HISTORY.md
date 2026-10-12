@@ -2,8 +2,6 @@
 
 Each implementation change is committed before its full benchmark; reviewed results are committed separately. Runs appear in measurement order. Historical artifacts and the original pre-vectorization tags are preserved.
 
-Provenance correction (2026-10-12): affected records now reference the corresponding commits on this repository. This correction changed no implementation, corpus, model output, review grade, or benchmark setting.
-
 | Run | Suite | Tested commit | Reviewed correct | Correct and complete | Truncated | Evidence recall | Median s |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [pre-vectorization](results/pre-vectorization/report.md) | gameplay-v1 | `98cd7e4318` | 12/20 | pending / n/a | n/a | 63.3% | 20.02 |
@@ -47,6 +45,7 @@ Provenance correction (2026-10-12): affected records now reference the correspon
 | [casting-order-contract-original](results/casting-order-contract-original/report.md) | gameplay-v1 | `dea2984bcb` | 20/20 | 20 | 0 | 96.2% | 11.16 |
 | [gameplay-v1 verification 2026-10-12](results/verification-2026-10-12-gameplay/report.md) | gameplay-v1 | `0079f3e44c` | 20/20 | 20 | 0 | 96.2% | 11.27 |
 | [heldout-v1 verification 2026-10-12](results/verification-2026-10-12-heldout/report.md) | heldout-v1 | `0079f3e44c` | 25/32 | 25 | 0 | 78.1% | 10.30 |
+| [commander-damage-heldout](results/commander-damage-heldout/report.md) | heldout-v1 | `f5324aafb9` | 26/32 | 26 | 0 | 81.2% | 10.50 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
