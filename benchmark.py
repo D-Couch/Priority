@@ -214,8 +214,8 @@ def apply_review(run, review, suite):
 
 def write_history():
     lines=['# Benchmark history','','Each implementation change is committed before its full benchmark; reviewed results are committed separately. Runs appear in measurement order. Historical artifacts and the original pre-vectorization tags are preserved.','',
-           '| Run | Tested commit | Reviewed correct | Correct and complete | Truncated | Evidence recall | Median s |',
-           '| --- | --- | --- | --- | --- | --- | --- |']
+           '| Run | Suite | Tested commit | Reviewed correct | Correct and complete | Truncated | Evidence recall | Median s |',
+           '| --- | --- | --- | --- | --- | --- | --- | --- |']
     paths=sorted((BENCH/'results').glob('*/run.json'), key=lambda p:read(p)['created_at'])
     for path in paths:
         r=read(path)
@@ -223,20 +223,21 @@ def write_history():
         s=summary(r);link=path.parent.relative_to(BENCH).as_posix()+'/report.md'
         complete=fmt(s['correct_and_complete'])
         truncated=fmt(s['truncated_answers']) if not s['unknown_finish_reason'] else 'n/a'
-        lines.append(f"| [{r['label']}]({link}) | `{r['git']['commit'][:10]}` | {s['fully_correct']}/{s['reviewed']} | {complete} | {truncated} | {fmt(s['mean_evidence_recall'],True)} | {fmt(s['median_seconds'])} |")
+        lines.append(f"| [{r['label']}]({link}) | {r['suite_id']} | `{r['git']['commit'][:10]}` | {s['fully_correct']}/{s['reviewed']} | {complete} | {truncated} | {fmt(s['mean_evidence_recall'],True)} | {fmt(s['median_seconds'])} |")
     lines += ['', 'Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.', '']
     for addendum in sorted((BENCH/'results').glob('*/review-addendum.md')):
         lines.append(f"Review-note correction: [{addendum.parent.name}]({addendum.relative_to(BENCH).as_posix()}).")
     (BENCH/'HISTORY.md').write_text('\n'.join(lines))
 
 
-EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens'}
+EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval'}
 
 
 def validate_comparison(old, new, allow_changes=()):
     issues=[]
     for key in ['suite_sha256','references_sha256','corpus_sha256','model','model_runtime','seeds','repeats','mode','case_order','warmup']:
         if old.get(key)!=new.get(key):issues.append(key)
+    if 'retrieval' not in allow_changes and old.get('retrieval',{'mode':'lexical'}) != new.get('retrieval',{'mode':'lexical'}):issues.append('retrieval')
     unknown = set(allow_changes) - EXPERIMENT_FIELDS
     if unknown:
         raise ValueError('Unsupported experimental variables: '+', '.join(sorted(unknown)))
@@ -246,7 +247,7 @@ def validate_comparison(old, new, allow_changes=()):
             values = dict(row.get('sampling') or {})
             values.pop('stream_options',None)  # telemetry, not a sampling parameter
             for field in allow_changes:
-                values.pop(field.removeprefix('sampling.'),None)
+                if field.startswith('sampling.'):values.pop(field.removeprefix('sampling.'),None)
             result.add(json.dumps(values,sort_keys=True))
         return result
     if sampling(old)!=sampling(new):issues.append('sampling')
@@ -266,10 +267,13 @@ def compare(old, new, allow_changes=()):
     if allow_changes:
         lines[4:4] = ['Declared experimental variables: '+', '.join(sorted(allow_changes))+'. All other checked settings remain matched.','']
         for field in sorted(allow_changes):
+            if field == 'retrieval':
+                lines[4:4] = [f"- `retrieval`: {old.get('retrieval', {'mode':'lexical'})} → {new.get('retrieval')}"]
+                continue
             key=field.removeprefix('sampling.')
             values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
             lines[4:4] = [f"- `{field}`: {values(old)} → {values(new)}"]
-    for key,title,pct,lower in [('reviewed_accuracy','Reviewed accuracy',True,False),('mean_evidence_recall','Expected-evidence recall',True,False),('citation_id_precision','Citation ID validity',True,False),('median_seconds','Median latency (s)',False,True),('p95_seconds','p95 latency (s)',False,True),('errors','Request errors',False,True),('truncated_answers','Truncated answers',False,True),('correct_and_complete','Correct and normally completed',False,False)]:
+    for key,title,pct,lower in [('reviewed_accuracy','Reviewed accuracy',True,False),('mean_evidence_recall','Expected-evidence recall',True,False),('citation_id_precision','Citation ID validity',True,False),('median_seconds','Median latency (s)',False,True),('p95_seconds','p95 latency (s)',False,True),('unsupported_claim_answers','Answers with unsupported claims',False,True),('semantic_citation_failures','Citation-support failures',False,True),('errors','Request errors',False,True),('truncated_answers','Truncated answers',False,True),('correct_and_complete','Correct and normally completed',False,False)]:
         av,bv=a[key],b[key]
         if key=='reviewed_accuracy' and (a['reviewed']!=a['expected_attempts'] or b['reviewed']!=b['expected_attempts']):
             av=bv=None
@@ -353,7 +357,8 @@ def run_benchmark(args):
          'corpus_sha256':digest,'corpus_metadata':knowledge.metadata(),'model':server.MODEL,
          'model_runtime':runtime() if args.mode=='full' else {},
          'environment':{'python':platform.python_version(),'sqlite':sqlite3.sqlite_version,'os':platform.system(),'machine':platform.machine()},
-         'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','context_budget.py','requirements.txt','benchmark.py']},
+         'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','context_budget.py','vector_search.py','requirements.txt','benchmark.py']},
+         'retrieval':__import__('vector_search').configuration(),
          'mode':args.mode,'repeats':args.repeats,'seeds':seeds,'case_order':[c['id'] for c in suite['cases']],
          'expected_attempts':len(suite['cases'])*args.repeats,'warmup':args.mode=='full','results':[]}
     current={}

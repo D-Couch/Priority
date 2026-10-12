@@ -225,7 +225,7 @@ def _retrieve_lexical(messages, card_ids):
 def _related_rule(number,root):
     return number==root or (number.startswith(root+'.') if '.' not in root else bool(re.fullmatch(re.escape(root)+r'[a-z]?',number)))
 
-def retrieve(messages,card_ids):
+def _retrieve_structural(messages,card_ids):
     initial=_retrieve_lexical(messages,card_ids)
     question='\n'.join([m['content'] for m in messages if m['role']=='user'][-3:])
     search=search_question(question)+'\n'+'\n'.join(s['text'] for s in initial if s['kind']=='card')
@@ -277,6 +277,39 @@ def retrieve(messages,card_ids):
             parent=re.sub(r'[a-z]$','',n)
             if parent!=n:add(parent)
         return cards+[{'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':allrules[n],'url':'/api/rules/'+n} for n in chosen[:64]]
+
+
+def retrieve(messages, card_ids):
+    sources = _retrieve_structural(messages, card_ids)
+    mode = os.environ.get('MTG_RETRIEVAL', 'lexical')
+    if mode == 'lexical':
+        return sources
+    if mode != 'hybrid':
+        raise ValueError('MTG_RETRIEVAL must be lexical or hybrid')
+    import vector_search
+    turns = [m['content'] for m in messages if m['role'] == 'user'][-3:]
+    question = turns[-1]
+    # Same real user question and attached Oracle text; no evaluation labels.
+    question += '\n' + '\n'.join(s['text'] for s in sources if s['kind'] == 'card')
+    question += '\n' + '\n'.join(turns[:-1])
+    try:
+        semantic = vector_search.search(question)
+    except Exception as exc:
+        raise ValueError('Hybrid retrieval failed: '+str(exc)) from exc
+    lexical = [s['id'][3:] for s in sources if s['kind'] == 'rule']
+    ordered = vector_search.fuse(lexical, semantic)
+    with closing(connect()) as conn:
+        rules = {r['number']:r['body'] for r in conn.execute('SELECT number,body FROM rules')}
+    chosen = []
+    for number in ordered:
+        if number not in chosen:
+            chosen.append(number)
+        parent = re.sub(r'[a-z]$', '', number)
+        if parent in rules and parent not in chosen:
+            chosen.append(parent)
+    return [s for s in sources if s['kind'] != 'rule'] + [
+        {'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':rules[n],'url':'/api/rules/'+n}
+        for n in chosen[:64] if n in rules]
 
 
 

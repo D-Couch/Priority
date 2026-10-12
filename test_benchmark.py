@@ -83,4 +83,12 @@ class BenchmarkTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'explicit boolean'):
             benchmark.apply_review(run,review,{'cases':[self.case()]})
 
+    def test_retrieval_experiment_requires_explicit_allowance(self):
+        old={'status':'complete','expected_attempts':1,'results':[{'sampling':{'temperature':.1}}]}
+        new=copy.deepcopy(old);new['retrieval']={'mode':'hybrid','index_sha256':'example'}
+        self.assertIn('retrieval',benchmark.validate_comparison(old,new))
+        self.assertEqual(benchmark.validate_comparison(old,new,['retrieval']),[])
+        new['corpus_sha256']='changed'
+        self.assertIn('corpus_sha256',benchmark.validate_comparison(old,new,['retrieval']))
+
 if __name__=='__main__':unittest.main()
