@@ -2,6 +2,8 @@
 
 Each implementation change is committed before its full benchmark; reviewed results are committed separately. Runs appear in measurement order. Historical artifacts and the original pre-vectorization tags are preserved.
 
+Provenance correction (2026-10-12): published commit IDs replaced earlier workspace-only IDs in the affected reports and run manifests. This metadata-only correction does not change implementation files, model outputs, reviews, or benchmark settings.
+
 | Run | Suite | Tested commit | Reviewed correct | Correct and complete | Truncated | Evidence recall | Median s |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [pre-vectorization](results/pre-vectorization/report.md) | gameplay-v1 | `98cd7e4318` | 12/20 | pending / n/a | n/a | 63.3% | 20.02 |
@@ -32,17 +34,17 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [lexical-seed43-original](results/lexical-seed43-original/report.md) | gameplay-v1 | `4144f33dff` | 20/20 | 20 | 0 | 96.2% | 10.95 |
 | [hybrid-seed43-heldout](results/hybrid-seed43-heldout/report.md) | heldout-v1 | `4144f33dff` | 27/32 | 27 | 0 | 75.5% | 10.74 |
 | [hybrid-seed43-original](results/hybrid-seed43-original/report.md) | gameplay-v1 | `4144f33dff` | 20/20 | 20 | 0 | 96.2% | 11.16 |
-| [leave-game-rule-heldout](results/leave-game-rule-heldout/report.md) | heldout-v1 | `faa875bda3` | 0/0 | pending / n/a | 0 | 77.1% | 10.17 |
-| [leave-game-rule-original](results/leave-game-rule-original/report.md) | gameplay-v1 | `faa875bda3` | 0/0 | pending / n/a | 0 | 96.2% | 10.93 |
-| [leave-game-phrase-heldout](results/leave-game-phrase-heldout/report.md) | heldout-v1 | `6a78d5fa69` | 26/32 | 26 | 0 | 78.6% | 9.94 |
-| [leave-game-phrase-original](results/leave-game-phrase-original/report.md) | gameplay-v1 | `6a78d5fa69` | 20/20 | 20 | 0 | 96.2% | 10.11 |
-| [concise-outcomes-heldout](results/concise-outcomes-heldout/report.md) | heldout-v1 | `3f38dd4f0c` | 24/32 | 24 | 0 | 78.6% | 11.04 |
-| [concise-outcomes-original](results/concise-outcomes-original/report.md) | gameplay-v1 | `3f38dd4f0c` | 20/20 | 20 | 0 | 96.2% | 10.61 |
-| [casting-order-heldout](results/casting-order-heldout/report.md) | heldout-v1 | `7c10de4923` | 27/32 | 27 | 0 | 79.7% | 10.40 |
-| [casting-order-original](results/casting-order-original/report.md) | gameplay-v1 | `7c10de4923` | 20/20 | 20 | 0 | 96.2% | 10.95 |
-| [novel-v1-baseline](results/novel-v1-baseline/report.md) | novel-v1 | `004746b3ff` | 17/20 | 17 | 0 | 82.5% | 8.21 |
-| [casting-order-contract-heldout](results/casting-order-contract-heldout/report.md) | heldout-v1 | `f4b8711187` | 25/32 | 25 | 0 | 78.1% | 10.74 |
-| [casting-order-contract-original](results/casting-order-contract-original/report.md) | gameplay-v1 | `f4b8711187` | 20/20 | 20 | 0 | 96.2% | 11.16 |
+| [leave-game-rule-heldout](results/leave-game-rule-heldout/report.md) | heldout-v1 | `38ff1f08c8` | 0/0 | pending / n/a | 0 | 77.1% | 10.17 |
+| [leave-game-rule-original](results/leave-game-rule-original/report.md) | gameplay-v1 | `38ff1f08c8` | 0/0 | pending / n/a | 0 | 96.2% | 10.93 |
+| [leave-game-phrase-heldout](results/leave-game-phrase-heldout/report.md) | heldout-v1 | `b5987a7976` | 26/32 | 26 | 0 | 78.6% | 9.94 |
+| [leave-game-phrase-original](results/leave-game-phrase-original/report.md) | gameplay-v1 | `b5987a7976` | 20/20 | 20 | 0 | 96.2% | 10.11 |
+| [concise-outcomes-heldout](results/concise-outcomes-heldout/report.md) | heldout-v1 | `18b40500a9` | 24/32 | 24 | 0 | 78.6% | 11.04 |
+| [concise-outcomes-original](results/concise-outcomes-original/report.md) | gameplay-v1 | `18b40500a9` | 20/20 | 20 | 0 | 96.2% | 10.61 |
+| [casting-order-heldout](results/casting-order-heldout/report.md) | heldout-v1 | `1e5d8960cc` | 27/32 | 27 | 0 | 79.7% | 10.40 |
+| [casting-order-original](results/casting-order-original/report.md) | gameplay-v1 | `1e5d8960cc` | 20/20 | 20 | 0 | 96.2% | 10.95 |
+| [novel-v1-baseline](results/novel-v1-baseline/report.md) | novel-v1 | `0841001ac9` | 17/20 | 17 | 0 | 82.5% | 8.21 |
+| [casting-order-contract-heldout](results/casting-order-contract-heldout/report.md) | heldout-v1 | `dea2984bcb` | 25/32 | 25 | 0 | 78.1% | 10.74 |
+| [casting-order-contract-original](results/casting-order-contract-original/report.md) | gameplay-v1 | `dea2984bcb` | 20/20 | 20 | 0 | 96.2% | 11.16 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

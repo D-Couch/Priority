@@ -1,6 +1,6 @@
 # casting-order-heldout → casting-order-contract-heldout
 
-Implementation `7c10de49239b03725b9e22e27a8e7dc49c8d27c6` → `f4b87111878e6e50b32076f548b1d9896a1fac8b`
+Implementation `1e5d8960ccecadb7981898d0f27ee71bdc859fad` → `dea2984bcba395434fdfefe205f61543c45413af`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |

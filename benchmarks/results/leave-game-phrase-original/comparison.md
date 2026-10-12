@@ -1,6 +1,6 @@
 # relevant-rulings-original → leave-game-phrase-original
 
-Implementation `1b544b16bb8a58a18853958be467f303c38cc036` → `6a78d5fa695aa3647f4a31435c4bd159bd962953`
+Implementation `1b544b16bb8a58a18853958be467f303c38cc036` → `b5987a7976395f469801eb6a96635a2aaa8cc789`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |

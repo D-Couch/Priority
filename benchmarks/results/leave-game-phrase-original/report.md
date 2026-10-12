@@ -1,6 +1,6 @@
 # leave-game-phrase-original
 
-Status: **complete** · implementation commit `6a78d5fa695aa3647f4a31435c4bd159bd962953`
+Status: **complete** · implementation commit `b5987a7976395f469801eb6a96635a2aaa8cc789`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 
