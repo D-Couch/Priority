@@ -1,0 +1,684 @@
+{
+  "schema_version": 1,
+  "id": "novel-v1",
+  "description": "20 AI-authored scenarios frozen before inference as an additional evaluation set distinct from gameplay-v1 and heldout-v1. Rubrics and outcomes require independent human Magic judge review; this run is exploratory until then.",
+  "rules_version": "20260925",
+  "cases": [
+    {
+      "id": "n01-bestow-illegal-target",
+      "category": "casting",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast a creature spell using its bestow cost, targeting my opponent’s creature. In response, that creature leaves the battlefield. Does my spell go to the graveyard or can it still resolve?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "It can still resolve as a creature spell; it stops being bestowed when its target is illegal.",
+      "criteria": [
+        {
+          "id": "n01-bestow-illegal-target.1",
+          "description": "Says it can resolve as a creature spell."
+        },
+        {
+          "id": "n01-bestow-illegal-target.2",
+          "description": "Explains the illegal target ends the bestowed/Aura mode rather than countering the spell."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.103e",
+          "any_of": [
+            "CR 702.103e"
+          ]
+        },
+        {
+          "label": "CR 608.3b",
+          "any_of": [
+            "CR 608.3b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n02-mutate-illegal-target",
+      "category": "casting",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast a mutating creature spell targeting a creature. Before it resolves, the target is removed. Is the mutating spell countered by the game, or does it resolve in another way?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "It continues resolving as a creature spell and enters the battlefield normally.",
+      "criteria": [
+        {
+          "id": "n02-mutate-illegal-target.1",
+          "description": "Says the spell continues resolving as a creature spell."
+        },
+        {
+          "id": "n02-mutate-illegal-target.2",
+          "description": "Says it enters under its controller’s control."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.140b",
+          "any_of": [
+            "CR 702.140b"
+          ]
+        },
+        {
+          "label": "CR 608.3b",
+          "any_of": [
+            "CR 608.3b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n03-saga-final-chapter",
+      "category": "sagas",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My Saga has just triggered its final chapter ability, which is still on the stack. Is the Saga sacrificed immediately because it has enough lore counters?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. It is not sacrificed while it is the source of a chapter ability still on the stack; the state-based action can apply after that ability leaves the stack.",
+      "criteria": [
+        {
+          "id": "n03-saga-final-chapter.1",
+          "description": "Says it is not sacrificed while its chapter ability remains on the stack."
+        },
+        {
+          "id": "n03-saga-final-chapter.2",
+          "description": "Identifies this as a state-based action that does not use the stack."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 714.4",
+          "any_of": [
+            "CR 714.4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n04-prototype-graveyard",
+      "category": "prototype",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast an artifact creature as a 2/2 prototype, then it dies. In my graveyard, does it still have prototype power/toughness, or its normal characteristics?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "It has only its normal characteristics in the graveyard; prototype values apply on the battlefield and stack only when cast as prototyped.",
+      "criteria": [
+        {
+          "id": "n04-prototype-graveyard.1",
+          "description": "Says a prototype card in the graveyard has only normal characteristics."
+        },
+        {
+          "id": "n04-prototype-graveyard.2",
+          "description": "Distinguishes its prototyped characteristics while on stack/battlefield from other zones."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 718.3",
+          "any_of": [
+            "CR 718.3"
+          ]
+        },
+        {
+          "label": "CR 718.4",
+          "any_of": [
+            "CR 718.4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n05-overload-hexproof",
+      "category": "overload",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A spell says “deal 2 damage to target creature.” I cast it using overload, which changes “target” to “each.” Does it affect an opponent’s creature with hexproof?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. The overloaded spell does not require targets and may affect objects that could not have been chosen as legal targets, including a hexproof creature.",
+      "criteria": [
+        {
+          "id": "n05-overload-hexproof.1",
+          "description": "Says overload changes target wording to each."
+        },
+        {
+          "id": "n05-overload-hexproof.2",
+          "description": "Says the overloaded spell can affect a hexproof object because it does not target."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.96a",
+          "any_of": [
+            "CR 702.96a"
+          ]
+        },
+        {
+          "label": "CR 702.96b",
+          "any_of": [
+            "CR 702.96b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n06-level-up",
+      "category": "levelers",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My leveler already has the maximum number of level counters shown on its card. Can I activate its level up ability again if I can pay?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. A leveler’s level up ability is present at all times and may be activated regardless of its current number of level counters.",
+      "criteria": [
+        {
+          "id": "n06-level-up.1",
+          "description": "Says level up can still be activated at any level."
+        },
+        {
+          "id": "n06-level-up.2",
+          "description": "Explains the ability adds a level counter and is sorcery-speed."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 711.4",
+          "any_of": [
+            "CR 711.4"
+          ]
+        },
+        {
+          "label": "CR 702.87a",
+          "any_of": [
+            "CR 702.87a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n07-keyword-counter",
+      "category": "counters",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An effect puts a flying keyword counter on my creature. Does that counter give the creature flying, or is it only a marker?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "It gives the creature flying. A keyword counter causes that object to gain the keyword.",
+      "criteria": [
+        {
+          "id": "n07-keyword-counter.1",
+          "description": "Says the creature gains flying from the keyword counter."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 122.1b",
+          "any_of": [
+            "CR 122.1b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n08-adventure-exile",
+      "category": "adventure",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast the Adventure half of a card and it resolves. The card is exiled instead of going to the graveyard. Can I later cast its creature half from exile, and can I cast the Adventure half again using that permission?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "While it remains exiled, you may play the card, including its creature half. That permission does not let you cast it as an Adventure again.",
+      "criteria": [
+        {
+          "id": "n08-adventure-exile.1",
+          "description": "Says the resolving Adventure spell is exiled and may later be played while it remains there."
+        },
+        {
+          "id": "n08-adventure-exile.2",
+          "description": "Says that permission cannot cast it as an Adventure."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 715.3d",
+          "any_of": [
+            "CR 715.3d"
+          ]
+        },
+        {
+          "label": "CR 715.4",
+          "any_of": [
+            "CR 715.4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n09-foretell-turn",
+      "category": "foretell",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I foretell a card during my turn. Can I cast it later in that same turn by paying its foretell cost?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. The foretell permission allows casting only after the current turn has ended.",
+      "criteria": [
+        {
+          "id": "n09-foretell-turn.1",
+          "description": "Says it cannot be cast during the turn it was foretold."
+        },
+        {
+          "id": "n09-foretell-turn.2",
+          "description": "Says it may be cast after that turn by paying the foretell cost."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.143a",
+          "any_of": [
+            "CR 702.143a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n10-suspend-last-counter",
+      "category": "suspend",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The last time counter is removed from my suspended card during upkeep. Must I cast it, and do I pay its mana cost?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Casting is optional. If you choose to play it, you may do so without paying its mana cost if able; otherwise it remains exiled.",
+      "criteria": [
+        {
+          "id": "n10-suspend-last-counter.1",
+          "description": "Says casting is optional when the last time counter is removed."
+        },
+        {
+          "id": "n10-suspend-last-counter.2",
+          "description": "Says it may be played without paying its mana cost if able, otherwise remains exiled."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.62a",
+          "any_of": [
+            "CR 702.62a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n11-morph-special-action",
+      "category": "morph",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My opponent has an instant on the stack. I have priority and control a face-down creature with morph. May I pay its morph cost and turn it face up now, and does that use the stack?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. Turning it face up this way is a special action available while you have priority and it does not use the stack.",
+      "criteria": [
+        {
+          "id": "n11-morph-special-action.1",
+          "description": "Says it can be turned face up while its controller has priority."
+        },
+        {
+          "id": "n11-morph-special-action.2",
+          "description": "Says this is a special action that does not use the stack."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.37e",
+          "any_of": [
+            "CR 702.37e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n12-dfc-returned",
+      "category": "double-faced-cards",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A double-faced card is returned directly from my graveyard to the battlefield by an effect. No instruction specifies a face. Which face enters?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "It enters with its front face up by default.",
+      "criteria": [
+        {
+          "id": "n12-dfc-returned.1",
+          "description": "Says the front face enters up by default when put onto the battlefield from a non-stack zone."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 712.14",
+          "any_of": [
+            "CR 712.14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n13-afterlife-exile",
+      "category": "afterlife",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A creature with afterlife 2 is exiled directly from the battlefield instead of dying. Do I create two Spirit tokens?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. Afterlife triggers only when the permanent is put into a graveyard from the battlefield; exile does not satisfy that event.",
+      "criteria": [
+        {
+          "id": "n13-afterlife-exile.1",
+          "description": "Says afterlife triggers on a battlefield-to-graveyard event."
+        },
+        {
+          "id": "n13-afterlife-exile.2",
+          "description": "Says direct exile does not create the tokens."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.135a",
+          "any_of": [
+            "CR 702.135a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n14-enlist-sickness",
+      "category": "enlist",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I just gained control of a creature without haste this turn. May I tap it to pay another attacker’s enlist cost as it attacks?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. Enlist can tap a creature that has haste or has been under your control continuously since the turn began; this creature meets neither condition.",
+      "criteria": [
+        {
+          "id": "n14-enlist-sickness.1",
+          "description": "Says enlist has the haste/continuous-control requirement for the creature tapped."
+        },
+        {
+          "id": "n14-enlist-sickness.2",
+          "description": "Connects enlist to an optional cost to attack and its power bonus."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.154a",
+          "any_of": [
+            "CR 702.154a"
+          ]
+        },
+        {
+          "label": "CR 702.154b",
+          "any_of": [
+            "CR 702.154b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n15-mentor-target",
+      "category": "mentor",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My 4/4 with mentor attacks alongside my 3/3. Can the mentor ability target that 3/3?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. The 3/3 is an attacking creature with power less than the 4/4, so it is a legal target for the mentor trigger.",
+      "criteria": [
+        {
+          "id": "n15-mentor-target.1",
+          "description": "Says mentor triggers when the creature attacks and can target a smaller-power attacking creature."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.134a",
+          "any_of": [
+            "CR 702.134a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n16-convoke-summoning-sickness",
+      "category": "convoke",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast a creature this turn and it has no haste. May I tap it to help pay the convoke cost of another spell?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. Convoke lets you tap an untapped creature you control to pay mana; summoning sickness does not prohibit tapping it for another spell’s cost.",
+      "criteria": [
+        {
+          "id": "n16-convoke-summoning-sickness.1",
+          "description": "Says convoke can tap an untapped creature to pay the spell’s cost."
+        },
+        {
+          "id": "n16-convoke-summoning-sickness.2",
+          "description": "Distinguishes convoke from activating the creature’s own tap-symbol ability or attacking."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.51a",
+          "any_of": [
+            "CR 702.51a"
+          ]
+        },
+        {
+          "label": "CR 302.6",
+          "any_of": [
+            "CR 302.6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n17-casualty-copy",
+      "category": "casualty",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast a spell with casualty 2 and sacrifice a 2/2 as its additional cost. Does the spell get copied, and may the copy have a different target?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. Paying casualty’s sacrifice cost causes its cast trigger to copy the spell, and if it has targets you may choose new ones for the copy.",
+      "criteria": [
+        {
+          "id": "n17-casualty-copy.1",
+          "description": "Says sacrificing a creature with power at least 2 is the casualty cost."
+        },
+        {
+          "id": "n17-casualty-copy.2",
+          "description": "Says paying it creates a copy and permits new targets."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.153a",
+          "any_of": [
+            "CR 702.153a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n18-myriad-tokens",
+      "category": "myriad",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Myriad creates two attacking token copies in a four-player game. What happens to those tokens at end of combat?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "They are exiled at end of combat. Myriad creates tapped-and-attacking copies for the other opponents, then exiles the tokens at end of combat.",
+      "criteria": [
+        {
+          "id": "n18-myriad-tokens.1",
+          "description": "Says myriad creates tapped and attacking token copies for each other opponent."
+        },
+        {
+          "id": "n18-myriad-tokens.2",
+          "description": "Says the tokens are exiled at end of combat."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.116a",
+          "any_of": [
+            "CR 702.116a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n19-totem-armor",
+      "category": "totem-armor",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A creature enchanted by an Aura with totem armor would be destroyed by lethal damage. Is the creature destroyed?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. Totem armor replaces that destruction: remove all damage marked on the creature and destroy the Aura instead.",
+      "criteria": [
+        {
+          "id": "n19-totem-armor.1",
+          "description": "Says the Aura is destroyed instead of the enchanted permanent."
+        },
+        {
+          "id": "n19-totem-armor.2",
+          "description": "Says damage is removed from the permanent."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.89a",
+          "any_of": [
+            "CR 702.89a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n20-bolster",
+      "category": "bolster",
+      "difficulty": "standard",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An effect tells me to bolster 2. I control two creatures tied for least toughness and one larger creature. How do I choose and place the counters?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Choose one of the creatures tied for least toughness and put both +1/+1 counters on that creature.",
+      "criteria": [
+        {
+          "id": "n20-bolster.1",
+          "description": "Says the chosen creature must have least toughness or be tied for least."
+        },
+        {
+          "id": "n20-bolster.2",
+          "description": "Says all 2 counters are put on the one chosen creature."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 701.39a",
+          "any_of": [
+            "CR 701.39a"
+          ]
+        }
+      ]
+    }
+  ]
+}

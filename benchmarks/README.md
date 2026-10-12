@@ -83,6 +83,8 @@ Reporting-only changes recompute the history from saved results without rerunnin
 ## Additional frozen suites
 
 Use `--suite benchmarks/heldout-v1/scenarios.json` with `run` or `validate` to select the 32-case extension. Its references live beside its scenarios; the original suite and references remain unchanged. Review automatically selects the suite recorded in the run. Read [the predeclared protocol](heldout-v1/PROTOCOL.md). The first baseline is held out from implementation tuning; subsequent measurements are regression tests. New reviews also assess semantic citation support separately from source-ID validity.
+
+An additional 20-case evaluation set is frozen in [novel-v1](novel-v1/PROTOCOL.md). It covers mechanics outside the two existing suites and is validated in CI. Its AI-authored labels still require independent human Magic judge review before using its score as an accuracy claim. Run it with `--suite benchmarks/novel-v1/scenarios.json` and keep any results separate from regression tuning.
 # Local hybrid retrieval experiment
 
 The default is lexical retrieval. The optional hybrid mode embeds rules locally through LM Studio using the installed `text-embedding-nomic-embed-text-v1.5` GGUF model. It keeps exact card/Oracle lookup and the existing context-token budget. No cloud embedding service or vector database is required.

@@ -1,0 +1,137 @@
+{
+  "CR 702.103e": {
+    "text": "As a bestowed Aura spell begins resolving, if its target is illegal, it ceases to be bestowed and the effect making it an Aura spell ends. It continues resolving as a creature spell. See rule 608.3b.",
+    "sha256": "3c4dc3d64fff0a08a59797d7bf89b7bd77837aaa540c95922c5a8b4b98a4b569",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 608.3b": {
+    "text": "If the object that’s resolving has a target, it checks whether the target is still legal, as described in 608.2b. If a spell with an illegal target is a bestowed Aura spell (see rule 702.103e) or a mutating creature spell (see rule 702.140b), it becomes a creature spell and will resolve as described in rule 608.3a. Otherwise, the spell doesn’t resolve. It is removed from the stack and put into its owner’s graveyard.",
+    "sha256": "9df3d97703b638d67f73ecf6d1f9821d655b43fd8e5d92cc9a8d921b61544c3d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.140b": {
+    "text": "As a mutating creature spell begins resolving, if its target is illegal, it ceases to be a mutating creature spell and continues resolving as a creature spell and will be put onto the battlefield under the control of the spell’s controller.",
+    "sha256": "69755e5f145b12c643ff6536cc4decb81d16f0ff71b6b913975c98a4f0357ffe",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 714.4": {
+    "text": "If the number of lore counters on a Saga permanent with one or more chapter abilities is greater than or equal to its final chapter number, and it isn’t the source of a chapter ability that has triggered but not yet left the stack, that Saga’s controller sacrifices it. This state-based action doesn’t use the stack.",
+    "sha256": "43472e108ec4e5a07827a9ecec067ca7a30342e5dafb65629ae4f7a00212cfc2",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 718.3": {
+    "text": "As a player casts a prototype card, the player chooses whether they cast the card normally or cast it as a prototyped spell using the prototype keyword ability (see rule 702.160, “Prototype”).",
+    "sha256": "460b0db5607bc8bb73a5f1efae88c137338d1ad48afccde148e0a96284d36879",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 718.4": {
+    "text": "In every zone except the stack or the battlefield, and while on the stack or the battlefield when not cast as a prototyped spell, a prototype card has only its normal characteristics.",
+    "sha256": "a51e578576f3b1fa36d18f327ddbf86de004781068821aca77507955737c1884",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.96a": {
+    "text": "Overload is a keyword that represents two static abilities that function while the spell with overload is on the stack. Overload [cost] means “You may choose to pay [cost] rather than pay this spell’s mana cost” and “If you chose to pay this spell’s overload cost, change its text by replacing all instances of the word ‘target’ with the word ‘each.’” Casting a spell using its overload ability follows the rules for paying alternative costs in rules 601.2b and 601.2f–h.",
+    "sha256": "53cc3f248babed63d40ec053cbcdb7c2e2d83ab0e179f4a501335d08267bdf0e",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.96b": {
+    "text": "If a player chooses to pay the overload cost of a spell, that spell won’t require any targets. It may affect objects that couldn’t be chosen as legal targets if the spell were cast without its overload cost being paid.",
+    "sha256": "872d09c138bdb933cbf2b0504858308b25875170becdd9e78b44f21781a8ea92",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 711.4": {
+    "text": "Any ability a leveler card has that isn’t preceded by a level symbol is treated normally. In particular, each leveler permanent has its level up ability (see rule 702.87) at all times; it may be activated regardless of how many level counters are on that permanent.",
+    "sha256": "89b6f8d92ca9422d56c58df9f39defcefe6a7788059a2c0094fd091d5367787b",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.87a": {
+    "text": "Level up is an activated ability. “Level up [cost]” means “[Cost]: Put a level counter on this permanent. Activate only as a sorcery.”",
+    "sha256": "b61e44ac598bd5da8847e7ca18f5da2d0b879ea40a8578936ce40ce9329e1e54",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 122.1b": {
+    "text": "A keyword counter on a permanent or on a card in a zone other than the battlefield causes that object to gain that keyword. The keywords that a keyword counter can be are flying, first strike, double strike, deathtouch, decayed, exalted, haste, hexproof, indestructible, lifelink, menace, reach, shadow, trample, and vigilance, as well as any variants of those keywords. See rule 613.1f.",
+    "sha256": "a611b40804b8e1b84ea1ac9489beee28c82cf92a416884e02e320927179d9592",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 715.3d": {
+    "text": "Instead of putting a spell that was cast as an Adventure into its owner’s graveyard as it resolves, its controller exiles it. For as long as that card remains exiled, that player may play it. It can’t be cast as an Adventure this way, although other effects that allow a player to cast it may allow a player to cast it as an Adventure.",
+    "sha256": "90723223e6ddbe50d25277d5913675ddbfb880523fecd29c858b9bd0f891e6d9",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 715.4": {
+    "text": "In every zone except the stack, and while on the stack not as an Adventure, an adventurer card has only its normal characteristics.",
+    "sha256": "961d07d2e55fa89d5113084876782b6794f62755875ae105f4f904947481d728",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.143a": {
+    "text": "Foretell is a keyword that functions while the card with foretell is in a player’s hand. Any time a player has priority during their turn, that player may pay {2} and exile a card with foretell from their hand face down. That player may look at that card as long as it remains in exile. They may cast that card after the current turn has ended by paying any foretell cost it has rather than paying that spell’s mana cost. Casting a spell this way follows the rules for paying alternative costs in rules 601.2b and 601.2f–h.",
+    "sha256": "9be7623327ebf1a54369c0b760bbd3eaaa44a48d426c7f385be1fe5e2ff9a449",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.62a": {
+    "text": "Suspend is a keyword that represents three abilities. The first is a static ability that functions while the card with suspend is in a player’s hand. The second and third are triggered abilities that function in the exile zone. “Suspend N—[cost]” means “If you could begin to cast this card by putting it onto the stack from your hand, you may pay [cost] and exile it with N time counters on it. This action doesn’t use the stack,” and “At the beginning of your upkeep, if this card is suspended, remove a time counter from it,” and “When the last time counter is removed from this card, if it’s exiled, you may play it without paying its mana cost if able. If you don’t, it remains exiled. If you cast a creature spell this way, it gains haste until you lose control of the spell or the permanent it becomes.”",
+    "sha256": "3f4eeca464dcae5592d508d68a1c0037306fff9288e2cddf881033f00a8c5ff9",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.37e": {
+    "text": "Any time you have priority, you may turn a face-down permanent you control with a morph ability face up. This is a special action; it doesn’t use the stack (see rule 116). To do this, show all players what the permanent’s morph cost would be if it were face up, pay that cost, then turn the permanent face up. (If the permanent wouldn’t have a morph cost if it were face up, it can’t be turned face up this way.) The morph effect on it ends, and it regains its normal characteristics. Any abilities relating to the permanent entering the battlefield don’t trigger when it’s turned face up and don’t have any effect, because the permanent has already entered the battlefield.",
+    "sha256": "16496e943eb1020702e2938c19ad593b3f994bfc8e84e7e5ca46f99b9c2af736",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 712.14": {
+    "text": "A double-faced card put onto the battlefield from a zone other than the stack enters the battlefield with its front face up by default.",
+    "sha256": "ca7898c0afb13e87620f59942968d7c97cfbadb93cc8f48e2b37dce15779a867",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.135a": {
+    "text": "Afterlife is a triggered ability. “Afterlife N” means “When this permanent is put into a graveyard from the battlefield, create N 1/1 white and black Spirit creature tokens with flying.”",
+    "sha256": "f9a949a74debc719935b0b7a8d88587e3682862a72dbcaf5a7333ee38f4dd093",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.154a": {
+    "text": "Enlist represents a static ability and a triggered ability. Enlist means “As this creature attacks, you may tap up to one untapped creature you control that you didn’t choose to attack with and that either has haste or has been under your control continuously since this turn began. When you do, this creature gets +X/+0 until end of turn, where X is the tapped creature’s power.”",
+    "sha256": "cc40a5caed4159c9f9fda3d781c1a4694c106a78443f1344df1036f008c1a474",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.154b": {
+    "text": "Enlist’s static ability represents an optional cost to attack (see rule 508.1g). Its triggered ability is linked to that static ability (see rule 607.2h).",
+    "sha256": "eb09726a7f4a5ef1b3a19b2070a38478e188b07fe8f4bc46dbd8dae95696882d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.134a": {
+    "text": "Mentor is a triggered ability. “Mentor” means “Whenever this creature attacks, put a +1/+1 counter on target attacking creature with power less than this creature’s power.”",
+    "sha256": "33eb25d1221c203602090a3d92166a03d6e939da9dfd2816c6f99f03ec35c3a9",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.51a": {
+    "text": "Convoke is a static ability that functions while the spell with convoke is on the stack. “Convoke” means “For each colored mana in this spell’s total cost, you may tap an untapped creature of that color you control rather than pay that mana. For each generic mana in this spell’s total cost, you may tap an untapped creature you control rather than pay that mana.”",
+    "sha256": "65aed8dfdb1b50eb868a05bb6e0279a62d3167debf06846dd20b7ce0a11875ed",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 302.6": {
+    "text": "A creature’s activated ability with the tap symbol or the untap symbol in its activation cost can’t be activated unless the creature has been under its controller’s control continuously since their most recent turn began. A creature can’t attack unless it has been under its controller’s control continuously since their most recent turn began. This rule is informally called the “summoning sickness” rule.",
+    "sha256": "978ff61bf0ee986749934c1b0685a3f6f8c6faf418a17a366495aed58bd0c4b4",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.153a": {
+    "text": "Casualty is a keyword that represents two abilities. The first is a static ability that functions while the spell with casualty is on the stack. The second is a triggered ability that functions while the spell with casualty is on the stack. Casualty N means “As an additional cost to cast this spell, you may sacrifice a creature with power N or greater,” and “When you cast this spell, if a casualty cost was paid for it, copy it. If the spell has any targets, you may choose new targets for the copy.” Paying a spell’s casualty cost follows the rules for paying additional costs in rules 601.2b and 601.2f–h.",
+    "sha256": "4bc861e2c554b4952a17f0ff9d6450d702fdfff332965c5babdf57db3cec61cf",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.116a": {
+    "text": "Myriad is a triggered ability that may also create a delayed triggered ability. “Myriad” means “Whenever this creature attacks, for each opponent other than defending player, you may create a token that’s a copy of this creature that’s tapped and attacking that player or a planeswalker they control. If one or more tokens are created this way, exile the tokens at end of combat.”",
+    "sha256": "e7cb398ded8099cd41f24dafd12d785d590e046dca24676546661a5a82b3ce47",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.89a": {
+    "text": "Umbra armor is a static ability that appears on some Auras. “Umbra armor” means “If enchanted permanent would be destroyed, instead remove all damage marked on it and destroy this Aura.”",
+    "sha256": "c820db368804d7c45a264854260245fca297c02b1d2b1405978a4eafead85e14",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.39a": {
+    "text": "“Bolster N” means “Choose a creature you control with the least toughness or tied for least toughness among creatures you control. Put N +1/+1 counters on that creature.”",
+    "sha256": "326a3ef98209e52ffb0d5d12701d22831980ffdd0f99e958dfdd71a8357ff4a6",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  }
+}
