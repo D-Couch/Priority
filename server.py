@@ -12,6 +12,7 @@ import urllib.request
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 import knowledge
+from generation import decode_completion
 
 ROOT = Path(__file__).resolve().parent
 LM_URL = os.environ.get('LM_STUDIO_URL', 'http://127.0.0.1:1234/v1').rstrip('/')
@@ -145,7 +146,7 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             evidence = '\n\n'.join('['+s['id']+'] '+s['title']+'\n'+s['text'] for s in sources)
             history = [{'role':m['role'],'content':m['content']} for m in messages[-12:]]
-            body = {'model':MODEL, 'messages':[{'role':'system','content':SYSTEM+'\n\nREFERENCE EXCERPTS:\n'+evidence}]+history, 'temperature':0.1,'max_tokens':3500,'stream':True}
+            body = {'model':MODEL, 'messages':[{'role':'system','content':SYSTEM+'\n\nREFERENCE EXCERPTS:\n'+evidence}]+history, 'temperature':0.1,'max_tokens':3500,'stream':True,'stream_options':{'include_usage':True}}
             with lm_request('/chat/completions',body,timeout=300) as upstream:
                 self.send_response(200)
                 self.send_header('Content-Type','application/x-ndjson; charset=utf-8')
@@ -159,45 +160,14 @@ class Handler(SimpleHTTPRequestHandler):
                     self.wfile.flush()
                 emit({'type':'sources','sources':sources})
                 output = ''
-                pending = ''
-                thinking = False
-                finish_reason = None
-                # Qwen may expose reasoning separately or in <think> tags. Neither is shown.
-                for raw in upstream:
-                    line = raw.decode('utf-8').strip()
-                    if not line.startswith('data:'):
-                        continue
-                    data = line[5:].strip()
-                    if data == '[DONE]':
-                        break
-                    event = json.loads(data)
-                    if event.get('error'):
-                        raise RuntimeError(event['error'].get('message','LM Studio generation failed'))
-                    choice = (event.get('choices') or [{}])[0]
-                    finish_reason = choice.get('finish_reason') or finish_reason
-                    chunk = choice.get('delta',{}).get('content') or ''
-                    pending += chunk
-                    while pending:
-                        tag = '</think>' if thinking else '<think>'
-                        index = pending.find(tag)
-                        if index >= 0:
-                            visible = pending[:index]
-                            if not thinking and visible:
-                                output += visible
-                                emit({'type':'token','text':visible})
-                            pending = pending[index+len(tag):]
-                            thinking = not thinking
-                        else:
-                            keep = next((n for n in range(min(len(tag)-1,len(pending)),0,-1) if pending.endswith(tag[:n])),0)
-                            visible = pending[:-keep] if keep else pending
-                            if not thinking and visible:
-                                output += visible
-                                emit({'type':'token','text':visible})
-                            pending = pending[-keep:] if keep else ''
-                            break
-                if pending and not thinking:
-                    output += pending
-                    emit({'type':'token','text':pending})
+                diagnostics = {}
+                for event in decode_completion(upstream):
+                    if event['type'] == 'token':
+                        output += event['text']
+                        emit(event)
+                    else:
+                        diagnostics = {k:v for k,v in event.items() if k != 'type'}
+                finish_reason = diagnostics.get('finish_reason')
                 ids = {s['id'] for s in sources}
                 cited = set(re.findall(r'\[(CR \d{3}(?:\.\d+[a-z]?)?|C\d+)\]',output))
                 warnings = []
@@ -209,7 +179,7 @@ class Handler(SimpleHTTPRequestHandler):
                     warnings.append('The model reached its output limit; this response may be incomplete.')
                 if not output.strip():
                     warnings.append('The model returned no final answer. Try again or reduce reasoning in LM Studio.')
-                emit({'type':'done','warnings':warnings})
+                emit({'type':'done','warnings':warnings,'diagnostics':diagnostics})
         except (BrokenPipeError,ConnectionResetError):
             pass
         except Exception as e:
