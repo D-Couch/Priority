@@ -110,6 +110,9 @@ def summary(run):
     cited_count = sum(len(r['metrics']['citations']) for r in rows)
     return {'completed':len(completed), 'attempted':len(rows), 'errors':len(rows)-len(completed),
             'expected_attempts':run['expected_attempts'],
+            'truncated_answers':sum(r.get('diagnostics',{}).get('finish_reason')=='length' for r in rows),
+            'unknown_finish_reason':sum(not r.get('diagnostics',{}).get('finish_reason') for r in rows),
+            'correct_and_complete':sum(r['review']['fully_correct'] and r.get('diagnostics',{}).get('finish_reason')=='stop' for r in reviewed),
             'mean_evidence_recall':statistics.mean(r['metrics']['evidence_recall'] for r in rows) if rows else None,
             'all_evidence_cases':sum(r['metrics']['all_evidence_found'] for r in rows),
             'answers_with_citations':sum(bool(r['metrics']['citations']) for r in completed),
@@ -135,6 +138,9 @@ def report(run, path):
              '| Metric | Result |','| --- | --- |',
              f"| Completed requests | {s['completed']}/{s['expected_attempts']} |",
              f"| Request errors | {s['errors']} |",
+             f"| Truncated answers | {s['truncated_answers']} |",
+             f"| Correct and normally completed | {s['correct_and_complete']}/{s['reviewed']} reviewed |",
+             f"| Unknown finish reason | {s['unknown_finish_reason']} |",
              f"| Mean expected-evidence recall | {fmt(s['mean_evidence_recall'],True)} |",
              f"| Cases retrieving every expected evidence group | {s['all_evidence_cases']}/{s['attempted']} |",
              f"| Answers with citations | {s['answers_with_citations']}/{s['completed']} |",
@@ -242,7 +248,7 @@ def compare(old, new, allow_changes=()):
     issues=validate_comparison(old,new,allow_changes)
     if issues:
         raise ValueError('Runs are not directly comparable: '+', '.join(issues))
-    a,b=old['summary'],new['summary']
+    a,b=summary(old),summary(new)
     lines=[f"# {old['label']} → {new['label']}",'',
            f"Implementation `{old['git']['commit']}` → `{new['git']['commit']}`",'',
            '| Metric | Before | After | Change |','| --- | --- | --- | --- |']
@@ -252,7 +258,7 @@ def compare(old, new, allow_changes=()):
             key=field.removeprefix('sampling.')
             values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
             lines[4:4] = [f"- `{field}`: {values(old)} → {values(new)}"]
-    for key,title,pct,lower in [('reviewed_accuracy','Reviewed accuracy',True,False),('mean_evidence_recall','Expected-evidence recall',True,False),('citation_id_precision','Citation ID validity',True,False),('median_seconds','Median latency (s)',False,True),('p95_seconds','p95 latency (s)',False,True),('errors','Request errors',False,True)]:
+    for key,title,pct,lower in [('reviewed_accuracy','Reviewed accuracy',True,False),('mean_evidence_recall','Expected-evidence recall',True,False),('citation_id_precision','Citation ID validity',True,False),('median_seconds','Median latency (s)',False,True),('p95_seconds','p95 latency (s)',False,True),('errors','Request errors',False,True),('truncated_answers','Truncated answers',False,True),('correct_and_complete','Correct and normally completed',False,False)]:
         av,bv=a[key],b[key]
         if key=='reviewed_accuracy' and (a['reviewed']!=a['expected_attempts'] or b['reviewed']!=b['expected_attempts']):
             av=bv=None
@@ -388,6 +394,7 @@ def run_benchmark(args):
                                 if event['type']=='token':
                                     if first is None and event['text'].strip():first=time.perf_counter()-start
                                     row['answer']+=event['text']
+                                elif event['type']=='sources':row['sources']=event['sources'];row['sources_received']=True
                                 elif event['type']=='error':raise RuntimeError(event['error'])
                                 elif event['type']=='done':row['warnings']=event['warnings'];row['diagnostics']=event.get('diagnostics',{});done=True
                         if not done:raise RuntimeError('Stream ended without a done event')
@@ -396,7 +403,9 @@ def run_benchmark(args):
                     row['error']=str(e)
                     if isinstance(e,urllib.error.HTTPError):row['error']+=' '+e.read().decode()[:1000]
                 row['timing']={'total_seconds':round(time.perf_counter()-start,4),'retrieval_seconds':round(current.get('retrieval_seconds',0),4),'first_visible_token_seconds':round(first,4) if first is not None else None}
-                row['sources']=current.get('sources',[])
+                row['candidate_sources']=current.get('sources',[])
+                if args.mode=='retrieval':row['sources']=row['candidate_sources']
+                row.pop('sources_received',None)
                 row['sampling']=current.get('sampling')
                 row['prompt_sha256']=current.get('prompt_sha256')
                 row['metrics']=measure_evidence(case,row['sources'],row['answer'])
