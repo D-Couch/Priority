@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "run_id": "answer-contract",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted review; not independently human-validated)",
+  "review_method": "Read every answer against frozen criteria and passages. Extra claims and incorrect rule application count against correctness even when source IDs are valid. No Qwen self-grading; AI-assisted review, not independent human validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "6077160c4eb29a17b7adc7ff2cbc9147acc68431812ce31e126692eab86313b1",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct activated mana ability ruling, immediate resolution, and supporting rules."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "f13fe1cddcea16cf4c7f114dd14650c35e7563fdab4541f0703d67f7ee57527f",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct priority returned to caster and all players passing. Both canonical references now fit; same mean recall conceals changing coverage between cases."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "01824d77b2cf2d466009ded003dbe9089e1063443238486f18aa0a78b4a9151d",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no draw with sole target illegal and whole spell not resolving."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "2c4b7724cff6ae8b4e281258776e45d5823124e7da2562e7f179fefafae6c610",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct remaining legal target takes damage and partial illegality does not stop resolution."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "da66c3f5770c2adf4b65e49855172e592acf6ce9619ac0304d4265e1e43bdebc",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/4 assignment and indestructibility distinction with both operative definitions."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "e177292a4ab742260952b8b9c5470fea1d26746d31118de28f187d98b5d3b86d",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct maximum 4 and explicit nonzero deathtouch assignment rule."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "5a41692db7faa33f8b3f784df56449ae080c16c0b09cedbf8faad855af4c7ffa",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 0/0 goes to graveyard; explicitly distinguishes lethal-damage destruction from zero-toughness action."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "740a9667b4cd4fdce50028e08f8033dde24cb35147b2167552812f0999fd2df3",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct requested conclusions and repaired timing: explicitly puts state-based actions before waiting triggers are put on the stack, citing 704.3."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "20e1173e252f253ec97a3acf46ef8e82964bb793c4dbae45a56b2aeee057e342",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct additional 4 and excludes hand cast. Citation ID now correct."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "19f7920e03d4aa30315ba2d03227f8acb420853807a5e83a6d133e5024819d58",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no Blood Artist trigger, exile replaces graveyard entry, and no dies event. Now finishes normally."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "83e166f8491f3206498f54acb163393b0439845412487bb32d14995ff63f7abb",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct four tokens and each replacement applies once to the event. Now finishes normally."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "e394d28b4e9866e938de3750e79572efe057655dbf1694158bf0c225fe5d77e5",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected-player choice, both arithmetic orders, and once-per-effect restriction."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "f1256ed99836a01511bae5e665f6d33625db3bfb4747199c94dd722c49853d46",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct APNAP order and last-in-first-out resolution with supporting sources."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "4f4987e6bb0d4138ed5ebc9c8e3718d7da9527ee8e4dc25028018c47eef6c92f",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct 2/2 and sublayer order regardless of timestamps."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "47c275613748541e715680ecfefd006d52e63c75a7e184b23351c99da4ce5d75",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct own-creature targeting and opponents-only hexproof restriction."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "f7f310a19bc31112ad7bac6990b8b8a0ce7655a62c208ea2d7ab28c2f5d58992",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no second-step damage and continued blocked status without trample. The false first-strike damage sequence is gone."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "32404f9502d3021f39d79cedfd1e10e5f7bbfd6038f7cd5e8b602fc3536b8387",
+      "criteria": {
+        "17-token-blink.1": false,
+        "17-token-blink.2": false
+      },
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrect conditional return for tokens under return-it wording; 111.8 was again dropped by packing when the response contract consumed additional prompt space. Confuses existence before state-based checks with permission to change zones. The response also exhausts the 3500-token output budget and is cut off."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "6009c6b1c73f0dbbe5df8cdbce85d385074f4ec158907807566243aab67b79a9",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct activation when priority is available and absence of tap/untap symbols. No unsupported active-player assumption or immediate-draw claim."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "f3ffb54bea1cde813fdc20b87de25b6121f83139da224c6e053ca2149d003916",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no response window, explicit state-based checks before priority, and choice of one legendary permanent. Uses alternative timing evidence 117.5 rather than canonical reference 704.3."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "ce02dcabf985effca4c0e712706c3cf7f3d7b117232164333fe04f32515b9440",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly asks only for protection quality and the removal spell\u2019s identity/details. No hypothetical ruling or overbroad claim. This expected clarification is successful, not an abstention failure."
+    }
+  ]
+}

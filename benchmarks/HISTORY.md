@@ -4,6 +4,7 @@ Each report identifies the implementation commit tested. Results are committed a
 
 | Run | Tested commit | Reviewed correct | Evidence recall | Median s |
 | --- | --- | --- | --- | --- |
+| [answer-contract](results/answer-contract/report.md) | `1432d4563f` | 19/20 reviewed | 93.8% | 12.11 |
 | [focused-rulings](results/focused-rulings/report.md) | `c9ceef4f97` | 17/20 reviewed | 93.8% | 9.88 |
 | [low-reasoning](results/low-reasoning/report.md) | `6a176bd62b` | 16/20 reviewed | 63.3% | 12.37 |
 | [medium-reasoning](results/medium-reasoning/report.md) | `9a9dafd5e7` | 16/20 reviewed | 93.8% | 12.12 |
