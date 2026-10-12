@@ -31,32 +31,16 @@ class VectorTests(unittest.TestCase):
         self.assertTrue(all(n=='100.1' for n,t in chunks[1:]))
         self.assertTrue(all(len(t)<1300 for n,t in chunks))
 
-    def test_lettered_rule_family_is_appended_after_primary_ranked_rules(self):
+    def test_hybrid_preserves_all_lexical_candidates_before_semantic_extras(self):
         import knowledge
-        rules={'704.5b','704.5f','704.5g','704.5h','704.6a','704.5','701.14a','701.14c','701.14d'}
-        self.assertEqual(knowledge.lettered_rule_family('704.5g',rules),['704.5b','704.5f','704.5g','704.5h'])
-        self.assertEqual(knowledge.lettered_rule_family('701.14a',rules),['701.14a','701.14c','701.14d'])
-        self.assertEqual(knowledge.lettered_rule_family('704.5',rules),[])
-        self.assertEqual(knowledge.lettered_rule_family('704.6a',rules),['704.6a'])
-
-    def test_primary_hybrid_candidates_keep_order_before_family_expansion(self):
-        import knowledge
-        ranked=['701.14a','704.5g']
-        rules={number:'body' for number in ranked+['701.14','701.14c','704.5','704.5f','704.5h']}
-        primary=[]
-        for number in ranked:
-            if number in rules and number not in primary:primary.append(number)
-            parent=knowledge.re.sub(r'[a-z]$','',number)
-            if parent in rules and parent not in primary:primary.append(parent)
-        chosen=list(primary)
-        for number in primary:
-            for sibling in knowledge.lettered_rule_family(number,rules):
-                if sibling not in chosen:chosen.append(sibling)
-        self.assertEqual(chosen[:len(primary)],primary)
-        self.assertEqual(primary,['701.14a','701.14','704.5g','704.5'])
-        self.assertIn('701.14c',chosen)
-        self.assertIn('704.5f',chosen)
-        self.assertLessEqual(len(chosen),96)
+        sources=[{'id':'C1','kind':'card','text':'Oracle'}]
+        lexical=[{'id':'CR '+str(i),'kind':'rule','text':'lex-'+str(i)} for i in range(64)]
+        bodies={str(i):'body-'+str(i) for i in range(96)}
+        result=knowledge.append_semantic_rules(sources+lexical,['63','80','81']+list(map(str,range(100))),bodies)
+        ids=[s['id'] for s in result]
+        self.assertEqual(ids[:65],['C1']+['CR '+str(i) for i in range(64)])
+        self.assertEqual(ids[65:],['CR 80','CR 81']+['CR '+str(i) for i in range(64,80)]+['CR '+str(i) for i in range(82,88)])
+        self.assertLessEqual(len([s for s in result if s['kind']=='rule']),88)
 
     def test_remote_embedding_endpoint_rejected_before_network(self):
         with patch.dict('os.environ',{'LM_STUDIO_URL':'https://example.org/v1'}):

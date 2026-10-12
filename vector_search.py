@@ -162,10 +162,9 @@ def configuration():
     if mode=='hybrid':
         meta,_=load()
         with INDEX.open('rb') as f: digest=hashlib.file_digest(f,'sha256').hexdigest()
-        result.update(model=MODEL,index_sha256=digest,index_metadata=meta,fusion='rrf',rrf_k=60,
-                      semantic_limit=24,query_characters=1200,
-                      rule_neighborhood='same-parent-lettered-family-up-to-32-else-immediate-siblings',
-                      primary_candidate_limit=64,candidate_limit=96)
+        result.update(model=MODEL,index_sha256=digest,index_metadata=meta,
+                      fusion='preserve-lexical-order-append-vector-only',
+                      semantic_limit=24,query_characters=1200,candidate_limit=88)
     return result
 
 

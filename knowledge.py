@@ -279,21 +279,20 @@ def _retrieve_structural(messages,card_ids):
         return cards+[{'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':allrules[n],'url':'/api/rules/'+n} for n in chosen[:64]]
 
 
-def lettered_rule_family(number, known_rules):
-    """Return sibling exceptions under the selected rule's numbered parent."""
-    match = re.fullmatch(r'(\d{3}\.\d+)[a-z]', number)
-    if not match:
-        return []
-    parent = match.group(1)
-    family = [candidate for candidate in known_rules
-              if re.fullmatch(re.escape(parent)+r'[a-z]', candidate)]
-    if len(family) <= 32:
-        return sorted(family)
-    letter = number[-1]
-    return [candidate for offset in (-1, 1)
-            if 'a' <= chr(ord(letter)+offset) <= 'z'
-            for candidate in [parent+chr(ord(letter)+offset)]
-            if candidate in known_rules]
+def append_semantic_rules(sources, semantic_numbers, rule_bodies, limit=24):
+    """Preserve the lexical source order and append only vector-only rules."""
+    cards_and_rulings = [s for s in sources if s['kind'] != 'rule']
+    lexical_rules = [s for s in sources if s['kind'] == 'rule']
+    lexical_numbers = {s['id'][3:] for s in lexical_rules}
+    extras = []
+    for number in semantic_numbers:
+        if number in rule_bodies and number not in lexical_numbers:
+            extras.append({'id':'CR '+number,'title':'Rule '+number,'kind':'rule',
+                           'text':rule_bodies[number],'url':'/api/rules/'+number})
+            lexical_numbers.add(number)
+        if len(extras) == limit:
+            break
+    return cards_and_rulings + lexical_rules + extras
 
 
 def retrieve(messages, card_ids):
@@ -313,28 +312,9 @@ def retrieve(messages, card_ids):
         semantic = vector_search.search(question)
     except Exception as exc:
         raise ValueError('Hybrid retrieval failed: '+str(exc)) from exc
-    lexical = [s['id'][3:] for s in sources if s['kind'] == 'rule']
-    ordered = vector_search.fuse(lexical, semantic)
     with closing(connect()) as conn:
         rules = {r['number']:r['body'] for r in conn.execute('SELECT number,body FROM rules')}
-    primary = []
-    for number in ordered:
-        if number in rules and number not in primary:
-            primary.append(number)
-        parent = re.sub(r'[a-z]$', '', number)
-        if parent in rules and parent not in primary:
-            primary.append(parent)
-    # Preserve the original ranked candidates exactly; append related clauses
-    # only after the primary retrieval list is complete.
-    primary = primary[:64]
-    chosen = list(primary)
-    for number in primary:
-        for sibling in lettered_rule_family(number, rules):
-            if sibling not in chosen:
-                chosen.append(sibling)
-    return [s for s in sources if s['kind'] != 'rule'] + [
-        {'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':rules[n],'url':'/api/rules/'+n}
-        for n in chosen[:96] if n in rules]
+    return append_semantic_rules(sources, semantic, rules)
 
 
 
