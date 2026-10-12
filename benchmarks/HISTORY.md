@@ -41,6 +41,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [casting-order-heldout](results/casting-order-heldout/report.md) | heldout-v1 | `7c10de4923` | 27/32 | 27 | 0 | 79.7% | 10.40 |
 | [casting-order-original](results/casting-order-original/report.md) | gameplay-v1 | `7c10de4923` | 20/20 | 20 | 0 | 96.2% | 10.95 |
 | [novel-v1-baseline](results/novel-v1-baseline/report.md) | novel-v1 | `004746b3ff` | 17/20 | 17 | 0 | 82.5% | 8.21 |
+| [casting-order-contract-heldout](results/casting-order-contract-heldout/report.md) | heldout-v1 | `f4b8711187` | 25/32 | 25 | 0 | 78.1% | 10.74 |
+| [casting-order-contract-original](results/casting-order-contract-original/report.md) | gameplay-v1 | `f4b8711187` | 20/20 | 20 | 0 | 96.2% | 11.16 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
