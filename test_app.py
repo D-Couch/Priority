@@ -49,6 +49,11 @@ class KnowledgeTests(unittest.TestCase):
         self.assertFalse(any(s['kind']=='card' for s in sources))
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_commander_damage_retrieves_rule_903_10a(self):
+        sources=knowledge.retrieve([{'role':'user','content':'In Commander, a particular commander has dealt me 12 combat damage while controlled by Alice and then 9 while controlled by Bob. Do those add together for commander damage, even though its controller changed?'}],[])
+        self.assertIn('CR 903.10a',{s['id'] for s in sources})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_card_attachment_has_oracle_text(self):
         card=next(c for c in knowledge.search_cards('Lightning Bolt') if c['name']=='Lightning Bolt')
         sources=knowledge.retrieve([{'role':'user','content':'Can this target a creature?'}],[card['id']])

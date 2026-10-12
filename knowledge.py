@@ -136,7 +136,7 @@ TOPICS = [
     (r'death|dies|die\b|graveyard|lethal|state.based|indestructible|deathtouch', ['704', '702.2', '702.12']),
     (r'layer|lose.*abilit|loses.*abilit|humility|blood moon|timestamp', ['613']),
     (r'replace|replacement|instead|\bdouble(?:s)?\b(?![ -]+strike)', ['614', '616']),
-    (r'commander|command zone|commander tax', ['903', '903.9', '903.9a', '903.9b']),
+    (r'commander|command zone|commander tax', ['903', '903.9', '903.9a', '903.9b', '903.10', '903.10a']),
     (r'additional cost|cost to cast|costs? during casting', ['601.2a', '601.2h', '601.2i', '117.2e', '117.3c']),
     (r'dies|die\b|death', ['700.4', '603.6c', '603.10a']),
     (r'mana.*abilit|tap.*land|tap.*mana', ['605.1a', '605.3b']),
