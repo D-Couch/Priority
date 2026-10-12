@@ -47,7 +47,7 @@ LM_STUDIO_URL='http://127.0.0.1:1234/v1' ./start.sh
 
 If LM Studio requires authentication, set `LM_STUDIO_API_KEY` in your environment. The app does not store it in the browser or source files. The model URL must use a loopback address. The app binds only to `127.0.0.1` and rejects nonlocal Host/Origin headers. Leave LM Studio's CORS setting off; the Python backend makes model requests.
 
-The backend measures the formatted prompt using the loaded model tokenizer and reserves 3,500 output tokens plus a template margin. It keeps complete excerpts, prioritizes Oracle text and related rule clauses over dated rulings, and omits older turns when necessary (with a warning). An oversized latest question is rejected before generation. The current local SDK tokenization connection requires access to LM Studio’s SDK endpoint; HTTP-only gateways are not supported. The default reasoning effort is low, as measured in the benchmark history. The assistant displays final answer content and suppresses reasoning fields/tags.
+The backend measures the formatted prompt using the loaded model tokenizer and reserves 3,500 output tokens plus a template margin. It keeps complete excerpts, prioritizes Oracle text and related rule clauses over dated rulings, and omits older turns when necessary (with a warning). An oversized latest question is rejected before generation. The current local SDK tokenization connection requires access to LM Studio’s SDK endpoint; HTTP-only gateways are not supported. The current reasoning effort is medium; the benchmark history records both low- and medium-effort experiments. The assistant displays final answer content and suppresses reasoning fields/tags.
 
 ## Development
 
@@ -64,6 +64,10 @@ Frontend libraries: React/ReactDOM 18.3.1 and HTM 3.1.1, distributed under MIT l
 ## Benchmark history
 
 The project includes 20 gameplay scenarios, a frozen corpus, an end-to-end benchmark runner, and attributed answer reviews. See [benchmark instructions](benchmarks/README.md) and [performance history](benchmarks/HISTORY.md). Each report records the exact implementation commit, source/data hashes, model settings, retrieved passages, answers, quality grades, and latency. Future vector-search changes should have separate implementation and results commits.
+
+The improved, still vector-free configuration scored **20/20 correct and complete at each of seeds 42 and 43** (40 answers on the same 20 scenarios), versus 12/20 in the original baseline. Median response times were 10.21 and 9.95 seconds; neither verification run contained an empty or truncated answer. Reviews are AI-assisted, not independently human-validated. One seed-42 answer uses plain rule numbers instead of clickable bracketed citations. This is a development-suite result, not an accuracy claim for unseen questions. See the [second-seed findings](benchmarks/results/atomic-sections-seed43/findings.md).
+
+The original tags are preserved. `pre-vectorization-quality` marks this improved baseline; freeze unseen scenarios and paraphrases before evaluating vectorization against it. Restart an already-running backend with `./start.sh` to load the changes.
 
 For a fresh Git clone, restore the included database before starting the app:
 

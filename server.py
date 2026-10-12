@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Loopback-only MTG chat server. Python standard library; no pip dependencies."""
+"""Loopback-only MTG chat server with local LM Studio inference and tokenization."""
 from contextlib import closing
 import argparse
 import json
