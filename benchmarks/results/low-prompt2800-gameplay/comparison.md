@@ -2,7 +2,7 @@
 
 Implementation `823c4d85a146b11a5ec44de9477daf0874296a09` → `4995e6077d669a53968a10113ab675ba9e9496bc`
 
-- `context_budget.max_prompt_tokens`: unlimited/model limit → 2800
+- `context_budget.max_prompt_tokens`: 4628 → 2800
 Declared experimental variables: context_budget.max_prompt_tokens. All other checked settings remain matched.
 
 | Metric | Before | After | Change |

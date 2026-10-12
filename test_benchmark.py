@@ -70,6 +70,8 @@ class BenchmarkTests(unittest.TestCase):
         new={**old,'context_budget':{'max_prompt_tokens':2800}}
         self.assertIn('context_budget',benchmark.validate_comparison(old,new))
         self.assertEqual(benchmark.validate_comparison(old,new,['context_budget.max_prompt_tokens']),[])
+        historical={**old,'context_budget':None,'model_runtime':{'/api/v1/models':{'loaded_configs':[{'context_length':8192}]}}}
+        self.assertEqual(benchmark.recorded_prompt_limit(historical),8192-3500-benchmark.context_budget.TEMPLATE_MARGIN)
         with self.assertRaisesRegex(ValueError,'Unsupported'):
             benchmark.validate_comparison(old,new,['corpus_sha256'])
 

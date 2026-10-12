@@ -258,6 +258,21 @@ def validate_comparison(old, new, allow_changes=()):
     return issues
 
 
+def recorded_prompt_limit(run):
+    configured = (run.get('context_budget') or {}).get('max_prompt_tokens')
+    if configured is not None:
+        return configured
+    # Older runs predate the explicit cap but still reserved output room from
+    # the loaded model's context length.
+    runtime = run.get('model_runtime', {}).get('/api/v1/models', {})
+    configs = runtime.get('loaded_configs', [])
+    if configs and configs[0].get('context_length'):
+        max_output = next((r.get('sampling', {}).get('max_tokens') for r in run.get('results', [])
+                           if r.get('sampling', {}).get('max_tokens') is not None), 3500)
+        return configs[0]['context_length'] - max_output - context_budget.TEMPLATE_MARGIN
+    return 'unavailable'
+
+
 def compare(old, new, allow_changes=()):
     issues=validate_comparison(old,new,allow_changes)
     if issues:
@@ -273,8 +288,8 @@ def compare(old, new, allow_changes=()):
                 lines[4:4] = [f"- `retrieval`: {old.get('retrieval', {'mode':'lexical'})} → {new.get('retrieval')}"]
                 continue
             if field == 'context_budget.max_prompt_tokens':
-                before=old.get('context_budget',{}).get('max_prompt_tokens','unlimited/model limit')
-                after=new.get('context_budget',{}).get('max_prompt_tokens','unlimited/model limit')
+                before=recorded_prompt_limit(old)
+                after=recorded_prompt_limit(new)
                 lines[4:4] = [f"- `{field}`: {before} → {after}"]
                 continue
             key=field.removeprefix('sampling.')
