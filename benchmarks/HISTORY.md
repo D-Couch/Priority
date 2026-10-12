@@ -53,6 +53,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [reasoning-off-heldout](results/reasoning-off-heldout/report.md) | heldout-v1 | `f3d0bfb7b9` | 26/32 | 26 | 0 | 81.2% | 4.99 |
 | [reasoning-off-gameplay](results/reasoning-off-gameplay/report.md) | gameplay-v1 | `f3d0bfb7b9` | 18/20 | 18 | 0 | 96.2% | 4.94 |
 | [reasoning-low-gameplay-repeat](results/reasoning-low-gameplay-repeat/report.md) | gameplay-v1 | `d4491d1041` | 20/20 | 20 | 0 | 96.2% | 8.40 |
+| [reasoning-low-default-gameplay](results/reasoning-low-default-gameplay/report.md) | gameplay-v1 | `823c4d85a1` | 20/20 | 20 | 0 | 96.2% | 8.49 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

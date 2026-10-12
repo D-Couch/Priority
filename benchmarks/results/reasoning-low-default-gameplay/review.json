@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "reasoning-low-default-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted rubric review; byte-identical answers inherit the prior AI-assisted review; the changed mana-ability answer was checked against the rubric and cited rules.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "06dce98b09018d51c367e7c853573b164f0673764375d857d09ab9efed62b799",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies both criteria and cites the rule defining activated mana abilities."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "27e1d90e3c612e57e33edc10ce96938ee56393bdac6fd5deb0b4bf265fc4a553",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "ffc0beee513b77638300f77f06d882f0e681ab7b1b3277e262c571f260d35a30",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "c9b9f0ef9893bebb3c3e7b834b87f166d4d5c1dfa376edc455aa0e6d77fd330a",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "54ceafbc4e29998f178fa3bfdbffca0bc22d4250dfc2ebe0db06a6504e84b2cc",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "592ba170a594ee9906f0d9b9d099627a1f20508575b183c4c81bd51769fb3caa",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "0e80527bd2a00cc4f5cc3a22af2d2f4669f351d63aa37671173ce857662b11d8",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "8a5ee88fa29e01c391ddd035fe812ade51e6ab5749b14204acc414ec32c5db30",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "fab3474647653efd4e384ce8f91d419d36618704e005f4fba8c0980b47c7d463",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "c2fa7b409359ce0aee80d640eed6e66b08c2ac7efab631d6122d5fe7bc8347c1",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "dcf0e01b2749874bd0bf0f452a6c57635eb18b0282515973ac9497b65dc40a8a",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "adcac7068d73d050d215753eab0e352e5ac1a5fee9aa5548f5e2093767267f74",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "e9ed6938a3a0a4e0aa9675efc3e0084664d403c96c058f0ea7563370c41b2724",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "dfeb0a6be4adab63adbbfd906fe9c424d0861d42f65a81747163ce579fab8b69",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "35cd5b1918d35d1899873b8a9bd511847785f3ff35293f4a7d86d812de8644d4",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "bf45ee2ddd09e7f89fecb78c720e4fd1058fc47b37d877802271664f97990f14",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "838348a9b89bd74a99ac79a2d30860939e899e81928930adb97a603301c8eebd",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "1dfa38464d64d3090abd54564d7b40ac6e634c09ce3d94910dc5161a42b25a62",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "685b1ce9c32edbb8ce4dc4a23ae605b3720fea9df4f2e9fdb880bf9f6bf354be",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "2e74fb833305f66a55f5f849caaf3a70dd9b36da8edb4f7dec92f21cd22cddf5",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly asks for facts explicitly required by this scenario rubric; this is an appropriate clarification, not an unsupported refusal."
+    }
+  ]
+}
