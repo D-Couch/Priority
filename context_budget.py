@@ -4,11 +4,17 @@ from urllib.parse import urlparse
 
 OUTPUT_TOKENS = 3500
 TEMPLATE_MARGIN = 64
+ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
+Follow this response contract:
+If information needed to determine the ruling is missing, respond ONLY with "Need details:" and the specific clarifying questions. Do not add a rules tutorial, hypothetical rulings, or assurances.
+Otherwise use "Ruling:" for the direct answer to every part of the question, then "Why:" with at most three concise explanatory sentences and supporting source citations. Address only the interaction asked about; do not add examples, unasked timing sequences, or extra caveats.
+Check that each cited rule's conditions match the stated game state. An exception applies only to the event it describes. Do not extend it to a different event merely because similar words appear in the rules.
+"""
 
 
 def make_messages(system, sources, history):
     evidence = '\n\n'.join('[' + s['id'] + '] ' + s['title'] + '\n' + s['text'] for s in sources)
-    return [{'role': 'system', 'content': system + '\n\nREFERENCE EXCERPTS:\n' + evidence}] + history
+    return [{'role': 'system', 'content': system + '\n\nREFERENCE EXCERPTS:\n' + evidence + '\n\n' + ANSWER_CONTRACT}] + history
 
 
 def source_groups(sources):
