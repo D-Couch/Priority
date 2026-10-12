@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 
 OUTPUT_TOKENS = 3500
 TEMPLATE_MARGIN = 64
-MAX_PROMPT_TOKENS = 2800
+MAX_PROMPT_TOKENS = 3500
 ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
 Follow this response contract:
 If information needed to determine the ruling is missing, respond ONLY with "Need details:" and the specific clarifying questions. Do not add a rules tutorial, hypothetical rulings, or assurances.
