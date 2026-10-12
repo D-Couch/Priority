@@ -74,7 +74,7 @@ Full runs measure evidence from the server's emitted `sources` event (the excerp
 
 ## Current runtime and verification
 
-Run `./setup.sh` once from the project root, then `source .venv/bin/activate` before the benchmark commands above. The LM Studio Python client supplies local tokenization; all inference remains local. The current default uses low reasoning effort, caps the prompt at 3,500 tokens, and reserves 3,500 output tokens. `MTG_REASONING_EFFORT=medium` runs the comparison configuration; `off` is available experimentally but failed the current gameplay quality gate. Declare prompt-budget experiments with `--allow-change context_budget.max_prompt_tokens`.
+Run `./setup.sh` once from the project root, then `source .venv/bin/activate` before the benchmark commands above. The LM Studio Python client supplies local tokenization; all inference remains local. The current default uses low reasoning effort, caps the prompt at 4,628 tokens, and reserves 3,500 output tokens. `MTG_REASONING_EFFORT=medium` runs the comparison configuration; `off` is available experimentally but failed the current gameplay quality gate. Declare prompt-budget experiments with `--allow-change context_budget.max_prompt_tokens`.
 
 The vector-free baseline now has two reviewed 20/20 runs, seeds 42 and 43, with identical prompt and implementation hashes. These are repeated development cases, not 40 distinct questions. Before introducing embeddings, freeze a separate set of unseen cases and paraphrases and compare both sets. Do not weaken existing criteria or discard a regression to improve the headline score.
 
