@@ -47,6 +47,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [heldout-v1 verification 2026-10-12](results/verification-2026-10-12-heldout/report.md) | heldout-v1 | `0079f3e44c` | 25/32 | 25 | 0 | 78.1% | 10.30 |
 | [commander-damage-heldout](results/commander-damage-heldout/report.md) | heldout-v1 | `9acdbc3a36` | 26/32 | 26 | 0 | 81.2% | 10.50 |
 | [commander-damage-gameplay](results/commander-damage-gameplay/report.md) | gameplay-v1 | `456390538f` | 20/20 | 20 | 0 | 96.2% | 10.87 |
+| [reasoning-low-heldout](results/reasoning-low-heldout/report.md) | heldout-v1 | `10c549d012` | 28/32 | 28 | 0 | 81.2% | 8.41 |
+| [reasoning-low-gameplay](results/reasoning-low-gameplay/report.md) | gameplay-v1 | `10c549d012` | 19/20 | pending / n/a | n/a | 96.2% | 8.18 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
