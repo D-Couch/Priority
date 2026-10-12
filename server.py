@@ -13,6 +13,7 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 import knowledge
 from generation import decode_completion
+from context_budget import prepare_context, OUTPUT_TOKENS
 
 ROOT = Path(__file__).resolve().parent
 LM_URL = os.environ.get('LM_STUDIO_URL', 'http://127.0.0.1:1234/v1').rstrip('/')
@@ -144,9 +145,9 @@ class Handler(SimpleHTTPRequestHandler):
             return self.reply({'error':'A response is already running. Wait for it to finish.'},409)
         streamed = False
         try:
-            evidence = '\n\n'.join('['+s['id']+'] '+s['title']+'\n'+s['text'] for s in sources)
             history = [{'role':m['role'],'content':m['content']} for m in messages[-12:]]
-            body = {'model':MODEL, 'messages':[{'role':'system','content':SYSTEM+'\n\nREFERENCE EXCERPTS:\n'+evidence}]+history, 'temperature':0.1,'max_tokens':3500,'reasoning_effort':'low','stream':True,'stream_options':{'include_usage':True}}
+            prompt, sources, budget = prepare_context(SYSTEM, sources, history, LM_URL, MODEL)
+            body = {'model':MODEL, 'messages':prompt, 'temperature':0.1,'max_tokens':OUTPUT_TOKENS,'reasoning_effort':'low','stream':True,'stream_options':{'include_usage':True}}
             with lm_request('/chat/completions',body,timeout=300) as upstream:
                 self.send_response(200)
                 self.send_header('Content-Type','application/x-ndjson; charset=utf-8')
@@ -167,10 +168,13 @@ class Handler(SimpleHTTPRequestHandler):
                         emit(event)
                     else:
                         diagnostics = {k:v for k,v in event.items() if k != 'type'}
+                diagnostics['context_budget'] = budget
                 finish_reason = diagnostics.get('finish_reason')
                 ids = {s['id'] for s in sources}
                 cited = set(re.findall(r'\[(CR \d{3}(?:\.\d+[a-z]?)?|C\d+)\]',output))
                 warnings = []
+                if budget['omitted_turns']:
+                    warnings.append('Older conversation turns were omitted to fit the model context. Restate any relevant details.')
                 if cited-ids:
                     warnings.append('Some citations were not in the retrieved evidence: '+', '.join(sorted(cited-ids)))
                 if not cited:

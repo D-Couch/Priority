@@ -342,7 +342,7 @@ def run_benchmark(args):
          'corpus_sha256':digest,'corpus_metadata':knowledge.metadata(),'model':server.MODEL,
          'model_runtime':runtime() if args.mode=='full' else {},
          'environment':{'python':platform.python_version(),'sqlite':sqlite3.sqlite_version,'os':platform.system(),'machine':platform.machine()},
-         'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','benchmark.py']},
+         'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','context_budget.py','requirements.txt','benchmark.py']},
          'mode':args.mode,'repeats':args.repeats,'seeds':seeds,'case_order':[c['id'] for c in suite['cases']],
          'expected_attempts':len(suite['cases'])*args.repeats,'warmup':args.mode=='full','results':[]}
     current={}

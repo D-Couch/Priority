@@ -1,0 +1,74 @@
+"""Pack complete source excerpts against LM Studio's actual tokenizer."""
+import re
+from urllib.parse import urlparse
+
+OUTPUT_TOKENS = 3500
+TEMPLATE_MARGIN = 64
+
+
+def make_messages(system, sources, history):
+    evidence = '\n\n'.join('[' + s['id'] + '] ' + s['title'] + '\n' + s['text'] for s in sources)
+    return [{'role': 'system', 'content': system + '\n\nREFERENCE EXCERPTS:\n' + evidence}] + history
+
+
+def source_groups(sources):
+    """Oracle text first, then rule families in retrieval order, then dated rulings."""
+    cards = [s for s in sources if s['kind'] == 'card']
+    groups = {}
+    for source in sources:
+        if source['kind'] == 'rule':
+            parent = re.sub(r'[a-z]$', '', source['id'])
+            groups.setdefault(parent, []).append(source)
+    # Small sibling bundles preserve the operative clauses behind a definition.
+    # Large branches remain individual excerpts rather than exhausting the budget.
+    result = [[s] for s in cards]
+    for group in groups.values():
+        if len(group) <= 8 and sum(len(s['text']) for s in group) <= 3500:
+            result.append(group)
+        else:
+            result.extend([s] for s in group)
+    result.extend([s] for s in sources if s['kind'] == 'ruling')
+    return result
+
+
+def pack_context(system, sources, history, count_tokens, context_length):
+    limit = context_length - OUTPUT_TOKENS - TEMPLATE_MARGIN
+    history = list(history)
+    dropped_turns = 0
+    while count_tokens(make_messages(system, [], history)) > limit and len(history) > 1:
+        # Discard oldest turns, never the current question.
+        history.pop(0)
+        dropped_turns += 1
+    while len(history) > 1 and history[0]['role'] != 'user':
+        history.pop(0)
+        dropped_turns += 1
+    if count_tokens(make_messages(system, [], history)) > limit:
+        raise ValueError('Your latest question is too long for the loaded model context. Shorten it or load a larger context in LM Studio.')
+    selected = []
+    for group in source_groups(sources):
+        candidate = selected + group
+        if count_tokens(make_messages(system, candidate, history)) <= limit:
+            selected = candidate
+    if sources and not selected:
+        raise ValueError('No complete reference excerpt fits alongside this conversation. Start a new conversation or load a larger context in LM Studio.')
+    messages = make_messages(system, selected, history)
+    prompt_tokens = count_tokens(messages)
+    return messages, selected, {'context_length': context_length, 'prompt_tokens': prompt_tokens,
+                               'reserved_output_tokens': OUTPUT_TOKENS, 'template_margin': TEMPLATE_MARGIN,
+                               'omitted_sources': len(sources) - len(selected), 'omitted_turns': dropped_turns}
+
+
+def prepare_context(system, sources, history, lm_url, model_id):
+    try:
+        import lmstudio as lms
+    except ImportError as exc:
+        raise ValueError('Install the local tokenizer client with .venv/bin/python -m pip install -r requirements.txt, then launch with ./start.sh.') from exc
+    host = urlparse(lm_url).netloc
+    with lms.Client(host) as client:
+        model = client.llm.model(model_id)
+        def count(messages):
+            chat = lms.Chat.from_history({'messages': messages})
+            return len(model.tokenize(model.apply_prompt_template(chat)))
+        messages, selected, budget = pack_context(system, sources, history, count, model.get_context_length())
+        budget['tokenizer_client_version'] = lms.__version__
+        return messages, selected, budget

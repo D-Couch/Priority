@@ -1,0 +1,2 @@
+# Local tokenization and prompt-template access; no cloud inference.
+lmstudio==1.5.0

@@ -1,6 +1,6 @@
 # Priority — local Magic rules assistant
 
-A React chat interface backed by Python and your existing LM Studio model. Everything needed to run the app is included, including React and a local SQLite knowledge database. No Node, npm, pip, account, or cloud inference is needed.
+A React chat interface backed by Python and your existing LM Studio model. React and a frozen SQLite knowledge snapshot are included. Setup installs a Python client for local LM Studio tokenization. No Node, npm, account, or cloud inference is needed; inference and tokenization stay on your computer.
 
 ## Run
 
@@ -8,6 +8,7 @@ A React chat interface backed by Python and your existing LM Studio model. Every
 2. In this folder, run:
 
    ```bash
+   ./setup.sh  # once; downloads Python dependencies
    ./start.sh
    ```
 
@@ -46,7 +47,7 @@ LM_STUDIO_URL='http://127.0.0.1:1234/v1' ./start.sh
 
 If LM Studio requires authentication, set `LM_STUDIO_API_KEY` in your environment. The app does not store it in the browser or source files. The model URL must use a loopback address. The app binds only to `127.0.0.1` and rejects nonlocal Host/Origin headers. Leave LM Studio's CORS setting off; the Python backend makes model requests.
 
-If LM Studio reports a context-length error, increase its loaded context to 16K or higher and retry. Long attached card text/rulings can require a larger context. If responses are slow, reduce model reasoning in LM Studio. The assistant displays final answer content and suppresses reasoning fields/tags.
+The backend measures the formatted prompt using the loaded model tokenizer and reserves 3,500 output tokens plus a template margin. It keeps complete excerpts, prioritizes Oracle text and related rule clauses over dated rulings, and omits older turns when necessary (with a warning). An oversized latest question is rejected before generation. The current local SDK tokenization connection requires access to LM Studio’s SDK endpoint; HTTP-only gateways are not supported. The default reasoning effort is low, as measured in the benchmark history. The assistant displays final answer content and suppresses reasoning fields/tags.
 
 ## Development
 
@@ -56,7 +57,7 @@ If LM Studio reports a context-length error, increase its loaded context to 16K 
 - `data/knowledge.sqlite`: current rules/card/ruling snapshot.
 - `test_app.py`: parser and retrieval regression checks.
 
-Run checks with `python3 -m unittest -v`. Update the database from the terminal with `python3 knowledge.py`. Python 3.11+ with SQLite FTS5 support is required.
+Run checks with `.venv/bin/python -m unittest -v`. Run inference benchmarks with `.venv/bin/python benchmark.py run ...`. Update the database from the terminal with `python3 knowledge.py`. Python 3.11+ with SQLite FTS5 support is required.
 
 Frontend libraries: React/ReactDOM 18.3.1 and HTM 3.1.1, distributed under MIT licenses. Library license files are in `static/vendor/`. Magic content belongs to its respective rights holders. This is an unofficial personal project.
 
