@@ -146,7 +146,7 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             evidence = '\n\n'.join('['+s['id']+'] '+s['title']+'\n'+s['text'] for s in sources)
             history = [{'role':m['role'],'content':m['content']} for m in messages[-12:]]
-            body = {'model':MODEL, 'messages':[{'role':'system','content':SYSTEM+'\n\nREFERENCE EXCERPTS:\n'+evidence}]+history, 'temperature':0.1,'max_tokens':3500,'stream':True,'stream_options':{'include_usage':True}}
+            body = {'model':MODEL, 'messages':[{'role':'system','content':SYSTEM+'\n\nREFERENCE EXCERPTS:\n'+evidence}]+history, 'temperature':0.1,'max_tokens':3500,'reasoning_effort':'low','stream':True,'stream_options':{'include_usage':True}}
             with lm_request('/chat/completions',body,timeout=300) as upstream:
                 self.send_response(200)
                 self.send_header('Content-Type','application/x-ndjson; charset=utf-8')
