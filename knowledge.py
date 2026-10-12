@@ -279,6 +279,18 @@ def _retrieve_structural(messages,card_ids):
         return cards+[{'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':allrules[n],'url':'/api/rules/'+n} for n in chosen[:64]]
 
 
+def adjacent_letter_rules(number, known_rules):
+    """Keep the immediately neighboring lettered clauses with a selected rule."""
+    match = re.fullmatch(r'(\d{3}\.\d+)([a-z])', number)
+    if not match:
+        return []
+    parent, letter = match.groups()
+    return [candidate for offset in (-1, 1)
+            if 'a' <= chr(ord(letter)+offset) <= 'z'
+            for candidate in [parent+chr(ord(letter)+offset)]
+            if candidate in known_rules]
+
+
 def retrieve(messages, card_ids):
     sources = _retrieve_structural(messages, card_ids)
     mode = os.environ.get('MTG_RETRIEVAL', 'lexical')
@@ -304,6 +316,9 @@ def retrieve(messages, card_ids):
     for number in ordered:
         if number not in chosen:
             chosen.append(number)
+        for sibling in adjacent_letter_rules(number, rules):
+            if sibling not in chosen:
+                chosen.append(sibling)
         parent = re.sub(r'[a-z]$', '', number)
         if parent in rules and parent not in chosen:
             chosen.append(parent)

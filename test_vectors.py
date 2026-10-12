@@ -31,6 +31,13 @@ class VectorTests(unittest.TestCase):
         self.assertTrue(all(n=='100.1' for n,t in chunks[1:]))
         self.assertTrue(all(len(t)<1300 for n,t in chunks))
 
+    def test_adjacent_lettered_exceptions_travel_with_selected_rule(self):
+        import knowledge
+        rules={'704.5b','704.5f','704.5g','704.5h','704.6a','704.5'}
+        self.assertEqual(knowledge.adjacent_letter_rules('704.5g',rules),['704.5f','704.5h'])
+        self.assertEqual(knowledge.adjacent_letter_rules('704.5a',rules),['704.5b'])
+        self.assertEqual(knowledge.adjacent_letter_rules('704.5',rules),[])
+
     def test_remote_embedding_endpoint_rejected_before_network(self):
         with patch.dict('os.environ',{'LM_STUDIO_URL':'https://example.org/v1'}):
             with self.assertRaisesRegex(ValueError,'loopback'):vs.api('/embeddings',{})

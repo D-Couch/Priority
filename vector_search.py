@@ -162,7 +162,9 @@ def configuration():
     if mode=='hybrid':
         meta,_=load()
         with INDEX.open('rb') as f: digest=hashlib.file_digest(f,'sha256').hexdigest()
-        result.update(model=MODEL,index_sha256=digest,index_metadata=meta,fusion='rrf',rrf_k=60,semantic_limit=24,query_characters=1200)
+        result.update(model=MODEL,index_sha256=digest,index_metadata=meta,fusion='rrf',rrf_k=60,
+                      semantic_limit=24,query_characters=1200,rule_neighborhood='immediate-letter-siblings',
+                      candidate_limit=64)
     return result
 
 
