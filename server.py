@@ -148,7 +148,7 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             history = [{'role':m['role'],'content':m['content']} for m in messages[-12:]]
             prompt, sources, budget = prepare_context(SYSTEM, sources, history, LM_URL, MODEL)
-            body = {'model':MODEL, 'messages':prompt, 'temperature':0.1,'max_tokens':OUTPUT_TOKENS,'reasoning_effort':'low','stream':True,'stream_options':{'include_usage':True}}
+            body = {'model':MODEL, 'messages':prompt, 'temperature':0.1,'max_tokens':OUTPUT_TOKENS,'reasoning_effort':'medium','stream':True,'stream_options':{'include_usage':True}}
             with lm_request('/chat/completions',body,timeout=300) as upstream:
                 self.send_response(200)
                 self.send_header('Content-Type','application/x-ndjson; charset=utf-8')
