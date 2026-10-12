@@ -418,8 +418,8 @@
       },
       "citations_supported": true,
       "unsupported_or_contradictory_claims": false,
-      "abstained": true,
-      "notes": "Appropriately asks for the exact effects and starting event/count and avoids inventing a result."
+      "abstained": false,
+      "notes": "Correctly asks for facts explicitly required by this scenario rubric; this is an appropriate clarification, not an unsupported refusal."
     }
   ]
 }

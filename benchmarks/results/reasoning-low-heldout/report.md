@@ -9,7 +9,7 @@ Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42
 | Completed requests | 32/32 |
 | Request errors | 0 |
 | Truncated answers | 0 |
-| Correct and normally completed | 28/32 reviewed |
+| Correct and normally completed | 29/32 reviewed |
 | Unknown finish reason | 0 |
 | Mean expected-evidence recall | 81.2% |
 | Cases retrieving every expected evidence group | 18/32 |
@@ -17,8 +17,8 @@ Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42
 | Citation ID validity (not semantic support) | 100.0% |
 | Answers with unsupported/contradictory claims | 3 |
 | Reviewed citation-support failures | 0 |
-| Reviewed fully correct | 28/32 reviewed |
-| Reviewed accuracy | 87.5% |
+| Reviewed fully correct | 29/32 reviewed |
+| Reviewed accuracy | 90.6% |
 | Mean reviewed rubric score | 93.8% |
 | Median successful response | 8.41 s |
 | p95 successful response | 16.36 s |
@@ -59,7 +59,7 @@ Only the first heldout-v1 baseline is an unseen-case measurement; after inspecti
 | h29-empty-library (r1) | 100.0% | correct | 6.87 |
 | h30-ambiguous-combat (r1) | 50.0% | incorrect | 6.60 |
 | h31-ambiguous-copy (r1) | 100.0% | incorrect | 7.03 |
-| h32-ambiguous-replacements (r1) | 100.0% | abstained | 5.11 |
+| h32-ambiguous-replacements (r1) | 100.0% | correct | 5.11 |
 
 ## Answers and review notes
 
@@ -472,7 +472,7 @@ Two replacement effects apply to my token creation. How many tokens do I get?
 
 Need details: What are the two replacement effects? (e.g., two "double the number of tokens" effects, one "double" and one "change the type," etc.)
 
-Review: **abstained**. Appropriately asks for the exact effects and starting event/count and avoids inventing a result.
+Review: **correct**. Correctly asks for facts explicitly required by this scenario rubric; this is an appropriate clarification, not an unsupported refusal.
 Reviewer: Codex
 
 Missing reference groups: none

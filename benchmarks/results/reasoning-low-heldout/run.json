@@ -28060,11 +28060,11 @@
         },
         "citations_supported": true,
         "unsupported_or_contradictory_claims": false,
-        "abstained": true,
-        "notes": "Appropriately asks for the exact effects and starting event/count and avoids inventing a result.",
-        "fully_correct": false,
+        "abstained": false,
+        "notes": "Correctly asks for facts explicitly required by this scenario rubric; this is an appropriate clarification, not an unsupported refusal.",
+        "fully_correct": true,
         "rubric_score": 1.0,
-        "outcome": "abstained",
+        "outcome": "correct",
         "reviewer": "Codex",
         "review_method": "AI-assisted rubric review; exact answer and cited rule/card text checked against the versioned project corpus."
       }
@@ -28077,7 +28077,7 @@
     "expected_attempts": 32,
     "truncated_answers": 0,
     "unknown_finish_reason": 0,
-    "correct_and_complete": 28,
+    "correct_and_complete": 29,
     "mean_evidence_recall": 0.8125,
     "all_evidence_cases": 18,
     "answers_with_citations": 31,
@@ -28088,8 +28088,8 @@
     "unsupported_claim_answers": 3,
     "semantic_citation_failures": 0,
     "reviewed": 32,
-    "fully_correct": 28,
-    "reviewed_accuracy": 0.875,
+    "fully_correct": 29,
+    "reviewed_accuracy": 0.90625,
     "mean_rubric_score": 0.9375
   },
   "finished_at": "2026-10-12T22:34:03.650624+00:00"

@@ -307,7 +307,7 @@ Need details:
 1. What quality does your creature's protection specify (e.g., "protection from red," "protection from black," "protection from a specific player")?
 2. What is the removal spell (name or text)? Specifically, does it target your creature, and what color is it?
 
-Review: **correct**. Appropriately asks for the protection quality and the removal spell details, avoiding a definitive ruling.
+Review: **correct**. Correctly asks for facts explicitly required by this scenario rubric; this is an appropriate clarification, not an unsupported refusal.
 Reviewer: Codex
 
 Missing reference groups: none
