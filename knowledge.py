@@ -135,7 +135,7 @@ TOPICS = [
     (r'target|fizzle|hexproof|shroud|ward', ['115', '608.2b', '702.11', '702.18', '702.21']),
     (r'death|dies|die\b|graveyard|lethal|state.based|indestructible|deathtouch', ['704', '702.2', '702.12']),
     (r'layer|lose.*abilit|loses.*abilit|humility|blood moon|timestamp', ['613']),
-    (r'replace|replacement|instead|double|doubles', ['614', '616']),
+    (r'replace|replacement|instead|\bdouble(?:s)?\b(?![ -]+strike)', ['614', '616']),
     (r'commander|command zone|commander tax', ['903', '903.9', '903.9a', '903.9b']),
     (r'dies|die\b|death', ['700.4', '603.6c', '603.10a']),
     (r'mana.*abilit|tap.*land|tap.*mana', ['605.1a', '605.3b']),
@@ -145,6 +145,15 @@ TOPICS = [
     (r'counterspell|cast|casting|cost|mana', ['601']),
     (r'token|tokens', ['111']),
 ]
+
+
+def search_question(text):
+    """Exclude explicit absent effects from search, while keeping the original prompt.
+
+    Only complete exclusion sentences are removed: a player's statement that
+    they have no replacement effect does not imply that no other player has one.
+    """
+    return re.sub(r'(?i)(?:^|(?<=[.!?])\s+)no (?:other )?replacement effects? apply(?:[.!]|$)', ' ', text)
 
 
 def _retrieve_lexical(messages, card_ids):
@@ -172,13 +181,13 @@ def _retrieve_lexical(messages, card_ids):
                 if len(selected) >= 8:
                     break
         selected = selected[:8]
-        search_text = question + '\n' + '\n'.join(c['body'] for c in selected)
+        search_text = search_question(question) + '\n' + '\n'.join(c['body'] for c in selected)
         scores = {}
         def add(number, score):
             scores[number] = scores.get(number, 0) + score
         for number in re.findall(r'\b\d{3}\.\d+[a-z]?\b', question):
             add(number, 100)
-        for text, weight in [(user_texts[-1], 3), (search_text, 1)]:
+        for text, weight in [(search_question(user_texts[-1]), 3), (search_text, 1)]:
             terms = list(dict.fromkeys(t for t in re.findall(r'[a-zA-Z]{3,}', text.lower()) if t not in STOP))[:70]
             if terms:
                 query = ' OR '.join('"'+t+'"' for t in terms)
@@ -187,6 +196,11 @@ def _retrieve_lexical(messages, card_ids):
         for pattern, roots in TOPICS:
             if re.search(pattern, search_text, re.I):
                 for root in roots:
+                    # A broad topic such as death does not imply every related keyword.
+                    if root.startswith('702.'):
+                        heading = conn.execute('SELECT body FROM rules WHERE number=?', (root,)).fetchone()
+                        if heading and not re.search(r'(?<!\w)' + re.escape(heading['body']) + r'(?!\w)', search_text, re.I):
+                            continue
                     # Include section headings and immediate definitions to ground vocabulary.
                     for row in conn.execute('SELECT number FROM rules WHERE number=? OR number=? OR number=?', (root, root+'.1', root+'.2')):
                         add(row['number'], 15 if '.' in root else 5)
@@ -214,7 +228,7 @@ def _related_rule(number,root):
 def retrieve(messages,card_ids):
     initial=_retrieve_lexical(messages,card_ids)
     question='\n'.join([m['content'] for m in messages if m['role']=='user'][-3:])
-    search=question+'\n'+'\n'.join(s['text'] for s in initial if s['kind']=='card')
+    search=search_question(question)+'\n'+'\n'.join(s['text'] for s in initial if s['kind']=='card')
     rules=[s for s in initial if s['kind']=='rule'];cards=[s for s in initial if s['kind']!='rule']
     with closing(connect()) as conn:
         allrules={r['number']:r['body'] for r in conn.execute('SELECT * FROM rules')}

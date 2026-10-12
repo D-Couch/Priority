@@ -1,4 +1,5 @@
 import unittest
+import re
 import knowledge
 
 
@@ -8,6 +9,17 @@ class KnowledgeTests(unittest.TestCase):
         self.assertFalse(knowledge._related_rule('702.20a', '702.2'))
         self.assertTrue(knowledge._related_rule('117.3c', '117'))
         self.assertFalse(knowledge._related_rule('1170.3c', '117'))
+
+    def test_absent_effects_and_double_strike_do_not_request_replacement_topics(self):
+        def topics(question):
+            text = knowledge.search_question(question)
+            return {root for pattern, roots in knowledge.TOPICS if re.search(pattern, text, re.I) for root in roots}
+        self.assertNotIn('614', topics('A token is exiled. No replacement effects apply. Can it return?'))
+        self.assertNotIn('614', topics('My creature has double strike.'))
+        self.assertIn('510', topics('My creature has double strike.'))
+        self.assertIn('614', topics('An effect doubles the damage.'))
+        self.assertIn('614', topics('I have no replacement effects, but my opponent does.'))
+        self.assertIn('614', topics('One replacement effect applies. No other replacement effects apply.'))
 
     def test_parser_keeps_subrules_and_examples(self):
         text='100. General\n\n100.1 First rule.\nExample: an example.\n\n100.1a Subrule.\n\n100.2 Next.\n'
