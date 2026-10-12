@@ -83,3 +83,32 @@ Reporting-only changes recompute the history from saved results without rerunnin
 ## Additional frozen suites
 
 Use `--suite benchmarks/heldout-v1/scenarios.json` with `run` or `validate` to select the 32-case extension. Its references live beside its scenarios; the original suite and references remain unchanged. Review automatically selects the suite recorded in the run. Read [the predeclared protocol](heldout-v1/PROTOCOL.md). The first baseline is held out from implementation tuning; subsequent measurements are regression tests. New reviews also assess semantic citation support separately from source-ID validity.
+# Local hybrid retrieval experiment
+
+The default is lexical retrieval. The optional hybrid mode embeds rules locally through LM Studio using the installed `text-embedding-nomic-embed-text-v1.5` GGUF model. It keeps exact card/Oracle lookup and the existing context-token budget. No cloud embedding service or vector database is required.
+
+Build the SQLite sidecar against live knowledge:
+
+```bash
+.venv/bin/python vector_search.py build
+MTG_RETRIEVAL=hybrid ./start.sh
+```
+
+For reproducible benchmark experiments, use the frozen corpus:
+
+```bash
+.venv/bin/python vector_search.py build --frozen
+MTG_RETRIEVAL=hybrid .venv/bin/python benchmark.py run \
+  --suite benchmarks/heldout-v1/scenarios.json \
+  --label my-hybrid-heldout --output benchmarks/results/my-hybrid-heldout
+```
+
+Each run directory must be new, and implementation changes must be committed before running. Use a separate run without `--suite` for the original 20 cases. Compare against a matched lexical run with `benchmark.py compare ... --allow-change retrieval`. Corpus, suite, model, seed, generation parameters and case ordering still must match. The retrieval experiment allowance cannot bypass those checks.
+
+Implementation: store normalized 768-dimensional float32 vectors as little-endian SQLite blobs; perform exact cosine search over all rule chunks in Python. Chunk text at 1,200 characters with 200-character overlap; return full original rule passages. Queries use up to 1,200 characters of actual conversation and attached Oracle text, never expected answers. Reciprocal-rank fusion (k=60) combines lexical candidates with the best 24 semantic rule results, deduplicates and includes parent definitions within a 64-rule candidate limit. The same context packer applies afterward.
+
+Model task prefixes follow the [Nomic model card](https://huggingface.co/nomic-ai/nomic-embed-text-v1.5): `search_document:` and `search_query:`. Embeddings use [LM Studio's local endpoint](https://lmstudio.ai/docs/developer/openai-compat/embeddings). Exact scanning is appropriate for this small rules corpus; this experiment does not establish performance for embedding every card/ruling.
+
+The index records rule-content hash, model identity/quantization, dimensions and chunk settings. A changed rules corpus or embedding model requires rebuilding. A failed build preserves the previous index. Hybrid mode fails explicitly if its index or embedding server is unavailable; it does not silently run lexical and mislabel results. `MTG_VECTOR_INDEX` may select another sidecar path. Generated indexes remain outside Git; run artifacts retain the index hash and metadata.
+
+The predeclared adoption gate and review limits are in [the protocol](heldout-v1/PROTOCOL.md). The final decision is documented in the experiment report; availability of hybrid mode is not a claim that it improves quality.

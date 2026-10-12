@@ -9,3 +9,7 @@ After baseline, classify failures as retrieval, packing, reasoning, clarificatio
 Vector experiment: keep generation settings and corpus fixed. Embed rule passages locally using the installed Nomic Embed Text v1.5; preserve exact Oracle attachment lookup. Compare hybrid lexical/semantic retrieval with the latest lexical configuration on BOTH suites at seed 42. Store model/index identity and measure index size/build time, retrieval time, end-to-end latency, correctness, unsupported claims and citation support. No benchmark labels are used to build the index.
 
 Adoption gate: hybrid must improve correct-and-complete answers on the 52-case combined set, introduce no new unsupported answers, and keep median end-to-end latency within 20% of lexical on each suite. A passing result requires another matched seed before enabling it by default. If it fails, retain the experimental option with lexical as default and document the tradeoff. Single runs are descriptive, not statistical proof. Do not tune embeddings to these labels during this experiment.
+
+## Reviewed prompt experiment
+
+The source-quotation response contract was committed and measured on both frozen suites. It remained 25/32 on held-out and 20/20 on original, improved citation-support reviews 10→9, but produced new unsupported details and increased held-out p95 from 18.79s to 28.99s. It was reverted; artifacts and comparison are retained under `results/source-quotes-*`.

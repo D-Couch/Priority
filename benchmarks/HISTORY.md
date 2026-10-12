@@ -17,6 +17,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [heldout-baseline](results/heldout-baseline/report.md) | `e184b2efaf` | 25/32 | 25 | 0 | 75.5% | 10.91 |
 | [relevant-rulings-heldout](results/relevant-rulings-heldout/report.md) | `1b544b16bb` | 25/32 | 25 | 0 | 75.5% | 10.26 |
 | [relevant-rulings-original](results/relevant-rulings-original/report.md) | `1b544b16bb` | 20/20 | 20 | 0 | 96.2% | 10.27 |
+| [source-quotes-heldout](results/source-quotes-heldout/report.md) | `6f31339abf` | 25/32 | 25 | 0 | 75.5% | 10.25 |
+| [source-quotes-original](results/source-quotes-original/report.md) | `6f31339abf` | 20/20 | 20 | 0 | 96.2% | 9.92 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
