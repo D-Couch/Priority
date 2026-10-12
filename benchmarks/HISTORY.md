@@ -25,6 +25,9 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [hybrid-neighbors-original](results/hybrid-neighbors-original/report.md) | gameplay-v1 | `8cd2f2fdef` | 19/20 | 19 | 0 | 93.8% | 11.48 |
 | [hybrid-family-heldout](results/hybrid-family-heldout/report.md) | heldout-v1 | `d55b40a747` | 28/32 | 28 | 0 | 77.9% | 11.11 |
 | [hybrid-family-original](results/hybrid-family-original-run2/report.md) | gameplay-v1 | `d55b40a747` | 19/20 | 19 | 0 | 89.6% | 11.73 |
+| [hybrid-lexical-preserving-heldout](results/hybrid-lexical-preserving-heldout/report.md) | heldout-v1 | `770ab3f865` | 0/0 | pending / n/a | 0 | 78.6% | 10.65 |
+| [hybrid-priority-packed-heldout](results/hybrid-priority-packed-heldout/report.md) | heldout-v1 | `2c6a37b371` | 28/32 | 28 | 0 | 75.5% | 10.96 |
+| [hybrid-priority-packed-original](results/hybrid-priority-packed-original/report.md) | gameplay-v1 | `2c6a37b371` | 20/20 | 20 | 0 | 96.2% | 10.73 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
