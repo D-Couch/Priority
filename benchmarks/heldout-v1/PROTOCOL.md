@@ -31,3 +31,8 @@ The next implementation retains the complete structural lexical candidate list i
 ## Seed-43 matched replication outcome
 
 Matched seed-43 lexical controls scored 27/32 heldout and 20/20 original. The lexical-preserving hybrid also scored 27/32 heldout and 20/20 original, for 47/52 combined versus 47/52 lexical. Heldout evidence recall was unchanged. The hybrid fixed h23's false damage-mark detail but introduced an unsupported and incorrect rule-section suggestion in h25; it also failed h30's required clarification criterion by offering conditional guidance instead of asking for missing details. No request failed or truncated. The replication therefore fails two adoption requirements (no combined accuracy gain; a new unsupported answer). **Lexical remains the default.** Hybrid remains an opt-in experiment. The seed-42 gain (48/52 vs 45/52) did not reproduce and is not evidence to change the default.
+
+
+## Targeted CR 800.4a retrieval failure
+
+The first topic matcher for leaving-game questions did not match the frozen h25 phrasing “Bob loses and leaves before Bolt resolves.” Its seed-42 full-suite run did not retrieve CR 800.4a and did not fix the abstention. See `results/leave-game-rule-heldout/analysis.md`; this negative run is retained. The follow-up broadens phrasing based on the missed linguistic form, without changing benchmark labels.

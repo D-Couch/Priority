@@ -32,6 +32,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [lexical-seed43-original](results/lexical-seed43-original/report.md) | gameplay-v1 | `4144f33dff` | 20/20 | 20 | 0 | 96.2% | 10.95 |
 | [hybrid-seed43-heldout](results/hybrid-seed43-heldout/report.md) | heldout-v1 | `4144f33dff` | 27/32 | 27 | 0 | 75.5% | 10.74 |
 | [hybrid-seed43-original](results/hybrid-seed43-original/report.md) | gameplay-v1 | `4144f33dff` | 20/20 | 20 | 0 | 96.2% | 11.16 |
+| [leave-game-rule-heldout](results/leave-game-rule-heldout/report.md) | heldout-v1 | `faa875bda3` | 0/0 | pending / n/a | 0 | 77.1% | 10.17 |
+| [leave-game-rule-original](results/leave-game-rule-original/report.md) | gameplay-v1 | `faa875bda3` | 0/0 | pending / n/a | 0 | 96.2% | 10.93 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
