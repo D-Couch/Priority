@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "lexical-seed43-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "Read every answer against frozen criteria and source passages; explicitly grade criteria, factual contradictions and citation support. Correct clarification is not abstention. Citation support is separate from ruling correctness; a correct conclusion with wrong terminology is not fully correct. See the suite reference addendum.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct Alice/Bob/Charlie stacking and reverse resolution. CR 805.7 is a shared-team-turn rule, not the ordinary multiplayer rule; citation does not support its application here.",
+      "answer_sha256": "e28a129644186f1ad5a2b1c0a68ca6e835e55888ac505d883573d7e0a7313367"
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no win; CR 603.4 and Felidar ruling support checking again at resolution.",
+      "answer_sha256": "dc4ba1d8ec113d40d9d70791b6abe65b09ce19164d8c626fdc5154367776c5db"
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct independent trigger and search. CR 603.3/405.4 establish stack objects but do not explicitly support independence from the removed source; canonical 113.7a omitted.",
+      "answer_sha256": "598a83842696623ec9250ab08601d19eb7e49cca8b13302409c8cd4c785dad8b"
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct exile replacement prevents dies trigger; Oracle and card ruling establish it.",
+      "answer_sha256": "0722aa7df57c2b1a090d0d5d48e7d872309906d769e50a5e447952c085a84b37"
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Three triggers, including itself; CR 603.10a and Blood Artist ruling support simultaneous deaths.",
+      "answer_sha256": "3d697b3af5703360e2db4e0a65a21a9ee35f21e651ae182a58f42626e8e6a5c7"
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Zero life; lifelink requires damage actually dealt under CR 702.15b.",
+      "answer_sha256": "77f7ea0d4c9a07e7f50b252a533b0451e32353def4a789109ee85979a99a7824"
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: infect gives the opponent poison counters instead of life loss, and lifelink separately gains three life for its controller; CR 702.90b and 702.15b support both results.",
+      "answer_sha256": "ae2ba27837aa37fe1acda68be280115fd13da214f6acfdccd687c9fc7290b0ba"
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Wrath destroys; cited protection clauses do not stop nontargeting destruction.",
+      "answer_sha256": "3e765f924c341f659031fb5fea461b6ff20503d35c9314cb9c3fb103e1e47f3d"
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Aura goes to owner graveyard as SBA, directly supported by CR 702.16c.",
+      "answer_sha256": "c1925cdb4a97c9d76325bb766cbd307dbb63edcd3d4b407306da377d5a1fef4f"
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Own Giant Growth is allowed; hexproof only restricts opponent-controlled targeting.",
+      "answer_sha256": "e31516e1a781fffad47603d2168538786ab889c0ff74f2c9b4a1f2da85c464e4"
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Ward triggers without countering uncounterable Decay; correct resolution, supported by Oracle and dated ruling.",
+      "answer_sha256": "6c8599727b8536d0e821fb51ddbbb73ecf8f927783ac9ab452c61fa1393ef0c3"
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct morph special action and normal triggered ability despite split second; relevant clauses cited.",
+      "answer_sha256": "ffdb1f36dd20352609afb9ffbd281d7e6a8671ee82137bbfd8da207a1833f048"
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct that opponent cannot interrupt cost payment, but says sacrifice happens before the spell is on the stack. CR 601.2a puts the spell on the stack before costs are paid at 601.2h; first response still occurs after payment. C3 supports no response, not that added sequencing claim.",
+      "answer_sha256": "9412971736778537b2544a5f7bb643189882d778998669957ba9cb651585a081"
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct exile and no draw. Flashback citation supports exile; CR 608.2c is a resolution-instructions rule, not support for the claimed countered-spell rule (701.5a).",
+      "answer_sha256": "360967bd6fc828d9ab623b3e35e27234153d6bd49e799645a3fdd7a908ce42fb"
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no rebound because countered spell never resolves; graveyard answer includes harmless qualification about counter effects.",
+      "answer_sha256": "a35da57694094b1fc2224e938cb890a8fafd6c4c3f2c657693f7513dfe68cc85"
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no persist trigger with existing -1/-1 counter; cited persist and intervening-if definitions support it.",
+      "answer_sha256": "91de2fe7387705bd4b907ceffc4a17eb8aed8e27a65f34a188061a8e56117b5a"
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no undying; explicitly uses CR 704.8 pre-SBA state. Frozen evidence group erroneously names 704.7; see addendum, no rubric changes.",
+      "answer_sha256": "ba9899c384a9fc7161ec69ad6a5a4ec0c7f04ef7bb1744b58003c32420292c68"
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct returned object is new and Bolt has no legal target; Cloudshift ruling and 608.2b support answer.",
+      "answer_sha256": "898d363021706a0f3d227e3dba2e111858e181d94f8ee77092edf5a874beec8c"
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no equip response because stack is nonempty. Extra sentence about lack of damage prevention is unnecessary: toughness increase can save a creature if attached in time; it does not literally prevent damage.",
+      "answer_sha256": "758567c9b275e7e4cb5c4a2dcf8ec6c5a4aad772e736fd86b56c38e4275f2078"
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: an untapped creature that just entered may be tapped to pay a Vehicle crew cost; CR 702.122a and the Smuggler\u2019s Copter ruling support this.",
+      "answer_sha256": "85dcf2df24f882d55ec43e4ee903db28bbcc9cd5bea344bc157116d22b67a546"
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct new Vehicle cannot attack without haste; card ruling and haste definition support it.",
+      "answer_sha256": "739d6fc16b8aaa67d9108eea927ef128653ddf80516cde6499d7b20ad6dec594"
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct blocker remains blocking and deals normal damage; cited combat rules support results, though direct 506.4b omitted.",
+      "answer_sha256": "c0fff6793d70f89db346fda6b459763411375f441e9a3490afd13456d3b9c786"
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correctly distinguishes fight damage from double strike and says the 3/3 dies and 4/4 survives, but adds the false detail that only 1 damage is marked on the 4/4; it was dealt 3 damage. The required answer criteria pass, but this unsupported factual claim makes the answer not fully correct.",
+      "answer_sha256": "532672b7304453ec45b347adea653133a05055622862b64b9083c1263bbcec95"
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct Aura leaves and creature returns to Alice. Answer admits 800.4a is missing and assumes its content; 405.6h is only a cross-reference, not sufficient evidence for which objects leave.",
+      "answer_sha256": "3d9143427b8c4b0fb2ca07f7a3ce5fbc8e69d43325b4c34be8cec24c3c9e300c"
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "criteria": {
+        "h25-leaving-stack.1": false,
+        "h25-leaving-stack.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Unnecessary abstention; the supplied complete game state has a determinate answer under the multiplayer leaving-game rule, though this retrieval result did not pack that rule. This answer makes no unsupported rule-number claim.",
+      "answer_sha256": "769f63c563c9664e51b330a61fa8b8c568faaad40e2059b472a04b1af632f54f"
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "criteria": {
+        "h26-commander-control.1": false,
+        "h26-commander-control.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrect and unsupported: the same commander dealt both amounts, so its 12 and 9 combat damage to the same player accumulate to 21 regardless of who controlled it. This answer falsely says they are tracked separately by controller.",
+      "answer_sha256": "cbaad16a26b19238bb96c1aca481bf287e230c58196338d8d97ffad2d39840d3"
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct command-zone option is a hand/library replacement effect under 903.9b, not the graveyard/exile SBA.",
+      "answer_sha256": "6a43be86ecb343ec278793ff82691366624117b636da64665140284c2a821363"
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected opponent chooses; both 8 and 10 with matching orders, supported by Oracle and 616.1.",
+      "answer_sha256": "586a8b0a861efc429ee57a252006508aa99983b228f916c98d6660d9552e4836"
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct no loss merely for empty library; attempted draw condition explicitly cited.",
+      "answer_sha256": "fe347993d771d0bc668e5119f5062d39f5084cd5152552e133638304f35c1ed0"
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "criteria": {
+        "h30-ambiguous-combat.1": true,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Appropriate clarification asks about trample and attacker/blocker stats, without inventing a total.",
+      "answer_sha256": "7393a0b9d0e8b553c6ca84e5a39e2665a70be172a1c71cd30493c4e3652dfffb"
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Fails frozen clarification criteria: gives unconditional answer without asking copy effect/enchantment details. 707.2 describes ordinary copy values but includes exceptions; unspecified effects could affect those values.",
+      "answer_sha256": "b716ec6bf345897b707c82fa925b99fd6e00df0a8138bfe8e1d2aff679252270"
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Appropriate clarification asks exact effects and original count; no invented number.",
+      "answer_sha256": "8a1d41e51952e6cb357d3efb3e350010b4124797408b4dd860a17c2cb0fec50b"
+    }
+  ]
+}
