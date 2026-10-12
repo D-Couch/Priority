@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "low-prompt2800-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted rubric review; each answer checked against the authored gameplay rubric and the actually packed excerpts.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "e861b3569d44fd6f766e2cf8e713272fe39955220ab324f6769623d0808fe745",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "c141bffed440442d06dee073fa86aacf792353aca05d39b943a3f7cf110e38d7",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "4b3fe37b2ca7319d5000705cf06b37cd7d86bb8b3bc012e18be40d6a50fc42d0",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "c9b9f0ef9893bebb3c3e7b834b87f166d4d5c1dfa376edc455aa0e6d77fd330a",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "d24febb76ab8ccc432862ae568793e01131f181352c1c91a8e1078711743c4c5",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "ef1d15021f4ee83a414f6c8b099a37293d573b7f602074024cd01507b5a6729d",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "6a47cc2d8859e739d63bb3841f1f7f09898e5a124810aa3ed41b59b0e0e18709",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "c6b279bc991656a506b9bff65827d44582b8fc3b30a6c4b9a959468d6c60cd8d",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Conclusion is correct, but the answer asserts that dies abilities trigger without citing or receiving the dies definition or zone-change trigger rule; these expected excerpts were omitted by the prompt cap."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "600f5cc44bdbadf5b05d6455064281cc087f438ee8e75cc258b3276564466e1a",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "883c27531dacd14d869b6b2f8ad0e029953a808e6716ae1015f7072d628848fe",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "df9e2e0caebc382885e21634734b684ef30f1cffb459da02b77745721f82b38f",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "2f2d00b653e0baa4e768e9be0edfb3cee6548686dea7f9f7da8b96e0d732f699",
+      "criteria": {
+        "12-replacement-choice.1": false,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly calculates 7 and 8 but explicitly declines to identify who chooses the order because CR 616.1 was omitted. Criterion 1 fails; this is a direct evidence loss caused by the cap."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "4d408bbe96a628d58db7e84677303e08427e78944a892c4713f3b73d5e120008",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "e665f48b673aac5d041f09f17332ceec8337de32c6ed3cb9c6082a444221a525",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "eaf6694b38dd2b0039e47948ab5939c5a19bcc059f67dc4802f68037172b1980",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "5efdc460c1ea9457cf19c6c19fc6120592106fa67aad6406a1391b01eee4ef94",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "b2174f58657d176d97a3c5168d320f167fc9a2bafcdc81f56fd8d1df98679fc1",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "bc82d604af853b16411167869da07c8f2b59a50ba26b797748e8640c4845e491",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "15b70684351872c3b5944973db47cc541d34a6239578b97c99acd3fd147f5457",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the legend rule cannot be responded to and one is kept, but does not explain the rubric-required timing that state-based actions occur before priority; the general state-based-action rule was omitted."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "b3297dc4a50f518e4011862b5c31d2b905ac2924d390f7ef23b7b7524a248c28",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the scenario rubric and its material claims are supported by the packed sources."
+    }
+  ]
+}
