@@ -144,7 +144,7 @@ TOPICS = [
     (r'copy|copies|copied|clone', ['707']),
     (r'counterspell|cast|casting|cost|mana', ['601']),
     (r'token|tokens', ['111']),
-    (r'\bleaves? the game\b|\bleaving the game\b|\bleave the game\b|\beliminated\b', ['800.4a']),
+    (r'\b(?:loses?|lost) and leaves?\b|\bleaves? the game\b|\bleaving the game\b|\bleave the game\b|\beliminated\b', ['800.4a']),
 ]
 
 
