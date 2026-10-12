@@ -50,12 +50,12 @@ def git(*args):
 
 
 def validate_suite(suite):
-    if suite.get('schema_version') != 1 or len(suite['cases']) != 20:
-        raise ValueError('Expected gameplay-v1 schema with 20 cases; version suite changes explicitly.')
+    if suite.get('schema_version') != 1 or not suite.get('cases'):
+        raise ValueError('Expected a versioned, nonempty gameplay suite.')
     ids = [c['id'] for c in suite['cases']]
     if len(set(ids)) != len(ids):
         raise ValueError('Duplicate scenario IDs')
-    references = read(BENCH/'references.json')
+    references = read(SUITE.parent/'references.json')
     with closing(knowledge.connect()) as conn:
         for case in suite['cases']:
             if len(case['cards']) != len(case['card_ids']):
@@ -120,6 +120,8 @@ def summary(run):
             'median_seconds':statistics.median(times) if times else None,
             'p95_seconds':percentile(times,.95),
             'median_first_visible_token_seconds':statistics.median(first) if first else None,
+            'unsupported_claim_answers':sum(r['review']['unsupported_or_contradictory_claims'] for r in reviewed) if reviewed and all('unsupported_or_contradictory_claims' in r['review'] for r in reviewed) else None,
+            'semantic_citation_failures':sum(r['review'].get('citations_supported') is False for r in reviewed) if reviewed and all(type(r['review'].get('citations_supported')) is bool for r in reviewed) else None,
             'reviewed':len(reviewed), 'fully_correct':sum(r['review']['fully_correct'] for r in reviewed),
             'reviewed_accuracy':sum(r['review']['fully_correct'] for r in reviewed)/len(reviewed) if reviewed else None,
             'mean_rubric_score':statistics.mean(r['review']['rubric_score'] for r in reviewed) if reviewed else None}
@@ -145,13 +147,15 @@ def report(run, path):
              f"| Cases retrieving every expected evidence group | {s['all_evidence_cases']}/{s['attempted']} |",
              f"| Answers with citations | {s['answers_with_citations']}/{s['completed']} |",
              f"| Citation ID validity (not semantic support) | {fmt(s['citation_id_precision'],True)} |",
+             f"| Answers with unsupported/contradictory claims | {fmt(s['unsupported_claim_answers'])} |",
+             f"| Reviewed citation-support failures | {fmt(s['semantic_citation_failures'])} |",
              f"| Reviewed fully correct | {s['fully_correct']}/{s['reviewed']} reviewed |",
              f"| Reviewed accuracy | {fmt(s['reviewed_accuracy'],True)} |",
              f"| Mean reviewed rubric score | {fmt(s['mean_rubric_score'],True)} |",
              f"| Median successful response | {fmt(s['median_seconds'])} s |",
              f"| p95 successful response | {fmt(s['p95_seconds'])} s |",
              f"| Median first visible answer token | {fmt(s['median_first_visible_token_seconds'])} s |",'',
-             'These are development scenarios, not a held-out accuracy claim. Citation validity only checks source IDs. '
+             'Only the first heldout-v1 baseline is an unseen-case measurement; after inspection that suite becomes regression data. Rubrics are AI-authored, not independent human validation. Citation validity only checks source IDs. '
              'Evidence recall measures the authored reference groups, not all potentially relevant rules. '
              'Timings include retrieval and generation; failed requests are reported separately and excluded from latency percentiles.', '',
              '| Scenario | Evidence recall | Reviewed result | Total s |','| --- | --- | --- | --- |']
@@ -179,7 +183,7 @@ def prepare_review(run):
             'results':[{'case_id':r['case_id'],'repeat':r['repeat'],
                         'answer_sha256':hashlib.sha256(r['answer'].encode()).hexdigest(),
                         'criteria':{x['id']:None for x in cases[r['case_id']]['criteria']},
-                        'unsupported_or_contradictory_claims':None,'abstained':None,'notes':''} for r in run['results']]}
+                        'citations_supported':None,'unsupported_or_contradictory_claims':None,'abstained':None,'notes':''} for r in run['results']]}
 
 
 def apply_review(run, review, suite):
@@ -345,7 +349,7 @@ def run_benchmark(args):
     seeds=[args.seed+i for i in range(args.repeats)]
     run={'schema_version':1,'run_id':out.name,'label':args.label,'created_at':stamp,'status':'running',
          'git':{'commit':git('rev-parse','HEAD'),'tree':git('rev-parse','HEAD^{tree}'),'dirty':False},
-         'suite_id':suite['id'],'suite_sha256':sha(SUITE),'references_sha256':sha(BENCH/'references.json'),
+         'suite_path':SUITE.relative_to(ROOT).as_posix(),'suite_id':suite['id'],'suite_sha256':sha(SUITE),'references_sha256':sha(SUITE.parent/'references.json'),
          'corpus_sha256':digest,'corpus_metadata':knowledge.metadata(),'model':server.MODEL,
          'model_runtime':runtime() if args.mode=='full' else {},
          'environment':{'python':platform.python_version(),'sqlite':sqlite3.sqlite_version,'os':platform.system(),'machine':platform.machine()},
@@ -431,20 +435,25 @@ def run_benchmark(args):
 
 
 def main():
+    global SUITE
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest='command',required=True)
-    p=sub.add_parser('run');p.add_argument('--label',required=True);p.add_argument('--output',required=True);p.add_argument('--mode',choices=['full','retrieval'],default='full');p.add_argument('--repeats',type=int,default=1);p.add_argument('--seed',type=int,default=42)
+    p=sub.add_parser('run');p.add_argument('--suite',type=Path,default=SUITE);p.add_argument('--label',required=True);p.add_argument('--output',required=True);p.add_argument('--mode',choices=['full','retrieval'],default='full');p.add_argument('--repeats',type=int,default=1);p.add_argument('--seed',type=int,default=42)
     p=sub.add_parser('review');p.add_argument('directory')
     p=sub.add_parser('compare');p.add_argument('before');p.add_argument('after');p.add_argument('--output',required=True);p.add_argument('--allow-change',action='append',choices=sorted(EXPERIMENT_FIELDS),default=[])
-    sub.add_parser('validate')
+    p=sub.add_parser('validate');p.add_argument('--suite',type=Path,default=SUITE)
     p=sub.add_parser('restore-corpus');p.add_argument('--output',required=True)
     args=parser.parse_args()
     if args.command=='run':
+        SUITE=args.suite.resolve()
         with frozen_corpus():run_benchmark(args)
     elif args.command=='validate':
-        validate_suite(read(SUITE));print('Validated 20 scenarios, frozen reference passages, and card IDs.')
+        SUITE=args.suite.resolve()
+        with frozen_corpus():validate_suite(read(SUITE))
+        print('Validated',len(read(SUITE)['cases']),'scenarios, frozen references, and card IDs.')
     elif args.command=='review':
         path=Path(args.directory);r=read(path/'run.json')
+        SUITE=ROOT/r.get('suite_path','benchmarks/scenarios.json')
         if sha(SUITE)!=r['suite_sha256']:raise ValueError('Suite changed since this run')
         apply_review(r,read(path/'review.json'),read(SUITE));r['summary']=summary(r);write(path/'run.json',r);report(r,path/'report.md');write_history();print(json.dumps(r['summary'],indent=2))
     elif args.command=='compare':

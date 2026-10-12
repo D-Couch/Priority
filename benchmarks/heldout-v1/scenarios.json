@@ -1,0 +1,1408 @@
+{
+  "schema_version": 1,
+  "id": "heldout-v1",
+  "description": "32 new scenarios authored and committed before the first model run. Only the first baseline is held out; subsequent runs are regression measurements. AI-authored rubrics, not independently human-validated.",
+  "rules_version": "20260925",
+  "cases": [
+    {
+      "id": "h01-apnap",
+      "category": "multiplayer",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "In a three-player game, turn order is Alice, Bob, Charlie. It is Alice’s upkeep. Each controls exactly one ability that triggers at the beginning of that upkeep, with no other triggers. In what order do they go on the stack and resolve if nobody responds?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Stack Alice then Bob then Charlie; resolve Charlie then Bob then Alice.",
+      "criteria": [
+        {
+          "id": "h01-apnap.1",
+          "description": "Places triggers in Alice/Bob/Charlie order."
+        },
+        {
+          "id": "h01-apnap.2",
+          "description": "Resolves Charlie/Bob/Alice."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 603.3b",
+          "any_of": [
+            "CR 603.3b"
+          ]
+        },
+        {
+          "label": "CR 101.4",
+          "any_of": [
+            "CR 101.4"
+          ]
+        },
+        {
+          "label": "CR 405.2",
+          "any_of": [
+            "CR 405.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h02-intervening-if",
+      "category": "triggers",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I control Felidar Sovereign and begin my upkeep at 40 life. Its ability triggers, then I drop to 39 life before it resolves. Do I win from that ability?"
+        }
+      ],
+      "cards": [
+        "Felidar Sovereign"
+      ],
+      "card_ids": [
+        "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b"
+      ],
+      "expected_answer": "No; the intervening-if condition is checked again on resolution.",
+      "criteria": [
+        {
+          "id": "h02-intervening-if.1",
+          "description": "Says no win."
+        },
+        {
+          "id": "h02-intervening-if.2",
+          "description": "Explains condition checked again on resolution."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 603.4",
+          "any_of": [
+            "CR 603.4"
+          ]
+        },
+        {
+          "label": "CARD Felidar Sovereign",
+          "any_of": [
+            "CARD Felidar Sovereign"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h03-independent-trigger",
+      "category": "triggers",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My Solemn Simulacrum enters and its search ability goes on the stack. My opponent destroys it before that ability resolves. May I still search for a basic land with the original ability?"
+        }
+      ],
+      "cards": [
+        "Solemn Simulacrum"
+      ],
+      "card_ids": [
+        "00c0543c-2a1f-4425-8283-4062d74a1637"
+      ],
+      "expected_answer": "Yes; the triggered ability exists independently of its source.",
+      "criteria": [
+        {
+          "id": "h03-independent-trigger.1",
+          "description": "Allows the original search."
+        },
+        {
+          "id": "h03-independent-trigger.2",
+          "description": "Explains source removal does not remove ability."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 113.7a",
+          "any_of": [
+            "CR 113.7a"
+          ]
+        },
+        {
+          "label": "CARD Solemn Simulacrum",
+          "any_of": [
+            "CARD Solemn Simulacrum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h04-replacement-death",
+      "category": "replacement",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rest in Peace is on the battlefield. My Solemn Simulacrum is destroyed. Does its dies ability trigger?"
+        }
+      ],
+      "cards": [
+        "Rest in Peace",
+        "Solemn Simulacrum"
+      ],
+      "card_ids": [
+        "087f9ad7-e74f-40e2-8102-1ed2925d0418",
+        "00c0543c-2a1f-4425-8283-4062d74a1637"
+      ],
+      "expected_answer": "No; exile replaces the graveyard move, so it does not die.",
+      "criteria": [
+        {
+          "id": "h04-replacement-death.1",
+          "description": "Says no dies trigger."
+        },
+        {
+          "id": "h04-replacement-death.2",
+          "description": "Explains exile replaces graveyard move."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 614.6",
+          "any_of": [
+            "CR 614.6"
+          ]
+        },
+        {
+          "label": "CR 700.4",
+          "any_of": [
+            "CR 700.4"
+          ]
+        },
+        {
+          "label": "CARD Rest in Peace",
+          "any_of": [
+            "CARD Rest in Peace"
+          ]
+        },
+        {
+          "label": "CARD Solemn Simulacrum",
+          "any_of": [
+            "CARD Solemn Simulacrum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h05-simultaneous-death",
+      "category": "triggers",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I control Blood Artist and two vanilla creature tokens. Those three creatures die simultaneously, and no other creatures die. How many times does my Blood Artist trigger?"
+        }
+      ],
+      "cards": [
+        "Blood Artist"
+      ],
+      "card_ids": [
+        "310f141c-7f37-4729-aed6-dd9c09db448d"
+      ],
+      "expected_answer": "Three, counting itself and both tokens using the pre-event battlefield.",
+      "criteria": [
+        {
+          "id": "h05-simultaneous-death.1",
+          "description": "Says three triggers."
+        },
+        {
+          "id": "h05-simultaneous-death.2",
+          "description": "Includes itself and the other two creatures."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 603.10a",
+          "any_of": [
+            "CR 603.10a"
+          ]
+        },
+        {
+          "label": "CARD Blood Artist",
+          "any_of": [
+            "CARD Blood Artist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h06-lifelink-prevented",
+      "category": "damage",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My 3/3 with lifelink would deal 3 combat damage, but all 3 damage is prevented. How much life do I gain from lifelink?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Zero; no damage was dealt.",
+      "criteria": [
+        {
+          "id": "h06-lifelink-prevented.1",
+          "description": "Says zero life."
+        },
+        {
+          "id": "h06-lifelink-prevented.2",
+          "description": "Explains prevented damage does not count as dealt."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.15b",
+          "any_of": [
+            "CR 702.15b"
+          ]
+        },
+        {
+          "label": "CR 615.6",
+          "any_of": [
+            "CR 615.6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h07-infect-lifelink",
+      "category": "damage",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My unblocked 3/3 has both infect and lifelink and deals 3 combat damage to my opponent. No effects modify the damage. What happens to their life total, their poison counters, and my life total?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Opponent gains three poison and loses no life; I gain three life.",
+      "criteria": [
+        {
+          "id": "h07-infect-lifelink.1",
+          "description": "Says three poison and no life loss for opponent."
+        },
+        {
+          "id": "h07-infect-lifelink.2",
+          "description": "Says controller gains three life."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.90b",
+          "any_of": [
+            "CR 702.90b"
+          ]
+        },
+        {
+          "label": "CR 702.15b",
+          "any_of": [
+            "CR 702.15b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h08-protection-wrath",
+      "category": "protection",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My creature has protection from white but no indestructible. Does Wrath of God destroy it?"
+        }
+      ],
+      "cards": [
+        "Wrath of God"
+      ],
+      "card_ids": [
+        "34515b16-c9a4-4f98-8c77-416a7a523407"
+      ],
+      "expected_answer": "Yes; destruction neither targets nor deals damage.",
+      "criteria": [
+        {
+          "id": "h08-protection-wrath.1",
+          "description": "Says it is destroyed."
+        },
+        {
+          "id": "h08-protection-wrath.2",
+          "description": "Explains protection does not stop this nontargeting destruction."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.16b",
+          "any_of": [
+            "CR 702.16b"
+          ]
+        },
+        {
+          "label": "CR 702.16e",
+          "any_of": [
+            "CR 702.16e"
+          ]
+        },
+        {
+          "label": "CARD Wrath of God",
+          "any_of": [
+            "CARD Wrath of God"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h09-protection-aura",
+      "category": "protection",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A white Aura legally enchants my creature. The creature then gains protection from white. What happens to the Aura?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "It goes to its owner’s graveyard as a state-based action.",
+      "criteria": [
+        {
+          "id": "h09-protection-aura.1",
+          "description": "Says Aura goes to owner graveyard."
+        },
+        {
+          "id": "h09-protection-aura.2",
+          "description": "Explains protection makes attachment illegal and SBA removes Aura."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.16c",
+          "any_of": [
+            "CR 702.16c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h10-own-hexproof",
+      "category": "targeting",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I control Slippery Bogle. Can I target it with my own Giant Growth?"
+        }
+      ],
+      "cards": [
+        "Slippery Bogle",
+        "Giant Growth"
+      ],
+      "card_ids": [
+        "f64878c1-1fba-44f7-a24f-d24bef2e03ae",
+        "5748ebf1-24e3-499d-ab7c-c2cebd462a24"
+      ],
+      "expected_answer": "Yes; hexproof restricts opponents, not its controller.",
+      "criteria": [
+        {
+          "id": "h10-own-hexproof.1",
+          "description": "Allows targeting."
+        },
+        {
+          "id": "h10-own-hexproof.2",
+          "description": "Explains own spells are not restricted."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.11b",
+          "any_of": [
+            "CR 702.11b"
+          ]
+        },
+        {
+          "label": "CARD Slippery Bogle",
+          "any_of": [
+            "CARD Slippery Bogle"
+          ]
+        },
+        {
+          "label": "CARD Giant Growth",
+          "any_of": [
+            "CARD Giant Growth"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h11-ward-uncounterable",
+      "category": "targeting",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast Abrupt Decay targeting an opponent’s nonland creature with mana value 2 and ward {2}. I decline to pay the ward cost. Does ward counter Abrupt Decay? Assume the target remains legal and nothing else interferes."
+        }
+      ],
+      "cards": [
+        "Abrupt Decay"
+      ],
+      "card_ids": [
+        "1c747fe2-289e-492a-a846-aa77707e2dc3"
+      ],
+      "expected_answer": "Ward triggers but cannot counter Abrupt Decay; Decay still resolves.",
+      "criteria": [
+        {
+          "id": "h11-ward-uncounterable.1",
+          "description": "Says ward triggers but does not counter it."
+        },
+        {
+          "id": "h11-ward-uncounterable.2",
+          "description": "Says Decay resolves despite nonpayment."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.21a",
+          "any_of": [
+            "CR 702.21a"
+          ]
+        },
+        {
+          "label": "CR 101.2",
+          "any_of": [
+            "CR 101.2"
+          ]
+        },
+        {
+          "label": "CARD Abrupt Decay",
+          "any_of": [
+            "CARD Abrupt Decay"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h12-split-second",
+      "category": "timing",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My opponent casts Krosan Grip targeting my artifact. I have a face-down Willbender, enough mana for its morph cost, and a different artifact that is a legal Grip target. While Grip is on the stack, can I turn Willbender face up and use its trigger to redirect Grip?"
+        }
+      ],
+      "cards": [
+        "Krosan Grip",
+        "Willbender"
+      ],
+      "card_ids": [
+        "3e39224c-72ce-4ecc-aa17-12c071ea1f3e",
+        "0aae277e-e58e-4115-b5fd-0459451e17ec"
+      ],
+      "expected_answer": "Yes; morph is a special action and its triggered ability can change the target.",
+      "criteria": [
+        {
+          "id": "h12-split-second.1",
+          "description": "Allows turning face up despite split second."
+        },
+        {
+          "id": "h12-split-second.2",
+          "description": "Allows trigger to redirect Grip to the other legal target."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.61b",
+          "any_of": [
+            "CR 702.61b"
+          ]
+        },
+        {
+          "label": "CR 702.37e",
+          "any_of": [
+            "CR 702.37e"
+          ]
+        },
+        {
+          "label": "CARD Krosan Grip",
+          "any_of": [
+            "CARD Krosan Grip"
+          ]
+        },
+        {
+          "label": "CARD Willbender",
+          "any_of": [
+            "CARD Willbender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h13-sacrifice-cost",
+      "category": "costs",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast Fling, sacrificing my 4/4 as its additional cost. Can my opponent respond by destroying that same creature to stop me paying the sacrifice cost?"
+        }
+      ],
+      "cards": [
+        "Fling"
+      ],
+      "card_ids": [
+        "24227761-b50e-4b9e-93a2-e82d053b3e3d"
+      ],
+      "expected_answer": "No; costs are paid during casting before responses, and creature is already sacrificed.",
+      "criteria": [
+        {
+          "id": "h13-sacrifice-cost.1",
+          "description": "Says cannot respond to stop cost payment."
+        },
+        {
+          "id": "h13-sacrifice-cost.2",
+          "description": "Explains sacrifice already paid before priority."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 601.2h",
+          "any_of": [
+            "CR 601.2h"
+          ]
+        },
+        {
+          "label": "CR 117.2e",
+          "any_of": [
+            "CR 117.2e"
+          ]
+        },
+        {
+          "label": "CARD Fling",
+          "any_of": [
+            "CARD Fling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h14-flashback-countered",
+      "category": "zones",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast Think Twice from my graveyard using flashback. My opponent counters it. Where does Think Twice go, and do I draw a card?"
+        }
+      ],
+      "cards": [
+        "Think Twice"
+      ],
+      "card_ids": [
+        "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4"
+      ],
+      "expected_answer": "Exile, and no draw.",
+      "criteria": [
+        {
+          "id": "h14-flashback-countered.1",
+          "description": "Says exile rather than graveyard."
+        },
+        {
+          "id": "h14-flashback-countered.2",
+          "description": "Says no draw because countered."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.34a",
+          "any_of": [
+            "CR 702.34a"
+          ]
+        },
+        {
+          "label": "CR 701.5a",
+          "any_of": [
+            "CR 701.5a"
+          ]
+        },
+        {
+          "label": "CARD Think Twice",
+          "any_of": [
+            "CARD Think Twice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h15-rebound-countered",
+      "category": "zones",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast Ephemerate from my hand, but my opponent counters it. Does rebound exile it and let me cast it next upkeep?"
+        }
+      ],
+      "cards": [
+        "Ephemerate"
+      ],
+      "card_ids": [
+        "0fd57894-b917-41c8-a394-360d1d31b236"
+      ],
+      "expected_answer": "No; rebound only replaces going to graveyard as it resolves. Countered card goes to graveyard.",
+      "criteria": [
+        {
+          "id": "h15-rebound-countered.1",
+          "description": "Says no rebound or next-upkeep cast."
+        },
+        {
+          "id": "h15-rebound-countered.2",
+          "description": "Explains countered spell did not resolve and goes to graveyard."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.88a",
+          "any_of": [
+            "CR 702.88a"
+          ]
+        },
+        {
+          "label": "CR 701.5a",
+          "any_of": [
+            "CR 701.5a"
+          ]
+        },
+        {
+          "label": "CARD Ephemerate",
+          "any_of": [
+            "CARD Ephemerate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h16-persist-counter",
+      "category": "counters",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My Kitchen Finks has a -1/-1 counter on it when it dies. Does persist return it?"
+        }
+      ],
+      "cards": [
+        "Kitchen Finks"
+      ],
+      "card_ids": [
+        "5470dcfa-4eff-43da-abf7-19922841f719"
+      ],
+      "expected_answer": "No; persist requires no -1/-1 counters immediately before death.",
+      "criteria": [
+        {
+          "id": "h16-persist-counter.1",
+          "description": "Says no return."
+        },
+        {
+          "id": "h16-persist-counter.2",
+          "description": "Identifies existing -1/-1 counter blocks persist trigger."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.79a",
+          "any_of": [
+            "CR 702.79a"
+          ]
+        },
+        {
+          "label": "CARD Kitchen Finks",
+          "any_of": [
+            "CARD Kitchen Finks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h17-undying-simultaneous-sba",
+      "category": "counters",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My Young Wolf has one +1/+1 counter. An effect puts one -1/-1 counter on it and gives it -1/-1 until end of turn during the same resolution, making it 0/0. At the next state-based action check it dies and the opposite counters would be removed simultaneously. Does undying trigger?"
+        }
+      ],
+      "cards": [
+        "Young Wolf"
+      ],
+      "card_ids": [
+        "8b492764-10b6-4506-be11-22daa9220a91"
+      ],
+      "expected_answer": "No; last known information has a +1/+1 counter; simultaneous counter removal does not erase that history.",
+      "criteria": [
+        {
+          "id": "h17-undying-simultaneous-sba.1",
+          "description": "Says undying does not trigger."
+        },
+        {
+          "id": "h17-undying-simultaneous-sba.2",
+          "description": "Uses pre-SBA +1/+1 counter state despite simultaneous removal."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.93a",
+          "any_of": [
+            "CR 702.93a"
+          ]
+        },
+        {
+          "label": "CR 704.7",
+          "any_of": [
+            "CR 704.7"
+          ]
+        },
+        {
+          "label": "CR 704.5q",
+          "any_of": [
+            "CR 704.5q"
+          ]
+        },
+        {
+          "label": "CARD Young Wolf",
+          "any_of": [
+            "CARD Young Wolf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h18-blink-target",
+      "category": "zones",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An opponent’s Lightning Bolt targets my creature. In response I resolve Cloudshift on that creature. Does the original Bolt damage the returned creature?"
+        }
+      ],
+      "cards": [
+        "Lightning Bolt",
+        "Cloudshift"
+      ],
+      "card_ids": [
+        "4457ed35-7c10-48c8-9776-456485fdf070",
+        "6879f5ce-7a1b-4606-bad1-885779b0d456"
+      ],
+      "expected_answer": "No; returned permanent is a new object, so original target is illegal.",
+      "criteria": [
+        {
+          "id": "h18-blink-target.1",
+          "description": "Says Bolt does not damage returned creature."
+        },
+        {
+          "id": "h18-blink-target.2",
+          "description": "Explains new object and original target illegal."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 400.7",
+          "any_of": [
+            "CR 400.7"
+          ]
+        },
+        {
+          "label": "CR 608.2b",
+          "any_of": [
+            "CR 608.2b"
+          ]
+        },
+        {
+          "label": "CARD Lightning Bolt",
+          "any_of": [
+            "CARD Lightning Bolt"
+          ]
+        },
+        {
+          "label": "CARD Cloudshift",
+          "any_of": [
+            "CARD Cloudshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h19-equip-timing",
+      "category": "timing",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An opponent casts Lightning Bolt at my creature during my main phase. Can I activate Colossus Hammer’s normal equip ability in response to save it? No effect grants special activation permission."
+        }
+      ],
+      "cards": [
+        "Lightning Bolt",
+        "Colossus Hammer"
+      ],
+      "card_ids": [
+        "4457ed35-7c10-48c8-9776-456485fdf070",
+        "8ec03b88-8d3a-4a32-8b7c-7da59b0c03d0"
+      ],
+      "expected_answer": "No; equip only as sorcery, requiring empty stack during own main phase with priority.",
+      "criteria": [
+        {
+          "id": "h19-equip-timing.1",
+          "description": "Says cannot equip in response."
+        },
+        {
+          "id": "h19-equip-timing.2",
+          "description": "Explains sorcery timing requires empty stack."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.6a",
+          "any_of": [
+            "CR 702.6a"
+          ]
+        },
+        {
+          "label": "CR 307.5",
+          "any_of": [
+            "CR 307.5"
+          ]
+        },
+        {
+          "label": "CARD Lightning Bolt",
+          "any_of": [
+            "CARD Lightning Bolt"
+          ]
+        },
+        {
+          "label": "CARD Colossus Hammer",
+          "any_of": [
+            "CARD Colossus Hammer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h20-crew-new-creature",
+      "category": "costs",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I just cast a 3/3 creature with no haste. Can I tap it to pay the crew 1 cost of my Smuggler’s Copter right now?"
+        }
+      ],
+      "cards": [
+        "Smuggler's Copter"
+      ],
+      "card_ids": [
+        "49136bdc-bc50-49a2-999a-1ef9c16ea130"
+      ],
+      "expected_answer": "Yes; crew taps creatures without activating their own tap-symbol ability.",
+      "criteria": [
+        {
+          "id": "h20-crew-new-creature.1",
+          "description": "Allows tapping new creature to crew."
+        },
+        {
+          "id": "h20-crew-new-creature.2",
+          "description": "Distinguishes crew cost from creature tap-symbol ability."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.122a",
+          "any_of": [
+            "CR 702.122a"
+          ]
+        },
+        {
+          "label": "CR 302.6",
+          "any_of": [
+            "CR 302.6"
+          ]
+        },
+        {
+          "label": "CARD Smuggler's Copter",
+          "any_of": [
+            "CARD Smuggler's Copter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h21-new-vehicle",
+      "category": "combat",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast Smuggler’s Copter this turn and crew it. It has no haste. Can it attack this turn?"
+        }
+      ],
+      "cards": [
+        "Smuggler's Copter"
+      ],
+      "card_ids": [
+        "49136bdc-bc50-49a2-999a-1ef9c16ea130"
+      ],
+      "expected_answer": "No; I have not controlled it continuously since turn began.",
+      "criteria": [
+        {
+          "id": "h21-new-vehicle.1",
+          "description": "Says cannot attack."
+        },
+        {
+          "id": "h21-new-vehicle.2",
+          "description": "Explains control-since-turn-began requirement applies to crewed Vehicle."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 302.6",
+          "any_of": [
+            "CR 302.6"
+          ]
+        },
+        {
+          "label": "CARD Smuggler's Copter",
+          "any_of": [
+            "CARD Smuggler's Copter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h22-tapped-blocker",
+      "category": "combat",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "After my opponent declares a 3/3 as a blocker, I tap that blocker with a spell before combat damage. Does tapping it remove it from combat or stop its combat damage?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Neither; it remains blocking and deals damage normally.",
+      "criteria": [
+        {
+          "id": "h22-tapped-blocker.1",
+          "description": "Says remains blocking."
+        },
+        {
+          "id": "h22-tapped-blocker.2",
+          "description": "Says still deals combat damage."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 506.4b",
+          "any_of": [
+            "CR 506.4b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h23-fight-double-strike",
+      "category": "damage",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My 3/3 with double strike fights a 4/4 with no relevant abilities. No other effects apply. How much damage does each deal, and which survives?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Each deals once, 3 and 4 respectively; 3/3 dies and 4/4 survives with 3 damage.",
+      "criteria": [
+        {
+          "id": "h23-fight-double-strike.1",
+          "description": "Says 3 damage and 4 damage once, not two strikes."
+        },
+        {
+          "id": "h23-fight-double-strike.2",
+          "description": "Says 3/3 dies and 4/4 survives."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 701.14a",
+          "any_of": [
+            "CR 701.14a"
+          ]
+        },
+        {
+          "label": "CR 701.14d",
+          "any_of": [
+            "CR 701.14d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h24-leaving-controller",
+      "category": "multiplayer",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "In a multiplayer game, Alice owns a creature and Bob controls it solely through Bob’s Control Magic. Bob loses and leaves the game while Alice remains. What happens to the Aura and the creature?"
+        }
+      ],
+      "cards": [
+        "Control Magic"
+      ],
+      "card_ids": [
+        "cd0d7141-46d2-4aa3-bc77-6b3b4513803e"
+      ],
+      "expected_answer": "Aura leaves game; creature returns to Alice’s control.",
+      "criteria": [
+        {
+          "id": "h24-leaving-controller.1",
+          "description": "Says Aura leaves the game."
+        },
+        {
+          "id": "h24-leaving-controller.2",
+          "description": "Says creature returns to Alice rather than exiled."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 800.4a",
+          "any_of": [
+            "CR 800.4a"
+          ]
+        },
+        {
+          "label": "CARD Control Magic",
+          "any_of": [
+            "CARD Control Magic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h25-leaving-stack",
+      "category": "multiplayer",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "In a three-player game, Bob controls a Lightning Bolt he owns on the stack targeting Alice. Bob loses and leaves before Bolt resolves; Alice and Charlie remain. Does Bolt still resolve?"
+        }
+      ],
+      "cards": [
+        "Lightning Bolt"
+      ],
+      "card_ids": [
+        "4457ed35-7c10-48c8-9776-456485fdf070"
+      ],
+      "expected_answer": "No; Bob’s owned spell leaves the game.",
+      "criteria": [
+        {
+          "id": "h25-leaving-stack.1",
+          "description": "Says Bolt does not resolve."
+        },
+        {
+          "id": "h25-leaving-stack.2",
+          "description": "Explains owned objects including spell leave the game."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 800.4a",
+          "any_of": [
+            "CR 800.4a"
+          ]
+        },
+        {
+          "label": "CARD Lightning Bolt",
+          "any_of": [
+            "CARD Lightning Bolt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h26-commander-control",
+      "category": "commander",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "In Commander, a particular commander has dealt me 12 combat damage while controlled by Alice and then 9 while controlled by Bob. Do those add together for commander damage, even though its controller changed?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes; 21 from the same commander causes loss regardless of controller.",
+      "criteria": [
+        {
+          "id": "h26-commander-control.1",
+          "description": "Adds to 21 for same commander."
+        },
+        {
+          "id": "h26-commander-control.2",
+          "description": "Says I lose despite controller change."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 903.10a",
+          "any_of": [
+            "CR 903.10a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h27-commander-hand",
+      "category": "commander",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An effect would return my commander from the battlefield to my hand. May I choose the command zone instead, and is that a replacement effect or a later state-based action?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes; this is a replacement effect for hand/library moves.",
+      "criteria": [
+        {
+          "id": "h27-commander-hand.1",
+          "description": "Allows command zone instead."
+        },
+        {
+          "id": "h27-commander-hand.2",
+          "description": "Identifies replacement effect rather than graveyard/exile SBA."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 903.9b",
+          "any_of": [
+            "CR 903.9b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h28-replacement-order",
+      "category": "replacement",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I control Torbran, Thane of Red Fell and Furnace of Rath. My Lightning Bolt would deal 3 damage to my opponent. No other effects apply. Who chooses the order of the two replacement effects, and what damage totals are possible?"
+        }
+      ],
+      "cards": [
+        "Torbran, Thane of Red Fell",
+        "Furnace of Rath",
+        "Lightning Bolt"
+      ],
+      "card_ids": [
+        "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
+        "68715465-6cf9-4006-87e9-31f227fe9ed3",
+        "4457ed35-7c10-48c8-9776-456485fdf070"
+      ],
+      "expected_answer": "Affected opponent chooses; double then add =8, add then double =10.",
+      "criteria": [
+        {
+          "id": "h28-replacement-order.1",
+          "description": "Says affected opponent chooses."
+        },
+        {
+          "id": "h28-replacement-order.2",
+          "description": "Gives both 8 and 10, with matching order."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 616.1",
+          "any_of": [
+            "CR 616.1"
+          ]
+        },
+        {
+          "label": "CR 614.5",
+          "any_of": [
+            "CR 614.5"
+          ]
+        },
+        {
+          "label": "CARD Torbran, Thane of Red Fell",
+          "any_of": [
+            "CARD Torbran, Thane of Red Fell"
+          ]
+        },
+        {
+          "label": "CARD Furnace of Rath",
+          "any_of": [
+            "CARD Furnace of Rath"
+          ]
+        },
+        {
+          "label": "CARD Lightning Bolt",
+          "any_of": [
+            "CARD Lightning Bolt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h29-empty-library",
+      "category": "state-based",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My library is empty, but I have not tried to draw since it became empty. Do I immediately lose merely for having zero cards in my library?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No; loss requires attempted draw from empty library.",
+      "criteria": [
+        {
+          "id": "h29-empty-library.1",
+          "description": "Says no immediate loss."
+        },
+        {
+          "id": "h29-empty-library.2",
+          "description": "Distinguishes attempted draw from merely empty library."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 704.5b",
+          "any_of": [
+            "CR 704.5b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h30-ambiguous-combat",
+      "category": "clarification",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My attacker is blocked. How much damage gets through to my opponent?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Ask attacker power, blocker toughness/damage, abilities such as trample, and relevant effects; do not guess.",
+      "criteria": [
+        {
+          "id": "h30-ambiguous-combat.1",
+          "description": "Asks for relevant attacker/blocker stats and abilities."
+        },
+        {
+          "id": "h30-ambiguous-combat.2",
+          "description": "Does not give an unconditional damage total."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 510.1c",
+          "any_of": [
+            "CR 510.1c"
+          ]
+        },
+        {
+          "label": "CR 702.19b",
+          "any_of": [
+            "CR 702.19b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h31-ambiguous-copy",
+      "category": "clarification",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I copy a creature. Does my copy get its counters and the bonus from its enchantment?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Ask what copy effect and what bonus/enchantment are involved before resolving ambiguous interaction.",
+      "criteria": [
+        {
+          "id": "h31-ambiguous-copy.1",
+          "description": "Asks for copy effect and relevant creature/enchantment details."
+        },
+        {
+          "id": "h31-ambiguous-copy.2",
+          "description": "Does not assert a definitive ruling for an unspecified copy effect."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 707.2",
+          "any_of": [
+            "CR 707.2"
+          ]
+        },
+        {
+          "label": "CR 707.9",
+          "any_of": [
+            "CR 707.9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h32-ambiguous-replacements",
+      "category": "clarification",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Two replacement effects apply to my token creation. How many tokens do I get?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Ask exact effects and original event; no invented count.",
+      "criteria": [
+        {
+          "id": "h32-ambiguous-replacements.1",
+          "description": "Asks exact replacement effects and starting number/event."
+        },
+        {
+          "id": "h32-ambiguous-replacements.2",
+          "description": "Does not invent a token total."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 616.1",
+          "any_of": [
+            "CR 616.1"
+          ]
+        }
+      ]
+    }
+  ]
+}

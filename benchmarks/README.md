@@ -79,3 +79,7 @@ Run `./setup.sh` once from the project root, then `source .venv/bin/activate` be
 The vector-free baseline now has two reviewed 20/20 runs, seeds 42 and 43, with identical prompt and implementation hashes. These are repeated development cases, not 40 distinct questions. Before introducing embeddings, freeze a separate set of unseen cases and paraphrases and compare both sets. Do not weaken existing criteria or discard a regression to improve the headline score.
 
 Reporting-only changes recompute the history from saved results without rerunning inference or modifying historical artifacts. Unknown historical completion telemetry is displayed as unavailable, rather than counted as zero successful completions. Append-only review-note corrections are linked from the history.
+
+## Additional frozen suites
+
+Use `--suite benchmarks/heldout-v1/scenarios.json` with `run` or `validate` to select the 32-case extension. Its references live beside its scenarios; the original suite and references remain unchanged. Review automatically selects the suite recorded in the run. Read [the predeclared protocol](heldout-v1/PROTOCOL.md). The first baseline is held out from implementation tuning; subsequent measurements are regression tests. New reviews also assess semantic citation support separately from source-ID validity.

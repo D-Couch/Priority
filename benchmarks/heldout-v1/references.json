@@ -1,0 +1,347 @@
+{
+  "CR 603.3b": {
+    "text": "If multiple abilities have triggered since the last time a player received priority, the abilities are placed on the stack in a two-part process. First, each player, in APNAP order, puts each triggered ability they control with a trigger condition that isn’t another ability triggering on the stack in any order they choose. (See rule 101.4.) Second, each player, in APNAP order, puts all remaining triggered abilities they control on the stack in any order they choose. Then the game once again checks for and performs state-based actions until none are performed, then abilities that triggered during this process go on the stack. This process repeats until no new state-based actions are performed and no abilities trigger. Then the appropriate player gets priority.",
+    "sha256": "2428e9ee2a9ba8c21c8cf78420b4ac976be9698bb264891c46d4e33d2d848087",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 101.4": {
+    "text": "If multiple players would make choices and/or take actions at the same time, the active player (the player whose turn it is) makes any choices required, then the next player in turn order (usually the player seated to the active player’s left) makes any choices required, followed by the remaining nonactive players in turn order. Then the actions happen simultaneously. This rule is often referred to as the “Active Player, Nonactive Player (APNAP) order” rule.\nExample: A card reads “Each player sacrifices a creature.” First, the active player chooses a creature they control. Then each of the nonactive players, in turn order, chooses a creature they control. Then all creatures chosen this way are sacrificed simultaneously.",
+    "sha256": "be53b8c25dc79c900d2870e605f9f609c69342d5f526a30de18da6b7047b7c8e",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 405.2": {
+    "text": "The stack keeps track of the order that spells and/or abilities were added to it. Each time an object is put on the stack, it’s put on top of all objects already there.",
+    "sha256": "e257bd110050053abcb10899ee3befd7252dceb53f04cce376c79f25c71683d0",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 603.4": {
+    "text": "A triggered ability may read “When/Whenever/At [trigger event], if [condition], [effect].” When the trigger event occurs, the ability checks whether the stated condition is true. The ability triggers only if it is; otherwise it does nothing. If the ability triggers, it checks the stated condition again as it resolves. If the condition isn’t true at that time, the ability is removed from the stack and does nothing. Note that this mirrors the check for legal targets. This rule is referred to as the “intervening ‘if’ clause” rule. (The word “if” has only its normal English meaning anywhere else in the text of a card; this rule only applies to an “if” that immediately follows a trigger condition.)\nExample: Felidar Sovereign reads, “At the beginning of your upkeep, if you have 40 or more life, you win the game.” Its controller’s life total is checked as that player’s upkeep begins. If that player has 39 or less life, the ability doesn’t trigger at all. If that player has 40 or more life, the ability triggers and goes on the stack. As the ability resolves, that player’s life total is checked again. If that player has 39 or less life at this time, the ability is removed from the stack and has no effect. If that player has 40 or more life at this time, the ability resolves and that player wins the game.",
+    "sha256": "c57ce6976bd9876973161658bb46c2497a34f07f5e7bab4a5ea30fec6db77a08",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Felidar Sovereign": {
+    "text": "Felidar Sovereign\n{4}{W}{W}\nCreature — Cat Beast\nVigilance (Attacking doesn't cause this creature to tap.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nAt the beginning of your upkeep, if you have 40 or more life, you win the game.\n4 / 6",
+    "sha256": "062952c3a2d5577c30574735f0ee2f6d106a9c795dd668c4bb11cd92da393e04",
+    "url": "https://scryfall.com/card/bfz/26/felidar-sovereign?utm_source=api"
+  },
+  "CR 113.7a": {
+    "text": "Once activated or triggered, an ability exists on the stack independently of its source. Destruction or removal of the source after that time won’t affect the ability. Note that some abilities cause a source to do something (for example, “This creature deals 1 damage to any target”) rather than the ability doing anything directly. In these cases, any activated or triggered ability that references information about the source for use while announcing an activated ability or putting a triggered ability on the stack checks that information when the ability is put onto the stack. Otherwise, it will check that information when it resolves. In both instances, if the source is no longer in the zone it’s expected to be in at that time, its last known information is used. The source can still perform the action even though it no longer exists.",
+    "sha256": "dcc5cee86ae5482fc0b1a696f496fff07cdb9c6d9b9059876e916014420048b8",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Solemn Simulacrum": {
+    "text": "Solemn Simulacrum\n{4}\nArtifact Creature — Golem\nWhen this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.\nWhen this creature dies, you may draw a card.\n2 / 2",
+    "sha256": "d271049ed30c9fe713c904b11ef24dd078ed2ab1294d48a3b8bde491c438ccd7",
+    "url": "https://scryfall.com/card/msc/215/solemn-simulacrum?utm_source=api"
+  },
+  "CR 614.6": {
+    "text": "If an event is replaced, it never happens. A modified event occurs instead, which may in turn trigger abilities. Note that the modified event may contain instructions that can’t be carried out, in which case the impossible instruction is simply ignored.",
+    "sha256": "02230f667ab2196a50f184a602e5625fc220012f63bfa58f736870532c6fb345",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 700.4": {
+    "text": "The term dies means “is put into a graveyard from the battlefield.”",
+    "sha256": "7aac2b7f77c5b6d20754e58ea4cf050f683d6ed76f9ed8e78b5d9c06016803c1",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Rest in Peace": {
+    "text": "Rest in Peace\n{1}{W}\nEnchantment\nWhen this enchantment enters, exile all graveyards.\nIf a card or token would be put into a graveyard from anywhere, exile it instead.",
+    "sha256": "2021058aa5909e8d3e5321c54bda78983795d8855372cbc2e3c0108250fe17fb",
+    "url": "https://scryfall.com/card/big/4/rest-in-peace?utm_source=api"
+  },
+  "CR 603.10a": {
+    "text": "Some zone-change triggers look back in time. These are leaves-the-battlefield abilities, abilities that trigger when a player sacrifices a permanent, abilities that trigger when a card leaves a graveyard, and abilities that trigger when an object that all players can see is put into a hand or library.\nExample: Two creatures are on the battlefield along with an artifact that has the ability “Whenever a creature dies, you gain 1 life.” Someone casts a spell that destroys all artifacts, creatures, and enchantments. The artifact’s ability triggers twice, even though the artifact goes to its owner’s graveyard at the same time as the creatures.",
+    "sha256": "59452fa42dec82f78926a750bff5d322ab709976100ebb6c8609ca00e054c5ae",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Blood Artist": {
+    "text": "Blood Artist\n{1}{B}\nCreature — Vampire\nWhenever this creature or another creature dies, target player loses 1 life and you gain 1 life.\n0 / 1",
+    "sha256": "e1f7bdcf50441c54243b21ac3acd9b91b3f05f97072bdd2b251fb1f14813723b",
+    "url": "https://scryfall.com/card/soc/209/blood-artist?utm_source=api"
+  },
+  "CR 702.15b": {
+    "text": "Damage dealt by a source with lifelink causes that source’s controller, or its owner if it has no controller, to gain that much life (in addition to any other results that damage causes). See rule 120.3.",
+    "sha256": "1be6d385d65824fae11be8cce232acfe69da122f59fb389d613ac709ddd4cecf",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 615.6": {
+    "text": "If damage that would be dealt is prevented, it never happens. A modified event may occur instead, which may in turn trigger abilities. Note that the modified event may contain instructions that can’t be carried out, in which case the impossible instruction is simply ignored.",
+    "sha256": "4ff391d96aeb496637f3d2f61c6b47fe5d0da52121f591a22d4cc9fa5bf0bdb8",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.90b": {
+    "text": "Damage dealt to a player by a source with infect doesn’t cause that player to lose life. Rather, it causes that source’s controller to give the player that many poison counters. See rule 120.3.",
+    "sha256": "05521d52df23ff4fe2b5d053fe544c427803fb958e557799e1f3f1153d47009f",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.16b": {
+    "text": "A permanent or player with protection can’t be targeted by spells with the stated quality and can’t be targeted by abilities from a source with the stated quality.",
+    "sha256": "b24c65cbf655aff999b8d8046d2a67b9c26df8f32fd88a119ceb9a3a9ef21867",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.16e": {
+    "text": "Any damage that would be dealt by sources that have the stated quality to a permanent or player with protection is prevented.",
+    "sha256": "7b316d65673a1eb2c86fa57726e209e23e80d0546388a6c3ca7bea2002ace3bb",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Wrath of God": {
+    "text": "Wrath of God\n{2}{W}{W}\nSorcery\nDestroy all creatures. They can't be regenerated.",
+    "sha256": "febac8d30891a7358c89185aca29bf1e18c22836f67e18415d672fa3a6a8e35f",
+    "url": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+  },
+  "CR 702.16c": {
+    "text": "A permanent or player with protection can’t be enchanted by Auras that have the stated quality. Such Auras attached to the permanent or player with protection will be put into their owners’ graveyards as a state-based action. (See rule 704, “State-Based Actions.”)",
+    "sha256": "d6a3c4f3a45920f29241163d6e37cba6e3907b0269d0159dccf9ec1158d0028a",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.11b": {
+    "text": "“Hexproof” on a permanent means “This permanent can’t be the target of spells or abilities your opponents control.”",
+    "sha256": "daedc6374f4e2c808595af407130564d89a58cda6a682d7c60428f06314267ce",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Slippery Bogle": {
+    "text": "Slippery Bogle\n{G/U}\nCreature — Beast\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\n1 / 1",
+    "sha256": "c4ec720bc5d94897dbafacb6985af86d9490737dab0e56e27059e3a7d6721a76",
+    "url": "https://scryfall.com/card/uma/223/slippery-bogle?utm_source=api"
+  },
+  "CARD Giant Growth": {
+    "text": "Giant Growth\n{G}\nInstant\nTarget creature gets +3/+3 until end of turn.",
+    "sha256": "3a0c021814fdbca6b4fa79da8a0138620e0fa69b2029a0a2bf5e0a8a42b8b8b6",
+    "url": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+  },
+  "CR 702.21a": {
+    "text": "Ward is a triggered ability. Ward [cost] means “Whenever this permanent becomes the target of a spell or ability an opponent controls, counter that spell or ability unless that player pays [cost].”",
+    "sha256": "1dfde9033cbe2fb96b5a1bf1284907a5814dca3a31669a68e4cfbe8dc8c322ac",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 101.2": {
+    "text": "When a rule or effect allows or directs something to happen, and another effect states that it can’t happen, the “can’t” effect takes precedence.\nExample: If one effect reads “You may play an additional land this turn” and another reads “You can’t play lands this turn,” the effect that precludes you from playing lands wins.",
+    "sha256": "ff72e27aa4b76b234adfaffa786c6da59744d73261ccccb08aef218364f9e115",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Abrupt Decay": {
+    "text": "Abrupt Decay\n{B}{G}\nInstant\nThis spell can't be countered.\nDestroy target nonland permanent with mana value 3 or less.",
+    "sha256": "cdbf10597b2d0f2864b035a6472dff59e2b8438f0e088fe506994a6793f50ed3",
+    "url": "https://scryfall.com/card/mm3/146/abrupt-decay?utm_source=api"
+  },
+  "CR 702.61b": {
+    "text": "Players may activate mana abilities and take special actions while a spell with split second is on the stack. Triggered abilities trigger and are put on the stack as normal while a spell with split second is on the stack.",
+    "sha256": "a74c76535a154fb211feac9d697d1b61abc8e9d6530422468b279487c3328272",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.37e": {
+    "text": "Any time you have priority, you may turn a face-down permanent you control with a morph ability face up. This is a special action; it doesn’t use the stack (see rule 116). To do this, show all players what the permanent’s morph cost would be if it were face up, pay that cost, then turn the permanent face up. (If the permanent wouldn’t have a morph cost if it were face up, it can’t be turned face up this way.) The morph effect on it ends, and it regains its normal characteristics. Any abilities relating to the permanent entering the battlefield don’t trigger when it’s turned face up and don’t have any effect, because the permanent has already entered the battlefield.",
+    "sha256": "16496e943eb1020702e2938c19ad593b3f994bfc8e84e7e5ca46f99b9c2af736",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Krosan Grip": {
+    "text": "Krosan Grip\n{2}{G}\nInstant\nSplit second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nDestroy target artifact or enchantment.",
+    "sha256": "fd0bfc3983735876e7168ea2eabbca1154a4f5b8a23640cbde08e3fd72f11174",
+    "url": "https://scryfall.com/card/c21/198/krosan-grip?utm_source=api"
+  },
+  "CARD Willbender": {
+    "text": "Willbender\n{1}{U}\nCreature — Human Wizard\nMorph {1}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, change the target of target spell or ability with a single target.\n1 / 2",
+    "sha256": "c2f165b5d99303e317513d5807ec6dcca75947a0c57fa58af366fc7cba8357bd",
+    "url": "https://scryfall.com/card/c19/102/willbender?utm_source=api"
+  },
+  "CR 601.2h": {
+    "text": "The player pays the total cost. First, they pay all costs that don’t involve random elements or moving objects from the library to a public zone, in any order. Then they pay all remaining costs in any order. Partial payments are not allowed. Unpayable costs can’t be paid.\nExample: You cast Altar’s Reap, which costs {1}{B} and has an additional cost of sacrificing a creature. You sacrifice Thunderscape Familiar, whose effect makes your black spells cost {1} less to cast. Because a spell’s total cost is “locked in” before payments are actually made, you pay {B}, not {1}{B}, even though you’re sacrificing the Familiar.",
+    "sha256": "11022dc1e521543b70eb12480022664aa2c0868cc46282250766956da1485381",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 117.2e": {
+    "text": "Resolving spells and abilities may instruct players to make choices or take actions, or may allow players to activate mana abilities. Even if a player is doing so, no player has priority while a spell or ability is resolving. See rule 608, “Resolving Spells and Abilities.”",
+    "sha256": "251aa6e789040bcc50735c2c6c8c8d6b365c27c423441e3750dafeb187823a94",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Fling": {
+    "text": "Fling\n{1}{R}\nInstant\nAs an additional cost to cast this spell, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to any target.",
+    "sha256": "6dc13a2b3ee59bc34f8facea259608696fd3c1cbcb2b87bf78160cb5cc412863",
+    "url": "https://scryfall.com/card/jmp/320/fling?utm_source=api"
+  },
+  "CR 702.34a": {
+    "text": "Flashback appears on some instants and sorceries. It represents two static abilities: one that functions while the card is in a player’s graveyard and another that functions while the card is on the stack. “Flashback [cost]” means “You may cast this card from your graveyard if the resulting spell is an instant or sorcery spell by paying [cost] rather than paying its mana cost” and “If the flashback cost was paid, exile this card instead of putting it anywhere else any time it would leave the stack.” Casting a spell using its flashback ability follows the rules for paying alternative costs in rules 601.2b and 601.2f–h.",
+    "sha256": "4682fa0c2c91847b907e6ea3293a217618ed08e4158ac718f9e5bd7e2dcc0d52",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.5a": {
+    "text": "To cast a spell is to take it from the zone it’s in (usually the hand), put it on the stack, and pay its costs, so that it will eventually resolve and have its effect. A player may cast a spell if they have priority. See rule 601, “Casting Spells.”",
+    "sha256": "d730e214cf12e3b4ae94227d048dd610a79c6ae129ee7acd36b512556fc6050b",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Think Twice": {
+    "text": "Think Twice\n{1}{U}\nInstant\nDraw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+    "sha256": "639c5be67530012cedcd092b6ca3ea6c769b0a2a05140eb3ede227904ff1250e",
+    "url": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+  },
+  "CR 702.88a": {
+    "text": "Rebound appears on some instants and sorceries. It represents a static ability that functions while the spell is on the stack and may create a delayed triggered ability. “Rebound” means “If this spell was cast from your hand, instead of putting it into your graveyard as it resolves, exile it and, at the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.”",
+    "sha256": "450685a6d53a2b5bcb5327ceedf5d14f9d14757437f2877ba856a17acc482fd2",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Ephemerate": {
+    "text": "Ephemerate\n{W}\nInstant\nExile target creature you control, then return it to the battlefield under its owner's control.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+    "sha256": "b2916a302fee5d4438f55ccb890e04b306dc66e304c9524db9a2632e6a00e601",
+    "url": "https://scryfall.com/card/mh1/7/ephemerate?utm_source=api"
+  },
+  "CR 702.79a": {
+    "text": "Persist is a triggered ability. “Persist” means “When this permanent is put into a graveyard from the battlefield, if it had no -1/-1 counters on it, return it to the battlefield under its owner’s control with a -1/-1 counter on it.”",
+    "sha256": "b4b88f393a44099ca5c9c337496a99e04fbc3336d249ce55f6c96adcc68e458d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Kitchen Finks": {
+    "text": "Kitchen Finks\n{1}{G/W}{G/W}\nCreature — Ouphe\nWhen this creature enters, you gain 2 life.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)\n3 / 2",
+    "sha256": "c7d6d0e554b9f88f5d6e963153df514927554e1e3b6b6a5627f0b167b659b0c6",
+    "url": "https://scryfall.com/card/uma/216/kitchen-finks?utm_source=api"
+  },
+  "CR 702.93a": {
+    "text": "Undying is a triggered ability. “Undying” means “When this permanent is put into a graveyard from the battlefield, if it had no +1/+1 counters on it, return it to the battlefield under its owner’s control with a +1/+1 counter on it.”",
+    "sha256": "c07a2d9fe39c78593daa30c485cc52fbfe5a69bfedaf53a96c54bf5edc5f991c",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 704.7": {
+    "text": "If multiple state-based actions would have the same result at the same time, a single replacement effect will replace all of them.\nExample: You control Lich’s Mirror, which says “If you would lose the game, instead shuffle your hand, your graveyard, and all permanents you own into your library, then draw seven cards and your life total becomes 20.” There’s one card in your library and your life total is 1. A spell causes you to draw two cards and lose 2 life. The next time state-based actions are checked, you’d lose the game due to rule 704.5a and rule 704.5b. Instead, Lich’s Mirror replaces that game loss and you keep playing.",
+    "sha256": "d4d2cdf565dcc87296331a9a587799d00c60b19e7212005e688411514ff9d8ec",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 704.5q": {
+    "text": "If a permanent has both a +1/+1 counter and a -1/-1 counter on it, N +1/+1 and N -1/-1 counters are removed from it, where N is the smaller of the number of +1/+1 and -1/-1 counters on it.",
+    "sha256": "329f337f314d590ceb0034f97fe8abc16fd8a8cfacfc74abb14ea2e525443c47",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Young Wolf": {
+    "text": "Young Wolf\n{G}\nCreature — Wolf\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)\n1 / 1",
+    "sha256": "5434cd11bfae97b9fad3953fb8b547a74a5d28c01161f64ed0dc24ad1b489065",
+    "url": "https://scryfall.com/card/inr/227/young-wolf?utm_source=api"
+  },
+  "CR 400.7": {
+    "text": "An object that moves from one zone to another becomes a new object with no memory of, or relation to, its previous existence. This rule has the following exceptions.",
+    "sha256": "9ec31ef2bc4244570c9ac4c0b6b4f61f858c0a9ae38050673fcf46553310b94a",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 608.2b": {
+    "text": "If the spell or ability specifies targets, it checks whether the targets are still legal. A target that’s no longer in the zone it was in when it was targeted is illegal. Other changes to the game state may cause a target to no longer be legal; for example, its characteristics may have changed or an effect may have changed the text of the spell. If the source of an ability has left the zone it was in, its last known information is used during this process. If all its targets, for every instance of the word “target,” are now illegal, the spell or ability doesn’t resolve. It’s removed from the stack and, if it’s a spell, put into its owner’s graveyard. Otherwise, the spell or ability will resolve normally. Illegal targets, if any, won’t be affected by parts of a resolving spell’s effect for which they’re illegal. Other parts of the effect for which those targets are not illegal may still affect them. If the spell or ability creates any continuous effects that affect game rules (see rule 613.11), those effects don’t apply to illegal targets. If part of the effect requires information about an illegal target, it fails to determine any such information. Any part of the effect that requires that information won’t happen.\nExample: Sorin’s Thirst is a black instant that reads, “Sorin’s Thirst deals 2 damage to target creature and you gain 2 life.” If the creature isn’t a legal target during the resolution of Sorin’s Thirst (say, if the creature has gained protection from black or left the battlefield), then Sorin’s Thirst doesn’t resolve. Its controller doesn’t gain any life.\nExample: Plague Spores reads, “Destroy target nonblack creature and target land. They can’t be regenerated.” Suppose the same creature land is chosen both as the nonblack creature and as the land, and the color of the creature land is changed to black before Plague Spores resolves. Plague Spores still resolves because the black creature land is still a legal target for the “target land” part of the spell. The “destroy target nonblack creature” part of the spell won’t affect that permanent, but the “destroy target land” part of the spell will still destroy it. It can’t be regenerated.",
+    "sha256": "dab103dbf0cdfa2c7ea7d313511d8093fd3a9481fc39b00921760f8e69163c03",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Lightning Bolt": {
+    "text": "Lightning Bolt\n{R}\nInstant\nLightning Bolt deals 3 damage to any target.",
+    "sha256": "a31a78af0d849e6ad77906e7a75f5eb8bd4f15e5339cfa1053c2ef24c3bc749b",
+    "url": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+  },
+  "CARD Cloudshift": {
+    "text": "Cloudshift\n{W}\nInstant\nExile target creature you control, then return that card to the battlefield under your control.",
+    "sha256": "97c261a2042b55720b9d7e92a26579ddb8444f67e78a5faeec4191e73ca8749d",
+    "url": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+  },
+  "CR 702.6a": {
+    "text": "Equip is an activated ability of Equipment cards. “Equip [cost]” means “[Cost]: Attach this permanent to target creature you control. Activate only as a sorcery.”",
+    "sha256": "8ae451fc98487d5948d60fb013c92cc36ce0ac513bc7c6d471019f0f559883be",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 307.5": {
+    "text": "If a spell, ability, or effect states that a player can do something only “any time they could cast a sorcery” or “only as a sorcery,” it means only that the player must have priority, it must be during the main phase of their turn, and the stack must be empty. The player doesn’t need to have a sorcery card they could cast. Effects that would preclude that player from casting a sorcery spell don’t affect the player’s capability to perform that action (unless the action is actually casting a sorcery spell).",
+    "sha256": "333fc11f197177f91f855c838f7567a05b48129a93b45b89b40528dd7a8ddb11",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Colossus Hammer": {
+    "text": "Colossus Hammer\n{1}\nArtifact — Equipment\nEquipped creature gets +10/+10 and loses flying.\nEquip {8} ({8}: Attach to target creature you control. Equip only as a sorcery.)",
+    "sha256": "c335ee8d1d528b5599c7717d8bca6bc6eac5c0164a09f590b8c87801d69ed99a",
+    "url": "https://scryfall.com/card/afc/202/colossus-hammer?utm_source=api"
+  },
+  "CR 702.122a": {
+    "text": "Crew is an activated ability of Vehicle cards. “Crew N” means “Tap any number of other untapped creatures you control with total power N or greater: This permanent becomes an artifact creature until end of turn.”",
+    "sha256": "e1a6b82e980751503dd8d56f2527840e4749018ed6d97507453ed7e159a7d663",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 302.6": {
+    "text": "A creature’s activated ability with the tap symbol or the untap symbol in its activation cost can’t be activated unless the creature has been under its controller’s control continuously since their most recent turn began. A creature can’t attack unless it has been under its controller’s control continuously since their most recent turn began. This rule is informally called the “summoning sickness” rule.",
+    "sha256": "978ff61bf0ee986749934c1b0685a3f6f8c6faf418a17a366495aed58bd0c4b4",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Smuggler's Copter": {
+    "text": "Smuggler's Copter\n{2}\nArtifact — Vehicle\nFlying\nWhenever this Vehicle attacks or blocks, you may draw a card. If you do, discard a card.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)\n3 / 3",
+    "sha256": "78a007f8bffb9e889a3a40993b8c17df0e2134bec9edd398fc585217ead92877",
+    "url": "https://scryfall.com/card/nec/160/smugglers-copter?utm_source=api"
+  },
+  "CR 506.4b": {
+    "text": "Tapping or untapping a creature that’s already been declared as an attacker or blocker doesn’t remove it from combat and doesn’t prevent its combat damage.",
+    "sha256": "8f9e82c39060c12ca0b381f2f0cbd72398239e322399db806d3ede4cab0d2363",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.14a": {
+    "text": "A spell or ability may instruct a creature to fight another creature or it may instruct two creatures to fight each other. Each of those creatures deals damage equal to its power to the other creature.",
+    "sha256": "d4b58af7dd2b0a9842a0316a7f381d5f59289a34392114e9fa786c9f914b7f26",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.14d": {
+    "text": "The damage dealt when a creature fights isn’t combat damage.",
+    "sha256": "ed36bf607cced5ee49f3474459a7d8912d19151197d62aa83eac5e10c1e29d5c",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 800.4a": {
+    "text": "When a player leaves the game, all objects (see rule 109) owned by that player leave the game and any effects which give that player control of any objects or players end. Then, if that player controlled any objects on the stack not represented by cards, those objects cease to exist. Then, if there are any objects still controlled by that player, those objects are exiled. This is not a state-based action. It happens as soon as the player leaves the game. If the player who left the game had priority at the time they left, priority passes to the next player in turn order who’s still in the game.\nExample: Alex casts Mind Control, an Aura that reads, “You control enchanted creature,” on Bianca’s Assault Griffin. If Alex leaves the game, so does Mind Control, and Assault Griffin reverts to Bianca’s control. If, instead, Bianca leaves the game, so does Assault Griffin, and Mind Control is put into Alex’s graveyard.\nExample: Alex casts Act of Treason, which reads, in part, “Gain control of target creature until end of turn,” targeting Bianca’s Runeclaw Bears. If Alex leaves the game, Act of Treason’s change-of-control effect ends and Runeclaw Bears reverts to Bianca’s control.\nExample: Alex casts Bribery, which reads, “Search target opponent’s library for a creature card and put that card onto the battlefield under your control. Then that player shuffles their library,” targeting Bianca. Alex puts Serra Angel onto the battlefield from Bianca’s library. If Bianca leaves the game, Serra Angel also leaves the game. If, instead, Alex leaves the game, Serra Angel is exiled.\nExample: Alex controls Genesis Chamber, which reads, “Whenever a nontoken creature enters, if Genesis Chamber is untapped, that creature’s controller creates a 1/1 colorless Myr artifact creature token.” If Alex leaves the game, all such Myr tokens that entered the battlefield under Alex’s control leave the game, and all such Myr tokens that entered the battlefield under any other player’s control remain in the game.",
+    "sha256": "5dc0c727e12f1d49b6cebc96ad8ecf9f60e29651b081bfd4fe2c8ed76fbaf1fa",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Control Magic": {
+    "text": "Control Magic\n{2}{U}{U}\nEnchantment — Aura\nEnchant creature\nYou control enchanted creature.",
+    "sha256": "3e6c62184be13167e0221cc2589b73009c4675175a899665a5db501275afb907",
+    "url": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+  },
+  "CR 903.10a": {
+    "text": "A player who’s been dealt 21 or more combat damage by the same commander over the course of the game loses the game. (This is a state-based action. See rule 704.)",
+    "sha256": "0e03ed901994f90d3e03eacfe8c2150b8d17b4c2c0a258db49b2abfa1023eae0",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 903.9b": {
+    "text": "If a commander would be put into its owner’s hand or library from anywhere, its owner may put it into the command zone instead. This replacement effect may apply more than once to the same event. This is an exception to rule 614.5.",
+    "sha256": "82c932654677ca07f945fe24235e2fdb5507ca678c3345a41c141b9c77590a2b",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 616.1": {
+    "text": "If two or more replacement and/or prevention effects are attempting to modify the way an event affects an object or player, the affected object’s controller (or its owner if it has no controller) or the affected player chooses one to apply, following the steps listed below. If two or more players have to make these choices at the same time, choices are made in APNAP order (see rule 101.4).",
+    "sha256": "3ef08177561d2c42c2c47fe79ed21dfa5d711fbfbfeef439f03f2c9e55422eb3",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 614.5": {
+    "text": "A replacement effect doesn’t invoke itself repeatedly; it gets only one opportunity to affect an event or any modified events that may replace that event.\nExample: A player controls two permanents, each with an ability that reads “If a creature you control would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.” A creature that normally deals 2 damage will deal 8 damage—not just 4, and not an infinite amount.",
+    "sha256": "8c681b69785d454e70b159cec24bb90397b536669303d525b96716bd5392938e",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CARD Torbran, Thane of Red Fell": {
+    "text": "Torbran, Thane of Red Fell\n{1}{R}{R}{R}\nLegendary Creature — Dwarf Noble\nIf a red source you control would deal damage to an opponent or a permanent an opponent controls, it deals that much damage plus 2 instead.\n2 / 4",
+    "sha256": "848fcd0fdf828362aef7766d3ac422bdeb0f46491f000fafdc2d438a005f35d1",
+    "url": "https://scryfall.com/card/eld/147/torbran-thane-of-red-fell?utm_source=api"
+  },
+  "CARD Furnace of Rath": {
+    "text": "Furnace of Rath\n{1}{R}{R}{R}\nEnchantment\nIf a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
+    "sha256": "a8674032c0a1647617010d2e45142c71b63699125836fd12cd95d94ac8804380",
+    "url": "https://scryfall.com/card/hop/55/furnace-of-rath?utm_source=api"
+  },
+  "CR 704.5b": {
+    "text": "If a player attempted to draw a card from a library with no cards in it since the last time state-based actions were checked, that player loses the game.",
+    "sha256": "d2a65bc75a61b83e7050522356dffbf4e889bfb490686e6d23411878493c1db6",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 510.1c": {
+    "text": "A blocked creature assigns its combat damage to the creatures blocking it. If no creatures are currently blocking it (if, for example, they were destroyed or removed from combat), it assigns no combat damage. If exactly one creature is blocking it, it assigns all its combat damage to that creature. If two or more creatures are blocking it, it assigns its combat damage to those creatures divided as its controller chooses among them.\nExample: An attacking Elvish Regrower (a 4/3 creature) is blocked by Vampire Spawn (a 2/3 creature) and Helpful Hunter (a 1/1 creature). Elvish Regrower’s controller can assign all 4 damage to the Hunter, 1 damage to the Spawn and 3 damage to the Hunter, 2 damage to each creature, 3 damage to the Spawn and 1 damage to the Hunter, or all 4 damage to the Spawn.",
+    "sha256": "75145697c09e6d08849840e988f31b1d3579463e65beed206d63f3b7ba242f2f",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.19b": {
+    "text": "The controller of an attacking creature with trample first assigns damage to the creature(s) blocking it. Once all those blocking creatures are assigned lethal damage, any excess damage is assigned as its controller chooses among those blocking creatures and the player, planeswalker, or battle the creature is attacking. When checking for assigned lethal damage, take into account damage already marked on the creature and damage from other creatures that’s being assigned during the same combat damage step, but not any abilities or effects that might change the amount of damage that’s actually dealt. The attacking creature’s controller need not assign lethal damage to all those blocking creatures but in that case can’t assign any damage to the player or planeswalker it’s attacking.\nExample: A 2/2 creature that can block an additional creature blocks two attackers: a 1/1 with no abilities and a 3/3 with trample. The active player could assign 1 damage from the first attacker and 1 damage from the second to the blocking creature, and 2 damage to the defending player from the creature with trample.\nExample: A 6/6 green creature with trample is blocked by a 2/2 creature with protection from green. The attacking creature’s controller must assign at least 2 damage to the blocker, even though that damage will be prevented by the blocker’s protection ability. The attacking creature’s controller can divide the rest of the damage as they choose between the blocking creature and the defending player.",
+    "sha256": "3d1ac52b63989172a6ee1b63c02f8ae5077c44453c3093260b38e50afec4d8e6",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 707.2": {
+    "text": "When copying an object, the copy acquires the copiable values of the original object’s characteristics and, for an object on the stack, choices made when casting or activating it (mode, targets, the value of X, whether it was kicked, how it will affect multiple targets, and so on). The copiable values are the values derived from the text printed on the object (that text being name, mana cost, color indicator, card type, subtype, supertype, rules text, power, toughness, and/or loyalty), as modified by other copy effects, by its face-down status, and by “as . . . enters” and “as . . . is turned face up” abilities that set power and toughness (and may also set additional characteristics). Other effects (including type-changing and text-changing effects), status, counters, and stickers are not copied.\nExample: Chimeric Staff is an artifact that reads, “{X}: This artifact becomes an X/X Construct artifact creature until end of turn.” Clone is a creature that reads, “You may have this creature enter as a copy of any creature on the battlefield.” After a Staff has become a 5/5 Construct artifact creature, a Clone enters the battlefield as a copy of it. The Clone is an artifact, not a 5/5 Construct artifact creature. (The copy has the Staff’s ability, however, and will become a creature if that ability is activated.)\nExample: Clone enters the battlefield as a copy of a face-down Grinning Demon (a creature with morph {2}{B}{B}). The Clone is a colorless 2/2 creature with no name, no types, no abilities, and no mana cost. It will still be face up. Its controller can’t pay {2}{B}{B} to turn it face up.",
+    "sha256": "106f53fd1a557f4b19853fc003a1989899566f3c329d0efb3adfda5f93d8863f",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 707.9": {
+    "text": "Copy effects may include modifications or exceptions to the copying process.",
+    "sha256": "f0e4aae4c5326a66664a65e608064fb097d2e4543ef9935d09c185a0e13035c2",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  }
+}
