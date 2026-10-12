@@ -19,6 +19,9 @@ ROOT = Path(__file__).resolve().parent
 LM_URL = os.environ.get('LM_STUDIO_URL', 'http://127.0.0.1:1234/v1').rstrip('/')
 MODEL = os.environ.get('LM_STUDIO_MODEL', 'qwen/qwen3.8-27b')
 TOKEN = os.environ.get('LM_STUDIO_API_KEY', '')
+REASONING_EFFORT = os.environ.get('MTG_REASONING_EFFORT', 'medium')
+if REASONING_EFFORT not in {'off', 'low', 'medium', 'high', 'xhigh', 'on'}:
+    raise ValueError('MTG_REASONING_EFFORT must be off, low, medium, high, or xhigh.')
 SYNC = {'running': False, 'message': ''}
 LOCK = threading.Lock()
 GENERATION = threading.Lock()
@@ -148,7 +151,7 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             history = [{'role':m['role'],'content':m['content']} for m in messages[-12:]]
             prompt, sources, budget = prepare_context(SYSTEM, sources, history, LM_URL, MODEL)
-            body = {'model':MODEL, 'messages':prompt, 'temperature':0.1,'max_tokens':OUTPUT_TOKENS,'reasoning_effort':'medium','stream':True,'stream_options':{'include_usage':True}}
+            body = {'model':MODEL, 'messages':prompt, 'temperature':0.1,'max_tokens':OUTPUT_TOKENS,'reasoning_effort':REASONING_EFFORT,'stream':True,'stream_options':{'include_usage':True}}
             with lm_request('/chat/completions',body,timeout=300) as upstream:
                 self.send_response(200)
                 self.send_header('Content-Type','application/x-ndjson; charset=utf-8')
