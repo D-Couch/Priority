@@ -1,0 +1,3 @@
+# Review correction (2026-10-12)
+
+During the hybrid comparison, a second review pass found that h25's baseline answer suggested CR 104.3a as the relevant leaving-player rule. That is incorrect for the question about a player's spell on the stack; CR 800.4a governs objects owned by a player who leaves. The answer was already graded as abstained/incorrect, so the 25/32 correctness score did not change. Its unsupported-claim flag was corrected from false to true. The historical answer, prompt, corpus, suite, and all correctness criteria remain unchanged. The same reference mistake is flagged in the intermediate ruling-packing and source-quotation reviews that gave the identical suggestion.

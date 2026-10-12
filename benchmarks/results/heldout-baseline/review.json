@@ -326,9 +326,9 @@
         "h25-leaving-stack.2": false
       },
       "citations_supported": false,
-      "unsupported_or_contradictory_claims": false,
+      "unsupported_or_contradictory_claims": true,
       "abstained": true,
-      "notes": "Unnecessary abstention on a complete game state because 800.4a was not supplied. Also points to 104.3a rather than the applicable leaving-player rule."
+      "notes": "Unnecessary abstention on a complete game state because 800.4a was not supplied. Also points to 104.3a rather than the applicable leaving-player rule. Review correction: the suggestion that the needed rule is CR 104.3a is wrong for objects/spells owned by a player leaving the game, and is counted as an unsupported citation claim."
     },
     {
       "case_id": "h26-commander-control",

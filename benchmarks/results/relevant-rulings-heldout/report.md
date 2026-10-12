@@ -15,7 +15,7 @@ Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42
 | Cases retrieving every expected evidence group | 15/32 |
 | Answers with citations | 28/32 |
 | Citation ID validity (not semantic support) | 100.0% |
-| Answers with unsupported/contradictory claims | 4 |
+| Answers with unsupported/contradictory claims | 5 |
 | Reviewed citation-support failures | 10 |
 | Reviewed fully correct | 25/32 reviewed |
 | Reviewed accuracy | 78.1% |
@@ -381,7 +381,7 @@ In a three-player game, Bob controls a Lightning Bolt he owns on the stack targe
 
 Need details: The supplied reference excerpts do not include the rule governing what happens to a player's objects (including spells on the stack) when that player leaves the game. I cannot confirm or deny whether the Lightning Bolt is removed from the stack or continues to resolve without that rule text. Could you provide the relevant excerpt (typically found under the "Leaving the Game" section of the Comprehensive Rules), or should I answer based on general knowledge with the caveat that no supporting citation is available here?
 
-Review: **abstained**. Unnecessary abstention on a complete game state because 800.4a was not supplied. Also points to 104.3a rather than the applicable leaving-player rule.
+Review: **abstained**. Unnecessary abstention on a complete game state because 800.4a was not supplied. Also points to 104.3a rather than the applicable leaving-player rule. Review correction: the suggestion that the needed rule is CR 104.3a is wrong for objects/spells owned by a player leaving the game, and is counted as an unsupported citation claim.
 Reviewer: Codex (AI-assisted manual review; no independent human judge)
 
 Missing reference groups: CR 800.4a

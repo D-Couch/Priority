@@ -13,3 +13,7 @@ Adoption gate: hybrid must improve correct-and-complete answers on the 52-case c
 ## Reviewed prompt experiment
 
 The source-quotation response contract was committed and measured on both frozen suites. It remained 25/32 on held-out and 20/20 on original, improved citation-support reviews 10→9, but produced new unsupported details and increased held-out p95 from 18.79s to 28.99s. It was reverted; artifacts and comparison are retained under `results/source-quotes-*`.
+
+## First hybrid result and targeted follow-up
+
+The first hybrid run (RRF k=60, 24 semantic candidates, 64-rule cap) improved the held-out set to 29/32 but regressed the original suite to 19/20. In both suites it newly claimed a 0/0 indestructible creature with no damage survives. Candidate sources contained CR 704.5g but omitted adjacent CR 704.5f, which governs zero toughness. The run therefore fails the no-new-unsupported-answers gate and hybrid is not enabled by default. A separately committed retrieval fix will keep adjacent lettered subrules with a selected subrule, then repeat both suites against the unchanged frozen baselines. Historical first-run artifacts remain immutable.
