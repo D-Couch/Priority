@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "reasoning-off-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted rubric review; answers and cited passages checked against the authored held-out rubrics and frozen rules/card corpus.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "de0ff2b7a2125129a5d9bb8a3059cc30e644a3ded8da6a329b7abb6f4679a64a",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "1d5d6c73fc7d36d17c581aa18775e5ee686306e3626acbbc86ff84ce1f85965c",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "b8b6c76ed9e3adec491bc1e4e800a0ad6b6b8daf97273f7402ac3d25cc7c832d",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct conclusion, but CR 603.3 cited here covers putting triggered abilities on the stack and does not establish that the ability exists independently of its source; the answer does not cite the rule that directly supports that claim."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "77bafde0fddde9aec24152eab8ece4021d6f6c20be937976f7decbac045c2adb",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "e60ba3ae15ed9e4a13de3ce9f6ff281c7a72725f69c2681757c80c4639988f71",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "c43f846036af1efefc8b69ea3a1f84843cae6f6120fdea9580e8f38682c210df",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct zero-life result, but incorrectly calls lifelink a condition that must trigger; lifelink is a static ability and the rules phrase is damage dealt."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "32e166e2e2d4cb3ef6962b5b525ed007f2dbba6140129b54283562aba08086d9",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "7e0c19401bb4fea4ba09c5feb642fcfb193279b9f7cc00280e850320ce397d79",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "45b51b786b263fa8ba7947853088213b731ac49bf5fcef6fe87121ba0ad4e434",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "738bc6200f075ed593706f6e6a17740b76361d936167c45e619816fbf42d69ff",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "f6331e73dffda517ab79352d037f33e4b65786f3a1c0ceba5738014f20421c35",
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "78d3fac8295a9cba86781c7f6a510251706fad6acf4f1d983150990d6a5309dd",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "89a598f67d327388954b2b498c506de1fd1ac8c3254df0426231aba0f6241202",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "c746bb6d8bb7f1649b0db81716950155905883adab5e845da4d4fa9c32641ef3",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "9aa2f50e856e3f9822222a2c894e216a930d3722538721b88cbcfdd81a6bbeb4",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "ff83c3797b8da503ba439fb18d36a92e344807ccc857d33e85aff32a751d8d97",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "c98788a9bdd7633c92ad4ac91d0c0b437db950c391af7171daa8e0ab11ea7976",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "7dccf05c74be7607e733e5add61fc7350a40733b8d888d0f51e7ac764c8402ac",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "d7d1182f8ff70cae5101c7cb1123471749b96895b036a44794e2955e3b097ea2",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "43ef709307c3ef8aa6d78079371521fe7712bce00ee09b287df2d339f466855d",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "ce98d2882e868e42d3afd567fc8388f7be56fce093333862f3d197232d461a49",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "2bf702c970f2745c066ab592992566c5a1c7f2c4782685cb6d1d865cd3715aee",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "ac2aa671777f6029acaf1bcc319ed7f662d528fcac360f4e111c4e795f44a45e",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Damage and survival conclusion are correct, but “survives with 1 damage remaining” is inaccurate terminology for a 4/4 with 3 marked damage."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "ced9fba7d45c67821e6b9bce7ca4fb4fffb5e4ee6ab529c677a69039e4009bf7",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "c738bfcdf3dd232d66107b31042a25f8a74d3387ce96f30571482c6d452b4589",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "d078efc7c09092edd29cb5ce8aabc142295e138c046de469aa43e7cfb92ad3f4",
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "7287ad1c0e906fde3a25e7433db81ecdc21c7dc3befd806cf37af3a2c69ff642",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "2d3bbe4d906a382bc2c4cf3368bedc9ec0b2634ee383a74123e5cec2d25b223d",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The direct ruling says totals are 10 or 12, which is wrong; later text gives 10 or 8, then self-corrects repeatedly. Criterion 2 fails and the answer contains contradictory totals."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "bc37ace2d3b9b5735716b660d0642004521175541ff5d13174d2986122f8cbd8",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "b83537183226c57891a180a2b6169319ae84fb72ae11b2ffe4ecd3f3df5f0030",
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Gives unconditional zero damage without asking about trample or other relevant abilities. Both clarification criteria fail."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "c9f6050ef633b4a3ceefa3f1dc0668d1aa763c766e93a8a1f9f5c8f82061f0be",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Gives a definitive answer without asking which copy effect or what characteristics/effects are involved. Both clarification criteria fail."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "2155ee7b0750776e9cae830df4b1f8bc0e358dee932c46f9682b6e09e0cd1101",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Appropriately asks what effects apply and avoids inventing a result."
+    }
+  ]
+}
