@@ -1,0 +1,50 @@
+{
+  "baseline": "focused-rulings",
+  "only_changed_field": "sampling.reasoning_effort",
+  "results": [
+    {
+      "case_id": "07-zero-toughness",
+      "prompt_sha256": "75aaf9ce07746728e5bb1b6201505a4f7ec46661614c111bf2b56314be030014",
+      "reasoning_effort": "medium",
+      "seconds": 11.606366558997252,
+      "answer": "**No, it does not survive.** The creature will be put into its owner's graveyard by the state-based action for having toughness 0 or less.\n\n**Explanation:**\n\nIndestructible prevents a permanent from being *destroyed*\u2014that is, from being destroyed by lethal damage or by a \"destroy\" effect. Specifically, [CR 702.12b] states that an indestructible permanent \"isn't destroyed by lethal damage, and they ignore the state-based action that checks for lethal damage (see rule 704.5g).\"\n\nHowever, the -3/-3 makes the creature a 0/0, and the applicable state-based action is [CR 704.5f]: \"If a creature has toughness 0 or less, it's put into its owner's graveyard. Regeneration can't replace this event.\" This is not a destruction event; it is a separate state-based action that moves the permanent to the graveyard. Indestructible does not prevent this.\n\nSo the 0/0 indestructible creature is put into its owner's graveyard the next time state-based actions are checked.",
+      "diagnostics": {
+        "type": "diagnostics",
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 4510,
+          "completion_tokens": 949,
+          "total_tokens": 5459,
+          "completion_tokens_details": {
+            "reasoning_tokens": 709
+          }
+        },
+        "reasoning_characters": 2668,
+        "visible_characters": 964,
+        "stream_completed": true
+      }
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "prompt_sha256": "f7b6d3e533b4983e42c1b1ad5f3f01ebababba9a4e5a588648d3a97a23a71389",
+      "reasoning_effort": "medium",
+      "seconds": 10.429792640003143,
+      "answer": "**It depends on two details you haven't provided.**\n\nProtection from a quality (e.g., \"protection from red\") prevents a creature from being **targeted** by spells that have that quality [CR 702.16b]. It also prevents damage from sources with that quality [CR 702.16e]. However, protection does **not** make a creature immune to non-targeted effects (e.g., \"destroy all creatures\"), and it does **not** protect against spells of a different color or quality.\n\nSo the answer hinges on:\n\n1. **What quality does your creature have protection from?** (red, blue, a specific card name, a player, etc.)\n2. **What is the removal spell?** Specifically, what color is it, and does it say \"target\" in its text?\n\nIf the spell's color (or other quality) matches your creature's protection **and** the spell targets your creature, your creature is safe from being targeted [CR 702.16b]. If the spell is a different color, or if it's a non-targeted \"board wipe\" style effect, protection does not save it.\n\nCould you tell me the exact protection text on your creature and the name (or text) of the removal spell your opponent cast?",
+      "diagnostics": {
+        "type": "diagnostics",
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 4450,
+          "completion_tokens": 763,
+          "total_tokens": 5213,
+          "completion_tokens_details": {
+            "reasoning_tokens": 485
+          }
+        },
+        "reasoning_characters": 2061,
+        "visible_characters": 1115,
+        "stream_completed": true
+      }
+    }
+  ]
+}
