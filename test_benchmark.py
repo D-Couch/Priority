@@ -35,6 +35,19 @@ class BenchmarkTests(unittest.TestCase):
         self.assertIsNone(result['reviewed_accuracy'])
         self.assertEqual(result['reviewed'],0)
 
+    def test_complete_answer_gate_rejects_truncation_and_unknown_telemetry(self):
+        rows=[{'metrics':{'evidence_recall':1,'all_evidence_found':True,'citations':[],'invalid_citations':[]},
+               'timing':{'total_seconds':1},'review':{'fully_correct':True,'rubric_score':1},
+               'diagnostics':{'finish_reason':finish}} for finish in ('stop','length')]
+        run={'expected_attempts':2,'results':rows}
+        result=benchmark.summary(run)
+        self.assertEqual(result['fully_correct'],2)
+        self.assertEqual(result['correct_and_complete'],1)
+        self.assertEqual(result['truncated_answers'],1)
+        rows[1]['diagnostics']={}
+        self.assertIsNone(benchmark.summary(run)['correct_and_complete'])
+        self.assertEqual(benchmark.summary(run)['unknown_finish_reason'],1)
+
     def test_error_not_in_successful_latency(self):
         run={'expected_attempts':2,'results':[{'error':error,'metrics':{'evidence_recall':0,'all_evidence_found':False,'citations':[],'invalid_citations':[]},'timing':{'total_seconds':t}} for error,t in [(None,10),('failed',.1)]]}
         self.assertEqual(benchmark.summary(run)['median_seconds'],10)

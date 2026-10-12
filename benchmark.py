@@ -110,9 +110,9 @@ def summary(run):
     cited_count = sum(len(r['metrics']['citations']) for r in rows)
     return {'completed':len(completed), 'attempted':len(rows), 'errors':len(rows)-len(completed),
             'expected_attempts':run['expected_attempts'],
-            'truncated_answers':sum(r.get('diagnostics',{}).get('finish_reason')=='length' for r in rows),
+            'truncated_answers':sum(r.get('diagnostics',{}).get('finish_reason')=='length' for r in rows) if rows and all(r.get('diagnostics',{}).get('finish_reason') for r in rows) else None,
             'unknown_finish_reason':sum(not r.get('diagnostics',{}).get('finish_reason') for r in rows),
-            'correct_and_complete':sum(r['review']['fully_correct'] and r.get('diagnostics',{}).get('finish_reason')=='stop' for r in reviewed),
+            'correct_and_complete':sum(r['review']['fully_correct'] and not r.get('error') and r.get('diagnostics',{}).get('finish_reason')=='stop' for r in reviewed) if reviewed and all(r.get('diagnostics',{}).get('finish_reason') for r in rows) else None,
             'mean_evidence_recall':statistics.mean(r['metrics']['evidence_recall'] for r in rows) if rows else None,
             'all_evidence_cases':sum(r['metrics']['all_evidence_found'] for r in rows),
             'answers_with_citations':sum(bool(r['metrics']['citations']) for r in completed),
@@ -138,8 +138,8 @@ def report(run, path):
              '| Metric | Result |','| --- | --- |',
              f"| Completed requests | {s['completed']}/{s['expected_attempts']} |",
              f"| Request errors | {s['errors']} |",
-             f"| Truncated answers | {s['truncated_answers']} |",
-             f"| Correct and normally completed | {s['correct_and_complete']}/{s['reviewed']} reviewed |",
+             f"| Truncated answers | {fmt(s['truncated_answers'])} |",
+             f"| Correct and normally completed | {fmt(s['correct_and_complete'])}/{s['reviewed']} reviewed |",
              f"| Unknown finish reason | {s['unknown_finish_reason']} |",
              f"| Mean expected-evidence recall | {fmt(s['mean_evidence_recall'],True)} |",
              f"| Cases retrieving every expected evidence group | {s['all_evidence_cases']}/{s['attempted']} |",
@@ -209,14 +209,21 @@ def apply_review(run, review, suite):
 
 
 def write_history():
-    lines=['# Benchmark history','','Each report identifies the implementation commit tested. Results are committed afterward so the tested commit never has to refer to itself.','',
-           '| Run | Tested commit | Reviewed correct | Evidence recall | Median s |','| --- | --- | --- | --- | --- |']
-    for path in sorted((BENCH/'results').glob('*/run.json')):
+    lines=['# Benchmark history','','Each implementation change is committed before its full benchmark; reviewed results are committed separately. Runs appear in measurement order. Historical artifacts and the original pre-vectorization tags are preserved.','',
+           '| Run | Tested commit | Reviewed correct | Correct and complete | Truncated | Evidence recall | Median s |',
+           '| --- | --- | --- | --- | --- | --- | --- |']
+    paths=sorted((BENCH/'results').glob('*/run.json'), key=lambda p:read(p)['created_at'])
+    for path in paths:
         r=read(path)
         if r['status']!='complete':continue
-        s=r['summary'];link=path.parent.relative_to(BENCH).as_posix()+'/report.md'
-        lines.append(f"| [{r['label']}]({link}) | `{r['git']['commit'][:10]}` | {s['fully_correct']}/{s['reviewed']} reviewed | {fmt(s['mean_evidence_recall'],True)} | {fmt(s['median_seconds'])} |")
-    (BENCH/'HISTORY.md').write_text('\n'.join(lines)+'\n')
+        s=summary(r);link=path.parent.relative_to(BENCH).as_posix()+'/report.md'
+        complete=fmt(s['correct_and_complete'])
+        truncated=fmt(s['truncated_answers']) if not s['unknown_finish_reason'] else 'n/a'
+        lines.append(f"| [{r['label']}]({link}) | `{r['git']['commit'][:10]}` | {s['fully_correct']}/{s['reviewed']} | {complete} | {truncated} | {fmt(s['mean_evidence_recall'],True)} | {fmt(s['median_seconds'])} |")
+    lines += ['', 'Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.', '']
+    for addendum in sorted((BENCH/'results').glob('*/review-addendum.md')):
+        lines.append(f"Review-note correction: [{addendum.parent.name}]({addendum.relative_to(BENCH).as_posix()}).")
+    (BENCH/'HISTORY.md').write_text('\n'.join(lines))
 
 
 EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens'}

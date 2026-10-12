@@ -71,3 +71,11 @@ Runs now capture token usage, reasoning-character counts, finish reason, and tra
 Answer completeness is separate from the frozen substantive rubric: `correct_and_complete` requires a fully correct review and a normal `stop` finish. `truncated_answers` records `length` finishes even when the response already contains the required ruling. Historical runs without finish telemetry have unknown completion status; do not infer normal completion. Comparisons calculate these fields from saved diagnostics without rewriting old artifacts.
 
 Full runs measure evidence from the server's emitted `sources` event (the excerpts actually supplied to the model), retaining pre-packing candidates separately. Retrieval-only runs still measure candidate retrieval.
+
+## Current runtime and verification
+
+Run `./setup.sh` once from the project root, then `source .venv/bin/activate` before the benchmark commands above. The LM Studio Python client supplies local tokenization; all inference remains local. The current configuration uses medium reasoning effort and reserves 3,500 output tokens.
+
+The vector-free baseline now has two reviewed 20/20 runs, seeds 42 and 43, with identical prompt and implementation hashes. These are repeated development cases, not 40 distinct questions. Before introducing embeddings, freeze a separate set of unseen cases and paraphrases and compare both sets. Do not weaken existing criteria or discard a regression to improve the headline score.
+
+Reporting-only changes recompute the history from saved results without rerunning inference or modifying historical artifacts. Unknown historical completion telemetry is displayed as unavailable, rather than counted as zero successful completions. Append-only review-note corrections are linked from the history.
