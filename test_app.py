@@ -34,6 +34,13 @@ class KnowledgeTests(unittest.TestCase):
         self.assertIn('CR 605.3b',{s['id'] for s in sources})
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_additional_casting_cost_retrieves_order_and_priority_rules(self):
+        card=next(c for c in knowledge.search_cards('Fling') if c['name']=='Fling')
+        messages=[{'role':'user','content':'I cast Fling, sacrificing my creature as its additional cost. Can my opponent respond to stop me paying the cost?'}]
+        ids={s['id'] for s in knowledge.retrieve(messages,[card['id']])}
+        self.assertTrue({'CR 601.2a','CR 601.2h','CR 601.2i','CR 117.2e','CR 117.3c'}<=ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_commander_dies_evidence_and_no_spurious_card(self):
         sources=knowledge.retrieve([{'role':'user','content':'If my commander dies, can I put it in the command zone? Does it still trigger dies abilities?'}],[])
         ids={s['id'] for s in sources}

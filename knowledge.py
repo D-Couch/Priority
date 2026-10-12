@@ -137,6 +137,7 @@ TOPICS = [
     (r'layer|lose.*abilit|loses.*abilit|humility|blood moon|timestamp', ['613']),
     (r'replace|replacement|instead|\bdouble(?:s)?\b(?![ -]+strike)', ['614', '616']),
     (r'commander|command zone|commander tax', ['903', '903.9', '903.9a', '903.9b']),
+    (r'additional cost|cost to cast|costs? during casting', ['601.2a', '601.2h', '601.2i', '117.2e', '117.3c']),
     (r'dies|die\b|death', ['700.4', '603.6c', '603.10a']),
     (r'mana.*abilit|tap.*land|tap.*mana', ['605.1a', '605.3b']),
     (r'attack|block|combat|first strike|double strike|trample', ['508', '509', '510', '702.4', '702.7', '702.19']),
@@ -146,6 +147,7 @@ TOPICS = [
     (r'token|tokens', ['111']),
     (r'\b(?:loses?|lost) and leaves?\b|\bleaves? the game\b|\bleaving the game\b|\bleave the game\b|\beliminated\b', ['800.4a']),
 ]
+HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c'}
 
 
 def search_question(text):
@@ -235,6 +237,7 @@ def _retrieve_structural(messages,card_ids):
         allrules={r['number']:r['body'] for r in conn.execute('SELECT * FROM rules')}
         candidates={s['id'][3:]:1/(i+1) for i,s in enumerate(rules)}
         families=[]
+        focused=[]
         for root,heading in allrules.items():
             if re.fullmatch(r'702\.\d+',root) and re.search(r'(?<!\w)'+re.escape(heading)+r'(?!\w)',search,re.I):
                 families.append((root,[n for n in allrules if _related_rule(n,root)]))
@@ -243,10 +246,12 @@ def _retrieve_structural(messages,card_ids):
                 for root in roots:
                     family=[n for n in allrules if _related_rule(n,root)]
                     if family:families.append((root,family))
+                    if root in HIGH_PRIORITY_RULES:
+                        focused.append(root)
         terms=list(dict.fromkeys(t for t in re.findall(r'[a-zA-Z]{3,}',search.lower()) if t not in STOP))[:70]
         query=' OR '.join('"'+t+'"' for t in terms)
         ranked=[r['number'] for r in conn.execute('SELECT number FROM rules_fts WHERE rules_fts MATCH ? ORDER BY bm25(rules_fts)',(query,))] if query else []
-        mandatory=[]
+        mandatory=list(dict.fromkeys(focused))
         for root,family in families:
             familyset=set(family)
             is_keyword=root.startswith('702.')
