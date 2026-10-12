@@ -56,3 +56,22 @@ class ContextBudgetTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class RelevantRulingTests(unittest.TestCase):
+    def test_relevant_ruling_precedes_broad_rules_without_duplicates(self):
+        from context_budget import source_groups
+        sources = [
+            {'id':'C1','kind':'card','text':'Vehicle with crew 1'},
+            {'id':'C2','kind':'ruling','text':'A copied Vehicle does not become a creature.'},
+            {'id':'C3','kind':'ruling','text':'Any untapped creature can pay the crew cost, even one that just came under your control.'},
+            {'id':'CR 601.2','kind':'rule','text':'Casting spells.'},
+        ]
+        packed = [s['id'] for group in source_groups(sources, 'Can I tap a creature I just cast to pay crew?') for s in group]
+        self.assertEqual(packed[:2], ['C1','C3'])
+        self.assertEqual(len(packed), len(set(packed)))
+        self.assertLess(packed.index('C3'), packed.index('CR 601.2'))
+
+    def test_unmatched_and_oversized_rulings_do_not_take_reserved_space(self):
+        from context_budget import relevant_rulings
+        self.assertEqual(relevant_rulings([{'id':'C1','kind':'ruling','text':'crew '*400}], 'crew'), [])
+        self.assertEqual(relevant_rulings([{'id':'C1','kind':'ruling','text':'Crew a vehicle.'}], 'poison counters'), [])

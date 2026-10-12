@@ -1,5 +1,7 @@
 """Pack complete source excerpts against LM Studio's actual tokenizer."""
 import re
+import sqlite3
+from contextlib import closing
 from urllib.parse import urlparse
 
 OUTPUT_TOKENS = 3500
@@ -17,9 +19,34 @@ def make_messages(system, sources, history):
     return [{'role': 'system', 'content': system + '\n\nREFERENCE EXCERPTS:\n' + evidence + '\n\n' + ANSWER_CONTRACT}] + history
 
 
-def source_groups(sources):
+def relevant_rulings(sources, question):
+    """Reserve room for two query-relevant card rulings, not every dated ruling."""
+    from knowledge import STOP
+    rulings = [s for s in sources if s['kind'] == 'ruling']
+    terms = list(dict.fromkeys(t for t in re.findall(r'[a-zA-Z]{3,}', question.lower()) if t not in STOP))[:70]
+    if not rulings or not terms:
+        return []
+    with closing(sqlite3.connect(':memory:')) as conn:
+        conn.execute("CREATE VIRTUAL TABLE excerpts USING fts5(body, tokenize='porter unicode61')")
+        conn.executemany('INSERT INTO excerpts(body) VALUES (?)', [(s['text'],) for s in rulings])
+        query = ' OR '.join('"'+t+'"' for t in terms)
+        ranked = conn.execute('SELECT rowid FROM excerpts WHERE excerpts MATCH ? ORDER BY bm25(excerpts), rowid', (query,))
+        chosen = []
+        for (rowid,) in ranked:
+            source = rulings[rowid-1]
+            if sum(len(s['text']) for s in chosen) + len(source['text']) <= 1600:
+                chosen.append(source)
+            if len(chosen) == 2:
+                break
+        return chosen
+
+
+def source_groups(sources, question=''):
     """Keep compact sections intact so definitions travel with their exceptions."""
     result = [[s] for s in sources if s['kind'] == 'card']
+    priority = relevant_rulings(sources, question)
+    result.extend([s] for s in priority)
+    priority_ids = {s['id'] for s in priority}
     sections = {}
     for source in sources:
         if source['kind'] != 'rule':
@@ -41,7 +68,7 @@ def source_groups(sources):
                 result.append(group)
             else:
                 result.extend([s] for s in group)
-    result.extend([s] for s in sources if s['kind'] == 'ruling')
+    result.extend([s] for s in sources if s['kind'] == 'ruling' and s['id'] not in priority_ids)
     return result
 
 
@@ -59,7 +86,8 @@ def pack_context(system, sources, history, count_tokens, context_length):
     if count_tokens(make_messages(system, [], history)) > limit:
         raise ValueError('Your latest question is too long for the loaded model context. Shorten it or load a larger context in LM Studio.')
     selected = []
-    for group in source_groups(sources):
+    question = next((m['content'] for m in reversed(history) if m['role'] == 'user'), '')
+    for group in source_groups(sources, question):
         candidate = selected + group
         if count_tokens(make_messages(system, candidate, history)) <= limit:
             selected = candidate
