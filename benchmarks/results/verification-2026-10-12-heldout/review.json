@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "verification-2026-10-12-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex (AI-assisted; no independent human judge)",
+  "review_method": "Current 32 answers and packed source excerpts were verified byte-for-byte against the previous seed-42 held-out run. Its AI-assisted substantive grades are carried forward; citation-support fields retain the prior grades or remain unavailable where not checked. No independent human judge review.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "8d2d88dd38a11925a239472c08aa226ade3f2646b758b3174556139dc73c0a97",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "c51d7ef1859dd7d8b8ee22be67567eedf180a08ce560e51a2196acf43608da0a",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "a86ae1a1e1c64398451b21d7dacc20d7833bf5a66b25d1e04f59b0f1269bb792",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "b72337ba6411b15582e22ac37fbb72fc011fa19ea5d819ced00633e5c7a7e978",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "489fff63e892781025c2fe1f011148036a2f71796cbbdce9aadf4e0ea9a9b429",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "bb1ed904aadffdb007cfa4b0809bc7b1338497a2ea635e04b1a01bb3ffbf78ac",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "46e7442de514bb86db6e21a0662991527c47ce07a386d101bfc9eb29569d7b6e",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "fc1d7d3433384bb186f2ef60bc64d6356745cfdf664d67c405dd0874f6b06ed5",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "1ca9b13ecd8a102107e23d0778f721c24df55cd5e1dc4e69d70c6f9a29a39aeb",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "bb93066fb924c6d028cbb757f43083044af93ef349e3770fddeecb6b1513ead4",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "a8afbdf223eda1aab828f55fb18662664b6f9b740a4c49bfcc199c55a6255dc2",
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "585d3337531be26967fcbbeef1e5cacdad563cd7eee5620fa831bfe40d11082c",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "7df467ee2453febe6591437b2ae7866d77d02883a9ca8252c0a32849f7d47245",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "0752b403e286fb79249e87928274cb44ecd1dc6968516d405fe8b9dd259f0ca5",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "7f0ccc8fa1d188cd9491aaabc2684112368a2c10fd64e14c2977120ecce93d98",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "a13acaa67165474c6fb0a07edf586e186167af3a0756b768e0157e231084f6be",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "fbdb86504551ee21fb8ee75f67855bb0c0766525cfb96b411ca313371f4618bb",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "00ceee51dc807f9931b79f3b6c60f07d3922f6cad88545055431d45c5cfbcbcb",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "6a1b6f26f22bd1e0c76f8ee947734ea3cb1d84213273ececdc0e5db8411b23b6",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "931e1a4196a94ca458ebddeec52be6fe222356454c6677fab167201ef5ff200e",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "5bf09cbdc998a4ebec64fc4038ada254ff73456129750bc2105643da0695dc28",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "5ec556b2eb8fed2252e2478598e53ff4e79984d8684a2fa184b51fcf1ef53233",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "4aa21cc17f2a7a07c16863fc305eb37e14b97669211c0c1b63ad62b74c933b84",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "64baa854be29cb22cfb27191d53306a1a2fb2a2fdef4aa8df40c1c2d98121e2c",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "cb8f634646ed45765412ff0732caa18930609b345f517c7d1e28ad94bdf3dd78",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "987d22fc0e17a55bfa5ea99dd478372148bda8dd519b3f23921a0cac85aff725",
+      "criteria": {
+        "h26-commander-control.1": false,
+        "h26-commander-control.2": false
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "43542ab66c2ea149383aefa3ac70ea9d3b675916ce9880562ad4d58b96c13648",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "73fce62a17fb47185244d3f518a3194d8f015eb523605c0f09fb5d0dfa5fd72c",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "55f332c72a3eefe0af66092a01fe62233c137b2f761d171dc69aadf532f5ca36",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "62c79b639002c5438d70d135889331fe9811f42ea77e02e105b908de95a4abcd",
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "21deb5a31ac06859be570476fc4c25fd1eaa584d20f57ca50734c2f149a83735",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "9f0abfc7c24c4d2a7866c71919b0d2d90e94a3f2c34842de6e12228cf9d2c2bc",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Exact answer and packed source excerpts match the previously AI-assisted seed-42 review; the prior substantive grade is carried forward. This is not independent human judge validation."
+    }
+  ]
+}
