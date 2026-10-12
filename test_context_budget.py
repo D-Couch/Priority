@@ -18,7 +18,7 @@ def source(identifier, body, kind='rule'):
 
 class ContextBudgetTests(unittest.TestCase):
     def test_output_reserve_and_complete_excerpts(self):
-        sources = [source('CR 101.1', 'x' * 100), source('CR 101.2', 'y' * 900)]
+        sources = [source('CR 101.1', 'x' * 100), source('CR 202.2', 'y' * 900)]
         history = [{'role': 'user', 'content': 'Question'}]
         messages, chosen, info = pack_context('Judge', sources, history, count, capacity(180))
         self.assertLessEqual(count(messages) + OUTPUT_TOKENS + TEMPLATE_MARGIN, info['context_length'])
@@ -40,6 +40,13 @@ class ContextBudgetTests(unittest.TestCase):
         sources = [source('C1', 'dated' * 40, 'ruling'), source('C2', 'Oracle', 'card')]
         _, chosen, _ = pack_context('Judge', sources, [{'role': 'user', 'content': '?'}], count, capacity(70))
         self.assertEqual([s['id'] for s in chosen], ['C2'])
+
+    def test_adjacent_definition_and_exception_travel_together(self):
+        sources = [source('CR 201.7', 'Definition'), source('CR 201.8', 'Exception' * 30), source('CR 401.1', 'Other')]
+        _, chosen, _ = pack_context('Judge', sources, [{'role': 'user', 'content': '?'}], count, capacity(100))
+        self.assertEqual([s['id'] for s in chosen], ['CR 401.1'])
+        _, chosen, _ = pack_context('Judge', sources, [{'role': 'user', 'content': '?'}], count, capacity(600))
+        self.assertEqual([s['id'] for s in chosen], [s['id'] for s in sources])
 
     def test_short_rule_family_is_not_split(self):
         sources = [source('CR 101.1', 'Parent'), source('CR 101.1a', 'Child' * 30)]

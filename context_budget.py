@@ -18,21 +18,29 @@ def make_messages(system, sources, history):
 
 
 def source_groups(sources):
-    """Oracle text first, then rule families in retrieval order, then dated rulings."""
-    cards = [s for s in sources if s['kind'] == 'card']
-    groups = {}
+    """Keep compact sections intact so definitions travel with their exceptions."""
+    result = [[s] for s in sources if s['kind'] == 'card']
+    sections = {}
     for source in sources:
-        if source['kind'] == 'rule':
-            parent = re.sub(r'[a-z]$', '', source['id'])
-            groups.setdefault(parent, []).append(source)
-    # Small sibling bundles preserve the operative clauses behind a definition.
-    # Large branches remain individual excerpts rather than exhausting the budget.
-    result = [[s] for s in cards]
-    for group in groups.values():
-        if len(group) <= 8 and sum(len(s['text']) for s in group) <= 3500:
-            result.append(group)
-        else:
-            result.extend([s] for s in group)
+        if source['kind'] != 'rule':
+            continue
+        number = source['id'].removeprefix('CR ')
+        # Each keyword is its own section; the entire keyword chapter is too large.
+        section = re.sub(r'[a-z]$', '', number) if number.startswith('702.') else number.split('.')[0]
+        sections.setdefault(section, []).append(source)
+    for section in sections.values():
+        if sum(len(s['text']) for s in section) <= 6000:
+            result.append(section)
+            continue
+        # Large chapters fall back to short subrule families, then individual rules.
+        families = {}
+        for source in section:
+            families.setdefault(re.sub(r'[a-z]$', '', source['id']), []).append(source)
+        for group in families.values():
+            if len(group) <= 8 and sum(len(s['text']) for s in group) <= 3500:
+                result.append(group)
+            else:
+                result.extend([s] for s in group)
     result.extend([s] for s in sources if s['kind'] == 'ruling')
     return result
 
