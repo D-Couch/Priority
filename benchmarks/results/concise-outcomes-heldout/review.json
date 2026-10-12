@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "concise-outcomes-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "AI-assisted manual review against the frozen rubric and passages. Reused prior criteria only where the current response has the same substantive ruling; inspected changed wording for factual claims. Citation support is set unavailable unless directly rechecked against the currently packed excerpts.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "38a947e8e574701eba2d4c3b6b6e93ce188f59013aacee4b3bd83262468278c5",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct APNAP ordering and resolution, but says the abilities are put on the stack simultaneously; they are placed in APNAP order sequentially. CR 603.3b supports the required order, while the added simultaneity claim is incorrect."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "dc4ba1d8ec113d40d9d70791b6abe65b09ce19164d8c626fdc5154367776c5db",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "c5ee00d745fa3bf0cd591d1305cc9bce5726dc2cb08ab1b3b7d4af5b2482f22b",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "b72337ba6411b15582e22ac37fbb72fc011fa19ea5d819ced00633e5c7a7e978",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "db13127e47d088594b3594225cf9ece10cf575b43438ea1b31b7cbc2cfcc7c79",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "ea008286c427873de016559b7e6edfcc020e51a4fa37dc0b6e1f86a1a8c6f841",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "39a355953b7b08f7dbd7a2508d915f93fbfcc34673a43b3e6aa9c338d67aa8b3",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "f2b468a4118119351be190ee8c2b0a7beb8517aa437f895a10778cc9836ce973",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "ba3df1d554fb28fdebb36f0c160f2bebcc230c2b03ec6d566fc0edcd25ef90ce",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "e10596d0a09c7895652a423b45ff5fa9fe355b5bbe3cf052ce1db748b99d3354",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "4d3a64478bec61d4b4997691d7df452b5dc42b1eaa683040df63ea3eebb265e4",
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "01c0ed1c42b4354a0c1775ec7f278680167d760cdd046d6d3c3d9efb898cccc0",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "71a6b3b6ac15ea2bd8268386c80d2955900327c419dc538438b52a1652614cf5",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The conclusion is right, but it falsely says the sacrifice happens before the spell is on the stack. CR 601.2a moves the spell to the stack before CR 601.2h pays costs; CR 117.2e says players do not receive priority during casting. That governing sequence is missing from packed excerpts. The card ruling supports no response, not the stated stack chronology."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "c1c24371743c652d427e02c227bda514934c9d6f8812512c65ae2f48294bdcff",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "d855bc7535c6046d68b5bf1fc6d6b2d92a745e5ec9edafcaed77e6bcc5c7402a",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "c52a8139c99fa391ceaae41328ee8a0d9ab0d9e317c7d734063ef22a2f65b499",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "b10ab4ed8db5c56d8f0fc5987f52a381846f8cf4389b07ff1f11f698815ce4e4",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "e35f367b0cd1b7d7c867f9ea711b13d43d219df26d253abd2a5b484bd8427539",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "e4c6d2d113e921ed3b8684e7b027270f668422d80f97657e0b98e4ed8c7219ff",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "538afa687b5d7c6fb48828f4ba29a50f97fc51e1a07037b2b0cd7f0a0865e335",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "8471c80a5fd6259413c55242850b374b24004ab5a471229c9c6729af9e4399ef",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "711697511f7605285b5ba0a3e81fea5b972c4ce9c5daf9be55ef54447083e68f",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "8ac494f310537c5ae9c536cb6731eac250460ea74a8782466d0352240ced11aa",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The damage and survival conclusions are correct, and double strike is irrelevant, but the answer says the surviving 4/4 has 1 damage marked. It took 3 damage from the 3/3, so that detail is wrong and unsupported."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "b10aa8d82a98a88576af205520b812e9bd391115252273af08e733de3594dd4d",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "91b11bbec8180397738c7c67f6173cfe4390df5ed286e7b22b6355a48bc6fc16",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correctly says Bolt leaves and does not resolve under CR 800.4a. However, the Bribery example concerns a permanent put onto the battlefield from a leaving player’s library, not a spell on the stack; it does not confirm that claim. The rule’s general owned-object sentence directly supports the conclusion."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "d2b1664d65e64cb7b4b9d192b19e57d6cd93f8e6fd78fae7b3cc3409c2db262e",
+      "criteria": {
+        "h26-commander-control.1": false,
+        "h26-commander-control.2": false
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "6f0b63009c6dbf1815195e63983d3b1f80b939cfd6380803b46481fc70c13b58",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "2c47a28b6ae4ca443a76cc027049193090c306d1b96897dc1f59cbf319d752a3",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "463435fc393a63e53db3b5280a2468281ed3eeb4eaf6e5d33c7665f664c3a6ea",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "2306fe18dbec133a33fb65064fd7c36873ad1835101987c8dd3a5efd19daf63b",
+      "criteria": {
+        "h30-ambiguous-combat.1": true,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "ae88565663ae88f61a408402480697b5b00d612095b5513a52541b5911635e04",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "11d3404c2fd03187d00427c039ccae9c49a6a6f693ebd21ebb98d5fef038af94",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Same substantive ruling as the previous reviewed run; rechecked this wording. Citation support not separately regraded for this prompt run."
+    }
+  ]
+}

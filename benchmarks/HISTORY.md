@@ -36,6 +36,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [leave-game-rule-original](results/leave-game-rule-original/report.md) | gameplay-v1 | `faa875bda3` | 0/0 | pending / n/a | 0 | 96.2% | 10.93 |
 | [leave-game-phrase-heldout](results/leave-game-phrase-heldout/report.md) | heldout-v1 | `6a78d5fa69` | 26/32 | 26 | 0 | 78.6% | 9.94 |
 | [leave-game-phrase-original](results/leave-game-phrase-original/report.md) | gameplay-v1 | `6a78d5fa69` | 20/20 | 20 | 0 | 96.2% | 10.11 |
+| [concise-outcomes-heldout](results/concise-outcomes-heldout/report.md) | heldout-v1 | `3f38dd4f0c` | 24/32 | 24 | 0 | 78.6% | 11.04 |
+| [concise-outcomes-original](results/concise-outcomes-original/report.md) | gameplay-v1 | `3f38dd4f0c` | 20/20 | 20 | 0 | 96.2% | 10.61 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

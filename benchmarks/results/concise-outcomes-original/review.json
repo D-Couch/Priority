@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "concise-outcomes-original",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "AI-assisted manual review against the frozen rubric and passages. Reused prior criteria only where the current response has the same substantive ruling; inspected changed wording for factual claims. Citation support is set unavailable unless directly rechecked against the currently packed excerpts.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "e312dbe73aee8df15bdaec6b38dc7b1c63310ac2187d9e526be5d9a3a2a3974f",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "f7ffab53c9ff9e138a0dd16f5b0f2c943e86e0e00421be01591205db8276ea50",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "c39e8d9a7e155c2e1f6c4083a935721286bff6712384bbac76e202a1173d92ed",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "60200e47ac06a6b3839c12242b8a78a4d2a6a6ffc3a6c7a8ffd7b18d338df38a",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "5e60b9ab4ffdf755d65d8cccf334cfc0a6be6ec03b077b6f0d235daa906c7a89",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "64da9b589cc7017811c5eedc4505e2ab247f3387aa0e6ae988123927c4c1311e",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "115440168374780598803770ace588aedaa7648da0127992175038f3e13b433f",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "d7ff6b68b8f832ab4a3684ff6de83ef524be096336e70711afd101f914aa082b",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "c57d0d31b88ff49bcb56e5b5bd484ee94a26155c382aa6d35f495373397e152a",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "99c7d274df96bce5077c90f82a81125d54596c187bf66f22ecb29f822160a0b9",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "8cbc37db85a25947afec628e4a1a5a40171389c0e4402bfdaff9964b9cc2bc95",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "d100a76319b4609fcd30cf2d29be5224519325c361a8feee47d63aeb2359e95a",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "9a02ba83e2f507f7cf1cadf3f645dfa47ac3101dd5d6483eb7394d78100e7a10",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "29c9eeab84259ce157f67a66df0d625a953b3a9b4ce2e935d2f1996e0b8b42f7",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "36283f5db4584a0eff538def892fb3058a95270751a624092c51865052f31a32",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "9ca567725c6c7300f58c337239d9f76f26931d0bc0b6ed4572b3f9d3b661f666",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "ea10d9a34a5acb8bf28c3f8806344b9f347d9888199deb0043fbd8c9f2ee9dbf",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "e4aca94ffab4de2deddf1cb3d67fe73f1b9e540b459ece491ceea8028caf27ce",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "a5413f7f3203d637bb3af6797110c953cdf1c2196ab419b097ab9d793d4e4353",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "629dda22f3db6c04b645ecd711574ce9dbc031b9b7797968ad88e76adcb2ffa0",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against the frozen criteria; the answer’s ruling matches the prior review. Semantic citation support is unavailable because the previous suite review did not record that field."
+    }
+  ]
+}
