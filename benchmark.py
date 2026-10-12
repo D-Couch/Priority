@@ -212,26 +212,45 @@ def write_history():
     (BENCH/'HISTORY.md').write_text('\n'.join(lines)+'\n')
 
 
-def validate_comparison(old, new):
+EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens'}
+
+
+def validate_comparison(old, new, allow_changes=()):
     issues=[]
     for key in ['suite_sha256','references_sha256','corpus_sha256','model','model_runtime','seeds','repeats','mode','case_order','warmup']:
         if old.get(key)!=new.get(key):issues.append(key)
+    unknown = set(allow_changes) - EXPERIMENT_FIELDS
+    if unknown:
+        raise ValueError('Unsupported experimental variables: '+', '.join(sorted(unknown)))
     def sampling(run):
-        return {json.dumps(r.get('sampling'),sort_keys=True) for r in run['results']}
+        result = set()
+        for row in run['results']:
+            values = dict(row.get('sampling') or {})
+            values.pop('stream_options',None)  # telemetry, not a sampling parameter
+            for field in allow_changes:
+                values.pop(field.removeprefix('sampling.'),None)
+            result.add(json.dumps(values,sort_keys=True))
+        return result
     if sampling(old)!=sampling(new):issues.append('sampling')
     if old['status']!='complete' or new['status']!='complete':issues.append('incomplete run')
     if len(old['results'])!=old['expected_attempts'] or len(new['results'])!=new['expected_attempts']:issues.append('missing results')
     return issues
 
 
-def compare(old, new):
-    issues=validate_comparison(old,new)
+def compare(old, new, allow_changes=()):
+    issues=validate_comparison(old,new,allow_changes)
     if issues:
         raise ValueError('Runs are not directly comparable: '+', '.join(issues))
     a,b=old['summary'],new['summary']
     lines=[f"# {old['label']} → {new['label']}",'',
            f"Implementation `{old['git']['commit']}` → `{new['git']['commit']}`",'',
            '| Metric | Before | After | Change |','| --- | --- | --- | --- |']
+    if allow_changes:
+        lines[4:4] = ['Declared experimental variables: '+', '.join(sorted(allow_changes))+'. All other checked settings remain matched.','']
+        for field in sorted(allow_changes):
+            key=field.removeprefix('sampling.')
+            values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
+            lines[4:4] = [f"- `{field}`: {values(old)} → {values(new)}"]
     for key,title,pct,lower in [('reviewed_accuracy','Reviewed accuracy',True,False),('mean_evidence_recall','Expected-evidence recall',True,False),('citation_id_precision','Citation ID validity',True,False),('median_seconds','Median latency (s)',False,True),('p95_seconds','p95 latency (s)',False,True),('errors','Request errors',False,True)]:
         av,bv=a[key],b[key]
         if key=='reviewed_accuracy' and (a['reviewed']!=a['expected_attempts'] or b['reviewed']!=b['expected_attempts']):
@@ -294,7 +313,7 @@ def run_benchmark(args):
          'corpus_sha256':digest,'corpus_metadata':knowledge.metadata(),'model':server.MODEL,
          'model_runtime':runtime() if args.mode=='full' else {},
          'environment':{'python':platform.python_version(),'sqlite':sqlite3.sqlite_version,'os':platform.system(),'machine':platform.machine()},
-         'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','benchmark.py']},
+         'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','benchmark.py']},
          'mode':args.mode,'repeats':args.repeats,'seeds':seeds,'case_order':[c['id'] for c in suite['cases']],
          'expected_attempts':len(suite['cases'])*args.repeats,'warmup':args.mode=='full','results':[]}
     current={}
@@ -311,7 +330,7 @@ def run_benchmark(args):
     def measured_lm(path,payload=None,timeout=10):
         if payload is not None:
             payload={**payload,'seed':current['seed']}
-            current['sampling']={k:v for k,v in payload.items() if k!='messages'}
+            current['sampling']={k:v for k,v in payload.items() if k not in ('messages','stream_options')}
             current['prompt_sha256']=hashlib.sha256(json.dumps(payload['messages'],sort_keys=True).encode()).hexdigest()
         return real_lm(path,payload,timeout)
     knowledge.retrieve=measured_retrieve
@@ -347,7 +366,7 @@ def run_benchmark(args):
                                     if first is None and event['text'].strip():first=time.perf_counter()-start
                                     row['answer']+=event['text']
                                 elif event['type']=='error':raise RuntimeError(event['error'])
-                                elif event['type']=='done':row['warnings']=event['warnings'];done=True
+                                elif event['type']=='done':row['warnings']=event['warnings'];row['diagnostics']=event.get('diagnostics',{});done=True
                         if not done:raise RuntimeError('Stream ended without a done event')
                         if not row['answer'].strip():raise RuntimeError('No final answer returned')
                 except Exception as e:
@@ -377,7 +396,7 @@ def main():
     sub=parser.add_subparsers(dest='command',required=True)
     p=sub.add_parser('run');p.add_argument('--label',required=True);p.add_argument('--output',required=True);p.add_argument('--mode',choices=['full','retrieval'],default='full');p.add_argument('--repeats',type=int,default=1);p.add_argument('--seed',type=int,default=42)
     p=sub.add_parser('review');p.add_argument('directory')
-    p=sub.add_parser('compare');p.add_argument('before');p.add_argument('after');p.add_argument('--output',required=True)
+    p=sub.add_parser('compare');p.add_argument('before');p.add_argument('after');p.add_argument('--output',required=True);p.add_argument('--allow-change',action='append',choices=sorted(EXPERIMENT_FIELDS),default=[])
     sub.add_parser('validate')
     p=sub.add_parser('restore-corpus');p.add_argument('--output',required=True)
     args=parser.parse_args()
@@ -389,7 +408,7 @@ def main():
         if sha(SUITE)!=r['suite_sha256']:raise ValueError('Suite changed since this run')
         apply_review(r,read(path/'review.json'),read(SUITE));r['summary']=summary(r);write(path/'run.json',r);report(r,path/'report.md');write_history();print(json.dumps(r['summary'],indent=2))
     elif args.command=='compare':
-        result=compare(read(Path(args.before)/'run.json'),read(Path(args.after)/'run.json'));Path(args.output).write_text(result);print(result)
+        result=compare(read(Path(args.before)/'run.json'),read(Path(args.after)/'run.json'),args.allow_change);Path(args.output).write_text(result);print(result)
     elif args.command=='restore-corpus':
         target=Path(args.output)
         if target.exists():raise ValueError('Refusing to overwrite an existing database; choose another path or move the old one aside first.')

@@ -61,3 +61,9 @@ Comparison rejects changed suite/reference/corpus hashes, model/runtime settings
 The original application is preserved at `pre-vectorization-app`. The initial reviewed benchmark is tagged `pre-vectorization`. Keep historical run directories unchanged; a corrected evaluation belongs in a new run/review record with the correction explained. New scenarios or rule versions require a new suite version and a new baseline. This public development set can be overfit; add separate held-out scenarios before claiming general accuracy improvements.
 
 GitHub Actions validates the corpus, regression tests, and suite on pushes/PRs. It does not contact your local LM Studio or claim to run inference on GitHub-hosted runners. Full benchmarks remain local and their reports are committed to Git.
+
+## Controlled generation experiments
+
+A generation experiment may deliberately change `sampling.reasoning_effort` or `sampling.max_tokens`. Declare the exact changed variable using `compare --allow-change sampling.reasoning_effort` (repeat the flag only for an explicitly planned multi-factor experiment). The report prints the before/after values. This does not waive checks on the corpus, labels, model/runtime, seed schedule, or any other sampling parameter. A generation experiment is not described as a retrieval-only comparison.
+
+Runs now capture token usage, reasoning-character counts, finish reason, and transport completion in each result's `diagnostics` field. Private reasoning text is neither stored nor displayed. Telemetry-only `stream_options` are excluded from sampling comparisons. Stream decoder tests cover every split point in reasoning tags, separate reasoning fields, and truncated transport.

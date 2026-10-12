@@ -33,6 +33,15 @@ class BenchmarkTests(unittest.TestCase):
         other=copy.deepcopy(run);other['corpus_sha256']='b';other['results'][0]['sampling']['temperature']=.7
         self.assertEqual(set(benchmark.validate_comparison(run,other)),{'corpus_sha256','sampling'})
 
+    def test_declared_reasoning_experiment_still_rejects_temperature_change(self):
+        old={'status':'complete','expected_attempts':1,'results':[{'sampling':{'temperature':.1}}]}
+        new=copy.deepcopy(old);new['results'][0]['sampling']['reasoning_effort']='low'
+        self.assertEqual(benchmark.validate_comparison(old,new,['sampling.reasoning_effort']),[])
+        new['results'][0]['sampling']['temperature']=.7
+        self.assertIn('sampling',benchmark.validate_comparison(old,new,['sampling.reasoning_effort']))
+        with self.assertRaisesRegex(ValueError,'Unsupported'):
+            benchmark.validate_comparison(old,new,['corpus_sha256'])
+
     def test_review_bound_to_answer_and_checks_each_criterion(self):
         run={'run_id':'r','suite_sha256':'s','results':[{'case_id':'case','repeat':1,'answer':'No.'}]}
         review={'run_id':'r','suite_sha256':'s','reviewer':'test','review_method':'fixture','results':[{'case_id':'case','repeat':1,'answer_sha256':hashlib.sha256(b'No.').hexdigest(),'criteria':{'one':True,'two':False},'unsupported_or_contradictory_claims':False,'abstained':False,'notes':'Second requirement missing.'}]}
