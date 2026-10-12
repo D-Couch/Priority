@@ -31,12 +31,32 @@ class VectorTests(unittest.TestCase):
         self.assertTrue(all(n=='100.1' for n,t in chunks[1:]))
         self.assertTrue(all(len(t)<1300 for n,t in chunks))
 
-    def test_adjacent_lettered_exceptions_travel_with_selected_rule(self):
+    def test_lettered_rule_family_is_appended_after_primary_ranked_rules(self):
         import knowledge
-        rules={'704.5b','704.5f','704.5g','704.5h','704.6a','704.5'}
-        self.assertEqual(knowledge.adjacent_letter_rules('704.5g',rules),['704.5f','704.5h'])
-        self.assertEqual(knowledge.adjacent_letter_rules('704.5a',rules),['704.5b'])
-        self.assertEqual(knowledge.adjacent_letter_rules('704.5',rules),[])
+        rules={'704.5b','704.5f','704.5g','704.5h','704.6a','704.5','701.14a','701.14c','701.14d'}
+        self.assertEqual(knowledge.lettered_rule_family('704.5g',rules),['704.5b','704.5f','704.5g','704.5h'])
+        self.assertEqual(knowledge.lettered_rule_family('701.14a',rules),['701.14a','701.14c','701.14d'])
+        self.assertEqual(knowledge.lettered_rule_family('704.5',rules),[])
+        self.assertEqual(knowledge.lettered_rule_family('704.6a',rules),['704.6a'])
+
+    def test_primary_hybrid_candidates_keep_order_before_family_expansion(self):
+        import knowledge
+        ranked=['701.14a','704.5g']
+        rules={number:'body' for number in ranked+['701.14','701.14c','704.5','704.5f','704.5h']}
+        primary=[]
+        for number in ranked:
+            if number in rules and number not in primary:primary.append(number)
+            parent=knowledge.re.sub(r'[a-z]$','',number)
+            if parent in rules and parent not in primary:primary.append(parent)
+        chosen=list(primary)
+        for number in primary:
+            for sibling in knowledge.lettered_rule_family(number,rules):
+                if sibling not in chosen:chosen.append(sibling)
+        self.assertEqual(chosen[:len(primary)],primary)
+        self.assertEqual(primary,['701.14a','701.14','704.5g','704.5'])
+        self.assertIn('701.14c',chosen)
+        self.assertIn('704.5f',chosen)
+        self.assertLessEqual(len(chosen),96)
 
     def test_remote_embedding_endpoint_rejected_before_network(self):
         with patch.dict('os.environ',{'LM_STUDIO_URL':'https://example.org/v1'}):

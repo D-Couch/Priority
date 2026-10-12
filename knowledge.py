@@ -279,12 +279,17 @@ def _retrieve_structural(messages,card_ids):
         return cards+[{'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':allrules[n],'url':'/api/rules/'+n} for n in chosen[:64]]
 
 
-def adjacent_letter_rules(number, known_rules):
-    """Keep the immediately neighboring lettered clauses with a selected rule."""
-    match = re.fullmatch(r'(\d{3}\.\d+)([a-z])', number)
+def lettered_rule_family(number, known_rules):
+    """Return sibling exceptions under the selected rule's numbered parent."""
+    match = re.fullmatch(r'(\d{3}\.\d+)[a-z]', number)
     if not match:
         return []
-    parent, letter = match.groups()
+    parent = match.group(1)
+    family = [candidate for candidate in known_rules
+              if re.fullmatch(re.escape(parent)+r'[a-z]', candidate)]
+    if len(family) <= 32:
+        return sorted(family)
+    letter = number[-1]
     return [candidate for offset in (-1, 1)
             if 'a' <= chr(ord(letter)+offset) <= 'z'
             for candidate in [parent+chr(ord(letter)+offset)]
@@ -312,19 +317,24 @@ def retrieve(messages, card_ids):
     ordered = vector_search.fuse(lexical, semantic)
     with closing(connect()) as conn:
         rules = {r['number']:r['body'] for r in conn.execute('SELECT number,body FROM rules')}
-    chosen = []
+    primary = []
     for number in ordered:
-        if number not in chosen:
-            chosen.append(number)
-        for sibling in adjacent_letter_rules(number, rules):
+        if number in rules and number not in primary:
+            primary.append(number)
+        parent = re.sub(r'[a-z]$', '', number)
+        if parent in rules and parent not in primary:
+            primary.append(parent)
+    # Preserve the original ranked candidates exactly; append related clauses
+    # only after the primary retrieval list is complete.
+    primary = primary[:64]
+    chosen = list(primary)
+    for number in primary:
+        for sibling in lettered_rule_family(number, rules):
             if sibling not in chosen:
                 chosen.append(sibling)
-        parent = re.sub(r'[a-z]$', '', number)
-        if parent in rules and parent not in chosen:
-            chosen.append(parent)
     return [s for s in sources if s['kind'] != 'rule'] + [
         {'id':'CR '+n,'title':'Rule '+n,'kind':'rule','text':rules[n],'url':'/api/rules/'+n}
-        for n in chosen[:64] if n in rules]
+        for n in chosen[:96] if n in rules]
 
 
 
