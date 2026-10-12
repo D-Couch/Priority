@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import sqlite3
 import tempfile
+import threading
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -149,6 +150,54 @@ TOPICS = [
 ]
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c'}
 
+_CARD_ALIAS_LOCK = threading.Lock()
+_CARD_ALIAS_INDEX = None
+_CARD_ALIAS_DB_SIGNATURE = None
+
+
+def _card_alias_index(conn):
+    """Cache aliases only; resolve full card rows from SQLite after matching."""
+    global _CARD_ALIAS_INDEX, _CARD_ALIAS_DB_SIGNATURE
+    stat = DB.stat()
+    signature = (stat.st_mtime_ns, stat.st_size)
+    if _CARD_ALIAS_INDEX is not None and _CARD_ALIAS_DB_SIGNATURE == signature:
+        return _CARD_ALIAS_INDEX
+    with _CARD_ALIAS_LOCK:
+        if _CARD_ALIAS_INDEX is not None and _CARD_ALIAS_DB_SIGNATURE == signature:
+            return _CARD_ALIAS_INDEX
+        aliases = {}
+        max_words = 0
+        for row in conn.execute('SELECT rowid,id,aliases FROM cards ORDER BY rowid'):
+            for alias in json.loads(row['aliases']):
+                words = re.findall(r'\w+', alias.casefold())
+                if not words:
+                    continue
+                key = ' '.join(words)
+                max_words = max(max_words, len(words))
+                aliases.setdefault(key, []).append((row['rowid'], row['id'], alias))
+        _CARD_ALIAS_INDEX = (aliases, max_words)
+        _CARD_ALIAS_DB_SIGNATURE = signature
+        return _CARD_ALIAS_INDEX
+
+
+def _mentioned_card_ids(question, conn, bracketed):
+    """Find the same exact, multiword card-name mentions as the former table scan."""
+    aliases, max_words = _card_alias_index(conn)
+    words = list(re.finditer(r'\w+', question))
+    matched = {}
+    bracketed = {name.casefold() for name in bracketed}
+    for start in range(len(words)):
+        end_limit = min(len(words), start + max_words)
+        for end in range(start + 1, end_limit + 1):
+            key = ' '.join(m.group(0).casefold() for m in words[start:end])
+            for rowid, card_id, alias in aliases.get(key, ()):
+                found = alias.casefold() in bracketed
+                if not found and len(alias.split()) >= 2:
+                    found = re.search(r'(?<!\w)' + re.escape(alias) + r'(?!\w)', question) is not None
+                if found:
+                    matched.setdefault(card_id, rowid)
+    return [card_id for card_id, _ in sorted(matched.items(), key=lambda item: item[1])]
+
 
 def search_question(text):
     """Exclude explicit absent effects from search, while keeping the original prompt.
@@ -175,12 +224,13 @@ def _retrieve_lexical(messages, card_ids):
         # with at least two words and exact capitalization; ambiguous lowercase names
         # and single-word names require attachment or brackets.
         bracketed = re.findall(r'\[\[([^\]]+)\]\]', question)
-        lower = question.casefold()
-        for row in conn.execute('SELECT * FROM cards'):
-            aliases = json.loads(row['aliases'])
-            if any(a.casefold() in [b.casefold() for b in bracketed] or (len(a.split()) >= 2 and re.search(r'(?<!\w)'+re.escape(a)+r'(?!\w)', question)) for a in aliases):
-                if row['id'] not in {x['id'] for x in selected}:
+        selected_ids = {x['id'] for x in selected}
+        for card_id in _mentioned_card_ids(question, conn, bracketed):
+            if card_id not in selected_ids:
+                row = conn.execute('SELECT * FROM cards WHERE id=?', (card_id,)).fetchone()
+                if row:
                     selected.append(dict(row))
+                    selected_ids.add(card_id)
                 if len(selected) >= 8:
                     break
         selected = selected[:8]

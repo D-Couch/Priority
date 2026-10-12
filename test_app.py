@@ -71,6 +71,14 @@ class KnowledgeTests(unittest.TestCase):
         self.assertTrue(any(s['title']=='Humility' and s['kind']=='card' for s in sources))
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_card_name_lookup_finds_exact_names_and_split_faces(self):
+        messages=[{'role':'user','content':'Does Fire // Ice interact with Brazen Borrower?'}]
+        sources=knowledge.retrieve(messages,[])
+        names={s['title'] for s in sources if s['kind']=='card'}
+        self.assertIn('Fire // Ice',names)
+        self.assertIn('Brazen Borrower // Petty Theft',names)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_trample_evidence(self):
         sources=knowledge.retrieve([{'role':'user','content':'How does trample work when the blocking creature has indestructible?'}],[])
         self.assertIn('CR 702.19b',{s['id'] for s in sources})
