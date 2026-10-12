@@ -1,0 +1,5 @@
+# Project changes and evaluation
+
+Preserve the benchmark history. Before changing retrieval, prompts, generation settings, or rules parsing, identify the most recent compatible committed benchmark. Keep behavior changes in an implementation commit, then run `benchmark.py run` against the frozen corpus. Review every answer with the frozen rubric, disclose reviewer identity/method, generate a before/after comparison, and commit results separately. State improvements, regressions, missing review, and errors honestly. Never silently tune labels or overwrite a historical run to make scores improve.
+
+For UI/documentation-only changes, run the applicable checks and note why inference behavior was unaffected; do not spend a full model run unnecessarily. Do not update the rules/card snapshot as part of an unrelated algorithm change. Benchmark source, settings, and corpus hashes must match the implementation actually measured. Preserve the original `pre-vectorization-app` and `pre-vectorization` tags. See `benchmarks/README.md` for commands and metric definitions.

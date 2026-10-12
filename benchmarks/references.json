@@ -1,0 +1,202 @@
+{
+  "CR 605.3b": {
+    "text": "An activated mana ability doesn\u2019t go on the stack, so it can\u2019t be targeted, countered, or otherwise responded to. Rather, it resolves immediately after it is activated. (See rule 405.6c.)",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "edb5aea1e190332933d0e0869ebbca93a11f1404704d2f90c0bf0e47a5d15d2f"
+  },
+  "CR 117.3c": {
+    "text": "If a player has priority when they cast a spell, activate an ability, or take a special action, that player receives priority afterward.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "b2955f09a7fb444a12f59cdff8abc0c9511aee3fcc4ba9da359c27c246ed148b"
+  },
+  "CR 117.4": {
+    "text": "If all players pass in succession (that is, if all players pass without taking any actions in between passing), the spell or ability on top of the stack resolves or, if the stack is empty, the phase or step ends.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "5617aa49c3a0ba4c3aa6f5e0415df24b94b27e9ac2981f2db389e8cf563827db"
+  },
+  "CR 608.2b": {
+    "text": "If the spell or ability specifies targets, it checks whether the targets are still legal. A target that\u2019s no longer in the zone it was in when it was targeted is illegal. Other changes to the game state may cause a target to no longer be legal; for example, its characteristics may have changed or an effect may have changed the text of the spell. If the source of an ability has left the zone it was in, its last known information is used during this process. If all its targets, for every instance of the word \u201ctarget,\u201d are now illegal, the spell or ability doesn\u2019t resolve. It\u2019s removed from the stack and, if it\u2019s a spell, put into its owner\u2019s graveyard. Otherwise, the spell or ability will resolve normally. Illegal targets, if any, won\u2019t be affected by parts of a resolving spell\u2019s effect for which they\u2019re illegal. Other parts of the effect for which those targets are not illegal may still affect them. If the spell or ability creates any continuous effects that affect game rules (see rule 613.11), those effects don\u2019t apply to illegal targets. If part of the effect requires information about an illegal target, it fails to determine any such information. Any part of the effect that requires that information won\u2019t happen.\nExample: Sorin\u2019s Thirst is a black instant that reads, \u201cSorin\u2019s Thirst deals 2 damage to target creature and you gain 2 life.\u201d If the creature isn\u2019t a legal target during the resolution of Sorin\u2019s Thirst (say, if the creature has gained protection from black or left the battlefield), then Sorin\u2019s Thirst doesn\u2019t resolve. Its controller doesn\u2019t gain any life.\nExample: Plague Spores reads, \u201cDestroy target nonblack creature and target land. They can\u2019t be regenerated.\u201d Suppose the same creature land is chosen both as the nonblack creature and as the land, and the color of the creature land is changed to black before Plague Spores resolves. Plague Spores still resolves because the black creature land is still a legal target for the \u201ctarget land\u201d part of the spell. The \u201cdestroy target nonblack creature\u201d part of the spell won\u2019t affect that permanent, but the \u201cdestroy target land\u201d part of the spell will still destroy it. It can\u2019t be regenerated.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "dab103dbf0cdfa2c7ea7d313511d8093fd3a9481fc39b00921760f8e69163c03"
+  },
+  "CARD Defiant Strike": {
+    "text": "Defiant Strike\n{W}\nInstant\nTarget creature gets +1/+0 until end of turn.\nDraw a card.",
+    "url": "https://scryfall.com/card/m21/15/defiant-strike?utm_source=api",
+    "sha256": "fd63f6ff5f315ee3893c80698e505de7863fb9023374418ff06dac29dd8e1f75"
+  },
+  "CR 702.19b": {
+    "text": "The controller of an attacking creature with trample first assigns damage to the creature(s) blocking it. Once all those blocking creatures are assigned lethal damage, any excess damage is assigned as its controller chooses among those blocking creatures and the player, planeswalker, or battle the creature is attacking. When checking for assigned lethal damage, take into account damage already marked on the creature and damage from other creatures that\u2019s being assigned during the same combat damage step, but not any abilities or effects that might change the amount of damage that\u2019s actually dealt. The attacking creature\u2019s controller need not assign lethal damage to all those blocking creatures but in that case can\u2019t assign any damage to the player or planeswalker it\u2019s attacking.\nExample: A 2/2 creature that can block an additional creature blocks two attackers: a 1/1 with no abilities and a 3/3 with trample. The active player could assign 1 damage from the first attacker and 1 damage from the second to the blocking creature, and 2 damage to the defending player from the creature with trample.\nExample: A 6/6 green creature with trample is blocked by a 2/2 creature with protection from green. The attacking creature\u2019s controller must assign at least 2 damage to the blocker, even though that damage will be prevented by the blocker\u2019s protection ability. The attacking creature\u2019s controller can divide the rest of the damage as they choose between the blocking creature and the defending player.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "3d1ac52b63989172a6ee1b63c02f8ae5077c44453c3093260b38e50afec4d8e6"
+  },
+  "CR 702.12b": {
+    "text": "A permanent with indestructible can\u2019t be destroyed. Such permanents aren\u2019t destroyed by lethal damage, and they ignore the state-based action that checks for lethal damage (see rule 704.5g).",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "590e41803c0fce003af2932579985e2347033454ec9455c76c4ad961e402c13d"
+  },
+  "CR 702.2c": {
+    "text": "Any nonzero amount of combat damage assigned to a creature by a source with deathtouch is considered to be lethal damage for the purposes of determining if excess damage is being dealt.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "3660c5fd73b70d3afbe3877b92acbe074add63e3ba623c432d9798f556f2337c"
+  },
+  "CR 704.5f": {
+    "text": "If a creature has toughness 0 or less, it\u2019s put into its owner\u2019s graveyard. Regeneration can\u2019t replace this event.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "97c2fbf5531e7ecd0066b142726f23aedee41ec596db576ee53acecc070a4c31"
+  },
+  "CR 903.9a": {
+    "text": "If a commander is in a graveyard or in exile and that object was put into that zone since the last time state-based actions were checked, its owner may put it into the command zone. This is a state-based action. See rule 704.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "7e8b046f9f82d5a053e254cbfce161ca8c12e70f28a3eb4de1ba681879a2a68a"
+  },
+  "CR 700.4": {
+    "text": "The term dies means \u201cis put into a graveyard from the battlefield.\u201d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "7aac2b7f77c5b6d20754e58ea4cf050f683d6ed76f9ed8e78b5d9c06016803c1"
+  },
+  "CR 603.6c": {
+    "text": "Leaves-the-battlefield abilities trigger when a permanent moves from the battlefield to another zone, or when a phased-in permanent leaves the game because its owner leaves the game. These are written as, but aren\u2019t limited to, \u201cWhen [this object] leaves the battlefield, . . .\u201d or \u201cWhenever [something] is put into a graveyard from the battlefield, . . . .\u201d (See also rule 603.10.) An ability that attempts to do something to the card that left the battlefield checks for it only in the first zone that it went to. An ability that triggers when a card is put into a certain zone \u201cfrom anywhere\u201d is never treated as a leaves-the-battlefield ability, even if an object is put into that zone from the battlefield.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "bc98ffbf46456bd9a68f3bbb5bfbf0297d0a4144ba8620220f79f3aa57880c10"
+  },
+  "CR 603.10a": {
+    "text": "Some zone-change triggers look back in time. These are leaves-the-battlefield abilities, abilities that trigger when a player sacrifices a permanent, abilities that trigger when a card leaves a graveyard, and abilities that trigger when an object that all players can see is put into a hand or library.\nExample: Two creatures are on the battlefield along with an artifact that has the ability \u201cWhenever a creature dies, you gain 1 life.\u201d Someone casts a spell that destroys all artifacts, creatures, and enchantments. The artifact\u2019s ability triggers twice, even though the artifact goes to its owner\u2019s graveyard at the same time as the creatures.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "59452fa42dec82f78926a750bff5d322ab709976100ebb6c8609ca00e054c5ae"
+  },
+  "CR 903.8": {
+    "text": "A player may cast a commander they own from the command zone. A commander cast from the command zone costs an additional {2} for each previous time the player casting it has cast it from the command zone that game. This additional cost is informally known as the \u201ccommander tax.\u201d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "bc854052d85efe7f986d3fad9f996703a072c83291efce85961c2bfc30d78f90"
+  },
+  "CR 614.6": {
+    "text": "If an event is replaced, it never happens. A modified event occurs instead, which may in turn trigger abilities. Note that the modified event may contain instructions that can\u2019t be carried out, in which case the impossible instruction is simply ignored.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "02230f667ab2196a50f184a602e5625fc220012f63bfa58f736870532c6fb345"
+  },
+  "CARD Rest in Peace": {
+    "text": "Rest in Peace\n{1}{W}\nEnchantment\nWhen this enchantment enters, exile all graveyards.\nIf a card or token would be put into a graveyard from anywhere, exile it instead.",
+    "url": "https://scryfall.com/card/big/4/rest-in-peace?utm_source=api",
+    "sha256": "2021058aa5909e8d3e5321c54bda78983795d8855372cbc2e3c0108250fe17fb"
+  },
+  "CARD Blood Artist": {
+    "text": "Blood Artist\n{1}{B}\nCreature \u2014 Vampire\nWhenever this creature or another creature dies, target player loses 1 life and you gain 1 life.\n0 / 1",
+    "url": "https://scryfall.com/card/soc/209/blood-artist?utm_source=api",
+    "sha256": "e1f7bdcf50441c54243b21ac3acd9b91b3f05f97072bdd2b251fb1f14813723b"
+  },
+  "CR 614.5": {
+    "text": "A replacement effect doesn\u2019t invoke itself repeatedly; it gets only one opportunity to affect an event or any modified events that may replace that event.\nExample: A player controls two permanents, each with an ability that reads \u201cIf a creature you control would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.\u201d A creature that normally deals 2 damage will deal 8 damage\u2014not just 4, and not an infinite amount.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "8c681b69785d454e70b159cec24bb90397b536669303d525b96716bd5392938e"
+  },
+  "CARD Doubling Season": {
+    "text": "Doubling Season\n{4}{G}\nEnchantment\nIf an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.\nIf an effect would put one or more counters on a permanent you control, it puts twice that many of those counters on that permanent instead.",
+    "url": "https://scryfall.com/card/fdn/216/doubling-season?utm_source=api",
+    "sha256": "53dbc1778fc5a4ee3288536546cd125668d4b44f0aa0218a67b48692f455dfc7"
+  },
+  "CARD Anointed Procession": {
+    "text": "Anointed Procession\n{3}{W}\nEnchantment\nIf an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.",
+    "url": "https://scryfall.com/card/akh/2/anointed-procession?utm_source=api",
+    "sha256": "212370a7550b334b67cb5a60250e2135f9e9d3bfe0f55d8ad509a53135d1452a"
+  },
+  "CR 616.1": {
+    "text": "If two or more replacement and/or prevention effects are attempting to modify the way an event affects an object or player, the affected object\u2019s controller (or its owner if it has no controller) or the affected player chooses one to apply, following the steps listed below. If two or more players have to make these choices at the same time, choices are made in APNAP order (see rule 101.4).",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "3ef08177561d2c42c2c47fe79ed21dfa5d711fbfbfeef439f03f2c9e55422eb3"
+  },
+  "CR 603.3b": {
+    "text": "If multiple abilities have triggered since the last time a player received priority, the abilities are placed on the stack in a two-part process. First, each player, in APNAP order, puts each triggered ability they control with a trigger condition that isn\u2019t another ability triggering on the stack in any order they choose. (See rule 101.4.) Second, each player, in APNAP order, puts all remaining triggered abilities they control on the stack in any order they choose. Then the game once again checks for and performs state-based actions until none are performed, then abilities that triggered during this process go on the stack. This process repeats until no new state-based actions are performed and no abilities trigger. Then the appropriate player gets priority.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "2428e9ee2a9ba8c21c8cf78420b4ac976be9698bb264891c46d4e33d2d848087"
+  },
+  "CR 405.2": {
+    "text": "The stack keeps track of the order that spells and/or abilities were added to it. Each time an object is put on the stack, it\u2019s put on top of all objects already there.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "e257bd110050053abcb10899ee3befd7252dceb53f04cce376c79f25c71683d0"
+  },
+  "CR 608.1": {
+    "text": "Each time all players pass in succession, the spell or ability on top of the stack resolves. (See rule 609, \u201cEffects.\u201d)",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "7207a14f6247b9cbdfeccf7a1d98a056578563e901ac2e85c9f3f819e850f637"
+  },
+  "CR 613.4b": {
+    "text": "Layer 7b: Effects that set power and/or toughness to a specific number or value are applied. Effects that refer to the base power and/or toughness of a creature apply in this layer.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "50ee234c558c3883fbf08d8562d121136a05b319fe13c4361e56984ff59ca172"
+  },
+  "CR 613.4c": {
+    "text": "Layer 7c: Effects and counters that modify power and/or toughness (but don\u2019t set power and/or toughness to a specific number or value) are applied.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "a4500372aa2716123f69e7b7de2dd0026a99661e2156dd1e1add78a426261dc6"
+  },
+  "CARD Humility": {
+    "text": "Humility\n{2}{W}{W}\nEnchantment\nAll creatures lose all abilities and have base power and toughness 1/1.",
+    "url": "https://scryfall.com/card/tpr/16/humility?utm_source=api",
+    "sha256": "5f7e26a9aedcfe7ebd9b3f829b7e1d0cdc497054fb1f8edc59fd9a00060b12dc"
+  },
+  "CARD Glorious Anthem": {
+    "text": "Glorious Anthem\n{1}{W}{W}\nEnchantment\nCreatures you control get +1/+1.",
+    "url": "https://scryfall.com/card/m21/21/glorious-anthem?utm_source=api",
+    "sha256": "2d079c77cd7cefca5e6932e6b06d2ccab8039a03c1a08caad1d4821d9c755d7c"
+  },
+  "CR 702.11b": {
+    "text": "\u201cHexproof\u201d on a permanent means \u201cThis permanent can\u2019t be the target of spells or abilities your opponents control.\u201d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "daedc6374f4e2c808595af407130564d89a58cda6a682d7c60428f06314267ce"
+  },
+  "CARD Giant Growth": {
+    "text": "Giant Growth\n{G}\nInstant\nTarget creature gets +3/+3 until end of turn.",
+    "url": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api",
+    "sha256": "3a0c021814fdbca6b4fa79da8a0138620e0fa69b2029a0a2bf5e0a8a42b8b8b6"
+  },
+  "CR 510.1c": {
+    "text": "A blocked creature assigns its combat damage to the creatures blocking it. If no creatures are currently blocking it (if, for example, they were destroyed or removed from combat), it assigns no combat damage. If exactly one creature is blocking it, it assigns all its combat damage to that creature. If two or more creatures are blocking it, it assigns its combat damage to those creatures divided as its controller chooses among them.\nExample: An attacking Elvish Regrower (a 4/3 creature) is blocked by Vampire Spawn (a 2/3 creature) and Helpful Hunter (a 1/1 creature). Elvish Regrower\u2019s controller can assign all 4 damage to the Hunter, 1 damage to the Spawn and 3 damage to the Hunter, 2 damage to each creature, 3 damage to the Spawn and 1 damage to the Hunter, or all 4 damage to the Spawn.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "75145697c09e6d08849840e988f31b1d3579463e65beed206d63f3b7ba242f2f"
+  },
+  "CR 509.1h": {
+    "text": "An attacking creature with one or more creatures declared as blockers for it becomes a blocked creature; one with no creatures declared as blockers for it becomes an unblocked creature. This remains unchanged until the creature is removed from combat, an effect says that it becomes blocked or unblocked, or the combat phase ends, whichever comes first. A creature remains blocked even if all the creatures blocking it are removed from combat.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "84b7ad119915503003dbeccc31733341cb7560a7c28f83b7d2d40ff38d1b4a25"
+  },
+  "CR 702.4b": {
+    "text": "If at least one attacking or blocking creature has first strike (see rule 702.7) or double strike as the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike. After that step, instead of proceeding to the end of combat step, the phase gets a second combat damage step. The only creatures that assign combat damage in that step are the remaining attackers and blockers that had neither first strike nor double strike as the first combat damage step began, as well as the remaining attackers and blockers that currently have double strike. After that step, the phase proceeds to the end of combat step.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "06a13c28e2925e4ca70b84c2b44c956e186cec6cc6c86d23f679eeebcfb4de02"
+  },
+  "CR 111.8": {
+    "text": "A token that has left the battlefield can\u2019t move to another zone or come back onto the battlefield. If such a token would change zones, it remains in its current zone instead. It ceases to exist the next time state-based actions are checked; see rule 704.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "e01a1c8d7a82ad5a7feebceaf14de2ed8ec14eb36ca68f451a125e4a7a56398f"
+  },
+  "CR 111.7": {
+    "text": "A token that\u2019s in a zone other than the battlefield ceases to exist. This is a state-based action; see rule 704. (Note that if a token changes zones, applicable triggered abilities will trigger before the token ceases to exist.)",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "8e33434f8ef873c0ba11349428ac881138b68c7f20bc3632427cc5f54422c1b4"
+  },
+  "CR 302.6": {
+    "text": "A creature\u2019s activated ability with the tap symbol or the untap symbol in its activation cost can\u2019t be activated unless the creature has been under its controller\u2019s control continuously since their most recent turn began. A creature can\u2019t attack unless it has been under its controller\u2019s control continuously since their most recent turn began. This rule is informally called the \u201csummoning sickness\u201d rule.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "978ff61bf0ee986749934c1b0685a3f6f8c6faf418a17a366495aed58bd0c4b4"
+  },
+  "CR 704.5j": {
+    "text": "If two or more legendary permanents with the same name are controlled by the same player, that player chooses one of them, and the rest are put into their owners\u2019 graveyards. This is called the \u201clegend rule.\u201d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "7f86d382ef140dbc80728d6e7369cc38e5585f9925b1f4942b5a9985b2f82d65"
+  },
+  "CR 704.3": {
+    "text": "Whenever a player would get priority (see rule 117, \u201cTiming and Priority\u201d), the game checks for any of the listed conditions for state-based actions, then performs all applicable state-based actions simultaneously as a single event. If any state-based actions are performed as a result of a check, the check is repeated; otherwise all triggered abilities that are waiting to be put on the stack are put on the stack, then the check is repeated. Once no more state-based actions have been performed as the result of a check and no triggered abilities are waiting to be put on the stack, the appropriate player gets priority. This process also occurs during the cleanup step (see rule 514), except that if no state-based actions are performed as the result of the step\u2019s first check and no triggered abilities are waiting to be put on the stack, then no player gets priority and the step ends.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "a836b0ece8328ab69519eee3a4f2616882572609234d825acc786ffba74d1153"
+  },
+  "CR 702.16b": {
+    "text": "A permanent or player with protection can\u2019t be targeted by spells with the stated quality and can\u2019t be targeted by abilities from a source with the stated quality.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "b24c65cbf655aff999b8d8046d2a67b9c26df8f32fd88a119ceb9a3a9ef21867"
+  },
+  "CR 702.16e": {
+    "text": "Any damage that would be dealt by sources that have the stated quality to a permanent or player with protection is prevented.",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "sha256": "7b316d65673a1eb2c86fa57726e209e23e80d0546388a6c3ca7bea2002ace3bb"
+  }
+}

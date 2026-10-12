@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
 data/knowledge-*.sqlite
+data/*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.env
+.env.*
+!.env.example
+benchmarks/results/**/*.tmp

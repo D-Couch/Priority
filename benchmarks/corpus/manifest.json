@@ -1,0 +1,14 @@
+{
+  "database_sha256": "61d87e012de5fb234ee0d93dbf3d158c4c6640e66384636c44edd70eb1fcef9d",
+  "archive_sha256": "e1508da2a3223e0eae2c8bf438729aa1f0a851660f08a6da86a1f839110b1bc3",
+  "metadata": {
+    "rules_url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "rules_version": "20260925",
+    "cards_updated": "2026-10-11T21:01:56.537+00:00",
+    "rulings_updated": "2026-10-11T21:00:32.982+00:00",
+    "synced_at": "2026-10-12T03:38:49.503227+00:00",
+    "rules_count": 3312,
+    "cards_count": 38721,
+    "rulings_count": 79706
+  }
+}

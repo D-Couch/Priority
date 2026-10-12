@@ -56,6 +56,18 @@ If LM Studio reports a context-length error, increase its loaded context to 16K 
 - `data/knowledge.sqlite`: current rules/card/ruling snapshot.
 - `test_app.py`: parser and retrieval regression checks.
 
-Run checks with `python3 -m unittest -v`. Update the database from the terminal with `python3 knowledge.py`. Python 3.10+ with SQLite FTS5 support is required.
+Run checks with `python3 -m unittest -v`. Update the database from the terminal with `python3 knowledge.py`. Python 3.11+ with SQLite FTS5 support is required.
 
 Frontend libraries: React/ReactDOM 18.3.1 and HTM 3.1.1, distributed under MIT licenses. Library license files are in `static/vendor/`. Magic content belongs to its respective rights holders. This is an unofficial personal project.
+
+## Benchmark history
+
+The project includes 20 gameplay scenarios, a frozen corpus, an end-to-end benchmark runner, and attributed answer reviews. See [benchmark instructions](benchmarks/README.md) and [performance history](benchmarks/HISTORY.md). Each report records the exact implementation commit, source/data hashes, model settings, retrieved passages, answers, quality grades, and latency. Future vector-search changes should have separate implementation and results commits.
+
+For a fresh Git clone, restore the included database before starting the app:
+
+```bash
+python3 benchmark.py restore-corpus --output data/knowledge.sqlite
+```
+
+Then run `./start.sh` as above. No model weights, API credentials, or personal chat history are included in the repository.

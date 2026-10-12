@@ -1,0 +1,18 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore frozen benchmark corpus
+        run: python3 benchmark.py restore-corpus --output data/knowledge.sqlite
+      - name: Validate benchmark labels and references
+        run: python3 benchmark.py validate
+      - name: Run regression tests
+        run: python3 -m unittest -v
