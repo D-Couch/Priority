@@ -24,16 +24,22 @@ class ReasoningPolicyTests(unittest.TestCase):
             'My attacker is blocked. How much damage gets through?',
             'Do I get priority after casting this spell?',
             'Can I respond to the legend rule?',
+            'Do I get priority after casting this spell?',
         ]
         for question in questions:
             with self.subTest(question=question):
                 self.assertEqual(select_effort('adaptive', messages(question)), 'low')
 
     def test_adaptive_mode_uses_off_for_unflagged_questions(self):
-        self.assertEqual(
-            select_effort('adaptive', messages('Can I respond to a Forest tapping for mana?')),
-            'none',
-        )
+        questions = [
+            'Can I respond to a Forest tapping for mana?',
+            'A death ability triggers when the creature dies.',
+            'No replacement effects apply, and the attacker does not have trample.',
+            'Assuming I have priority, can I target my creature?',
+        ]
+        for question in questions:
+            with self.subTest(question=question):
+                self.assertEqual(select_effort('adaptive', messages(question)), 'none')
 
     def test_adaptive_mode_reads_user_turns_only(self):
         history = [
