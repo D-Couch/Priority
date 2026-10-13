@@ -119,6 +119,17 @@ class KnowledgeTests(unittest.TestCase):
                 self.assertTrue(expected <= {s['id'] for s in selected})
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_blocked_attacker_damage_retrieves_trample_rule_through_packing(self):
+        question='My attacker is blocked. How much damage gets through to my opponent?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        self.assertIn('CR 702.19b',{s['id'] for s in sources})
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages) // 4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 702.19b',{s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_spell_copy_rule_is_prioritized(self):
         question='When an instant is copied, is the copy cast, and does it retain the original mode?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}

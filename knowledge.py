@@ -136,6 +136,7 @@ TOPICS = [
     (r'poison(?:ed)?(?: counters?)?|ten poison|poison threshold', ['104.3d']),
     (r'planeswalker|loyalty ability|loyalty counters?', ['606', '606.4', '704.5i', '113.7a']),
     (r'ability.{0,50}(?:source|permanent).{0,50}(?:leav|graveyard|destroy)|(?:source|permanent).{0,50}(?:leav|graveyard|destroy).{0,50}abilit', ['113.7a']),
+    (r'blocked.{0,60}(?:damage|opponent|player)|(?:damage|opponent|player).{0,60}blocked', ['510', '702.19b']),
     (r'target|fizzle|hexproof|shroud|ward', ['115', '608.2b', '702.11', '702.18', '702.21']),
     (r'death|dies|die\b|graveyard|lethal|state.based|indestructible|deathtouch', ['704', '702.2', '702.12']),
     (r'layer|lose.*abilit|loses.*abilit|humility|blood moon|timestamp', ['613']),
@@ -161,7 +162,7 @@ TOPICS = [
 # matches could crowd out the exact rules for mana value, initiative, and copies.
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
                        '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.10',
-                       '104.3d', '606.4', '704.5i', '113.7a'}
+                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None
