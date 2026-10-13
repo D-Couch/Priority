@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "run_id": "prototype-priority-novel",
+  "suite_sha256": "53ca3961a9e5c6a625959d85a43f01a09785968d0aabecba949720f5bcb2272a",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "Reviewed every answer against the frozen criteria and supplied rules. Nineteen answers are identical to the reviewed current-code baseline and reuse their individual review notes. Re-reviewed the changed Prototype answer against supplied CR 718.3/718.4. AI-assisted evaluation; no independent human Magic judge validation.",
+  "results": [
+    {
+      "case_id": "n01-bestow-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "46d8f3c5d7abed8f60b906a84bfa998101fa379538c4856626af5a8e533a8368",
+      "criteria": {
+        "n01-bestow-illegal-target.1": true,
+        "n01-bestow-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.103e and 608.3b support ending bestowed status and resolving as a creature rather than putting the spell in the graveyard."
+    },
+    {
+      "case_id": "n02-mutate-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "e48a9dc40df23bea5cf115dc6e516ba00f39cd167351d4b9f3fef999a002f3cf",
+      "criteria": {
+        "n02-mutate-illegal-target.1": true,
+        "n02-mutate-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 608.3b and 608.3a support the illegal-target exception for mutating creature spells and their resolution as creatures."
+    },
+    {
+      "case_id": "n03-saga-final-chapter",
+      "repeat": 1,
+      "answer_sha256": "b3154132c063d53f476ff4bb0ff22957a3838a45af1093e9b93c9ae1dd61b6ce",
+      "criteria": {
+        "n03-saga-final-chapter.1": true,
+        "n03-saga-final-chapter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 704.5s defers the Saga sacrifice while its chapter ability remains on the stack; CR 117.5 supports the next state-based-action check after it leaves."
+    },
+    {
+      "case_id": "n04-prototype-graveyard",
+      "repeat": 1,
+      "answer_sha256": "23f753fff511900d09c4ae663cb9b85de2e1e2f3802e8b11dfa175810daec73d",
+      "criteria": {
+        "n04-prototype-graveyard.1": true,
+        "n04-prototype-graveyard.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 718.4 explicitly says prototype cards have only normal characteristics in every zone other than the stack or battlefield; the answer directly applies that rule to the graveyard."
+    },
+    {
+      "case_id": "n05-overload-hexproof",
+      "repeat": 1,
+      "answer_sha256": "879677edfbe87ded0f75b87b112491436e2a6550a4af1d614f3e209deea55085",
+      "criteria": {
+        "n05-overload-hexproof.1": true,
+        "n05-overload-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: overload changes the target pattern to each, so the overloaded spell has no targets for hexproof to restrict."
+    },
+    {
+      "case_id": "n06-level-up",
+      "repeat": 1,
+      "answer_sha256": "2d5fed227c82fcf59d35c2ec40f3f2ef50630e353bc6c42580800a4241e212ca",
+      "criteria": {
+        "n06-level-up.1": true,
+        "n06-level-up.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 711.4 says level up can be activated regardless of current level counters; CR 702.87a supplies the sorcery timing and counter effect."
+    },
+    {
+      "case_id": "n07-keyword-counter",
+      "repeat": 1,
+      "answer_sha256": "fea91b7c03385ea0352ab136efa683550b7a229d611a40c5e423fcac429b416a",
+      "criteria": {
+        "n07-keyword-counter.1": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 122.1b says flying keyword counters grant flying, and CR 613.1f places the effect in layer 6."
+    },
+    {
+      "case_id": "n08-adventure-exile",
+      "repeat": 1,
+      "answer_sha256": "bb2593677950d24e2fce20af4efdd6fac6ace49318f5acf98d760fd3aeaf437d",
+      "criteria": {
+        "n08-adventure-exile.1": true,
+        "n08-adventure-exile.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 715.3d distinguishes the permission to cast the creature face from the prohibited Adventure cast under that permission."
+    },
+    {
+      "case_id": "n09-foretell-turn",
+      "repeat": 1,
+      "answer_sha256": "2e7f110efe583590338db51bb814e8935941d61e4f368050a0d482ee8d5a1079",
+      "criteria": {
+        "n09-foretell-turn.1": true,
+        "n09-foretell-turn.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the supplied foretell rules prevent casting until after the turn the card became foretold has ended."
+    },
+    {
+      "case_id": "n10-suspend-last-counter",
+      "repeat": 1,
+      "answer_sha256": "01ba25e9306d7c11f441c996cd16a8cc526f35d79af121d3439efc2374792518",
+      "criteria": {
+        "n10-suspend-last-counter.1": true,
+        "n10-suspend-last-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.62a makes casting optional and allows play without paying its mana cost if able; it does not claim the card mana cost changes."
+    },
+    {
+      "case_id": "n11-morph-special-action",
+      "repeat": 1,
+      "answer_sha256": "38430b0b072b52576ccf21d379ec04655b1d2a4b0d4ddd3cc746204cbe107685",
+      "criteria": {
+        "n11-morph-special-action.1": true,
+        "n11-morph-special-action.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.37e and 117.1c support turning a face-down morph permanent face up as a special action while holding priority, without using the stack."
+    },
+    {
+      "case_id": "n12-dfc-returned",
+      "repeat": 1,
+      "answer_sha256": "6d2005439a1aec1d05fbdd481d5fa5bce2c8e026d3aba866f59de94ee3de0ef7",
+      "criteria": {
+        "n12-dfc-returned.1": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 712.14 supports a double-faced card entering from a non-stack zone front-face up by default."
+    },
+    {
+      "case_id": "n13-afterlife-exile",
+      "repeat": 1,
+      "answer_sha256": "50c4628983b59946ad9f7f0bac5308d8f09aa4c33a94b7dec5fd06229c0201b5",
+      "criteria": {
+        "n13-afterlife-exile.1": true,
+        "n13-afterlife-exile.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.135a requires the permanent to be put into a graveyard; direct exile does not satisfy that trigger condition."
+    },
+    {
+      "case_id": "n14-enlist-sickness",
+      "repeat": 1,
+      "answer_sha256": "fa25bd460ba57aa9c5a764a4e73a325ddbe487cb9e244c4cecb709ebe4889dd0",
+      "criteria": {
+        "n14-enlist-sickness.1": true,
+        "n14-enlist-sickness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.154a requires the enlisted creature to have haste or to have been controlled since the turn began; the stated creature meets neither condition."
+    },
+    {
+      "case_id": "n15-mentor-target",
+      "repeat": 1,
+      "answer_sha256": "4c82b8536b878675573c34e92cb81901034a0db1852d7a1ecfa348cff5ba5a9e",
+      "criteria": {
+        "n15-mentor-target.1": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.134a defines mentor as a trigger targeting an attacking creature with lower power; it does not misclassify the ability."
+    },
+    {
+      "case_id": "n16-convoke-summoning-sickness",
+      "repeat": 1,
+      "answer_sha256": "be1f2c841f185e3245973f872f782f55d35ad98bb88f9b425fdfdde1e642d728",
+      "criteria": {
+        "n16-convoke-summoning-sickness.1": true,
+        "n16-convoke-summoning-sickness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.51a permits tapping creatures to pay convoke; the cited haste restriction concerns activated abilities, not this cost payment."
+    },
+    {
+      "case_id": "n17-casualty-copy",
+      "repeat": 1,
+      "answer_sha256": "b703b73461ca4cee281a208050cb4ca6743e46ba66fce45749fb53fb01af5d43",
+      "criteria": {
+        "n17-casualty-copy.1": true,
+        "n17-casualty-copy.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.153a supports the casualty cost and copy; the 2/2 meets the power threshold and the target handling is supported by CR 707.10c."
+    },
+    {
+      "case_id": "n18-myriad-tokens",
+      "repeat": 1,
+      "answer_sha256": "33f382e5ee5429f8ae7b3aeb9712e98e5d82d5f3862e694473382465dff8114b",
+      "criteria": {
+        "n18-myriad-tokens.1": true,
+        "n18-myriad-tokens.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 702.116a explicitly exiles tokens created by myriad at end of combat."
+    },
+    {
+      "case_id": "n19-totem-armor",
+      "repeat": 1,
+      "answer_sha256": "a750f51d72038aaf9c7d8427a8485a3bbb60a22f10d3dde85165940e318d0d1d",
+      "criteria": {
+        "n19-totem-armor.1": true,
+        "n19-totem-armor.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the supplied umbra armor rule replaces destruction by removing damage and destroying the Aura, so the creature survives that destruction event."
+    },
+    {
+      "case_id": "n20-bolster",
+      "repeat": 1,
+      "answer_sha256": "2318ec5f404ec097171d329def31aa6c79e4c4637e4b4d53d9753cb3b9e297a6",
+      "criteria": {
+        "n20-bolster.1": true,
+        "n20-bolster.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: CR 701.39a permits choosing any creature tied for least toughness, excluding the larger creature."
+    }
+  ]
+}

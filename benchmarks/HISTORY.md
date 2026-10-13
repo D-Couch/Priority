@@ -81,6 +81,9 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [retrieval-core-rules-gameplay](results/retrieval-core-rules-gameplay/report.md) | gameplay-v1 | `4da6c0d7c4` | 20/20 | 20 | 0 | 100.0% | 7.39 |
 | [retrieval-core-rules-heldout](results/retrieval-core-rules-heldout/report.md) | heldout-v1 | `4da6c0d7c4` | 30/32 | 30 | 0 | 82.0% | 7.22 |
 | [pre-answer-precision](results/pre-answer-precision/report.md) | novel-v1 | `9a635a80fb` | 19/20 | 19 | 0 | 82.5% | 6.36 |
+| [prototype-priority-novel](results/prototype-priority-novel/report.md) | novel-v1 | `ad79a4ff68` | 20/20 | 20 | 0 | 87.5% | 5.95 |
+| [prototype-priority-heldout](results/prototype-priority-heldout/report.md) | heldout-v1 | `ad79a4ff68` | 30/32 | 30 | 0 | 82.0% | 7.51 |
+| [prototype-priority-gameplay](results/prototype-priority-gameplay/report.md) | gameplay-v1 | `ad79a4ff68` | 20/20 | 20 | 0 | 100.0% | 6.92 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

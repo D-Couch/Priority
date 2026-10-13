@@ -65,11 +65,13 @@ Frontend libraries: React/ReactDOM 18.3.1 and HTM 3.1.1, distributed under MIT l
 
 ## Benchmark history
 
-The project includes 20 gameplay scenarios, a frozen corpus, an end-to-end benchmark runner, and attributed answer reviews. See [benchmark instructions](benchmarks/README.md) and [performance history](benchmarks/HISTORY.md). Each report records the exact implementation commit, source/data hashes, model settings, retrieved passages, answers, quality grades, and latency. Future vector-search changes should have separate implementation and results commits.
+The project includes three frozen suites with 72 development scenarios, a frozen corpus, an end-to-end benchmark runner, and attributed answer reviews. See [benchmark instructions](benchmarks/README.md) and [performance history](benchmarks/HISTORY.md). Each report records the exact implementation commit, source/data hashes, model settings, retrieved passages, answers, quality grades, and latency. Future retrieval changes should have separate implementation and results commits.
 
 The improved, still vector-free configuration scored **20/20 correct and complete at each of seeds 42 and 43** (40 answers on the same 20 scenarios), versus 12/20 in the original baseline. Median response times were 10.21 and 9.95 seconds; neither verification run contained an empty or truncated answer. Reviews are AI-assisted, not independently human-validated. One seed-42 answer uses plain rule numbers instead of clickable bracketed citations. This is a development-suite result, not an accuracy claim for unseen questions. See the [second-seed findings](benchmarks/results/atomic-sections-seed43/findings.md).
 
 The original tags are preserved. `pre-vectorization-quality` marks this improved baseline; freeze unseen scenarios and paraphrases before evaluating vectorization against it. Restart an already-running backend with `./start.sh` to load the changes.
+
+The latest targeted retrieval change prioritizes the Prototype Cards rules when a question asks about a prototyped card leaving the battlefield. On the 20-case novel suite, the reviewed result rose from 19/20 to 20/20, expected-evidence recall from 82.5% to 87.5%, and median latency was 5.95 seconds (6.36 seconds before). The 20-case gameplay suite stayed at 20/20; all 32 held-out answers and evidence lists were unchanged at 30/32. These are single-seed, AI-assisted development evaluations, not independent judge validation or an accuracy estimate for unseen gameplay. Full per-case comparisons are in [benchmark history](benchmarks/HISTORY.md).
 
 For a fresh Git clone, restore the included database before starting the app:
 
