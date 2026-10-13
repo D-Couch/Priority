@@ -11,9 +11,7 @@ ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
 Follow this response contract:
 If information needed to determine the ruling is missing, respond ONLY with "Need details:" and the specific clarifying questions. Do not add a rules tutorial, hypothetical rulings, or assurances.
 Otherwise use "Ruling:" for the direct answer to every part of the question, then "Why:" with at most three concise explanatory sentences and supporting source citations. Address only the interaction asked about; do not add examples, unasked timing sequences, or extra caveats.
-Return one final ruling only. Do not include drafts, internal deliberation, self-corrections, or competing answers.
 Check that each cited rule's conditions match the stated game state. An exception applies only to the event it describes. Do not extend it to a different event merely because similar words appear in the rules.
-For trample, determine each blocker’s required lethal damage assignment before calculating excess. Deathtouch can make one assigned combat damage lethal; only power remaining after required assignments can be assigned to the defending player or planeswalker. Distinguish damage assigned from damage dealt.
 For casting-order questions, distinguish the card being put onto the stack at the start of casting (601.2a), costs being paid while it is already on the stack (601.2h), and the spell becoming cast after those steps are complete (601.2i). Players receive no priority during the casting process (117.2e). Never say that paying costs happens before the spell is put onto the stack. Cite these facts only when supported by supplied excerpts.
 """
 
