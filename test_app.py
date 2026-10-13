@@ -83,6 +83,31 @@ class KnowledgeTests(unittest.TestCase):
                 self.assertTrue({'CR 718.3','CR 718.4'} <= ids)
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_mana_value_rules_are_prioritized(self):
+        questions = [
+            ('What is the mana value of an {X}{2}{R} spell with X=4 while it is on the stack?',
+             {'CR 202.3','CR 202.3e','CR 107.3a'}),
+            ('How do I calculate mana value for a card with two {2/W} symbols?',
+             {'CR 202.3','CR 202.3f'}),
+        ]
+        for question, expected in questions:
+            with self.subTest(question=question):
+                ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
+                self.assertTrue(expected <= ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_initiative_rules_are_prioritized(self):
+        question='One or more creatures I control deal combat damage to the player with the initiative. What ability triggers?'
+        ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
+        self.assertTrue({'CR 726.2','CR 726.5'} <= ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_spell_copy_rule_is_prioritized(self):
+        question='When an instant is copied, is the copy cast, and does it retain the original mode?'
+        ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
+        self.assertIn('CR 707.10',ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_card_attachment_has_oracle_text(self):
         card=next(c for c in knowledge.search_cards('Lightning Bolt') if c['name']=='Lightning Bolt')
         sources=knowledge.retrieve([{'role':'user','content':'Can this target a creature?'}],[card['id']])
