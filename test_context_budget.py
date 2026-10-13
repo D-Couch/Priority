@@ -19,6 +19,7 @@ def source(identifier, body, kind='rule'):
 class ContextBudgetTests(unittest.TestCase):
     def test_general_random_rules_guidance_limits_mtr_scope_and_requires_legal_target_pool(self):
         self.assertIn('do not present MTR 3.9 as governing every random effect',ANSWER_CONTRACT)
+        self.assertIn('For random-target questions, do not add unrelated die-roll or tournament guidance',ANSWER_CONTRACT)
         self.assertIn('only legal targets belong in the pool',ANSWER_CONTRACT)
         self.assertIn('Never suggest an unequal sequential coin-flip method',ANSWER_CONTRACT)
 
