@@ -99,6 +99,14 @@ class BenchmarkTests(unittest.TestCase):
         new['model_runtime']['/api/v1/models']['loaded_configs'][0]['eval_batch_size']=4096
         self.assertIn('model_runtime',benchmark.validate_comparison(old,new,['model_runtime.physical_batch_size']))
 
+    def test_speculative_depth_experiment_allows_only_draft_depth_change(self):
+        old={'status':'complete','expected_attempts':1,'model_runtime':{'/api/v1/models':{'loaded_configs':[{'context_length':8192,'eval_batch_size':2048,'physical_batch_size':512,'parallel':1,'speculative_draft_mtp':True,'speculative_draft_max_tokens':3}]}},'results':[{'sampling':{'temperature':.1}}]}
+        new=copy.deepcopy(old);new['model_runtime']['/api/v1/models']['loaded_configs'][0]['speculative_draft_max_tokens']=5
+        self.assertIn('model_runtime',benchmark.validate_comparison(old,new))
+        self.assertEqual(benchmark.validate_comparison(old,new,['model_runtime.speculative_draft_max_tokens']),[])
+        new['model_runtime']['/api/v1/models']['loaded_configs'][0]['speculative_draft_mtp']=False
+        self.assertIn('model_runtime',benchmark.validate_comparison(old,new,['model_runtime.speculative_draft_max_tokens']))
+
     def test_review_bound_to_answer_and_checks_each_criterion(self):
         run={'run_id':'r','suite_sha256':'s','results':[{'case_id':'case','repeat':1,'answer':'No.'}]}
         review={'run_id':'r','suite_sha256':'s','reviewer':'test','review_method':'fixture','results':[{'case_id':'case','repeat':1,'answer_sha256':hashlib.sha256(b'No.').hexdigest(),'criteria':{'one':True,'two':False},'unsupported_or_contradictory_claims':False,'abstained':False,'notes':'Second requirement missing.'}]}

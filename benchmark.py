@@ -232,7 +232,7 @@ def write_history():
     (BENCH/'HISTORY.md').write_text('\n'.join(lines))
 
 
-MODEL_RUNTIME_FIELDS = {'model_runtime.parallel':'parallel', 'model_runtime.eval_batch_size':'eval_batch_size', 'model_runtime.physical_batch_size':'physical_batch_size'}
+MODEL_RUNTIME_FIELDS = {'model_runtime.parallel':'parallel', 'model_runtime.eval_batch_size':'eval_batch_size', 'model_runtime.physical_batch_size':'physical_batch_size', 'model_runtime.speculative_draft_max_tokens':'speculative_draft_max_tokens'}
 EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens', *MODEL_RUNTIME_FIELDS}
 
 
