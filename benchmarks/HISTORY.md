@@ -77,6 +77,9 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [adaptive-reasoning-seed43-narrow](results/adaptive-reasoning-seed43-narrow/report.md) | gameplay-v1 | `11affa4886` | 19/20 | 19 | 0 | 96.2% | 4.14 |
 | [adaptive-reasoning-seed43-final](results/adaptive-reasoning-seed43-final/report.md) | gameplay-v1 | `0709559bcc` | 20/20 | 20 | 0 | 96.2% | 4.15 |
 | [adaptive-reasoning-seed42-final](results/adaptive-reasoning-seed42-final/report.md) | gameplay-v1 | `0709559bcc` | 20/20 | 20 | 0 | 96.2% | 4.25 |
+| [lexical-low-heldout-current-baseline](results/lexical-low-heldout-current-baseline/report.md) | heldout-v1 | `20e77fc2d4` | 30/32 | 30 | 0 | 81.2% | 7.17 |
+| [retrieval-core-rules-gameplay](results/retrieval-core-rules-gameplay/report.md) | gameplay-v1 | `4da6c0d7c4` | 20/20 | 20 | 0 | 100.0% | 7.39 |
+| [retrieval-core-rules-heldout](results/retrieval-core-rules-heldout/report.md) | heldout-v1 | `4da6c0d7c4` | 30/32 | 30 | 0 | 82.0% | 7.22 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
