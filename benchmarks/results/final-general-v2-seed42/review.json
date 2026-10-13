@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "final-general-v2-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen v2 rubric and exact supplied rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "5178afc35d97c0b4f760080d3babb53fc99d1d770b700be52e3b5162c22ebde1",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Direct answer and scope for MTR 3.9 are correct, but the response includes a visibly incorrect d6-to-four-options mapping, then self-corrects mid-example and adds a long sequential-coin-flip aside. Prefer shuffled slips for arbitrary choices and keep this simple question concise."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "76045821032b17900d99f88150e3b9fef50367e3c655efbc7fd911f0b1977204",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states counters and an Aura\u2019s continuous bonus are not copied; CR 707.2 supports the general answer."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "129d40dad5541962f849bd3241120905b8381d677dabad23d5900c257905c019",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: fight damage is not combat damage, so double strike has no effect and each creature deals its power once."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "1d924f3e1f994ca3dfc7dc49631cfbb4a2b8717322054e596b8b1cd1b72f22e6",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The core process is correctly cited, but the unsolicited hypothetical is wrong. \u201cEnters with a +1/+1 counter\u201d and \u201centers tapped\u201d replacements can both apply to the same entering event; neither automatically stops the other. Avoid invented example effect text."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "610ec923df2ed87ce365889364354e4fdf8ae6558b970e4157fc2282ceba1d5c",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly excludes the creature made illegal by protection and cites both CR 702.16b and the target legality rule. No die-roll guidance is mixed into the answer."
+    }
+  ]
+}
