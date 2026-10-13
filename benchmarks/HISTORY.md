@@ -80,6 +80,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [lexical-low-heldout-current-baseline](results/lexical-low-heldout-current-baseline/report.md) | heldout-v1 | `20e77fc2d4` | 30/32 | 30 | 0 | 81.2% | 7.17 |
 | [retrieval-core-rules-gameplay](results/retrieval-core-rules-gameplay/report.md) | gameplay-v1 | `4da6c0d7c4` | 20/20 | 20 | 0 | 100.0% | 7.39 |
 | [retrieval-core-rules-heldout](results/retrieval-core-rules-heldout/report.md) | heldout-v1 | `4da6c0d7c4` | 30/32 | 30 | 0 | 82.0% | 7.22 |
+| [pre-answer-precision](results/pre-answer-precision/report.md) | novel-v1 | `9a635a80fb` | 19/20 | 19 | 0 | 82.5% | 6.36 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
