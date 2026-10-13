@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "run_id": "mechanics-v1-seed42",
+  "suite_sha256": "94c0a55451c6f3c38c2d3ea2c56e8f89cabe631557e181c041ee2bfe213f9c3d",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen scenario criteria and retrieved Comprehensive Rules excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "m01-poison-threshold",
+      "repeat": 1,
+      "answer_sha256": "c9c1d96f5eff7a962ffcb5da7cd7db1a298fbd5240195bdd2a11ab945a6586f9",
+      "criteria": {
+        "m01-poison-threshold.1": true,
+        "m01-poison-threshold.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The timing and threshold are right, but the answer cites CR 904.13c, an Archenemy rule, as the poison-loss rule. CR 117.2d supports the state-based-action timing; the cited threshold rule is not appropriate."
+    },
+    {
+      "case_id": "m02-x-on-stack",
+      "repeat": 1,
+      "answer_sha256": "5cb0c84b922cfed9fd3f494723c4451cf7bcb462d203ac068b377087acdb42b7",
+      "criteria": {
+        "m02-x-on-stack.1": true,
+        "m02-x-on-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The X value and total are correct. CR 107.3a supports the announced X value; seed 42 also shows the correct red mana value in its calculation."
+    },
+    {
+      "case_id": "m03-x-outside-stack",
+      "repeat": 1,
+      "answer_sha256": "783ed00236ac017bd9660f829893f6c5b9f6b406c2ac04f969c4fe901f63a3b8",
+      "criteria": {
+        "m03-x-outside-stack.1": false,
+        "m03-x-outside-stack.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "The answer gives the correct rule number but abstains instead of answering that mana value is 1 and counters do not affect it."
+    },
+    {
+      "case_id": "m04-hybrid-mana-value",
+      "repeat": 1,
+      "answer_sha256": "450cb698967a2e19297733e9f264a96117646af27ad263d591c6425a3dd2195c",
+      "criteria": {
+        "m04-hybrid-mana-value.1": true,
+        "m04-hybrid-mana-value.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The numerical answer 5 is correct and both criteria are satisfied. It acknowledges the hybrid-symbol rule is absent from the retrieved excerpts; it provides no supporting citation."
+    },
+    {
+      "case_id": "m05-loyalty-stack-window",
+      "repeat": 1,
+      "answer_sha256": "1c47e7deaf7a2f0b33bcf3c9c58dbf6239b5d72f51a3c3be8849dad8bfeed2e0",
+      "criteria": {
+        "m05-loyalty-stack-window.1": true,
+        "m05-loyalty-stack-window.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly applies the empty-stack, main-phase, active-turn timing condition; cited CR 113.5 supports the ruling."
+    },
+    {
+      "case_id": "m06-new-planeswalker-activation",
+      "repeat": 1,
+      "answer_sha256": "4c579758b1246673df36763f905fcb3b9f437564a954ab37a074b950a2a636d6",
+      "criteria": {
+        "m06-new-planeswalker-activation.1": true,
+        "m06-new-planeswalker-activation.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains priority after resolution and that summoning sickness does not restrict loyalty abilities; cited rules support the answer."
+    },
+    {
+      "case_id": "m07-loyalty-limit-permanent",
+      "repeat": 1,
+      "answer_sha256": "3f81716c06069b7c58f6b6c7e333c00bb5d7e88ac106bc5c7c86f62194a1e9a6",
+      "criteria": {
+        "m07-loyalty-limit-permanent.1": true,
+        "m07-loyalty-limit-permanent.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states the once-per-turn restriction applies to the individual permanent; cited rules support the distinction."
+    },
+    {
+      "case_id": "m08-loyalty-cost-and-source",
+      "repeat": 1,
+      "answer_sha256": "e5ca7367699fbfd796f253bb956fba4eca260ab183001c53ef41c1a5f0bfb416",
+      "criteria": {
+        "m08-loyalty-cost-and-source.1": true,
+        "m08-loyalty-cost-and-source.2": false,
+        "m08-loyalty-cost-and-source.3": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Correctly says counters are paid as an activation cost. It then abstains on whether the ability survives removal of its source, so criteria 2 and 3 are not established."
+    },
+    {
+      "case_id": "m09-siege-protector",
+      "repeat": 1,
+      "answer_sha256": "602fc9a27b8b166a10f2a6f09d8f81fc81f663e4b8d7fddd307240e33d1a7386",
+      "criteria": {
+        "m09-siege-protector.1": true,
+        "m09-siege-protector.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the protector must be an opponent of the Siege controller; cited CR 310.12a supports this."
+    },
+    {
+      "case_id": "m10-siege-last-counter",
+      "repeat": 1,
+      "answer_sha256": "c8821ef53f191a61323e399b1b305fe0f8bd09423f72332ab62f3a746f27d439",
+      "criteria": {
+        "m10-siege-last-counter.1": true,
+        "m10-siege-last-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies a triggered ability and the exile-then-cast effect; cited Siege rules support the timing and the zero-defense exception."
+    },
+    {
+      "case_id": "m11-monarch-combat-trigger",
+      "repeat": 1,
+      "answer_sha256": "f59a7980e12f999d0dbbe60e01df8698a8bad356389175b9aac7f81fea82d3e2",
+      "criteria": {
+        "m11-monarch-combat-trigger.1": true,
+        "m11-monarch-combat-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly distinguishes the combat-damage trigger from the later change of monarch on resolution; cited rules support the answer."
+    },
+    {
+      "case_id": "m12-monarch-draw-trigger",
+      "repeat": 1,
+      "answer_sha256": "f51f7215ba6063db6e37cbc76ebb74b63dc18074caf2f898277bea6ab572c599",
+      "criteria": {
+        "m12-monarch-draw-trigger.1": true,
+        "m12-monarch-draw-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the pending monarch draw trigger still makes Alice draw after the monarch changes; cited rules support the result."
+    },
+    {
+      "case_id": "m13-initiative-multiple-damage",
+      "repeat": 1,
+      "answer_sha256": "3ec6b5b32748ee87640850cefb3762f127cb00e1e6ec8c0cc291f001015261fe",
+      "criteria": {
+        "m13-initiative-multiple-damage.1": false,
+        "m13-initiative-multiple-damage.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "The fully specified scenario is answerable from the rules. The response requests the card text instead of answering the trigger count and initiative result."
+    },
+    {
+      "case_id": "m14-retake-initiative",
+      "repeat": 1,
+      "answer_sha256": "84930a8be5be320793ba2e4e77c05209b04b13b5aec6aee674a3cf10230cb8a3",
+      "criteria": {
+        "m14-retake-initiative.1": false,
+        "m14-retake-initiative.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "The response confuses initiative rules with monarch rules or asks for more context despite a specified initiative scenario. It does not state that no new designation is created while the initiative-taking trigger still occurs."
+    },
+    {
+      "case_id": "m15-phased-out-token",
+      "repeat": 1,
+      "answer_sha256": "a517d4bd81b46a758a672579da6ffb145a2b543777a05781ca3cb2d31c965834",
+      "criteria": {
+        "m15-phased-out-token.1": true,
+        "m15-phased-out-token.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that phasing is not a zone change, the token persists, and counters remain; cited CR 702.26 supports this."
+    },
+    {
+      "case_id": "m16-phased-out-board-wipe",
+      "repeat": 1,
+      "answer_sha256": "111b64f37b574a64d81de690f880018c0c781c85db70e470ceafe03eaed40289",
+      "criteria": {
+        "m16-phased-out-board-wipe.1": true,
+        "m16-phased-out-board-wipe.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that a phased-out permanent is unaffected by an ordinary destroy-all effect; cited CR 702.26 supports this."
+    },
+    {
+      "case_id": "m17-regeneration-shield",
+      "repeat": 1,
+      "answer_sha256": "029f9a8079b34ac207d3b79558110133c6e514db52fcd83b19f7adcbd4a2f763",
+      "criteria": {
+        "m17-regeneration-shield.1": true,
+        "m17-regeneration-shield.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly describes the replacement result: clear damage, tap, and remove from combat; cited regeneration rules support it."
+    },
+    {
+      "case_id": "m18-extra-turn-order",
+      "repeat": 1,
+      "answer_sha256": "fa1a6c2955414d3ac2fa9d45159235fc22cc268d86ba8d03ad2511d5f280397c",
+      "criteria": {
+        "m18-extra-turn-order.1": true,
+        "m18-extra-turn-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states that the most recently created extra turn is taken first; cited CR 500.7 supports it."
+    },
+    {
+      "case_id": "m19-land-not-a-spell",
+      "repeat": 1,
+      "answer_sha256": "4f1db10910fd57b8a877ef6c05463c09ae185b02cda788b048701faf5b6439a5",
+      "criteria": {
+        "m19-land-not-a-spell.1": true,
+        "m19-land-not-a-spell.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies playing a land as a special action that does not use the stack; cited rules support the no-response result."
+    },
+    {
+      "case_id": "m20-copy-not-cast",
+      "repeat": 1,
+      "answer_sha256": "d9564762c439a3bda5ead223a9052b8ed37d12747e955366b495c120eb6cbe56",
+      "criteria": {
+        "m20-copy-not-cast.1": false,
+        "m20-copy-not-cast.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Correctly explains that the mode is copied and cannot be changed, but abstains on whether copying casts the copy. That part is answerable from the rules and is required by the first criterion."
+    }
+  ]
+}

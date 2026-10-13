@@ -65,9 +65,11 @@ Frontend libraries: React/ReactDOM 18.3.1 and HTM 3.1.1, distributed under MIT l
 
 ## Benchmark history
 
-The project includes three frozen suites with 72 development scenarios, a frozen corpus, an end-to-end benchmark runner, and attributed answer reviews. See [benchmark instructions](benchmarks/README.md) and [performance history](benchmarks/HISTORY.md). Each report records the exact implementation commit, source/data hashes, model settings, retrieved passages, answers, quality grades, and latency. Future retrieval changes should have separate implementation and results commits.
+The project includes four frozen suites with 92 development scenarios, a frozen corpus, an end-to-end benchmark runner, and attributed answer reviews. See [benchmark instructions](benchmarks/README.md) and [performance history](benchmarks/HISTORY.md). Each report records the exact implementation commit, source/data hashes, model settings, retrieved passages, answers, quality grades, and latency. Future retrieval changes should have separate implementation and results commits.
 
 The improved, still vector-free configuration scored **20/20 correct and complete at each of seeds 42 and 43** (40 answers on the same 20 scenarios), versus 12/20 in the original baseline. Median response times were 10.21 and 9.95 seconds; neither verification run contained an empty or truncated answer. Reviews are AI-assisted, not independently human-validated. One seed-42 answer uses plain rule numbers instead of clickable bracketed citations. This is a development-suite result, not an accuracy claim for unseen questions. See the [second-seed findings](benchmarks/results/atomic-sections-seed43/findings.md).
+
+A newer 20-case mechanics suite scored 14/20 and 13/20 fully correct across two seeds (AI-assisted review), with 20/20 requests completed and no truncations. It exposed missed retrieval for initiative, X mana value, and copied spells, plus citation-support and arithmetic errors. The findings and limitations are documented in [the mechanics-v1 analysis](benchmarks/results/mechanics-v1-seed42/analysis.md); this is exploratory development data, not independently judge-validated accuracy.
 
 The original tags are preserved. `pre-vectorization-quality` marks this improved baseline; freeze unseen scenarios and paraphrases before evaluating vectorization against it. Restart an already-running backend with `./start.sh` to load the changes.
 
