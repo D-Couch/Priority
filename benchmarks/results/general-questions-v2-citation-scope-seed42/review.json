@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v2-citation-scope-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen v2 rubric and supplied rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "7183b3925ea3e1195f80cec787f91875b885fb94ca21c7b57bf472c3afb089c6",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Direct practical answer with fair methods, distinguishes the die-roll-only MTR guidance, and includes only legal targets in a random target pool. Citations support the claims."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "75d217cf1524755cb5a60287f925b63c1611aabc4727242b3a65fee3027ec4ec",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct general copy rule; counters and an Aura\u2019s continuous bonus are not copied. CR 707.2 and 707.4 support the answer."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "eafa0d727f18f1de525ec6277e63b24f52bade7e1ade6a366589c570bee77994",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains fight damage is once per creature and not combat damage, so double strike has no effect."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "aab38ebdb4763d75923edec7783644cfd816b0ba2a667c2c79e1a780aed1206d",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer accurately describes affected-player choice and sequential applicability. However, it mentions Rules 616.1 and 616.1f only in unlinked prose and cites CR 614.7 for the final statement. The cited excerpt does not support who chooses or the repeated process; those central claims need bracketed [CR 616.1] and [CR 616.1f] citations."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "3939a4daf055c3f1eea6dabdbee33a7391a46f27bdad60828199d1c49b46c091",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly excludes a creature made illegal by protection and cites both CR 702.16b and the targeting rule. No unrelated tournament-randomization claim was added."
+    }
+  ]
+}
