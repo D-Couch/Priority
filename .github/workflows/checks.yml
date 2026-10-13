@@ -26,6 +26,8 @@ jobs:
         run: python3 benchmark.py validate --suite benchmarks/mechanics-v1/scenarios.json
       - name: Validate general questions suite references
         run: python3 benchmark.py validate --suite benchmarks/general-questions-v1/scenarios.json
+      - name: Validate expanded general questions suite references
+        run: python3 benchmark.py validate --suite benchmarks/general-questions-v2/scenarios.json
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

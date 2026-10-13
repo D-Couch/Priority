@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "id": "general-questions-v2",
+  "description": "Five frozen broad rules questions evaluate useful direct answers to conceptual Magic rules queries, including randomness, legal targets, copy effects, fight damage, and replacement ordering.",
+  "rules_version": "20260925",
+  "cases": [
+    {
+      "id": "g01-random-paper-procedure",
+      "category": "general-rules",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "How does an instruction to do something randomly work in paper Magic? What should we physically do?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Answer directly: use a fair method for the eligible choices, such as shuffled slips or evenly mapping die results. Explain that the effect defines the eligible options and random targets must be legal. Scope MTR 3.9 to die-roll game actions.",
+      "criteria": [
+        {
+          "id": "g01-random-paper-procedure.1",
+          "description": "Gives a practical equal-chance method without requiring an exact card first."
+        },
+        {
+          "id": "g01-random-paper-procedure.2",
+          "description": "Distinguishes die-roll tournament guidance from other random effects and states that random targets must be legal."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "MTR 3.9",
+          "any_of": [
+            "MTR 3.9"
+          ]
+        },
+        {
+          "label": "CR 601.2c",
+          "any_of": [
+            "CR 601.2c"
+          ]
+        },
+        {
+          "label": "CR 115.2",
+          "any_of": [
+            "CR 115.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g02-copy-counters-and-bonuses",
+      "category": "general-rules",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "When a creature copies another creature, does it copy the counters and a +2/+2 bonus from an Aura on that creature?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Answer directly: normally no. Copies acquire copiable values, not counters or other continuous effects from the Aura. Exact copy text can add details, but no follow-up is required for the general rule.",
+      "criteria": [
+        {
+          "id": "g02-copy-counters-and-bonuses.1",
+          "description": "Directly says counters and the Aura’s continuous bonus are not copied under the general copy rule."
+        },
+        {
+          "id": "g02-copy-counters-and-bonuses.2",
+          "description": "Explains the distinction between copiable values and counters/other effects without requiring card identity first."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 707.2",
+          "any_of": [
+            "CR 707.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g03-fight-and-double-strike",
+      "category": "general-rules",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Does double strike make a creature deal damage twice when it fights another creature?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Answer directly: no. Each creature deals damage equal to its power once during a fight; fight damage is not combat damage, while double strike changes combat damage steps.",
+      "criteria": [
+        {
+          "id": "g03-fight-and-double-strike.1",
+          "description": "Says each creature deals damage equal to its power once when fighting."
+        },
+        {
+          "id": "g03-fight-and-double-strike.2",
+          "description": "Explains that fight damage is not combat damage, so double strike does not add a second damage event."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 701.14a",
+          "any_of": [
+            "CR 701.14a"
+          ]
+        },
+        {
+          "label": "CR 701.14d",
+          "any_of": [
+            "CR 701.14d"
+          ]
+        },
+        {
+          "label": "CR 702.4a",
+          "any_of": [
+            "CR 702.4a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g04-replacement-order-general",
+      "category": "general-rules",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Two replacement effects apply to the same event. Who chooses which to apply first, and do they both automatically happen?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Answer directly: the affected player (or affected object’s controller/owner as applicable) chooses. Apply one, then check which remaining effects still apply to the modified event. The outcome depends on the effects’ text.",
+      "criteria": [
+        {
+          "id": "g04-replacement-order-general.1",
+          "description": "Identifies who chooses the order in the general case."
+        },
+        {
+          "id": "g04-replacement-order-general.2",
+          "description": "Explains sequential re-evaluation and avoids asserting that every other effect automatically applies or inventing a final outcome."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 616.1",
+          "any_of": [
+            "CR 616.1"
+          ]
+        },
+        {
+          "label": "CR 616.1f",
+          "any_of": [
+            "CR 616.1f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g05-protection-and-random-target",
+      "category": "general-rules",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A red spell says “target creature chosen at random.” Could a creature with protection from red be selected?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Answer directly: no, assuming protection makes it illegal to target. The eligible random target pool contains only legal targets.",
+      "criteria": [
+        {
+          "id": "g05-protection-and-random-target.1",
+          "description": "Says a creature that is illegal to target because of protection from red is excluded."
+        },
+        {
+          "id": "g05-protection-and-random-target.2",
+          "description": "Explains that random selection is among legal targets and does not remove targeting restrictions."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 115.2",
+          "any_of": [
+            "CR 115.2"
+          ]
+        },
+        {
+          "label": "CR 702.16b",
+          "any_of": [
+            "CR 702.16b"
+          ]
+        }
+      ]
+    }
+  ]
+}

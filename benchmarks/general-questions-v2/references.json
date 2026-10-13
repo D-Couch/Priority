@@ -1,0 +1,55 @@
+{
+  "CR 601.2c": {
+    "text": "The player announces their choice of an appropriate object or player for each target the spell requires. A spell may require some targets only if an alternative or additional cost (such as a kicker cost) or a particular mode was chosen for it; otherwise, the spell is cast as though it did not require those targets. Similarly, a spell may require alternative targets only if an alternative or additional cost was chosen for it. If the spell has a variable number of targets, the player announces how many targets they will choose before they announce those targets. In some cases, the number of targets will be defined by the spell’s text. Once the number of targets the spell has is determined, that number doesn’t change, even if the information used to determine the number of targets does. The same target can’t be chosen multiple times for any one instance of the word “target” on the spell. However, if the spell uses the word “target” in multiple places, the same object or player can be chosen once for each instance of the word “target” (as long as it fits the targeting criteria). If any effects say that an object or player must be chosen as a target, the player chooses targets so that they obey the maximum possible number of such effects without violating any rules or effects that say that an object or player can’t be chosen as a target. The chosen objects and/or players each become a target of that spell. (Any abilities that trigger when those objects and/or players become the target of a spell trigger at this point; they’ll wait to be put on the stack until the spell has finished being cast.)\nExample: If a spell says “Tap two target creatures,” then the same creature can’t be chosen twice; the spell requires two different legal targets. A spell that says “Destroy target artifact and target land,” however, can target the same artifact land twice because it uses the word “target” in multiple places.",
+    "sha256": "050682f3eff2591fac1aa0b4054a27b9ef141e05cd21ae1e9058b3c7ea4ab811",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 115.2": {
+    "text": "Only permanents are legal targets for spells and abilities, unless a spell or ability (a) specifies that it can target an object in another zone or a player, or (b) targets an object that can’t exist on the battlefield, such as a spell or ability. See also rule 115.4.",
+    "sha256": "53d743b3783ebaa2ed95621edb5890d87daa722e67df5a536c4fe47ebc6a2916",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 707.2": {
+    "text": "When copying an object, the copy acquires the copiable values of the original object’s characteristics and, for an object on the stack, choices made when casting or activating it (mode, targets, the value of X, whether it was kicked, how it will affect multiple targets, and so on). The copiable values are the values derived from the text printed on the object (that text being name, mana cost, color indicator, card type, subtype, supertype, rules text, power, toughness, and/or loyalty), as modified by other copy effects, by its face-down status, and by “as . . . enters” and “as . . . is turned face up” abilities that set power and toughness (and may also set additional characteristics). Other effects (including type-changing and text-changing effects), status, counters, and stickers are not copied.\nExample: Chimeric Staff is an artifact that reads, “{X}: This artifact becomes an X/X Construct artifact creature until end of turn.” Clone is a creature that reads, “You may have this creature enter as a copy of any creature on the battlefield.” After a Staff has become a 5/5 Construct artifact creature, a Clone enters the battlefield as a copy of it. The Clone is an artifact, not a 5/5 Construct artifact creature. (The copy has the Staff’s ability, however, and will become a creature if that ability is activated.)\nExample: Clone enters the battlefield as a copy of a face-down Grinning Demon (a creature with morph {2}{B}{B}). The Clone is a colorless 2/2 creature with no name, no types, no abilities, and no mana cost. It will still be face up. Its controller can’t pay {2}{B}{B} to turn it face up.",
+    "sha256": "106f53fd1a557f4b19853fc003a1989899566f3c329d0efb3adfda5f93d8863f",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.14a": {
+    "text": "A spell or ability may instruct a creature to fight another creature or it may instruct two creatures to fight each other. Each of those creatures deals damage equal to its power to the other creature.",
+    "sha256": "d4b58af7dd2b0a9842a0316a7f381d5f59289a34392114e9fa786c9f914b7f26",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.14d": {
+    "text": "The damage dealt when a creature fights isn’t combat damage.",
+    "sha256": "ed36bf607cced5ee49f3474459a7d8912d19151197d62aa83eac5e10c1e29d5c",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.4a": {
+    "text": "Double strike is a static ability that modifies the rules for the combat damage step. (See rule 510, “Combat Damage Step.”)",
+    "sha256": "13c5976ba180d5608e2b8208d0cadcd456d639b4b207571f3b468efba3d7a9ed",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 616.1": {
+    "text": "If two or more replacement and/or prevention effects are attempting to modify the way an event affects an object or player, the affected object’s controller (or its owner if it has no controller) or the affected player chooses one to apply, following the steps listed below. If two or more players have to make these choices at the same time, choices are made in APNAP order (see rule 101.4).",
+    "sha256": "3ef08177561d2c42c2c47fe79ed21dfa5d711fbfbfeef439f03f2c9e55422eb3",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 616.1f": {
+    "text": "Once the chosen effect has been applied, this process is repeated (taking into account only replacement or prevention effects that would now be applicable) until there are no more left to apply.\nExample: Two permanents are on the battlefield. One is an enchantment that reads “If a card would be put into a graveyard from anywhere, instead exile it,” and the other is a creature that reads “If this creature would die, instead shuffle it into its owner’s library.” If the creature is destroyed, its controller decides which replacement to apply first; the other does nothing.\nExample: Essence of the Wild reads “Creatures you control enter as a copy of this creature.” A player who controls Essence of the Wild casts Rusted Sentinel, which normally enters the battlefield tapped. As it enters the battlefield, the copy effect from Essence of the Wild is applied first. As a result, it no longer has the ability that causes it to enter the battlefield tapped. Rusted Sentinel will enter the battlefield as an untapped copy of Essence of the Wild.",
+    "sha256": "f309f587f0e8d0ab51915ce8d3c95006ac9eab4612e93de4953b41da9707758a",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.16b": {
+    "text": "A permanent or player with protection can’t be targeted by spells with the stated quality and can’t be targeted by abilities from a source with the stated quality.",
+    "sha256": "b24c65cbf655aff999b8d8046d2a67b9c26df8f32fd88a119ceb9a3a9ef21867",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "MTR 3.9": {
+    "text": "For a game action that uses a die roll, any method that simulates the roll is acceptable if every result has an equal chance of occurring. Avoid dice whose values are clustered together, such as spindown life counters.",
+    "sha256": "b9bba9d44c4dc85e9e7abeb5007ac492104d49237c9dd34c832ac66d97bfdc37",
+    "url": "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf",
+    "effective_date": "2026-02-27",
+    "id": "MTR 3.9",
+    "title": "Magic Tournament Rules 3.9 — Die Rolling"
+  }
+}
