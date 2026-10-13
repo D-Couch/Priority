@@ -99,7 +99,9 @@ def validate_suite(suite):
 def validate_benchmark_history():
     """Ensure every recorded benchmark points to code in the current history."""
     records = sorted((BENCH/'results').rglob('run.json'))
-    commits = set(git('rev-list', 'HEAD').splitlines())
+    # Archived benchmark implementations may be pinned by a tag after a later
+    # refinement replaces them. Validate every locally fetched ref, not main alone.
+    commits = set(git('rev-list', '--all').splitlines())
     for path in records:
         run = read(path)
         commit = run.get('git', {}).get('commit')
