@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "run_id": "mechanics-v1-priority-seed42",
+  "suite_sha256": "94c0a55451c6f3c38c2d3ea2c56e8f89cabe631557e181c041ee2bfe213f9c3d",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against frozen criteria and retrieved Comprehensive Rules passages; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "m01-poison-threshold",
+      "repeat": 1,
+      "answer_sha256": "c9c1d96f5eff7a962ffcb5da7cd7db1a298fbd5240195bdd2a11ab945a6586f9",
+      "criteria": {
+        "m01-poison-threshold.1": true,
+        "m01-poison-threshold.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The threshold and timing are correct, but CR 904.13c is specific to Archenemy games and does not support the general-format claim as cited. CR 104.3d is the general poison-loss rule."
+    },
+    {
+      "case_id": "m02-x-on-stack",
+      "repeat": 1,
+      "answer_sha256": "06e53067355519a908775a39a093b3093e6037be08832a9d0331cae02821e7e1",
+      "criteria": {
+        "m02-x-on-stack.1": true,
+        "m02-x-on-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m03-x-outside-stack",
+      "repeat": 1,
+      "answer_sha256": "79a75a6bc7b6b5e4088e67bed6b7a479a0d136f5edb4d4e7ef86e40a447e7a6d",
+      "criteria": {
+        "m03-x-outside-stack.1": true,
+        "m03-x-outside-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m04-hybrid-mana-value",
+      "repeat": 1,
+      "answer_sha256": "54658144ccd317022d6fa4dfa27c269de24c245634b944800e1ec34ee6a0c3b5",
+      "criteria": {
+        "m04-hybrid-mana-value.1": true,
+        "m04-hybrid-mana-value.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m05-loyalty-stack-window",
+      "repeat": 1,
+      "answer_sha256": "1c47e7deaf7a2f0b33bcf3c9c58dbf6239b5d72f51a3c3be8849dad8bfeed2e0",
+      "criteria": {
+        "m05-loyalty-stack-window.1": true,
+        "m05-loyalty-stack-window.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m06-new-planeswalker-activation",
+      "repeat": 1,
+      "answer_sha256": "4c579758b1246673df36763f905fcb3b9f437564a954ab37a074b950a2a636d6",
+      "criteria": {
+        "m06-new-planeswalker-activation.1": true,
+        "m06-new-planeswalker-activation.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m07-loyalty-limit-permanent",
+      "repeat": 1,
+      "answer_sha256": "3f81716c06069b7c58f6b6c7e333c00bb5d7e88ac106bc5c7c86f62194a1e9a6",
+      "criteria": {
+        "m07-loyalty-limit-permanent.1": true,
+        "m07-loyalty-limit-permanent.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m08-loyalty-cost-and-source",
+      "repeat": 1,
+      "answer_sha256": "e5ca7367699fbfd796f253bb956fba4eca260ab183001c53ef41c1a5f0bfb416",
+      "criteria": {
+        "m08-loyalty-cost-and-source.1": true,
+        "m08-loyalty-cost-and-source.2": false,
+        "m08-loyalty-cost-and-source.3": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": true,
+      "notes": "Correctly says counters are paid as an activation cost. It abstains on both the zero-loyalty state-based action and whether the ability remains on the stack after its source leaves."
+    },
+    {
+      "case_id": "m09-siege-protector",
+      "repeat": 1,
+      "answer_sha256": "602fc9a27b8b166a10f2a6f09d8f81fc81f663e4b8d7fddd307240e33d1a7386",
+      "criteria": {
+        "m09-siege-protector.1": true,
+        "m09-siege-protector.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m10-siege-last-counter",
+      "repeat": 1,
+      "answer_sha256": "c8821ef53f191a61323e399b1b305fe0f8bd09423f72332ab62f3a746f27d439",
+      "criteria": {
+        "m10-siege-last-counter.1": true,
+        "m10-siege-last-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m11-monarch-combat-trigger",
+      "repeat": 1,
+      "answer_sha256": "f59a7980e12f999d0dbbe60e01df8698a8bad356389175b9aac7f81fea82d3e2",
+      "criteria": {
+        "m11-monarch-combat-trigger.1": true,
+        "m11-monarch-combat-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m12-monarch-draw-trigger",
+      "repeat": 1,
+      "answer_sha256": "f51f7215ba6063db6e37cbc76ebb74b63dc18074caf2f898277bea6ab572c599",
+      "criteria": {
+        "m12-monarch-draw-trigger.1": true,
+        "m12-monarch-draw-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m13-initiative-multiple-damage",
+      "repeat": 1,
+      "answer_sha256": "bd95e3946b843d287b93b902ef048ef9a00632a9fe3e6522881d0b7f3221a134",
+      "criteria": {
+        "m13-initiative-multiple-damage.1": true,
+        "m13-initiative-multiple-damage.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m14-retake-initiative",
+      "repeat": 1,
+      "answer_sha256": "fe6c84951bebe8755f043999b8fd2456951e70beb271eb5d8ad6b63e7f7b2c36",
+      "criteria": {
+        "m14-retake-initiative.1": true,
+        "m14-retake-initiative.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m15-phased-out-token",
+      "repeat": 1,
+      "answer_sha256": "a517d4bd81b46a758a672579da6ffb145a2b543777a05781ca3cb2d31c965834",
+      "criteria": {
+        "m15-phased-out-token.1": true,
+        "m15-phased-out-token.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m16-phased-out-board-wipe",
+      "repeat": 1,
+      "answer_sha256": "111b64f37b574a64d81de690f880018c0c781c85db70e470ceafe03eaed40289",
+      "criteria": {
+        "m16-phased-out-board-wipe.1": true,
+        "m16-phased-out-board-wipe.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m17-regeneration-shield",
+      "repeat": 1,
+      "answer_sha256": "029f9a8079b34ac207d3b79558110133c6e514db52fcd83b19f7adcbd4a2f763",
+      "criteria": {
+        "m17-regeneration-shield.1": true,
+        "m17-regeneration-shield.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m18-extra-turn-order",
+      "repeat": 1,
+      "answer_sha256": "fa1a6c2955414d3ac2fa9d45159235fc22cc268d86ba8d03ad2511d5f280397c",
+      "criteria": {
+        "m18-extra-turn-order.1": true,
+        "m18-extra-turn-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m19-land-not-a-spell",
+      "repeat": 1,
+      "answer_sha256": "4f1db10910fd57b8a877ef6c05463c09ae185b02cda788b048701faf5b6439a5",
+      "criteria": {
+        "m19-land-not-a-spell.1": true,
+        "m19-land-not-a-spell.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    },
+    {
+      "case_id": "m20-copy-not-cast",
+      "repeat": 1,
+      "answer_sha256": "8fbc3bae62ef16e87c938ff20d6ab8820d028f19e9312f9e65b4e3d5c7b57173",
+      "criteria": {
+        "m20-copy-not-cast.1": true,
+        "m20-copy-not-cast.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer satisfies each frozen case criterion and its cited rule passages support the relevant ruling."
+    }
+  ]
+}

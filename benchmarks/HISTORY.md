@@ -88,6 +88,11 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [explicit-clarification-heldout](results/explicit-clarification-heldout/report.md) | heldout-v1 | `a3e9798588` | 29/32 | 29 | 0 | 81.2% | 7.42 |
 | [mechanics-v1-seed42](results/mechanics-v1-seed42/report.md) | mechanics-v1 | `8624f5228f` | 14/20 | 14 | 0 | 48.3% | 7.31 |
 | [mechanics-v1-seed43](results/mechanics-v1-seed43/report.md) | mechanics-v1 | `8624f5228f` | 13/20 | 13 | 0 | 48.3% | 7.48 |
+| [mechanics-v1-priority-seed42](results/mechanics-v1-priority-seed42/report.md) | mechanics-v1 | `14003d0673` | 18/20 | 18 | 0 | 78.3% | 6.86 |
+| [mechanics-v1-priority-seed43](results/mechanics-v1-priority-seed43/report.md) | mechanics-v1 | `14003d0673` | 18/20 | 18 | 0 | 78.3% | 7.19 |
+| [key-priority-gameplay](results/key-priority-gameplay/report.md) | gameplay-v1 | `14003d0673` | 19/20 | 19 | 0 | 100.0% | 7.01 |
+| [key-priority-heldout](results/key-priority-heldout/report.md) | heldout-v1 | `14003d0673` | 29/32 | 29 | 0 | 82.0% | 7.52 |
+| [key-priority-novel](results/key-priority-novel/report.md) | novel-v1 | `14003d0673` | 16/20 | 16 | 0 | 82.5% | 6.20 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
