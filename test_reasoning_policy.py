@@ -23,6 +23,7 @@ class ReasoningPolicyTests(unittest.TestCase):
             'I copy a creature and get counters?',
             'My attacker is blocked. How much damage gets through?',
             'Do I get priority after casting this spell?',
+            'In whose order does the triggered ability resolve first?',
             'Can I respond to the legend rule?',
             'Do I get priority after casting this spell?',
         ]

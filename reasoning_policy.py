@@ -17,6 +17,7 @@ OPENAI_EFFORTS = {
 HIGH_RISK_QUERY = re.compile(
     r'\b(?:trample|deathtouch|lifelink|fights?|replacement|apnap|legend(?:ary)?|'
     r'copy|copied|copying|clone|blocked)\b|'
+    r'\bwhose\b[^.!?]{0,100}\b(?:triggers?|triggered abilit(?:y|ies)|abilit(?:y|ies))\b[^.!?]{0,100}\bresolve(?:s|d)?\b|'
     r'\bpriority (?:again|after)\b|\bpass(?:es|ing)? priority\b|\bwho (?:has|gets|receives?) priority\b|'
     r'\bgoes? on (?:the )?stack\b|'
     r'\b(?:damage is )?prevented\b',
