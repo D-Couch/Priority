@@ -136,7 +136,8 @@ TOPICS = [
     (r'target|fizzle|hexproof|shroud|ward', ['115', '608.2b', '702.11', '702.18', '702.21']),
     (r'death|dies|die\b|graveyard|lethal|state.based|indestructible|deathtouch', ['704', '702.2', '702.12']),
     (r'layer|lose.*abilit|loses.*abilit|humility|blood moon|timestamp', ['613']),
-    (r'replace|replacement|instead|\bdouble(?:s)?\b(?![ -]+strike)', ['614', '616']),
+    (r'replace|replacement|instead|\bdouble(?:s)?\b(?![ -]+strike)', ['614', '616', '614.6']),
+    (r'state.based actions?|legend(?:ary)? rule', ['704.3']),
     (r'commander|command zone|commander tax', ['903', '903.9', '903.9a', '903.9b', '903.10', '903.10a']),
     (r'additional cost|cost to cast|costs? during casting', ['601.2a', '601.2h', '601.2i', '117.2e', '117.3c']),
     (r'dies|die\b|death', ['700.4', '603.6c', '603.10a']),
@@ -148,7 +149,7 @@ TOPICS = [
     (r'token|tokens', ['111']),
     (r'\b(?:loses?|lost) and leaves?\b|\bleaves? the game\b|\bleaving the game\b|\bleave the game\b|\beliminated\b', ['800.4a']),
 ]
-HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c'}
+HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None

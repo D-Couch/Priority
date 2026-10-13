@@ -55,6 +55,18 @@ class KnowledgeTests(unittest.TestCase):
         self.assertFalse(any(s['kind']=='card' for s in sources))
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_replacement_retrieves_general_event_consequence(self):
+        question='Rest in Peace replaces a creature going to a graveyard with exile. Does a dies ability trigger?'
+        ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
+        self.assertIn('CR 614.6',ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_legend_rule_retrieves_state_based_action_sequence(self):
+        question='Can I respond to the legend rule after a spell resolves, before choosing one to keep?'
+        ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
+        self.assertIn('CR 704.3',ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_commander_damage_retrieves_rule_903_10a(self):
         sources=knowledge.retrieve([{'role':'user','content':'In Commander, a particular commander has dealt me 12 combat damage while controlled by Alice and then 9 while controlled by Bob. Do those add together for commander damage, even though its controller changed?'}],[])
         self.assertIn('CR 903.10a',{s['id'] for s in sources})
