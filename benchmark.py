@@ -260,6 +260,10 @@ def validate_comparison(old, new, allow_changes=()):
     def sampling(run):
         result = set()
         for row in run['results']:
+            # Failures during prompt preparation can occur before the outbound
+            # generation payload (and its sampling settings) exists.
+            if row.get('error') and row.get('sampling') is None:
+                continue
             values = dict(row.get('sampling') or {})
             values.pop('stream_options',None)  # telemetry, not a sampling parameter
             for field in allow_changes:

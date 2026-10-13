@@ -65,6 +65,14 @@ class BenchmarkTests(unittest.TestCase):
         new['results'][0]['sampling']['temperature']=.7
         self.assertIn('sampling',benchmark.validate_comparison(old,new,['sampling.reasoning_effort']))
 
+    def test_pre_generation_error_without_sampling_does_not_block_comparison(self):
+        base={'model':'qwen','temperature':.1,'max_tokens':3500,'stream':True,'seed':42,'reasoning_effort':'low'}
+        old={'status':'complete','expected_attempts':2,'results':[{'sampling':dict(base)},{'sampling':dict(base)}]}
+        new=copy.deepcopy(old)
+        new['results'][0]['sampling']['reasoning_effort']='none'
+        new['results'][1]={'error':'prompt preparation failed','sampling':None}
+        self.assertEqual(benchmark.validate_comparison(old,new,['sampling.reasoning_effort']),[])
+
     def test_prompt_budget_experiment_requires_explicit_allowance(self):
         old={'suite_sha256':'s','references_sha256':'r','corpus_sha256':'c','model':'m','model_runtime':{},'seeds':[42],'repeats':1,'mode':'full','case_order':['a'],'warmup':True,'retrieval':{'mode':'lexical'},'context_budget':{'max_prompt_tokens':4600},'status':'complete','expected_attempts':1,'results':[{'sampling':{'temperature':0.1}}]}
         new={**old,'context_budget':{'max_prompt_tokens':2800}}
