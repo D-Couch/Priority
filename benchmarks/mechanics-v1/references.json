@@ -1,0 +1,107 @@
+{
+  "CR 104.3d": {
+    "text": "If a player has ten or more poison counters, that player loses the game the next time a player would receive priority. (This is a state-based action. See rule 704.)",
+    "sha256": "fc72267a8324894377165416c1a96c260d27bb6a6d371be9094e9429d6d732fc",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 202.3": {
+    "text": "The mana value of an object is a number equal to the total amount of mana in its mana cost, regardless of color.\nExample: A mana cost of {3}{U}{U} translates to a mana value of 5.",
+    "sha256": "282b2edc88e45d16642744ef7806871f8af7b173ee3512cdb888fe845d1876ec",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 202.3e": {
+    "text": "When calculating the mana value of an object with an {X} in its mana cost, X is treated as 0 while the object is not on the stack, and X is treated as the number chosen for it while the object is on the stack.",
+    "sha256": "f75bbb9f12105900906ec568bc5bb277f0c4f0054ce49e9b521f6c39c3ea8b21",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 202.3f": {
+    "text": "When calculating the mana value of an object with a hybrid mana symbol in its mana cost, use the largest component of each hybrid symbol.\nExample: The mana value of a card with mana cost {1}{W/U}{W/U} is 3.\nExample: The mana value of a card with mana cost {2/B}{2/B}{2/B} is 6.",
+    "sha256": "7ffc93d53f424ff63e4bee261a0e38f5f6dc8a36800977d489ecaafd19e6f117",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 606.3": {
+    "text": "A player may activate a loyalty ability of a permanent they control any time they have priority and the stack is empty during a main phase of their turn, but only if no player has previously activated a loyalty ability of that permanent that turn.",
+    "sha256": "5fb19da272675a3617658976a0342561f607c10609412bca22249d2d69be1630",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 606.4": {
+    "text": "The cost to activate a loyalty ability of a permanent is to put on or remove from that permanent a certain number of loyalty counters, as shown by the loyalty symbol in the ability’s cost. This cost may be modified by other effects.",
+    "sha256": "482d4358db073fcafdd3944116b9487155a1e7551debb87a1e5c30af00840d3d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 704.5i": {
+    "text": "If a planeswalker has loyalty 0, it’s put into its owner’s graveyard.",
+    "sha256": "db566091b944d80103af04828f343cc0edc8c879235c3b874889036f6ecdf66f",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 113.7a": {
+    "text": "Once activated or triggered, an ability exists on the stack independently of its source. Destruction or removal of the source after that time won’t affect the ability. Note that some abilities cause a source to do something (for example, “This creature deals 1 damage to any target”) rather than the ability doing anything directly. In these cases, any activated or triggered ability that references information about the source for use while announcing an activated ability or putting a triggered ability on the stack checks that information when the ability is put onto the stack. Otherwise, it will check that information when it resolves. In both instances, if the source is no longer in the zone it’s expected to be in at that time, its last known information is used. The source can still perform the action even though it no longer exists.",
+    "sha256": "dcc5cee86ae5482fc0b1a696f496fff07cdb9c6d9b9059876e916014420048b8",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 310.12a": {
+    "text": "As a Siege enters the battlefield, its controller must choose its protector from among their opponents. Only an opponent of a Siege’s controller can be its protector.",
+    "sha256": "a07451daeb5ad7f3e4a264057ab9ad3c21521a8239e06a345b92df4f431e3f2e",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 310.12b": {
+    "text": "Sieges have the intrinsic ability “When the last defense counter is removed from this permanent, exile it, then you may cast it transformed without paying its mana cost.”",
+    "sha256": "5bc5c41d1f2fbdcc91b246e6beb1ec557a9482bf77e90acd27a6340ab4675470",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 603.3": {
+    "text": "Once an ability has triggered, its controller puts it on the stack as an object that’s not a card the next time a player would receive priority. See rule 117, “Timing and Priority.” The ability becomes the topmost object on the stack. It has the text of the ability that created it, and no other characteristics. It remains on the stack until it’s countered, it resolves, a rule causes it to be removed from the stack, or an effect moves it elsewhere.",
+    "sha256": "9d020e82ffb4b20f2b4c6777e838317df808679a09c525a0464274cb3da432e3",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 725.2": {
+    "text": "There are two inherent triggered abilities associated with being the monarch. These triggered abilities have no source and are controlled by the player who was the monarch at the time the abilities triggered. This is an exception to rule 113.8. The full texts of these abilities are “At the beginning of the monarch’s end step, that player draws a card” and “Whenever a creature deals combat damage to the monarch, its controller becomes the monarch.”",
+    "sha256": "ccec486b77ffa5966b8a2510dfec76c8c72977c6997810bc414ba59af19cc801",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 726.2": {
+    "text": "There are three inherent triggered abilities associated with having the initiative. These triggered abilities have no source and are controlled by the player who had the initiative at the time the abilities triggered. This is an exception to rule 113.8. The full text of these abilities are “At the beginning of the upkeep of the player who has the initiative, that player ventures into Undercity,” “Whenever one or more creatures a player controls deal combat damage to the player who has the initiative, the controller of those creatures takes the initiative,” and “Whenever a player takes the initiative, that player ventures into Undercity.” See rule 701.49, “Venture into the Dungeon.”",
+    "sha256": "f38a34e7efb018c9b300f5c413492d3f3add9a9427880f96ce90aac4d9fcbf49",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 726.5": {
+    "text": "If the player who currently has the initiative is instructed to take the initiative, this causes the last triggered ability in 726.2 to trigger but does not create a second initiative designation.",
+    "sha256": "bcd9878571ee9e4aa4b64ee306317da48660ac8cfc671b3a0e0e9ec9f96aedbb",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.26d": {
+    "text": "The phasing event doesn’t actually cause a permanent to change zones or control, even though it’s treated as though it’s not on the battlefield and not under its controller’s control while it’s phased out. Zone-change triggers don’t trigger when a permanent phases in or out. Tokens continue to exist on the battlefield while phased out. Counters and stickers remain on a permanent while it’s phased out. Effects that check a phased-in permanent’s history won’t treat the phasing event as having caused the permanent to leave or enter the battlefield or its controller’s control.",
+    "sha256": "f6503cbd765a57e4286a438b2fc63f7d075ef6ca6ad8dce652c20c322209412f",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 702.26b": {
+    "text": "If a permanent phases out, its status changes to “phased out.” Except for rules and effects that specifically mention phased-out permanents, a phased-out permanent is treated as though it does not exist. It can’t affect or be affected by anything else in the game. A permanent that phases out is removed from combat. (See rule 506.4.)\nExample: You control three creatures, one of which is phased out. You cast a spell that says “Draw a card for each creature you control.” You draw two cards.\nExample: You control a phased-out creature. You cast a spell that says “Destroy all creatures.” The phased-out creature is not destroyed.",
+    "sha256": "3272a2f9abadccb19639e18c925fe0a31c30e1f8d4f1b3ac4b560ea7f912f52e",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 701.19a": {
+    "text": "If the effect of a resolving spell or ability regenerates a permanent, it creates a replacement effect that protects the permanent the next time it would be destroyed this turn. In this case, “Regenerate [permanent]” means “The next time [permanent] would be destroyed this turn, instead remove all damage marked on it and its controller taps it. If it’s an attacking or blocking creature, remove it from combat.”",
+    "sha256": "a9eaba726cb9ba24bb673533f3d9265cdbd8bd074be9e9105733ecfa24a5abf5",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 500.7": {
+    "text": "Some effects can give a player extra turns. They do this by adding the turns directly after the specified turn. If a player is given multiple extra turns, the extra turns are added one at a time. If multiple players are given extra turns, the extra turns are added one at a time, in APNAP order (see rule 101.4). The most recently created turn will be taken first.",
+    "sha256": "6dc3fe7fb19d3c3648334c1b0d6e7a8b5ba942a1d7f2b6f36bbaf9215b98762c",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 305.1": {
+    "text": "A player who has priority may play a land card from their hand during a main phase of their turn when the stack is empty. Playing a land is a special action; it doesn’t use the stack (see rule 116). Rather, the player simply puts the land onto the battlefield. Since the land doesn’t go on the stack, it is never a spell, and players can’t respond to it with instants or activated abilities.",
+    "sha256": "9ca432b7783eaed534bc3a12eb325470c8bc1e6b8acee83e58468087d86b45f2",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 707.10": {
+    "text": "To copy a spell, activated ability, or triggered ability means to put a copy of it onto the stack; a copy of a spell isn’t cast and a copy of an activated ability isn’t activated. A copy of a spell or ability copies both the characteristics of the spell or ability and all decisions made for it, including modes, targets, the value of X, and additional or alternative costs. (See rule 601, “Casting Spells.”) Choices that are normally made on resolution are not copied. If an effect of the copy refers to objects used to pay its costs, it uses the objects used to pay the costs of the original spell or ability. A copy of a spell is owned by the player under whose control it was put on the stack. A copy of a spell or ability is controlled by the player under whose control it was put on the stack. A copy of a spell is itself a spell, even though it has no spell card associated with it. A copy of an ability is itself an ability.\nExample: A player casts Fork, targeting an Emerald Charm. Fork reads, “Copy target instant or sorcery spell, except that the copy is red. You may choose new targets for the copy.” Emerald Charm is a modal green instant. When the Fork resolves, it puts a copy of the Emerald Charm on the stack except the copy is red, not green. The copy has the same mode that was chosen for the original Emerald Charm. It does not necessarily have the same target, but only because Fork allows choosing of new targets.\nExample: Fling is an instant that reads, “As an additional cost to cast this spell, sacrifice a creature” and “Fling deals damage equal to the sacrificed creature’s power to any target.” When determining how much damage a copy of Fling deals, it checks the power of the creature sacrificed to pay for the original Fling.\nExample: Dawnglow Infusion is a sorcery that reads, “You gain X life if {G} was spent to cast this spell and X life if {W} was spent to cast it.” Because mana isn’t an object, a copy of Dawnglow Infusion won’t cause you to gain any life, no matter what mana was spent to cast the original spell.",
+    "sha256": "408b72bbae61c99a4877119f7caa12801b5e57cf24166af66763b3e3a4f6256d",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 707.10c": {
+    "text": "Some effects copy a spell or ability and state that its controller may choose new targets for the copy. The player may leave any number of the targets unchanged, even if those targets would be illegal. If the player chooses to change some or all of the targets, the new targets must be legal. Once the player has decided what the copy’s targets will be, the copy is put onto the stack with those targets.",
+    "sha256": "124cfaebb86f334570c575c25adb0e2e146aa454c9602971d9f432647e6c224c",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  }
+}

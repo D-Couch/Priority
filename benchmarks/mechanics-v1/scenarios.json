@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "id": "mechanics-v1",
+  "rules_version": "20260925",
+  "description": "Twenty newly authored mechanics scenarios frozen before inference, separate from gameplay-v1, heldout-v1, and novel-v1. These AI-authored cases use the cited Comprehensive Rules as references and have not been independently reviewed by a Magic judge.",
+  "cases": [
+    {
+      "id": "m01-poison-threshold",
+      "category": "state-based actions",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I have nine poison counters. A creature deals combat damage to me that gives me one more poison counter. Does the game end the instant I reach ten, or when does the loss happen?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "At ten or more poison counters, the player loses as a state-based action the next time a player would receive priority. It is not an immediate interruption in the middle of damage being dealt.",
+      "criteria": [
+        {
+          "id": "m01-poison-threshold.1",
+          "description": "Says ten or more poison counters causes a loss."
+        },
+        {
+          "id": "m01-poison-threshold.2",
+          "description": "Places the loss at the next time a player would receive priority, as a state-based action."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 104.3d",
+          "any_of": [
+            "CR 104.3d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m02-x-on-stack",
+      "category": "characteristics",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A spell has mana cost {X}{2}{R}. I cast it choosing X=4. What is its mana value while it is on the stack?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Its mana value is 7: X is 4 while the spell is on the stack, plus {2} and {R}.",
+      "criteria": [
+        {
+          "id": "m02-x-on-stack.1",
+          "description": "Uses the chosen X value while the spell is on the stack."
+        },
+        {
+          "id": "m02-x-on-stack.2",
+          "description": "Calculates the total as 4 + 2 + 1 = 7."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 202.3",
+          "any_of": [
+            "CR 202.3"
+          ]
+        },
+        {
+          "label": "CR 202.3e",
+          "any_of": [
+            "CR 202.3e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m03-x-outside-stack",
+      "category": "characteristics",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A permanent has mana cost {X}{G} and is on the battlefield with several counters on it. What is its mana value?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "X is treated as 0 while the permanent is not on the stack, so its mana value is 1. Its counters do not change that calculation.",
+      "criteria": [
+        {
+          "id": "m03-x-outside-stack.1",
+          "description": "Treats X as 0 outside the stack."
+        },
+        {
+          "id": "m03-x-outside-stack.2",
+          "description": "Gives mana value 1 and does not count counters toward mana value."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 202.3",
+          "any_of": [
+            "CR 202.3"
+          ]
+        },
+        {
+          "label": "CR 202.3e",
+          "any_of": [
+            "CR 202.3e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m04-hybrid-mana-value",
+      "category": "characteristics",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A card has mana cost {2/W}{2/W}{1}. What is its mana value?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Each {2/W} hybrid symbol contributes its largest component, 2. The total mana value is 5.",
+      "criteria": [
+        {
+          "id": "m04-hybrid-mana-value.1",
+          "description": "Uses the largest component of each hybrid symbol."
+        },
+        {
+          "id": "m04-hybrid-mana-value.2",
+          "description": "Calculates the total as 2 + 2 + 1 = 5."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 202.3f",
+          "any_of": [
+            "CR 202.3f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m05-loyalty-stack-window",
+      "category": "planeswalkers",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "It is my main phase and I have priority, but an opponent’s instant is still on the stack. May I activate a loyalty ability of my planeswalker in response?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. A loyalty ability can be activated only during a main phase of your turn when you have priority and the stack is empty.",
+      "criteria": [
+        {
+          "id": "m05-loyalty-stack-window.1",
+          "description": "Says the nonempty stack prevents activation."
+        },
+        {
+          "id": "m05-loyalty-stack-window.2",
+          "description": "States the main-phase, own-turn, and priority timing requirements."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 606.3",
+          "any_of": [
+            "CR 606.3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m06-new-planeswalker-activation",
+      "category": "planeswalkers",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I cast a planeswalker during my first main phase. After it resolves and the stack is empty, may I activate one of its loyalty abilities this turn if I have not activated one of its loyalty abilities yet?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. If it is still your main phase, you have priority, and the stack is empty, you may activate one of its loyalty abilities this turn. The loyalty timing rule does not impose a summoning-sickness restriction.",
+      "criteria": [
+        {
+          "id": "m06-new-planeswalker-activation.1",
+          "description": "Allows activation after the planeswalker resolves under the stated timing conditions."
+        },
+        {
+          "id": "m06-new-planeswalker-activation.2",
+          "description": "Does not apply the creature summoning-sickness restriction to this loyalty activation."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 606.3",
+          "any_of": [
+            "CR 606.3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m07-loyalty-limit-permanent",
+      "category": "planeswalkers",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I activated a +1 loyalty ability of one planeswalker earlier this turn. After it resolves, may I activate a different loyalty ability of that same planeswalker? What about a second planeswalker I control?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "You cannot activate another loyalty ability of the first planeswalker this turn. The restriction is per permanent, so you may activate an eligible ability of the second planeswalker if its timing conditions are met and you have not activated one of its loyalty abilities this turn.",
+      "criteria": [
+        {
+          "id": "m07-loyalty-limit-permanent.1",
+          "description": "Prohibits a second loyalty activation of the same permanent during that turn."
+        },
+        {
+          "id": "m07-loyalty-limit-permanent.2",
+          "description": "Identifies the restriction as applying separately to each permanent."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 606.3",
+          "any_of": [
+            "CR 606.3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m08-loyalty-cost-and-source",
+      "category": "planeswalkers",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My planeswalker has exactly three loyalty counters. I activate an ability with a −3 cost. Can I wait until it resolves to remove the counters, and does the ability still resolve if the planeswalker is put into the graveyard before the ability resolves?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "The three counters are removed as part of the activation cost, not on resolution. The planeswalker then has zero loyalty and is put into its owner’s graveyard as a state-based action, but the activated ability remains on the stack and can resolve.",
+      "criteria": [
+        {
+          "id": "m08-loyalty-cost-and-source.1",
+          "description": "Says loyalty counters are paid as the activation cost."
+        },
+        {
+          "id": "m08-loyalty-cost-and-source.2",
+          "description": "Says a planeswalker at zero loyalty is put into its owner’s graveyard."
+        },
+        {
+          "id": "m08-loyalty-cost-and-source.3",
+          "description": "Says removing the source does not remove the already-activated ability from the stack."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 606.4",
+          "any_of": [
+            "CR 606.4"
+          ]
+        },
+        {
+          "label": "CR 704.5i",
+          "any_of": [
+            "CR 704.5i"
+          ]
+        },
+        {
+          "label": "CR 113.7a",
+          "any_of": [
+            "CR 113.7a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m09-siege-protector",
+      "category": "battles",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I control a Battle — Siege in a two-opponent game. As it enters, may I choose myself as its protector, or must I choose one of my opponents?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "You must choose one of your opponents as the Siege’s protector. Only an opponent of that Siege’s controller is a legal choice.",
+      "criteria": [
+        {
+          "id": "m09-siege-protector.1",
+          "description": "Requires a protector to be chosen as the Siege enters."
+        },
+        {
+          "id": "m09-siege-protector.2",
+          "description": "Says the protector must be an opponent of the Siege’s controller."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 310.12a",
+          "any_of": [
+            "CR 310.12a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m10-siege-last-counter",
+      "category": "battles",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The last defense counter is removed from a Siege. Does it transform immediately as part of removing the counter, or does an ability trigger? What happens when that ability resolves?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Removing the last defense counter causes its triggered ability to trigger. When that ability resolves, the Siege is exiled, then its controller may cast it transformed without paying its mana cost.",
+      "criteria": [
+        {
+          "id": "m10-siege-last-counter.1",
+          "description": "Identifies a triggered ability rather than an immediate transformation."
+        },
+        {
+          "id": "m10-siege-last-counter.2",
+          "description": "Says resolution exiles the Siege and then allows its controller to cast it transformed without paying its mana cost."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 310.12b",
+          "any_of": [
+            "CR 310.12b"
+          ]
+        },
+        {
+          "label": "CR 603.3",
+          "any_of": [
+            "CR 603.3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m11-monarch-combat-trigger",
+      "category": "monarch",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A creature deals combat damage to the current monarch. Does its controller become the monarch immediately as damage is dealt, or only after a triggered ability resolves?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "The combat-damage event triggers the monarch ability. The creature’s controller becomes the monarch when that ability resolves, so the change is not immediate as damage is dealt.",
+      "criteria": [
+        {
+          "id": "m11-monarch-combat-trigger.1",
+          "description": "Identifies a triggered ability for combat damage to the monarch."
+        },
+        {
+          "id": "m11-monarch-combat-trigger.2",
+          "description": "Says the creature’s controller becomes monarch on resolution, not immediately during damage."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 725.2",
+          "any_of": [
+            "CR 725.2"
+          ]
+        },
+        {
+          "label": "CR 603.3",
+          "any_of": [
+            "CR 603.3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m12-monarch-draw-trigger",
+      "category": "monarch",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Alice is the monarch when her end step begins, so the monarch draw ability triggers. Before it resolves, an effect makes Bob the monarch. Does Alice’s already-triggered ability still make her draw a card?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Yes. Alice’s end-step draw ability already triggered and is on the stack. Changing who the monarch is does not remove that triggered ability; it still resolves and Alice draws a card.",
+      "criteria": [
+        {
+          "id": "m12-monarch-draw-trigger.1",
+          "description": "Says the draw ability triggers at the beginning of the monarch’s end step."
+        },
+        {
+          "id": "m12-monarch-draw-trigger.2",
+          "description": "Says changing the monarch after the trigger is on the stack does not remove it; Alice still draws."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 725.2",
+          "any_of": [
+            "CR 725.2"
+          ]
+        },
+        {
+          "label": "CR 603.3",
+          "any_of": [
+            "CR 603.3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m13-initiative-multiple-damage",
+      "category": "initiative",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I have the initiative. During one combat damage event, two creatures controlled by Bob each deal combat damage to me. How many times does the damage ability trigger, and what happens if it resolves?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "The ability triggers once for the event because it says “one or more creatures.” If it resolves, Bob takes the initiative; that in turn triggers the initiative ability that has Bob venture into Undercity.",
+      "criteria": [
+        {
+          "id": "m13-initiative-multiple-damage.1",
+          "description": "Counts the “one or more creatures” combat-damage ability as one trigger for the event."
+        },
+        {
+          "id": "m13-initiative-multiple-damage.2",
+          "description": "Says Bob takes the initiative if it resolves and then ventures into Undercity from the associated trigger."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 726.2",
+          "any_of": [
+            "CR 726.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m14-retake-initiative",
+      "category": "initiative",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I already have the initiative, and an effect instructs me to take the initiative. Do I get a second initiative designation, and does anything trigger?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "There is still only one initiative designation; you do not get a second one. The instruction causes the “whenever a player takes the initiative” ability to trigger, so you venture into Undercity when that trigger resolves.",
+      "criteria": [
+        {
+          "id": "m14-retake-initiative.1",
+          "description": "Says no second initiative designation is created."
+        },
+        {
+          "id": "m14-retake-initiative.2",
+          "description": "Says the initiative-taking trigger still triggers and leads to venturing into Undercity."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 726.5",
+          "any_of": [
+            "CR 726.5"
+          ]
+        },
+        {
+          "label": "CR 726.2",
+          "any_of": [
+            "CR 726.2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m15-phased-out-token",
+      "category": "phasing",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A creature token with counters on it phases out. Does it leave the battlefield, cease to exist, or cause leaves/enters-the-battlefield abilities to trigger?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No zone change happens. The token continues to exist on the battlefield, its counters remain, and phasing does not trigger zone-change abilities such as leaves- or enters-the-battlefield abilities.",
+      "criteria": [
+        {
+          "id": "m15-phased-out-token.1",
+          "description": "Says phasing does not change zones and does not trigger zone-change abilities."
+        },
+        {
+          "id": "m15-phased-out-token.2",
+          "description": "Says the token continues to exist and its counters remain."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.26d",
+          "any_of": [
+            "CR 702.26d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m16-phased-out-board-wipe",
+      "category": "phasing",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A phased-out creature is on the battlefield in the game’s history. A spell says “Destroy all creatures.” Is that phased-out creature destroyed?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. A phased-out permanent is treated as though it does not exist for ordinary game effects, so “destroy all creatures” does not affect it.",
+      "criteria": [
+        {
+          "id": "m16-phased-out-board-wipe.1",
+          "description": "Says a phased-out permanent is treated as nonexistent for ordinary effects."
+        },
+        {
+          "id": "m16-phased-out-board-wipe.2",
+          "description": "Applies that rule to exclude it from “destroy all creatures.”"
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 702.26b",
+          "any_of": [
+            "CR 702.26b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m17-regeneration-shield",
+      "category": "regeneration",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An attacking creature has a regeneration shield. It would be destroyed by lethal damage. What does the shield do?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "The shield replaces that destruction. All damage marked on the creature is removed, it is tapped, and because it was attacking it is removed from combat; it is not destroyed.",
+      "criteria": [
+        {
+          "id": "m17-regeneration-shield.1",
+          "description": "Says the shield replaces the next destruction this turn."
+        },
+        {
+          "id": "m17-regeneration-shield.2",
+          "description": "Includes removing marked damage, tapping the creature, and removing it from combat."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 701.19a",
+          "any_of": [
+            "CR 701.19a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m18-extra-turn-order",
+      "category": "turns",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Two extra turns are created for the same player after the current turn. First one effect creates an extra turn; later another effect creates a second extra turn. Which extra turn is taken first?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "The most recently created extra turn is taken first, so the second extra turn occurs before the first one.",
+      "criteria": [
+        {
+          "id": "m18-extra-turn-order.1",
+          "description": "Identifies that extra turns are inserted after the specified turn."
+        },
+        {
+          "id": "m18-extra-turn-order.2",
+          "description": "Says the most recently created extra turn is taken first."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 500.7",
+          "any_of": [
+            "CR 500.7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m19-land-not-a-spell",
+      "category": "lands",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I have priority in my main phase with an empty stack and play a land from my hand. Does the land go on the stack, and can my opponent respond to the land play with an instant?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "No. Playing a land is a special action, not casting a spell; it does not use the stack, and players cannot respond to the land play with instants or activated abilities.",
+      "criteria": [
+        {
+          "id": "m19-land-not-a-spell.1",
+          "description": "Says playing a land is a special action and is not casting a spell."
+        },
+        {
+          "id": "m19-land-not-a-spell.2",
+          "description": "Says it does not use the stack and opponents cannot respond to the land play."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 305.1",
+          "any_of": [
+            "CR 305.1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m20-copy-not-cast",
+      "category": "spell-copies",
+      "difficulty": "challenge",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An effect copies a modal instant on the stack and says I may choose new targets for the copy. Does the copy count as being cast for “whenever you cast” abilities? Can I choose a different mode as well as new targets?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "The copy is put directly onto the stack and is not cast, so cast-triggered abilities do not trigger for it. It copies the original’s chosen mode; the effect lets you choose new targets, not a new mode.",
+      "criteria": [
+        {
+          "id": "m20-copy-not-cast.1",
+          "description": "Says copying a spell does not cast the copy, so cast triggers do not trigger."
+        },
+        {
+          "id": "m20-copy-not-cast.2",
+          "description": "Says the copy keeps the original mode and that new targets may be chosen only as allowed by the copy effect."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "CR 707.10",
+          "any_of": [
+            "CR 707.10"
+          ]
+        },
+        {
+          "label": "CR 707.10c",
+          "any_of": [
+            "CR 707.10c"
+          ]
+        }
+      ]
+    }
+  ]
+}
