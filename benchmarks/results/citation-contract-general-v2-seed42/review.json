@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "citation-contract-general-v2-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen v2 rubric and supplied rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "925ebc75553f16ec9cb1fe3fb03efd42d99735c0d64b370c3feca79b2ca55f9b",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Directly answers with equal-chance paper methods, distinguishes die-roll MTR guidance from other random choices, and uses the card text to define the eligible pool. No exact card is needed for this general answer."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "adf2a0bf0d4460e7d1d6dd3d35041681bb0bf5df3f0b79476aa3069d4cf17355",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states that counters and continuous bonuses from an Aura are not part of copiable values. CR 707.2 directly supports the claim."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "019bdd69c5d66e41af68c7596880be31f559a6a100fb443c37799a8af38f4e2f",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: each creature deals power damage once when it fights; fight damage is not combat damage, so double strike does not add a second event. The citations support each part."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "b78cdaa8d00670e3311211ca8b595dd57d0eac0d2fa3fbb0af225a7d24cd4886",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies who chooses, explains re-evaluation, and gives a valid conditional example. It now uses bracketed citations to the precise rules for choice and subsequent applicability."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "62a6937d975bfdc8cb87a317d14bffc8bc23b908438dc4914b06ae274a6c970b",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly excludes a creature made illegal by protection from the random target pool. CR 702.16b and CR 601.2c directly support the protection restriction and legal-target requirement."
+    }
+  ]
+}

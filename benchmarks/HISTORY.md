@@ -111,6 +111,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [general-questions-v2-protection-fix-seed42](results/general-questions-v2-protection-fix-seed42/report.md) | general-questions-v2 | `56dabc13e3` | 0/0 | pending / n/a | 0 | 90.0% | 6.21 |
 | [general-questions-v2-focused-packing-seed42](results/general-questions-v2-focused-packing-seed42/report.md) | general-questions-v2 | `f9005f76c6` | 4/5 | 4 | 0 | 100.0% | 6.56 |
 | [general-questions-v2-citation-scope-seed42](results/general-questions-v2-citation-scope-seed42/report.md) | general-questions-v2 | `b851115310` | 5/5 | 5 | 0 | 100.0% | 7.46 |
+| [citation-contract-heldout-seed42](results/citation-contract-heldout-seed42/report.md) | heldout-v1 | `6ab8b65cb3` | 0/0 | pending / n/a | 0 | 81.4% | 7.93 |
+| [citation-contract-general-v2-seed42](results/citation-contract-general-v2-seed42/report.md) | general-questions-v2 | `6ab8b65cb3` | 5/5 | 5 | 0 | 100.0% | 8.81 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
