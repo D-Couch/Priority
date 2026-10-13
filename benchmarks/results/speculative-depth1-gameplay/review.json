@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "speculative-depth1-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted, case-by-case review of all 20 answers against frozen criteria and supplied rule/card excerpts; not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "cc2a1aca56d6cf584819ffd4f991243229be5c7a7af44f28c7817cac4d589329",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "27e1d90e3c612e57e33edc10ce96938ee56393bdac6fd5deb0b4bf265fc4a553",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "875f929ee19ec92106c28278cfe367302f472bd4dae03a2abea518552ee99ee5",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "c9b9f0ef9893bebb3c3e7b834b87f166d4d5c1dfa376edc455aa0e6d77fd330a",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "1c2e801dcf91c309ca392032b76c3098d883261f3d9dc866bc1b62f2536eda79",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "82bf82f4241cd573f06ba1ea5d53bda1ea7014c32757b0479e1111d0d766008b",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "9460db803ec9cb799478557fd7e51b7e4fbc8facbb6b37afcc7b19ec474c8262",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "42d2fcd8098e700fac1e98c334a73f918a1d67f68f2a90026d7fb1314c29890c",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "712171eea8ce1bf98a5cce884e37cadd5c34b03f1d91bbf5cb8ab470dfc7d33e",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "95c6e1b95c917db258ab6d89501792818d13ef01c4913f12ca273527045a3692",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "002ff32f19e690011e6a7b95b9b3f8406de4713d133949f6af55a921a7142210",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "7c702b5f7b439abde12cbc27bb0f4db3ded1573eda783b4847c967b6fdd70bc7",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "156f0608bdeced049755a1457b980794872bab6e05f41524707b0e8c1f66336f",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "0e04db9b8310e245a0ed240311fcf1e16552b70e581ada32dda4b9da4ee970db",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "35cd5b1918d35d1899873b8a9bd511847785f3ff35293f4a7d86d812de8644d4",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "0bfc2b77366f907efee278d3a9a77893818c8db2c68ae97edfad7c0849ff1551",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "838348a9b89bd74a99ac79a2d30860939e899e81928930adb97a603301c8eebd",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "70c20d3b590ec69ab4fcb301adb8e63c273a94c8cf61a2686388e69e52c105a3",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "b25848002d8e3c5b6602c2ba6b575633119add77faf5831a86274e9c97f2f0a6",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "2e74fb833305f66a55f5f849caaf3a70dd9b36da8edb4f7dec92f21cd22cddf5",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both authored criteria and the supplied rule/card excerpts; the answer is correct, complete, and its cited claims are supported."
+    }
+  ]
+}
