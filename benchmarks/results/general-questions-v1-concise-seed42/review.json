@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v1-concise-seed42",
+  "suite_sha256": "ec704535e2996f2bd49f8372c13770fb338087bc8d2430e2d9f4c3f6dd2d4f50",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against frozen criteria and supplied official rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "f692908b2daa3e4397df6a688962b02f1f908fad9608ed20079235d344689017",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Gives a direct practical answer, explicitly limits MTR 3.9 to die-roll game actions, and says a random target pool contains only legal targets. The die mapping and shuffled slips are even-probability methods."
+    }
+  ]
+}

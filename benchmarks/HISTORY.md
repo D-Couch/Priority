@@ -102,6 +102,10 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [poison-loyalty-retrieval-seed43](results/poison-loyalty-retrieval-seed43/report.md) | mechanics-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 95.0% | 6.34 |
 | [poison-loyalty-gameplay-seed42](results/poison-loyalty-gameplay-seed42/report.md) | gameplay-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 100.0% | 7.21 |
 | [blocked-trample-heldout-seed42](results/blocked-trample-heldout-seed42/report.md) | heldout-v1 | `076f5948b2` | 30/32 | 30 | 0 | 83.6% | 7.45 |
+| [general-questions-v1-seed42](results/general-questions-v1-seed42/report.md) | general-questions-v1 | `849366b2e6` | 0/1 | 0 | 0 | 100.0% | 7.27 |
+| [general-questions-v1-refined-seed42](results/general-questions-v1-refined-seed42/report.md) | general-questions-v1 | `0b0325030e` | 0/1 | 0 | 0 | 100.0% | 10.86 |
+| [general-questions-v1-concise-seed42](results/general-questions-v1-concise-seed42/report.md) | general-questions-v1 | `2935da7b0d` | 1/1 | 1 | 0 | 100.0% | 7.96 |
+| [general-answer-heldout-seed42](results/general-answer-heldout-seed42/report.md) | heldout-v1 | `2935da7b0d` | 0/0 | pending / n/a | 0 | 79.1% | 7.91 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

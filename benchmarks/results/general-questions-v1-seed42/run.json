@@ -1,0 +1,973 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v1-seed42",
+  "label": "general-questions-v1-seed42",
+  "created_at": "2026-10-13T05:07:22.485114+00:00",
+  "status": "complete",
+  "git": {
+    "commit": "849366b2e6afad05eb964ed69bdfc50875a7ba00",
+    "tree": "4a2f3e9ecbecf7fd7c12e6f618a384318289ad25",
+    "dirty": false
+  },
+  "suite_path": "benchmarks/general-questions-v1/scenarios.json",
+  "suite_id": "general-questions-v1",
+  "suite_sha256": "ec704535e2996f2bd49f8372c13770fb338087bc8d2430e2d9f4c3f6dd2d4f50",
+  "references_sha256": "0717de384d77309003aa687e0181cb9b8d4036f36d51093757fbf50e2efd4322",
+  "corpus_sha256": "61d87e012de5fb234ee0d93dbf3d158c4c6640e66384636c44edd70eb1fcef9d",
+  "corpus_metadata": {
+    "rules_url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+    "rules_version": "20260925",
+    "cards_updated": "2026-10-11T21:01:56.537+00:00",
+    "rulings_updated": "2026-10-11T21:00:32.982+00:00",
+    "synced_at": "2026-10-12T03:38:49.503227+00:00",
+    "rules_count": 3312,
+    "cards_count": 38721,
+    "rulings_count": 79706
+  },
+  "model": "qwen/qwen3.8-27b",
+  "model_runtime": {
+    "/api/v1/models": {
+      "key": "qwen/qwen3.8-27b",
+      "architecture": "qwen35",
+      "quantization": {
+        "name": "Q4_K_M",
+        "bits_per_weight": 4
+      },
+      "format": "gguf",
+      "selected_variant": "qwen/qwen3.8-27b@q4_k_m",
+      "max_context_length": 262144,
+      "capabilities": {
+        "vision": true,
+        "trained_for_tool_use": true,
+        "reasoning": {
+          "allowed_options": [
+            "off",
+            "low",
+            "medium",
+            "xhigh",
+            "on"
+          ],
+          "default": "xhigh"
+        }
+      },
+      "loaded_configs": [
+        {
+          "context_length": 8192,
+          "eval_batch_size": 2048,
+          "physical_batch_size": 512,
+          "parallel": 1,
+          "flash_attention": true,
+          "context_checkpoints": 32,
+          "reasoning_budget_message": "",
+          "speculative_draft_mtp": true,
+          "speculative_draft_simple": false,
+          "speculative_draft_model": "",
+          "speculative_draft_max_tokens": 3,
+          "speculative_draft_min_tokens": 0,
+          "speculative_draft_min_continue_probability": 0,
+          "offload_kv_cache_to_gpu": true
+        }
+      ]
+    },
+    "/api/v0/models": {
+      "id": "qwen/qwen3.8-27b",
+      "arch": "qwen35",
+      "quantization": "Q4_K_M",
+      "loaded_context_length": 8192,
+      "max_context_length": 262144,
+      "capabilities": [
+        "tool_use"
+      ],
+      "loaded_configs": []
+    }
+  },
+  "environment": {
+    "python": "3.14.7",
+    "sqlite": "3.51.2",
+    "os": "Linux",
+    "machine": "x86_64"
+  },
+  "implementation_sha256": {
+    "knowledge.py": "049e8f19b6e00c36c937fcd663b115416f9d2b9d659776a7d650a615696bdecb",
+    "server.py": "10c8bb0f99215b418c960ac627377244759f55cc10892fb279e38966ed0f3c6b",
+    "generation.py": "2888af3b015dcee793cee17adf3e79578c853488fbe8ca24555bf820c96d496d",
+    "context_budget.py": "a841e5d5d94e86bdc2ade2301ab1a563ffcbe21cc2af8de3e969f0302783495d",
+    "vector_search.py": "68ea478949e62a77e3f45ad9590c25ebd9a60a1874bfac73fc0d73c8e155b658",
+    "requirements.txt": "58209d2892bd72a0d6352e8eb5d96afcbf3a8779d128738c055b64227784ae7a",
+    "benchmark.py": "c064cb57ac5c31765204de72367cefd97831d08933e7296f354b166bdc7ccc3a"
+  },
+  "answer_contract_sha256": "bf1eacdb02c8be30ee18f74414ca6be1b74d2d421cfb2a168c1052f0ccbca7a2",
+  "retrieval": {
+    "mode": "lexical"
+  },
+  "context_budget": {
+    "max_prompt_tokens": 4628
+  },
+  "mode": "full",
+  "repeats": 1,
+  "seeds": [
+    42
+  ],
+  "case_order": [
+    "g01-random-paper-procedure"
+  ],
+  "expected_attempts": 1,
+  "warmup": true,
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "seed": 42,
+      "messages": [
+        {
+          "role": "user",
+          "content": "How does a card that says to perform some action ‘randomly’ actually work in paper Magic?"
+        }
+      ],
+      "card_ids": [],
+      "answer": "**Ruling:** In paper Magic, any method that simulates the random outcome with equal probability for each possible result is acceptable. This includes flipping a coin, rolling a die, or using any other fair randomizing method.\n\n**Why:** The Tournament Rules explicitly state that \"any method that simulates the roll is acceptable if every result has an equal chance of occurring,\" while cautioning against tools whose values are clustered (like spindown life counters) [MTR 3.9]. The Comprehensive Rules also acknowledge that some cards require coins or traditional dice [CR 100.3]. In practice, this means a coin flip works for a 50/50 choice, a six-sided die works for a 1-in-6 chance, and so on—as long as each outcome is equally likely.\n\n**Example:** If a card says \"Flip a coin. If heads, do X. If tails, do Y,\" you simply flip a coin. If a card says \"Roll a die. If you roll a 1, do X,\" you roll a standard six-sided die. The key requirement is fairness, not the specific tool used.",
+      "sources": [
+        {
+          "id": "MTR 3.9",
+          "kind": "tournament_rule",
+          "title": "Magic Tournament Rules 3.9 — Die Rolling",
+          "text": "For a game action that uses a die roll, any method that simulates the roll is acceptable if every result has an equal chance of occurring. Avoid dice whose values are clustered together, such as spindown life counters.",
+          "url": "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf",
+          "effective_date": "2026-02-27"
+        },
+        {
+          "id": "CR 601.2c",
+          "title": "Rule 601.2c",
+          "kind": "rule",
+          "text": "The player announces their choice of an appropriate object or player for each target the spell requires. A spell may require some targets only if an alternative or additional cost (such as a kicker cost) or a particular mode was chosen for it; otherwise, the spell is cast as though it did not require those targets. Similarly, a spell may require alternative targets only if an alternative or additional cost was chosen for it. If the spell has a variable number of targets, the player announces how many targets they will choose before they announce those targets. In some cases, the number of targets will be defined by the spell’s text. Once the number of targets the spell has is determined, that number doesn’t change, even if the information used to determine the number of targets does. The same target can’t be chosen multiple times for any one instance of the word “target” on the spell. However, if the spell uses the word “target” in multiple places, the same object or player can be chosen once for each instance of the word “target” (as long as it fits the targeting criteria). If any effects say that an object or player must be chosen as a target, the player chooses targets so that they obey the maximum possible number of such effects without violating any rules or effects that say that an object or player can’t be chosen as a target. The chosen objects and/or players each become a target of that spell. (Any abilities that trigger when those objects and/or players become the target of a spell trigger at this point; they’ll wait to be put on the stack until the spell has finished being cast.)\nExample: If a spell says “Tap two target creatures,” then the same creature can’t be chosen twice; the spell requires two different legal targets. A spell that says “Destroy target artifact and target land,” however, can target the same artifact land twice because it uses the word “target” in multiple places.",
+          "url": "/api/rules/601.2c"
+        },
+        {
+          "id": "CR 601.2",
+          "title": "Rule 601.2",
+          "kind": "rule",
+          "text": "To cast a spell is to take it from where it is (usually the hand), put it on the stack, and pay its costs, so that it will eventually resolve and have its effect. Casting a spell includes proposal of the spell (rules 601.2a–d) and determination and payment of costs (rules 601.2f–h). To cast a spell, a player follows the steps listed below, in order. A player must be legally allowed to cast the spell to begin this process (see rule 601.3). If a player is unable to comply with the requirements of a step listed below while performing that step, the casting of the spell is illegal; the game returns to the moment before the casting of that spell was proposed (see rule 733, “Handling Illegal Actions”).",
+          "url": "/api/rules/601.2"
+        },
+        {
+          "id": "CR 601.2b",
+          "title": "Rule 601.2b",
+          "kind": "rule",
+          "text": "If the spell is modal, the player announces the mode choice (see rule 700.2). If the player wishes to splice any cards onto the spell (see rule 702.47), they reveal those cards in their hand. If the spell has alternative or additional costs that will be paid as it’s being cast such as buyback or kicker costs (see rules 118.8 and 118.9), the player announces their intentions to pay any or all of those costs (see rule 601.2f). A player can’t apply two alternative methods of casting or two alternative costs to a single spell. If the spell has a variable cost that will be paid as it’s being cast (such as an {X} in its mana cost; see rule 107.3), the player announces the value of that variable. If the value of that variable is defined in the text of the spell by a choice that player would make later in the announcement or resolution of the spell, that player makes that choice at this time instead of that later time. If a cost that will be paid as the spell is being cast includes hybrid mana symbols, the player announces the nonhybrid equivalent cost they intend to pay. If a cost that will be paid as the spell is being cast includes Phyrexian mana symbols, the player announces whether they intend to pay 2 life or a corresponding colored mana cost for each of those symbols. Previously made choices (such as choosing to cast a spell with flashback from a graveyard or choosing to cast a creature with morph face down) may restrict the player’s options when making these choices.",
+          "url": "/api/rules/601.2b"
+        },
+        {
+          "id": "CR 601.2d",
+          "title": "Rule 601.2d",
+          "kind": "rule",
+          "text": "If the spell requires the player to divide or distribute an effect (such as damage or counters) among one or more targets, the player announces the division. Each of these targets must receive at least one of whatever is being divided.",
+          "url": "/api/rules/601.2d"
+        },
+        {
+          "id": "CR 115.2",
+          "title": "Rule 115.2",
+          "kind": "rule",
+          "text": "Only permanents are legal targets for spells and abilities, unless a spell or ability (a) specifies that it can target an object in another zone or a player, or (b) targets an object that can’t exist on the battlefield, such as a spell or ability. See also rule 115.4.",
+          "url": "/api/rules/115.2"
+        },
+        {
+          "id": "CR 121.6c",
+          "title": "Rule 121.6c",
+          "kind": "rule",
+          "text": "Some effects perform additional actions on a card after it’s drawn. If the draw is replaced, the additional action is not performed on any cards that are drawn as a result of that replacement effect or any subsequent replacement effects.",
+          "url": "/api/rules/121.6c"
+        },
+        {
+          "id": "CR 121.6",
+          "title": "Rule 121.6",
+          "kind": "rule",
+          "text": "Some effects replace card draws.",
+          "url": "/api/rules/121.6"
+        },
+        {
+          "id": "CR 121.6b",
+          "title": "Rule 121.6b",
+          "kind": "rule",
+          "text": "If an effect replaces a draw within a sequence of card draws, the replacement effect is completed before resuming the sequence.",
+          "url": "/api/rules/121.6b"
+        },
+        {
+          "id": "CR 732.1b",
+          "title": "Rule 732.1b",
+          "kind": "rule",
+          "text": "Occasionally the game gets into a state in which a set of actions could be repeated indefinitely (thus creating a “loop”). In that case, the shortcut rules can be used to determine how many times those actions are repeated without having to actually perform them, and how the loop is broken.",
+          "url": "/api/rules/732.1b"
+        },
+        {
+          "id": "CR 732.6",
+          "title": "Rule 732.6",
+          "kind": "rule",
+          "text": "If a loop contains an effect that says “[A] unless [B],” where [A] and [B] are each actions, no player can be forced to perform [B] to break the loop. If no player chooses to perform [B], the loop will continue as though [A] were mandatory.",
+          "url": "/api/rules/732.6"
+        },
+        {
+          "id": "CR 732.1",
+          "title": "Rule 732.1",
+          "kind": "rule",
+          "text": "When playing a game, players typically make use of mutually understood shortcuts rather than explicitly identifying each game choice (either taking an action or passing priority) a player makes.",
+          "url": "/api/rules/732.1"
+        },
+        {
+          "id": "CR 732.1a",
+          "title": "Rule 732.1a",
+          "kind": "rule",
+          "text": "The rules for taking shortcuts are largely informal. As long as each player in the game understands the intent of each other player, any shortcut system they use is acceptable.",
+          "url": "/api/rules/732.1a"
+        },
+        {
+          "id": "CR 732.1c",
+          "title": "Rule 732.1c",
+          "kind": "rule",
+          "text": "Tournaments use a modified version of the rules governing shortcuts and loops. These rules are covered in the Magic: The Gathering Tournament Rules (found at WPN.wizards.com/en/rules-documents). Whenever the Tournament Rules contradict these rules during a tournament, the Tournament Rules take precedence.",
+          "url": "/api/rules/732.1c"
+        },
+        {
+          "id": "CR 702.158d",
+          "title": "Rule 702.158d",
+          "kind": "rule",
+          "text": "Some abilities include an instruction to choose a sector along with an instruction to perform an action on each creature in that sector. To do this, choose one of the three sector designations, then perform that action on each creature with that sector designation.",
+          "url": "/api/rules/702.158d"
+        },
+        {
+          "id": "CR 702.158",
+          "title": "Rule 702.158",
+          "kind": "rule",
+          "text": "Space Sculptor",
+          "url": "/api/rules/702.158"
+        },
+        {
+          "id": "CR 702.158c",
+          "title": "Rule 702.158c",
+          "kind": "rule",
+          "text": "Any time a permanent with space sculptor and any creatures without a sector designation are on the battlefield at the same time, each player who controls one or more of those creatures and doesn’t control a permanent with space sculptor chooses a sector designation for each of those creatures they control. Then, each other player who controls one or more of those creatures chooses a sector designation for each of those creatures they control. This is a state-based action (see rule 704.5u).",
+          "url": "/api/rules/702.158c"
+        },
+        {
+          "id": "CR 702.158e",
+          "title": "Rule 702.158e",
+          "kind": "rule",
+          "text": "Two permanents are in the same sector if each has the same sector designation.",
+          "url": "/api/rules/702.158e"
+        },
+        {
+          "id": "CR 702.106b",
+          "title": "Rule 702.106b",
+          "kind": "rule",
+          "text": "To secretly choose a card name, note that name on a piece of paper kept with the face-down conspiracy card.",
+          "url": "/api/rules/702.106b"
+        },
+        {
+          "id": "CR 702.106",
+          "title": "Rule 702.106",
+          "kind": "rule",
+          "text": "Hidden Agenda",
+          "url": "/api/rules/702.106"
+        },
+        {
+          "id": "CR 702.106a",
+          "title": "Rule 702.106a",
+          "kind": "rule",
+          "text": "Hidden agenda is a static ability that functions as a conspiracy card with hidden agenda is put into the command zone. “Hidden agenda” means “As you put this conspiracy card into the command zone, turn it face down and secretly choose a card name.”",
+          "url": "/api/rules/702.106a"
+        },
+        {
+          "id": "CR 702.106c",
+          "title": "Rule 702.106c",
+          "kind": "rule",
+          "text": "Any time you have priority, you may turn a face-down conspiracy card you control in the command zone face up. This is a special action. Doing so will reveal the chosen name. See rule 116.2j.",
+          "url": "/api/rules/702.106c"
+        },
+        {
+          "id": "CR 801.5",
+          "title": "Rule 801.5",
+          "kind": "rule",
+          "text": "Some cards require players to make choices. These cards work differently when the limited range of influence option is used.",
+          "url": "/api/rules/801.5"
+        },
+        {
+          "id": "CR 801.5a",
+          "title": "Rule 801.5a",
+          "kind": "rule",
+          "text": "If a player is asked to choose an object or player, they must choose one within their range of influence.\nExample: In a game with a range of influence of 1, Alex is seated to the left of Rob. Alex activates the ability of Cuombajj Witches, which reads, “{T}: Cuombajj Witches deals 1 damage to any target and 1 damage to any target of an opponent’s choice,” targeting Rob and choosing Rob as the opponent who picks the other target. Rob must choose a target that’s in both his range of influence and in the range of influence of the controller of Cuombajj Witches. He must therefore choose himself, Alex, or a creature controlled by either himself or Alex.",
+          "url": "/api/rules/801.5a"
+        },
+        {
+          "id": "CR 801.5b",
+          "title": "Rule 801.5b",
+          "kind": "rule",
+          "text": "If a player is asked to choose between one or more options (and not between one or more objects or players), they can choose between those options even if those options refer to objects or players outside the player’s range of influence.\nExample: Alex, who has a range of influence of 2, is seated to the left of Rob, and Carissa, who has a range of influence of 1, is seated to the right of Rob. Alex casts a spell that reads, “An opponent chooses one — You draw two cards; or each creature you control gets +2/+2 until end of turn,” and chooses Carissa to make that choice. Carissa can choose the mode even though Alex is out of her range.",
+          "url": "/api/rules/801.5b"
+        },
+        {
+          "id": "CR 801.5c",
+          "title": "Rule 801.5c",
+          "kind": "rule",
+          "text": "If an effect requires a choice and there’s no player who can make that choice within its controller’s range of influence, the closest appropriate player to its controller’s left makes that choice.\nExample: In an Emperor game in which all players have range of influence 1, an emperor casts Fact or Fiction, which reads, “Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.” Since no opponent is within the emperor’s range of influence, the nearest opponent to the emperor’s left separates the cards into piles.",
+          "url": "/api/rules/801.5c"
+        },
+        {
+          "id": "CR 614.10b",
+          "title": "Rule 614.10b",
+          "kind": "rule",
+          "text": "Some effects cause a player to skip a step, phase, or turn, then take another action. That action is considered to be the first thing that happens during the next step, phase, or turn to actually occur.",
+          "url": "/api/rules/614.10b"
+        },
+        {
+          "id": "CR 614.11b",
+          "title": "Rule 614.11b",
+          "kind": "rule",
+          "text": "If an effect would have a player both draw a card and perform an additional action on that card, and the draw is replaced, the additional action is not performed on any cards that are drawn as a result of that replacement effect.",
+          "url": "/api/rules/614.11b"
+        },
+        {
+          "id": "CR 614.10",
+          "title": "Rule 614.10",
+          "kind": "rule",
+          "text": "An effect that causes a player to skip an event, step, phase, or turn is a replacement effect. “Skip [something]” is the same as “Instead of doing [something], do nothing.” Once a step, phase, or turn has started, it can no longer be skipped—any skip effects will wait until the next occurrence.",
+          "url": "/api/rules/614.10"
+        },
+        {
+          "id": "CR 614.11",
+          "title": "Rule 614.11",
+          "kind": "rule",
+          "text": "Some effects replace card draws. These effects are applied even if no cards could be drawn because there are no cards in the affected player’s library.",
+          "url": "/api/rules/614.11"
+        },
+        {
+          "id": "CR 614.10a",
+          "title": "Rule 614.10a",
+          "kind": "rule",
+          "text": "Anything scheduled for a skipped step, phase, or turn won’t happen. Anything scheduled for the “next” occurrence of something waits for the first occurrence that isn’t skipped. If two effects each cause a player to skip their next occurrence, that player must skip the next two; one effect will be satisfied in skipping the first occurrence, while the other will remain until another occurrence can be skipped.",
+          "url": "/api/rules/614.10a"
+        },
+        {
+          "id": "CR 614.11a",
+          "title": "Rule 614.11a",
+          "kind": "rule",
+          "text": "If an effect replaces a draw within a sequence of card draws, all actions required by the replacement are completed, if possible, before resuming the sequence.",
+          "url": "/api/rules/614.11a"
+        },
+        {
+          "id": "CR 400.12",
+          "title": "Rule 400.12",
+          "kind": "rule",
+          "text": "Some effects instruct a player to do something to a zone (such as “Shuffle your hand into your library”). That action is performed on all cards in that zone. The zone itself is not affected.",
+          "url": "/api/rules/400.12"
+        },
+        {
+          "id": "CR 304.5",
+          "title": "Rule 304.5",
+          "kind": "rule",
+          "text": "If text states that a player may do something “any time they could cast an instant” or “only as an instant,” it means only that the player must have priority. The player doesn’t need to have an instant card they could cast. Effects that would preclude that player from casting an instant spell don’t affect the player’s capability to perform that action (unless the action is actually casting an instant spell).",
+          "url": "/api/rules/304.5"
+        },
+        {
+          "id": "CR 118.11",
+          "title": "Rule 118.11",
+          "kind": "rule",
+          "text": "The actions performed when paying a cost may be modified by effects. Even if they are, meaning the actions that are performed don’t match the actions that are called for, the cost has still been paid.\nExample: A player controls Psychic Vortex, an enchantment with a cumulative upkeep cost of “Draw a card,” and Obstinate Familiar, a creature that says “If you would draw a card, you may skip that draw instead.” The player may decide to pay Psychic Vortex’s cumulative upkeep cost and then draw no cards instead of drawing the appropriate amount. The cumulative upkeep cost has still been paid.",
+          "url": "/api/rules/118.11"
+        },
+        {
+          "id": "CR 100.3",
+          "title": "Rule 100.3",
+          "kind": "rule",
+          "text": "Some cards require coins or traditional dice. Some casual variants require additional items, such as specially designated cards, nontraditional Magic cards, and specialized dice.",
+          "url": "/api/rules/100.3"
+        },
+        {
+          "id": "CR 100.6",
+          "title": "Rule 100.6",
+          "kind": "rule",
+          "text": "Most Magic tournaments (organized play activities where players compete against other players to win prizes) have additional rules covered in the Magic: The Gathering Tournament Rules (found at WPN.Wizards.com/en/rules-documents). These rules may limit the use of some cards, including barring all cards from some older sets.",
+          "url": "/api/rules/100.6"
+        },
+        {
+          "id": "CR 100.6a",
+          "title": "Rule 100.6a",
+          "kind": "rule",
+          "text": "Tournaments usually consist of a series of matches. A two-player match usually involves playing until one player has won two games. A multiplayer match usually consists of only one game.",
+          "url": "/api/rules/100.6a"
+        },
+        {
+          "id": "CR 100.6b",
+          "title": "Rule 100.6b",
+          "kind": "rule",
+          "text": "Players can use the Magic Store & Event Locator at Locator.Wizards.com to find tournaments in their area.",
+          "url": "/api/rules/100.6b"
+        },
+        {
+          "id": "CR 604.5",
+          "title": "Rule 604.5",
+          "kind": "rule",
+          "text": "Some static abilities apply while a spell is on the stack. These are often abilities that refer to countering the spell. Also, abilities that say “As an additional cost to cast . . . ,” “You may pay [cost] rather than pay [this object]’s mana cost,” and “You may cast [this object] without paying its mana cost” work while a spell is on the stack.",
+          "url": "/api/rules/604.5"
+        },
+        {
+          "id": "CR 806.3",
+          "title": "Rule 806.3",
+          "kind": "rule",
+          "text": "The players are randomly seated around the table.",
+          "url": "/api/rules/806.3"
+        }
+      ],
+      "warnings": [],
+      "error": null,
+      "timing": {
+        "total_seconds": 7.2727,
+        "retrieval_seconds": 0.1656,
+        "first_visible_token_seconds": 4.6032
+      },
+      "diagnostics": {
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 4524,
+          "completion_tokens": 412,
+          "total_tokens": 4936,
+          "completion_tokens_details": {
+            "reasoning_tokens": 172
+          }
+        },
+        "reasoning_characters": 794,
+        "visible_characters": 987,
+        "stream_completed": true,
+        "context_budget": {
+          "context_length": 8192,
+          "max_prompt_tokens": 4628,
+          "prompt_tokens": 4536,
+          "reserved_output_tokens": 3500,
+          "template_margin": 64,
+          "omitted_sources": 24,
+          "omitted_turns": 0,
+          "tokenizer_client_version": "1.5.0"
+        }
+      },
+      "candidate_sources": [
+        {
+          "id": "MTR 3.9",
+          "kind": "tournament_rule",
+          "title": "Magic Tournament Rules 3.9 — Die Rolling",
+          "text": "For a game action that uses a die roll, any method that simulates the roll is acceptable if every result has an equal chance of occurring. Avoid dice whose values are clustered together, such as spindown life counters.",
+          "url": "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf",
+          "effective_date": "2026-02-27"
+        },
+        {
+          "id": "CR 601.2c",
+          "title": "Rule 601.2c",
+          "kind": "rule",
+          "text": "The player announces their choice of an appropriate object or player for each target the spell requires. A spell may require some targets only if an alternative or additional cost (such as a kicker cost) or a particular mode was chosen for it; otherwise, the spell is cast as though it did not require those targets. Similarly, a spell may require alternative targets only if an alternative or additional cost was chosen for it. If the spell has a variable number of targets, the player announces how many targets they will choose before they announce those targets. In some cases, the number of targets will be defined by the spell’s text. Once the number of targets the spell has is determined, that number doesn’t change, even if the information used to determine the number of targets does. The same target can’t be chosen multiple times for any one instance of the word “target” on the spell. However, if the spell uses the word “target” in multiple places, the same object or player can be chosen once for each instance of the word “target” (as long as it fits the targeting criteria). If any effects say that an object or player must be chosen as a target, the player chooses targets so that they obey the maximum possible number of such effects without violating any rules or effects that say that an object or player can’t be chosen as a target. The chosen objects and/or players each become a target of that spell. (Any abilities that trigger when those objects and/or players become the target of a spell trigger at this point; they’ll wait to be put on the stack until the spell has finished being cast.)\nExample: If a spell says “Tap two target creatures,” then the same creature can’t be chosen twice; the spell requires two different legal targets. A spell that says “Destroy target artifact and target land,” however, can target the same artifact land twice because it uses the word “target” in multiple places.",
+          "url": "/api/rules/601.2c"
+        },
+        {
+          "id": "CR 115.2",
+          "title": "Rule 115.2",
+          "kind": "rule",
+          "text": "Only permanents are legal targets for spells and abilities, unless a spell or ability (a) specifies that it can target an object in another zone or a player, or (b) targets an object that can’t exist on the battlefield, such as a spell or ability. See also rule 115.4.",
+          "url": "/api/rules/115.2"
+        },
+        {
+          "id": "CR 121.6c",
+          "title": "Rule 121.6c",
+          "kind": "rule",
+          "text": "Some effects perform additional actions on a card after it’s drawn. If the draw is replaced, the additional action is not performed on any cards that are drawn as a result of that replacement effect or any subsequent replacement effects.",
+          "url": "/api/rules/121.6c"
+        },
+        {
+          "id": "CR 732.1b",
+          "title": "Rule 732.1b",
+          "kind": "rule",
+          "text": "Occasionally the game gets into a state in which a set of actions could be repeated indefinitely (thus creating a “loop”). In that case, the shortcut rules can be used to determine how many times those actions are repeated without having to actually perform them, and how the loop is broken.",
+          "url": "/api/rules/732.1b"
+        },
+        {
+          "id": "CR 732.6",
+          "title": "Rule 732.6",
+          "kind": "rule",
+          "text": "If a loop contains an effect that says “[A] unless [B],” where [A] and [B] are each actions, no player can be forced to perform [B] to break the loop. If no player chooses to perform [B], the loop will continue as though [A] were mandatory.",
+          "url": "/api/rules/732.6"
+        },
+        {
+          "id": "CR 702.158d",
+          "title": "Rule 702.158d",
+          "kind": "rule",
+          "text": "Some abilities include an instruction to choose a sector along with an instruction to perform an action on each creature in that sector. To do this, choose one of the three sector designations, then perform that action on each creature with that sector designation.",
+          "url": "/api/rules/702.158d"
+        },
+        {
+          "id": "CR 702.106b",
+          "title": "Rule 702.106b",
+          "kind": "rule",
+          "text": "To secretly choose a card name, note that name on a piece of paper kept with the face-down conspiracy card.",
+          "url": "/api/rules/702.106b"
+        },
+        {
+          "id": "CR 801.5",
+          "title": "Rule 801.5",
+          "kind": "rule",
+          "text": "Some cards require players to make choices. These cards work differently when the limited range of influence option is used.",
+          "url": "/api/rules/801.5"
+        },
+        {
+          "id": "CR 614.10b",
+          "title": "Rule 614.10b",
+          "kind": "rule",
+          "text": "Some effects cause a player to skip a step, phase, or turn, then take another action. That action is considered to be the first thing that happens during the next step, phase, or turn to actually occur.",
+          "url": "/api/rules/614.10b"
+        },
+        {
+          "id": "CR 400.12",
+          "title": "Rule 400.12",
+          "kind": "rule",
+          "text": "Some effects instruct a player to do something to a zone (such as “Shuffle your hand into your library”). That action is performed on all cards in that zone. The zone itself is not affected.",
+          "url": "/api/rules/400.12"
+        },
+        {
+          "id": "CR 614.11b",
+          "title": "Rule 614.11b",
+          "kind": "rule",
+          "text": "If an effect would have a player both draw a card and perform an additional action on that card, and the draw is replaced, the additional action is not performed on any cards that are drawn as a result of that replacement effect.",
+          "url": "/api/rules/614.11b"
+        },
+        {
+          "id": "CR 304.5",
+          "title": "Rule 304.5",
+          "kind": "rule",
+          "text": "If text states that a player may do something “any time they could cast an instant” or “only as an instant,” it means only that the player must have priority. The player doesn’t need to have an instant card they could cast. Effects that would preclude that player from casting an instant spell don’t affect the player’s capability to perform that action (unless the action is actually casting an instant spell).",
+          "url": "/api/rules/304.5"
+        },
+        {
+          "id": "CR 118.11",
+          "title": "Rule 118.11",
+          "kind": "rule",
+          "text": "The actions performed when paying a cost may be modified by effects. Even if they are, meaning the actions that are performed don’t match the actions that are called for, the cost has still been paid.\nExample: A player controls Psychic Vortex, an enchantment with a cumulative upkeep cost of “Draw a card,” and Obstinate Familiar, a creature that says “If you would draw a card, you may skip that draw instead.” The player may decide to pay Psychic Vortex’s cumulative upkeep cost and then draw no cards instead of drawing the appropriate amount. The cumulative upkeep cost has still been paid.",
+          "url": "/api/rules/118.11"
+        },
+        {
+          "id": "CR 103.2",
+          "title": "Rule 103.2",
+          "kind": "rule",
+          "text": "Some games require additional steps that are taken after the starting player has been determined. Perform the actions listed in 103.2a–e in order, as applicable.",
+          "url": "/api/rules/103.2"
+        },
+        {
+          "id": "CR 100.3",
+          "title": "Rule 100.3",
+          "kind": "rule",
+          "text": "Some cards require coins or traditional dice. Some casual variants require additional items, such as specially designated cards, nontraditional Magic cards, and specialized dice.",
+          "url": "/api/rules/100.3"
+        },
+        {
+          "id": "CR 701.17d",
+          "title": "Rule 701.17d",
+          "kind": "rule",
+          "text": "Some spells and abilities mill a single card and then ask for information about the milled card. If more than one card is milled due to replacement effects and the effect of a spell or ability asks for information about the milled card, such as a characteristic or mana value, it gets information from each milled card and will get multiple answers. If these answers are used to determine the value of a variable, the sum of the answers is used. If that effect grants a player permission to cast or play “that” card, the permission applies to each of the milled cards. If that effect performs any actions on “the” card, it performs that action on each milled card. If that effect performs any actions on “a” card, the controller of the spell or ability chooses which card is affected.",
+          "url": "/api/rules/701.17d"
+        },
+        {
+          "id": "CR 103.5b",
+          "title": "Rule 103.5b",
+          "kind": "rule",
+          "text": "If an effect allows a player to perform an action “any time [that player] could mulligan,” the player may perform that action at a time they would declare whether they will take a mulligan. This need not be in the first round of mulligans. Other players may have already made their mulligan declarations by the time the player has the option to perform this action. If the player performs the action, they then declare whether they will take a mulligan.",
+          "url": "/api/rules/103.5b"
+        },
+        {
+          "id": "CR 702.170e",
+          "title": "Rule 702.170e",
+          "kind": "rule",
+          "text": "If an effect refers to plotting a card, it means performing the special action associated with a plot ability.",
+          "url": "/api/rules/702.170e"
+        },
+        {
+          "id": "CR 117.2",
+          "title": "Rule 117.2",
+          "kind": "rule",
+          "text": "Other kinds of abilities and actions are automatically generated or performed by the game rules, or are performed by players without receiving priority.",
+          "url": "/api/rules/117.2"
+        },
+        {
+          "id": "CR 100.6",
+          "title": "Rule 100.6",
+          "kind": "rule",
+          "text": "Most Magic tournaments (organized play activities where players compete against other players to win prizes) have additional rules covered in the Magic: The Gathering Tournament Rules (found at WPN.Wizards.com/en/rules-documents). These rules may limit the use of some cards, including barring all cards from some older sets.",
+          "url": "/api/rules/100.6"
+        },
+        {
+          "id": "CR 604.5",
+          "title": "Rule 604.5",
+          "kind": "rule",
+          "text": "Some static abilities apply while a spell is on the stack. These are often abilities that refer to countering the spell. Also, abilities that say “As an additional cost to cast . . . ,” “You may pay [cost] rather than pay [this object]’s mana cost,” and “You may cast [this object] without paying its mana cost” work while a spell is on the stack.",
+          "url": "/api/rules/604.5"
+        },
+        {
+          "id": "CR 117.5",
+          "title": "Rule 117.5",
+          "kind": "rule",
+          "text": "Each time a player would get priority, the game first performs all applicable state-based actions as a single event (see rule 704, “State-Based Actions”), then repeats this process until no state-based actions are performed. Then triggered abilities are put on the stack (see rule 603, “Handling Triggered Abilities”). These steps repeat in order until no further state-based actions are performed and no abilities trigger. Then the player who would have received priority does so.",
+          "url": "/api/rules/117.5"
+        },
+        {
+          "id": "CR 307.5",
+          "title": "Rule 307.5",
+          "kind": "rule",
+          "text": "If a spell, ability, or effect states that a player can do something only “any time they could cast a sorcery” or “only as a sorcery,” it means only that the player must have priority, it must be during the main phase of their turn, and the stack must be empty. The player doesn’t need to have a sorcery card they could cast. Effects that would preclude that player from casting a sorcery spell don’t affect the player’s capability to perform that action (unless the action is actually casting a sorcery spell).",
+          "url": "/api/rules/307.5"
+        },
+        {
+          "id": "CR 806.3",
+          "title": "Rule 806.3",
+          "kind": "rule",
+          "text": "The players are randomly seated around the table.",
+          "url": "/api/rules/806.3"
+        },
+        {
+          "id": "CR 121.6",
+          "title": "Rule 121.6",
+          "kind": "rule",
+          "text": "Some effects replace card draws.",
+          "url": "/api/rules/121.6"
+        },
+        {
+          "id": "CR 732.1",
+          "title": "Rule 732.1",
+          "kind": "rule",
+          "text": "When playing a game, players typically make use of mutually understood shortcuts rather than explicitly identifying each game choice (either taking an action or passing priority) a player makes.",
+          "url": "/api/rules/732.1"
+        },
+        {
+          "id": "CR 702.158",
+          "title": "Rule 702.158",
+          "kind": "rule",
+          "text": "Space Sculptor",
+          "url": "/api/rules/702.158"
+        },
+        {
+          "id": "CR 702.106",
+          "title": "Rule 702.106",
+          "kind": "rule",
+          "text": "Hidden Agenda",
+          "url": "/api/rules/702.106"
+        },
+        {
+          "id": "CR 614.10",
+          "title": "Rule 614.10",
+          "kind": "rule",
+          "text": "An effect that causes a player to skip an event, step, phase, or turn is a replacement effect. “Skip [something]” is the same as “Instead of doing [something], do nothing.” Once a step, phase, or turn has started, it can no longer be skipped—any skip effects will wait until the next occurrence.",
+          "url": "/api/rules/614.10"
+        },
+        {
+          "id": "CR 614.11",
+          "title": "Rule 614.11",
+          "kind": "rule",
+          "text": "Some effects replace card draws. These effects are applied even if no cards could be drawn because there are no cards in the affected player’s library.",
+          "url": "/api/rules/614.11"
+        },
+        {
+          "id": "CR 601.2",
+          "title": "Rule 601.2",
+          "kind": "rule",
+          "text": "To cast a spell is to take it from where it is (usually the hand), put it on the stack, and pay its costs, so that it will eventually resolve and have its effect. Casting a spell includes proposal of the spell (rules 601.2a–d) and determination and payment of costs (rules 601.2f–h). To cast a spell, a player follows the steps listed below, in order. A player must be legally allowed to cast the spell to begin this process (see rule 601.3). If a player is unable to comply with the requirements of a step listed below while performing that step, the casting of the spell is illegal; the game returns to the moment before the casting of that spell was proposed (see rule 733, “Handling Illegal Actions”).",
+          "url": "/api/rules/601.2"
+        },
+        {
+          "id": "CR 701.17",
+          "title": "Rule 701.17",
+          "kind": "rule",
+          "text": "Mill",
+          "url": "/api/rules/701.17"
+        },
+        {
+          "id": "CR 601.2b",
+          "title": "Rule 601.2b",
+          "kind": "rule",
+          "text": "If the spell is modal, the player announces the mode choice (see rule 700.2). If the player wishes to splice any cards onto the spell (see rule 702.47), they reveal those cards in their hand. If the spell has alternative or additional costs that will be paid as it’s being cast such as buyback or kicker costs (see rules 118.8 and 118.9), the player announces their intentions to pay any or all of those costs (see rule 601.2f). A player can’t apply two alternative methods of casting or two alternative costs to a single spell. If the spell has a variable cost that will be paid as it’s being cast (such as an {X} in its mana cost; see rule 107.3), the player announces the value of that variable. If the value of that variable is defined in the text of the spell by a choice that player would make later in the announcement or resolution of the spell, that player makes that choice at this time instead of that later time. If a cost that will be paid as the spell is being cast includes hybrid mana symbols, the player announces the nonhybrid equivalent cost they intend to pay. If a cost that will be paid as the spell is being cast includes Phyrexian mana symbols, the player announces whether they intend to pay 2 life or a corresponding colored mana cost for each of those symbols. Previously made choices (such as choosing to cast a spell with flashback from a graveyard or choosing to cast a creature with morph face down) may restrict the player’s options when making these choices.",
+          "url": "/api/rules/601.2b"
+        },
+        {
+          "id": "CR 601.2d",
+          "title": "Rule 601.2d",
+          "kind": "rule",
+          "text": "If the spell requires the player to divide or distribute an effect (such as damage or counters) among one or more targets, the player announces the division. Each of these targets must receive at least one of whatever is being divided.",
+          "url": "/api/rules/601.2d"
+        },
+        {
+          "id": "CR 121.6b",
+          "title": "Rule 121.6b",
+          "kind": "rule",
+          "text": "If an effect replaces a draw within a sequence of card draws, the replacement effect is completed before resuming the sequence.",
+          "url": "/api/rules/121.6b"
+        },
+        {
+          "id": "CR 732.1a",
+          "title": "Rule 732.1a",
+          "kind": "rule",
+          "text": "The rules for taking shortcuts are largely informal. As long as each player in the game understands the intent of each other player, any shortcut system they use is acceptable.",
+          "url": "/api/rules/732.1a"
+        },
+        {
+          "id": "CR 732.1c",
+          "title": "Rule 732.1c",
+          "kind": "rule",
+          "text": "Tournaments use a modified version of the rules governing shortcuts and loops. These rules are covered in the Magic: The Gathering Tournament Rules (found at WPN.wizards.com/en/rules-documents). Whenever the Tournament Rules contradict these rules during a tournament, the Tournament Rules take precedence.",
+          "url": "/api/rules/732.1c"
+        },
+        {
+          "id": "CR 702.158c",
+          "title": "Rule 702.158c",
+          "kind": "rule",
+          "text": "Any time a permanent with space sculptor and any creatures without a sector designation are on the battlefield at the same time, each player who controls one or more of those creatures and doesn’t control a permanent with space sculptor chooses a sector designation for each of those creatures they control. Then, each other player who controls one or more of those creatures chooses a sector designation for each of those creatures they control. This is a state-based action (see rule 704.5u).",
+          "url": "/api/rules/702.158c"
+        },
+        {
+          "id": "CR 702.158e",
+          "title": "Rule 702.158e",
+          "kind": "rule",
+          "text": "Two permanents are in the same sector if each has the same sector designation.",
+          "url": "/api/rules/702.158e"
+        },
+        {
+          "id": "CR 702.106a",
+          "title": "Rule 702.106a",
+          "kind": "rule",
+          "text": "Hidden agenda is a static ability that functions as a conspiracy card with hidden agenda is put into the command zone. “Hidden agenda” means “As you put this conspiracy card into the command zone, turn it face down and secretly choose a card name.”",
+          "url": "/api/rules/702.106a"
+        },
+        {
+          "id": "CR 702.106c",
+          "title": "Rule 702.106c",
+          "kind": "rule",
+          "text": "Any time you have priority, you may turn a face-down conspiracy card you control in the command zone face up. This is a special action. Doing so will reveal the chosen name. See rule 116.2j.",
+          "url": "/api/rules/702.106c"
+        },
+        {
+          "id": "CR 801.5a",
+          "title": "Rule 801.5a",
+          "kind": "rule",
+          "text": "If a player is asked to choose an object or player, they must choose one within their range of influence.\nExample: In a game with a range of influence of 1, Alex is seated to the left of Rob. Alex activates the ability of Cuombajj Witches, which reads, “{T}: Cuombajj Witches deals 1 damage to any target and 1 damage to any target of an opponent’s choice,” targeting Rob and choosing Rob as the opponent who picks the other target. Rob must choose a target that’s in both his range of influence and in the range of influence of the controller of Cuombajj Witches. He must therefore choose himself, Alex, or a creature controlled by either himself or Alex.",
+          "url": "/api/rules/801.5a"
+        },
+        {
+          "id": "CR 801.5b",
+          "title": "Rule 801.5b",
+          "kind": "rule",
+          "text": "If a player is asked to choose between one or more options (and not between one or more objects or players), they can choose between those options even if those options refer to objects or players outside the player’s range of influence.\nExample: Alex, who has a range of influence of 2, is seated to the left of Rob, and Carissa, who has a range of influence of 1, is seated to the right of Rob. Alex casts a spell that reads, “An opponent chooses one — You draw two cards; or each creature you control gets +2/+2 until end of turn,” and chooses Carissa to make that choice. Carissa can choose the mode even though Alex is out of her range.",
+          "url": "/api/rules/801.5b"
+        },
+        {
+          "id": "CR 801.5c",
+          "title": "Rule 801.5c",
+          "kind": "rule",
+          "text": "If an effect requires a choice and there’s no player who can make that choice within its controller’s range of influence, the closest appropriate player to its controller’s left makes that choice.\nExample: In an Emperor game in which all players have range of influence 1, an emperor casts Fact or Fiction, which reads, “Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.” Since no opponent is within the emperor’s range of influence, the nearest opponent to the emperor’s left separates the cards into piles.",
+          "url": "/api/rules/801.5c"
+        },
+        {
+          "id": "CR 614.10a",
+          "title": "Rule 614.10a",
+          "kind": "rule",
+          "text": "Anything scheduled for a skipped step, phase, or turn won’t happen. Anything scheduled for the “next” occurrence of something waits for the first occurrence that isn’t skipped. If two effects each cause a player to skip their next occurrence, that player must skip the next two; one effect will be satisfied in skipping the first occurrence, while the other will remain until another occurrence can be skipped.",
+          "url": "/api/rules/614.10a"
+        },
+        {
+          "id": "CR 614.11a",
+          "title": "Rule 614.11a",
+          "kind": "rule",
+          "text": "If an effect replaces a draw within a sequence of card draws, all actions required by the replacement are completed, if possible, before resuming the sequence.",
+          "url": "/api/rules/614.11a"
+        },
+        {
+          "id": "CR 103.2a",
+          "title": "Rule 103.2a",
+          "kind": "rule",
+          "text": "If any players are using sideboards (see rule 100.4) or cards being represented by substitute cards (see rule 713), those cards are set aside. After this happens, each player’s deck is considered their starting deck.",
+          "url": "/api/rules/103.2a"
+        },
+        {
+          "id": "CR 103.2b",
+          "title": "Rule 103.2b",
+          "kind": "rule",
+          "text": "If any players wish to reveal a card with a companion ability that they own from outside the game, they may do so. A player may reveal no more than one card this way, and they may do so only if their deck fulfills the condition of that card’s companion ability. The revealed card remains outside the game. (See rule 702.139, “Companion.”)",
+          "url": "/api/rules/103.2b"
+        },
+        {
+          "id": "CR 103.2c",
+          "title": "Rule 103.2c",
+          "kind": "rule",
+          "text": "In a Commander game, each player puts their commander from their deck face up into the command zone. See rule 903.6.",
+          "url": "/api/rules/103.2c"
+        },
+        {
+          "id": "CR 103.2d",
+          "title": "Rule 103.2d",
+          "kind": "rule",
+          "text": "In a constructed game, each player playing with sticker sheets reveals all of their sticker sheets and chooses three of them at random. In a limited game, each player chooses up to three sticker sheets from among those in the sealed product they opened and reveals them. In either case, that player has access to only the stickers on the chosen sheets during the game, and those sticker sheets remain revealed. (See rule 123, “Stickers.”)",
+          "url": "/api/rules/103.2d"
+        },
+        {
+          "id": "CR 103.2e",
+          "title": "Rule 103.2e",
+          "kind": "rule",
+          "text": "In a Conspiracy Draft game, each player puts any number of conspiracy cards from their sideboard into the command zone. See rule 905.4.",
+          "url": "/api/rules/103.2e"
+        },
+        {
+          "id": "CR 701.17c",
+          "title": "Rule 701.17c",
+          "kind": "rule",
+          "text": "An effect that refers to a milled card can find that card in the zone it moved to from the library, as long as that zone is a public zone.",
+          "url": "/api/rules/701.17c"
+        },
+        {
+          "id": "CR 103.5a",
+          "title": "Rule 103.5a",
+          "kind": "rule",
+          "text": "In a Vanguard game, each player’s starting hand size is seven plus or minus the hand modifier of their vanguard card.",
+          "url": "/api/rules/103.5a"
+        },
+        {
+          "id": "CR 103.5c",
+          "title": "Rule 103.5c",
+          "kind": "rule",
+          "text": "In a multiplayer game and in any Brawl game, the first mulligan a player takes doesn’t count toward the number of cards that player will put on the bottom of their library or the number of mulligans that player may take. Subsequent mulligans are counted toward these numbers as normal.",
+          "url": "/api/rules/103.5c"
+        },
+        {
+          "id": "CR 702.170d",
+          "title": "Rule 702.170d",
+          "kind": "rule",
+          "text": "A plotted card’s owner may cast it from exile without paying its mana cost during their main phase while the stack is empty during any turn after the turn in which it became plotted. Casting a spell this way follows the rules for paying alternative costs in rules 601.2b and 601.2f–h. A plotted card may be cast this way even if it doesn’t have the plot ability while in exile.",
+          "url": "/api/rules/702.170d"
+        },
+        {
+          "id": "CR 702.170f",
+          "title": "Rule 702.170f",
+          "kind": "rule",
+          "text": "An effect may allow the plot ability of a card to function in a zone other than a player’s hand. In that case, the card is exiled from the zone it is in as the action is taken rather than from its owner’s hand.",
+          "url": "/api/rules/702.170f"
+        },
+        {
+          "id": "CR 117.2a",
+          "title": "Rule 117.2a",
+          "kind": "rule",
+          "text": "Triggered abilities can trigger at any time, including while a spell is being cast, an ability is being activated, or a spell or ability is resolving. (See rule 603, “Handling Triggered Abilities.”) However, nothing actually happens at the time an ability triggers. Each time a player would receive priority, each ability that has triggered but hasn’t yet been put on the stack is put on the stack. See rule 117.5.",
+          "url": "/api/rules/117.2a"
+        },
+        {
+          "id": "CR 117.2b",
+          "title": "Rule 117.2b",
+          "kind": "rule",
+          "text": "Static abilities continuously affect the game. Priority doesn’t apply to them. (See rule 604, “Handling Static Abilities,” and rule 611, “Continuous Effects.”)",
+          "url": "/api/rules/117.2b"
+        },
+        {
+          "id": "CR 117.2c",
+          "title": "Rule 117.2c",
+          "kind": "rule",
+          "text": "Turn-based actions happen automatically when certain steps or phases begin. They’re dealt with before a player would receive priority. See rule 117.3a. Turn-based actions also happen automatically when each step and phase ends; no player receives priority afterward. See rule 703, “Turn-Based Actions.”",
+          "url": "/api/rules/117.2c"
+        },
+        {
+          "id": "CR 117.2d",
+          "title": "Rule 117.2d",
+          "kind": "rule",
+          "text": "State-based actions happen automatically when certain conditions are met. See rule 704. They’re dealt with before a player would receive priority. See rule 117.5.",
+          "url": "/api/rules/117.2d"
+        },
+        {
+          "id": "CR 117.2e",
+          "title": "Rule 117.2e",
+          "kind": "rule",
+          "text": "Resolving spells and abilities may instruct players to make choices or take actions, or may allow players to activate mana abilities. Even if a player is doing so, no player has priority while a spell or ability is resolving. See rule 608, “Resolving Spells and Abilities.”",
+          "url": "/api/rules/117.2e"
+        },
+        {
+          "id": "CR 100.6a",
+          "title": "Rule 100.6a",
+          "kind": "rule",
+          "text": "Tournaments usually consist of a series of matches. A two-player match usually involves playing until one player has won two games. A multiplayer match usually consists of only one game.",
+          "url": "/api/rules/100.6a"
+        },
+        {
+          "id": "CR 100.6b",
+          "title": "Rule 100.6b",
+          "kind": "rule",
+          "text": "Players can use the Magic Store & Event Locator at Locator.Wizards.com to find tournaments in their area.",
+          "url": "/api/rules/100.6b"
+        },
+        {
+          "id": "CR 307.5a",
+          "title": "Rule 307.5a",
+          "kind": "rule",
+          "text": "Similarly, if an effect checks to see if a spell was cast “any time a sorcery couldn’t have been cast,” it’s checking only whether the spell’s controller cast it without having priority, during a phase other than their main phase, or while another object was on the stack.",
+          "url": "/api/rules/307.5a"
+        }
+      ],
+      "sampling": {
+        "model": "qwen/qwen3.8-27b",
+        "temperature": 0.1,
+        "max_tokens": 3500,
+        "reasoning_effort": "low",
+        "stream": true,
+        "seed": 42
+      },
+      "prompt_sha256": "577622f10e3d82ccedca9f1a1b0780ac42fba761023184d0ebb3cd75fc2e6185",
+      "metrics": {
+        "evidence_recall": 1.0,
+        "all_evidence_found": true,
+        "missing_evidence": [],
+        "retrieved_count": 41,
+        "context_characters": 13722,
+        "citations": [
+          "CR 100.3",
+          "MTR 3.9"
+        ],
+        "invalid_citations": [],
+        "citation_id_precision": 1.0
+      },
+      "review": {
+        "case_id": "g01-random-paper-procedure",
+        "repeat": 1,
+        "answer_sha256": "c27e16bf99abc872231931c73a67e0a6a7fe02037b3ccdbc6005197b8ec230cd",
+        "criteria": {
+          "g01-random-paper-procedure.1": true,
+          "g01-random-paper-procedure.2": false
+        },
+        "citations_supported": false,
+        "unsupported_or_contradictory_claims": true,
+        "abstained": false,
+        "notes": "Answers directly with fair physical examples, but incorrectly applies the Tournament Rules die-roll guidance to all random outcomes and omits the legal-target restriction.",
+        "fully_correct": false,
+        "rubric_score": 0.5,
+        "outcome": "partial",
+        "reviewer": "Codex",
+        "review_method": "AI-assisted review against frozen criteria and supplied official rule excerpts; not independently reviewed by a Magic judge."
+      }
+    }
+  ],
+  "summary": {
+    "completed": 1,
+    "attempted": 1,
+    "errors": 0,
+    "expected_attempts": 1,
+    "truncated_answers": 0,
+    "unknown_finish_reason": 0,
+    "correct_and_complete": 0,
+    "mean_evidence_recall": 1.0,
+    "all_evidence_cases": 1,
+    "answers_with_citations": 1,
+    "citation_id_precision": 1.0,
+    "median_seconds": 7.2727,
+    "p95_seconds": 7.2727,
+    "median_first_visible_token_seconds": 4.6032,
+    "unsupported_claim_answers": 1,
+    "semantic_citation_failures": 1,
+    "reviewed": 1,
+    "fully_correct": 0,
+    "reviewed_accuracy": 0.0,
+    "mean_rubric_score": 0.5
+  },
+  "finished_at": "2026-10-13T05:07:32.088969+00:00"
+}

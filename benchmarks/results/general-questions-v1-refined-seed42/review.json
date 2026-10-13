@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v1-refined-seed42",
+  "suite_sha256": "ec704535e2996f2bd49f8372c13770fb338087bc8d2430e2d9f4c3f6dd2d4f50",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against frozen criteria and supplied official rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "0be85c43c41cd649339ddfa9a7d82548c649cc863af0d1cc773f45693ef2d38c",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Answers without a follow-up and includes legal-target handling, but extends die-roll guidance to other choices and suggests an uneven two-coin procedure for three outcomes."
+    }
+  ]
+}

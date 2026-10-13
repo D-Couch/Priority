@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v1-seed42",
+  "suite_sha256": "ec704535e2996f2bd49f8372c13770fb338087bc8d2430e2d9f4c3f6dd2d4f50",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against frozen criteria and supplied official rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "c27e16bf99abc872231931c73a67e0a6a7fe02037b3ccdbc6005197b8ec230cd",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Answers directly with fair physical examples, but incorrectly applies the Tournament Rules die-roll guidance to all random outcomes and omits the legal-target restriction."
+    }
+  ]
+}
