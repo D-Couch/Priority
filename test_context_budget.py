@@ -28,6 +28,8 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('Do not invent hypothetical card text, game states, or examples',ANSWER_CONTRACT)
         self.assertIn('shuffled identical slips are a simple method',ANSWER_CONTRACT)
         self.assertIn('suggest a die only when its faces can be mapped evenly',ANSWER_CONTRACT)
+        self.assertIn('without a hypothetical example or invented outcome',ANSWER_CONTRACT)
+        self.assertIn('state the relevant branches instead of assuming it',ANSWER_CONTRACT)
 
     def test_tournament_rule_excerpt_is_packed_before_broad_rules(self):
         history=[{'role':'user','content':'How does a random die roll work?'}]
