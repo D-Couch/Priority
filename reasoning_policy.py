@@ -15,7 +15,7 @@ OPENAI_EFFORTS = {
 # evaluations. This is deliberately a small keyword policy, not a correctness
 # classifier; callers must still review benchmark results before enabling it.
 HIGH_RISK_QUERY = re.compile(
-    r'\b(?:trample|deathtouch|lifelink|fights?|replacement|apnap|'
+    r'\b(?:trample|deathtouch|lifelink|fights?|replacement|apnap|priority|legend(?:ary)?|'
     r'trigger(?:s|ed|ing)?|copy|copied|copying|clone|blocked)\b|'
     r'\bgoes? on (?:the )?stack\b|'
     r'\b(?:damage is )?prevented\b',

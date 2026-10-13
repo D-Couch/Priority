@@ -22,6 +22,8 @@ class ReasoningPolicyTests(unittest.TestCase):
             'My creature fights another creature.',
             'I copy a creature and get counters?',
             'My attacker is blocked. How much damage gets through?',
+            'Do I get priority after casting this spell?',
+            'Can I respond to the legend rule?',
         ]
         for question in questions:
             with self.subTest(question=question):
