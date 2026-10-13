@@ -106,6 +106,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [general-questions-v1-refined-seed42](results/general-questions-v1-refined-seed42/report.md) | general-questions-v1 | `0b0325030e` | 0/1 | 0 | 0 | 100.0% | 10.86 |
 | [general-questions-v1-concise-seed42](results/general-questions-v1-concise-seed42/report.md) | general-questions-v1 | `2935da7b0d` | 1/1 | 1 | 0 | 100.0% | 7.96 |
 | [general-answer-heldout-seed42](results/general-answer-heldout-seed42/report.md) | heldout-v1 | `2935da7b0d` | 0/0 | pending / n/a | 0 | 79.1% | 7.91 |
+| [fight-rule-retrieval-heldout-seed42-venv](results/fight-rule-retrieval-heldout-seed42-venv/report.md) | heldout-v1 | `96180d5652` | 0/0 | pending / n/a | 0 | 82.2% | 7.59 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
