@@ -149,6 +149,9 @@ TOPICS = [
     (r'dies|die\b|death', ['700.4', '603.6c', '603.10a']),
     (r'mana.*abilit|tap.*land|tap.*mana', ['605.1a', '605.3b']),
     (r'attack|block|combat|first strike|double strike|trample', ['508', '509', '510', '702.4', '702.7', '702.19']),
+    # Fight damage is not combat damage, so combat keywords such as double
+    # strike do not modify it. Keep the explicit fight rule with these queries.
+    (r'\bfight(?:s|ing)?\b', ['701.14']),
     (r'trigger|enters|entering', ['603']),
     (r'\bmana value\b|converted mana cost', ['202.3', '202.3e', '202.3f', '107.3a']),
     (r'\binitiative\b|undercity|venture into the dungeon', ['726.2', '726.5']),
