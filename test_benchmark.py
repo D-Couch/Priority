@@ -73,6 +73,23 @@ class BenchmarkTests(unittest.TestCase):
         new['results'][1]={'error':'prompt preparation failed','sampling':None}
         self.assertEqual(benchmark.validate_comparison(old,new,['sampling.reasoning_effort']),[])
 
+    def test_comparison_effort_values_exclude_pre_generation_errors(self):
+        def row(case_id, effort, error=None):
+            value={'case_id':case_id,'repeat':1,'error':error,
+                   'metrics':{'evidence_recall':1,'all_evidence_found':True,'citations':[],'invalid_citations':[]},
+                   'timing':{'total_seconds':1},'diagnostics':{'finish_reason':'stop'},
+                   'review':{'fully_correct':True,'rubric_score':1,'unsupported_or_contradictory_claims':False,
+                             'citations_supported':True,'outcome':'correct'}}
+            value['sampling']={'model':'qwen','temperature':.1,'max_tokens':3500,'stream':True,'seed':42,'reasoning_effort':effort} if effort else None
+            return value
+        common={'label':'run','git':{'commit':'abc'},'status':'complete','expected_attempts':2,'suite_sha256':'s','references_sha256':'r','corpus_sha256':'c',
+                'model':'qwen','model_runtime':{},'seeds':[42],'repeats':1,'mode':'full','case_order':['a','b'],'warmup':True}
+        old={**common,'results':[row('a','low'),row('b','low')]}
+        new={**common,'results':[row('a','none'),row('b',None,'prompt preparation failed')]}
+        report=benchmark.compare(old,new,['sampling.reasoning_effort'])
+        self.assertIn("['\"low\"'] → ['\"none\"']",report)
+        self.assertNotIn('server default',report)
+
     def test_prompt_budget_experiment_requires_explicit_allowance(self):
         old={'suite_sha256':'s','references_sha256':'r','corpus_sha256':'c','model':'m','model_runtime':{},'seeds':[42],'repeats':1,'mode':'full','case_order':['a'],'warmup':True,'retrieval':{'mode':'lexical'},'context_budget':{'max_prompt_tokens':4600},'status':'complete','expected_attempts':1,'results':[{'sampling':{'temperature':0.1}}]}
         new={**old,'context_budget':{'max_prompt_tokens':2800}}

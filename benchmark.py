@@ -321,7 +321,7 @@ def compare(old, new, allow_changes=()):
                 lines[4:4] = [f"- `{field}`: {runtime_values(old)} → {runtime_values(new)}"]
                 continue
             key=field.removeprefix('sampling.')
-            values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
+            values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results'] if not (r.get('error') and r.get('sampling') is None)})
             lines[4:4] = [f"- `{field}`: {values(old)} → {values(new)}"]
     for key,title,pct,lower in [('reviewed_accuracy','Reviewed accuracy',True,False),('mean_evidence_recall','Expected-evidence recall',True,False),('citation_id_precision','Citation ID validity',True,False),('median_seconds','Median latency (s)',False,True),('p95_seconds','p95 latency (s)',False,True),('unsupported_claim_answers','Answers with unsupported claims',False,True),('semantic_citation_failures','Citation-support failures',False,True),('errors','Request errors',False,True),('truncated_answers','Truncated answers',False,True),('correct_and_complete','Correct and normally completed',False,False)]:
         av,bv=a[key],b[key]
