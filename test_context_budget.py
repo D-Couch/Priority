@@ -21,6 +21,8 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('do not present MTR 3.9 as governing every random effect',ANSWER_CONTRACT)
         self.assertIn('For random-target questions, do not add unrelated die-roll or tournament guidance',ANSWER_CONTRACT)
         self.assertIn('Never mention a rule number in plain prose without its bracketed citation',ANSWER_CONTRACT)
+        self.assertIn('Do not assume an unstated keyword or game fact',ANSWER_CONTRACT)
+        self.assertIn('describe damage to creatures as damage marked rather than toughness lost',ANSWER_CONTRACT)
         self.assertIn('only legal targets belong in the pool',ANSWER_CONTRACT)
         self.assertIn('Never suggest an unequal sequential coin-flip method',ANSWER_CONTRACT)
 
