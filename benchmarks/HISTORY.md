@@ -93,8 +93,15 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [key-priority-gameplay](results/key-priority-gameplay/report.md) | gameplay-v1 | `14003d0673` | 19/20 | 19 | 0 | 100.0% | 7.01 |
 | [key-priority-heldout](results/key-priority-heldout/report.md) | heldout-v1 | `14003d0673` | 29/32 | 29 | 0 | 82.0% | 7.52 |
 | [key-priority-novel](results/key-priority-novel/report.md) | novel-v1 | `14003d0673` | 16/20 | 16 | 0 | 82.5% | 6.20 |
+| [copy-priority-fix-novel](results/copy-priority-fix-novel/report.md) | novel-v1 | `855024db87` | 17/20 | 17 | 0 | 87.5% | 5.95 |
+| [copy-priority-fix-mechanics-seed42](results/copy-priority-fix-mechanics-seed42/report.md) | mechanics-v1 | `855024db87` | 18/20 | 18 | 0 | 78.3% | 6.81 |
+| [copy-priority-fix-mechanics-seed43](results/copy-priority-fix-mechanics-seed43/report.md) | mechanics-v1 | `855024db87` | 18/20 | 18 | 0 | 78.3% | 7.14 |
+| [copy-priority-fix-gameplay](results/copy-priority-fix-gameplay/report.md) | gameplay-v1 | `855024db87` | 20/20 | 20 | 0 | 100.0% | 7.15 |
+| [copy-priority-fix-heldout](results/copy-priority-fix-heldout/report.md) | heldout-v1 | `855024db87` | 29/32 | 29 | 0 | 82.0% | 7.43 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
 Review-note correction: [atomic-sections](results/atomic-sections/review-addendum.md).
 Review-note correction: [heldout-baseline](results/heldout-baseline/review-addendum.md).
+Review-note correction: [key-priority-gameplay](results/key-priority-gameplay/review-addendum.md).
+Review-note correction: [prototype-priority-novel](results/prototype-priority-novel/review-addendum.md).
