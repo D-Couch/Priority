@@ -117,12 +117,19 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [precise-conditions-general-v2-seed42](results/precise-conditions-general-v2-seed42/report.md) | general-questions-v2 | `f12fe9d244` | 0/0 | pending / n/a | 0 | 90.0% | 10.06 |
 | [final-general-v2-seed42](results/final-general-v2-seed42/report.md) | general-questions-v2 | `abe822bdac` | 3/5 | 3 | 0 | 90.0% | 8.09 |
 | [packed-target-rules-general-v2-seed42](results/packed-target-rules-general-v2-seed42/report.md) | general-questions-v2 | `1ae326ef82` | 0/0 | pending / n/a | 0 | 100.0% | 7.33 |
+| [concise-general-v2-seed42](results/concise-general-v2-seed42/report.md) | general-questions-v2 | `b26e4ea449` | 0/0 | pending / n/a | 0 | 90.0% | 7.66 |
+| [concise-heldout-seed42](results/concise-heldout-seed42/report.md) | heldout-v1 | `b26e4ea449` | 0/0 | pending / n/a | 0 | 80.4% | 7.23 |
+| [conditional-general-v2-seed42](results/conditional-general-v2-seed42/report.md) | general-questions-v2 | `5abb9f298a` | 0/0 | pending / n/a | 0 | 90.0% | 7.52 |
+| [conditional-heldout-seed42](results/conditional-heldout-seed42/report.md) | heldout-v1 | `5abb9f298a` | 0/0 | pending / n/a | 0 | 81.1% | 7.78 |
+| [focused-general-v2-seed42](results/focused-general-v2-seed42/report.md) | general-questions-v2 | `9bd6927e08` | 4/5 | 4 | 0 | 90.0% | 10.27 |
+| [focused-heldout-seed42](results/focused-heldout-seed42/report.md) | heldout-v1 | `9bd6927e08` | 28/32 | 28 | 0 | 80.4% | 7.49 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
 Review-note correction: [atomic-sections](results/atomic-sections/review-addendum.md).
 Review-note correction: [citation-contract-heldout-seed42](results/citation-contract-heldout-seed42/review-addendum.md).
 Review-note correction: [fight-rule-retrieval-heldout-seed42-venv](results/fight-rule-retrieval-heldout-seed42-venv/review-addendum.md).
+Review-note correction: [focused-heldout-seed42](results/focused-heldout-seed42/review-addendum.md).
 Review-note correction: [heldout-baseline](results/heldout-baseline/review-addendum.md).
 Review-note correction: [key-priority-gameplay](results/key-priority-gameplay/review-addendum.md).
 Review-note correction: [prototype-priority-novel](results/prototype-priority-novel/review-addendum.md).

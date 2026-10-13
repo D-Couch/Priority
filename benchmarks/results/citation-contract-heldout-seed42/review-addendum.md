@@ -1,0 +1,5 @@
+# Product-intent review addendum
+
+The frozen h31 and h32 criteria were written before the user clarified that general rules questions should receive a direct or conditional answer instead of a follow-up-first response. Their original criterion grades remain unchanged: h31 is 0/2 and h32 is 1/2. Both answers give the general rule first and invite exact card text only after providing useful guidance, so they meet the updated product preference. Counting those two as product-aligned gives 28/32 for this run. h30 is not counted as aligned: this run assumes the attacker has trample although the question does not say so.
+
+Three answers contain unsupported or imprecise claims: h08 calls indestructible the “only” way to prevent destruction; h23 says the 4/4 has “1 toughness remaining” instead of 3 damage marked; h30 assumes trample. The review also records four semantic citation-support gaps, distinct from whether the core ruling is correct. This supplementary score is AI-assisted, not independent judge validation.

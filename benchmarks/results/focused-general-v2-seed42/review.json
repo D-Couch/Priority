@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-general-v2-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen suite rubric and the exact supplied rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "a033af62d606bf982e00e95dbef62a99bb9935366ea5023eda0fac1cf3269d0a",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Gives equal-chance paper methods and correctly limits MTR 3.9 to die-roll actions. It omits the suite criterion that random targets must be legal, although that detail is not needed to describe the physical method."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "31ba66bc79078fec92980455073d6aa968fccb4de4f02e1727dfa987dfb07137",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "f76c832901f019e76e0aa526d07900e8d1dd8e562a4556a19afa8d721c6cdf4e",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "594a59d1095827e501b0c162b9a98d9ad3a52bc6e5cb90a28fd12feb5f07c647",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly describes the chooser and sequential re-evaluation. The sourced example from CR 616.1f is relevant and accurate."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "370d419e0478e2841d8899e7f11a2ff08e85949645314d49f47af19328f8f478",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    }
+  ]
+}

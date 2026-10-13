@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "conditional-general-v2-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "",
+  "review_method": "",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "2877071d359e6671c76e2b7ab606fd3f328140336c4764ce8914386cb5a6131c",
+      "criteria": {
+        "g01-random-paper-procedure.1": null,
+        "g01-random-paper-procedure.2": null
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": null,
+      "abstained": null,
+      "notes": ""
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "be3a77bd21593295f5aa7504ac08f98465286b5cf0bf9aeb17619fd19d44f735",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": null,
+        "g02-copy-counters-and-bonuses.2": null
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": null,
+      "abstained": null,
+      "notes": ""
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "6ba1d033561ffb6f0d696756c675eae600a49c297c1d3cdcabb4e3ca359a1360",
+      "criteria": {
+        "g03-fight-and-double-strike.1": null,
+        "g03-fight-and-double-strike.2": null
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": null,
+      "abstained": null,
+      "notes": ""
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "eabb56ad9e8d7f1e34f0b941aca16c764c0431e6eb5389bcb308ba1ff3add386",
+      "criteria": {
+        "g04-replacement-order-general.1": null,
+        "g04-replacement-order-general.2": null
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": null,
+      "abstained": null,
+      "notes": ""
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "91160c555a29a52e3822a096631ada7ea90ad742e6485c994f882f9a301bf1a8",
+      "criteria": {
+        "g05-protection-and-random-target.1": null,
+        "g05-protection-and-random-target.2": null
+      },
+      "citations_supported": null,
+      "unsupported_or_contradictory_claims": null,
+      "abstained": null,
+      "notes": ""
+    }
+  ]
+}

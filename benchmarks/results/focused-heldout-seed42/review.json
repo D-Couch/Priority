@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-heldout-seed42",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen suite rubric and the exact supplied rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "18b5970e8f494f8749dc6634565d66ec9613d65d448fbf1c99f58f22b32c2383",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "4ee4856f45305d5eaf2efa219d85dbc8ff5a5229533e75a2ffd018579edc4ffb",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "4d24426dfc6cbaa2f3b5f2022d14c5ef62cc4bb54ca49f63f4807ba122670501",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The conclusion is correct. CR 405.1 and 405.4 describe stack objects but do not directly establish that removing a triggered ability source does not remove the ability; the direct source-removal rule is CR 113.7a."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "b57496648b81287b35ac544712c0eaed06c40477e690dd1c09293c2620074376",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "e469e4d6d65cb242d87abda27c8f10b3058cf774ad1ecca12b87a12ba3f27a80",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "a242e1f6662d7f534f2b948ca9a1dca130a8aca0d8cb8fad509cbde9ac95c5c1",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "2c1c5dff3044b9b453bdb154a8c4913a28b5ad759052ff19e8b0b596fd7eb4d0",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "b81edf891731ab3da448a7e95714d76d4af988d31524330a07bd8a42d8bfc702",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "a54c1054c842d43c5c6debedd0bc8da6384fa9949f966b10ba3511d9bbce0345",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "c51b25757e17467ee1ce1c4ac06531a1d1d6a85ab016b31b750e2ceaa2e0b68f",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "86ccdf7462a1526be68b6053eb9434915fb720a3e4293ed338b251279dd8cb4c",
+      "criteria": {
+        "h11-ward-uncounterable.1": false,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says Abrupt Decay is not countered even when ward is unpaid. The first frozen criterion specifically requires saying Ward triggers; the answer never states that explicitly."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "222fd6e1cdc4953e5196a647e10982d6c316cb953c3516f2b9aece2fb5ddbe2c",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "796c825ee3c9a7e12265d49fb7c8e10da2f3f3df1ae328edda2ab498036b2803",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "b2ec9e2eb3926b993ee63d72823a3978b45ba1854b5435a16bbb6af677a54bce",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "b1e37b7956cb78c1bbd55ba80461a04290e066d18e0a1fb74e92c2fb36c902ad",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "6585abf42448883232af2e7a7776b3fe9fb96999d625d1794398f14d64d93291",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "41d6166071e47675c3b7370a8fceed85afd24075eb48f32f753a080908b16d0e",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "231d06bc50c1eecd9a76dc7361d1976878ee71273db62dcd5829e05005f47601",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "f052e02f5757098872d5517b4f8a3d6df6445d9c79958cdd107ba7ceeb5058e2",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "d871874780b73caa43cf5486b55bb5247aa09a9dd28a3da9c91312742cf917bf",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "88584fdc6e02ddcf4849b535e8ef76d69f027a3fc03ba591a4ebca02f6f9b75a",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "23844448b67dc3dfb122445702c86133f2fefdf54758748008bf34b5a79af6d9",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "88ecac4c3fffeb8c1701f658d7437fa2599c5c623173aaaba8483f5e13c9bca3",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "8bb537a81c8a15158bb24d05c0d1db6a61d788a0930fc60bc5ebe5b5ca6e34f4",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "e414263c410485e0f50205ee4cb6321d39a6efb2599d05c4c55a9679794bd7b9",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "f606c0b2da9e7b8264496c89690ea891631fad3dbaa29759328e703a9be9b223",
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "8ee9e1fab1926ba73aa8ee7fd53c04af351e171023705ff68ecb5da631e43a80",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "7aa50d015e473a1f1d5d7f3543937df5fb8e11c669d330d49e076a10ce6c99a1",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "10437cac4a0e7e23ce3338c531f03cdaca19d9d5c798fb489927c7da302cff82",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer addresses the scenario accurately and cites the supplied supporting rules."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "a7aa0cf728ba632dfd6de6a0a7a2f068ce0df7c575a6d0bce90f2e6235f30cb1",
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Gives correct conditional outcomes for both trample and no-trample cases. Frozen criterion 1 requires asking for stats/abilities, which conflicts with the updated product preference for a useful conditional answer; counted as product-aligned in the addendum."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "d69805b83c9ed0e08053d460e660f606e5d78b6c19e0b06e737ec53aae809764",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Gives the general copy rule directly and correctly, matching the updated product preference. Both frozen criteria require asking for specifics and reject a definitive general answer; counted as product-aligned in the addendum."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "67442c30fcb9f73123de11fa95f7c4fbb174fe4e0a48ddb0054cf1155b3fe88d",
+      "criteria": {
+        "h32-ambiguous-replacements.1": false,
+        "h32-ambiguous-replacements.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "States the general rule but adds hypothetical examples despite the exact effects being unspecified. It does not request the starting event details and does not follow the concise answer contract; the frozen criteria are not met."
+    }
+  ]
+}
