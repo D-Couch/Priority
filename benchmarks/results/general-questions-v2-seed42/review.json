@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v2-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen v2 rubric and supplied official rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "25394efbde9c851e29a382a5b5fb960583bc694db10c928b65c26fb2844e9e48",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Directly answers with fair physical methods, scopes MTR 3.9 to die rolls, and limits random targets to legal targets. Each citation is present and supports the associated claim."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "8b5a313d694ce73f6ae4217547350a3054854b19c4b9287a6aada9a9d1356e05",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly distinguishes copiable values from counters and continuous effects. CR 707.2 directly supports the answer; no exact card name is needed for this general question."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "394da6507c06d993443b17ac1a119f27e05b5973af47e0cf54424fd999abcafb",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that fight damage occurs once per creature and is not combat damage, so double strike does not add another fight damage event. All three cited rules support the answer."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "f7a52c663a1bf988b1666589460c2c1651fa92a7b85db154ec7b00469efc60d3",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies the affected player/object controller and explains sequential re-evaluation. CR 616.1/616.1f support the core answer; cited 614.6/614.7 excerpts support the explanation. The hypothetical example is conditional and does not invent a result for the user\u2019s unspecified effects."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "c3f2da2c94b4e50877fdd75496a59e3f66b12ef08b38dc3cc828d3e3b4944fe0",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The ruling is substantively correct and gives a direct general answer, but the response says CR 702.16 is absent. Its only citation is CR 601.2c, which establishes target selection, not that protection from red makes this target illegal. The needed protection rule was not retrieved; this is a retrieval/evidence gap and should not be counted fully correct."
+    }
+  ]
+}
