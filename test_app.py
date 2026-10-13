@@ -187,5 +187,17 @@ class KnowledgeTests(unittest.TestCase):
         _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
         self.assertTrue({'CR 601.2c','CR 115.2','MTR 3.9'}<={s['id'] for s in selected})
 
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_random_target_with_protection_retrieves_protection_rule(self):
+        question='A red spell says target creature chosen at random. Can a creature with protection from red be selected?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        ids={s['id'] for s in sources}
+        self.assertIn('CR 702.16b',ids)
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 702.16b',{s['id'] for s in selected})
+
 if __name__=='__main__':
     unittest.main()
