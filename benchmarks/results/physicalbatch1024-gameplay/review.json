@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "run_id": "physicalbatch1024-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review of every answer against the frozen rubric and supplied excerpts; not independent judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "cc2a1aca56d6cf584819ffd4f991243229be5c7a7af44f28c7817cac4d589329",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct ruling; the expanded explanation accurately defines a mana ability and cites supplied rules.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "028a68cc915f63c973fbea16eeef7a9958009c96e5fe12c399bcd1099e0a650f",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct priority timing and all-players-pass resolution condition.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "e7f9a0cb514dc3385e48f95b5b728a5944bb0fff3ab14a77fe447279f12e41ed",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: all targets are illegal, so Defiant Strike does not resolve and no card is drawn.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "e0a19498e82c26b9e54ca224162e6846005e1c190e275791986747acf4fb1a71",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: with one legal target the spell resolves and affects that target.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "cd48e2a7111df0cdd8662eadcbf188a5716eb0ac093df1ac4b316123e9a88e41",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct assignment and explanation: indestructible does not increase lethal damage required for trample.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "a5696877e979e533c982b979b10b0b9316e4583d00e351550e5ec403cd5f3c5d",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: one damage is lethal for trample assignment due to deathtouch, leaving four for the player.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "06bb1f50c4508501b5f78f42bc04e94f8bf52607bfd68cb3b7a9421b074cbee7",
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrect. Indestructible does not stop the zero-toughness state-based action; the creature is put into its owner\u2019s graveyard. Both criteria fail.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "af9a189695a21af4368906d3e319c99bd8b89ee646f242eeaff8142a82e4047f",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the commander first reaches the graveyard, satisfying dies, and may then be moved to the command zone.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "6816873d59f09d7a0202363f55b597a9c507703d03ab20784b923aa0c1ee1b28",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: only the two prior casts from the command zone count, for {4}.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "3cd6a5e3d4f2418a591a5f16e67ae151bb9b653622b6ea516510d17c31172206",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Rest in Peace replaces the graveyard event with exile, so Blood Artist does not trigger.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "664875d9dd3a2a1c51f65ba36a0269d8538617ac75e71389b5494a5fc73bceb1",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: two replacement effects yield four tokens without looping; cited rulings support the result.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "efc883475273115b004eadda07df5cc9c3c716f2dbe0992beceac2438c2df31e",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct affected-player choice and both damage-order calculations.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "c37367421697fb3e7bd13c58650f1853f78eda01a8a9ae45c5bb7eaf6d6b64dd",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Alice puts her trigger on first, Bob on top, so Bob resolves first.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "c9009183ae01fcff6f237be9ea314629261a8c3b4af7dd41fb1942c2b51dc7d7",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct layer ordering gives 2/2 regardless of timestamp.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "d90f34645b8729bcffa137a8cb9f0507fbba72792a7548d979216979d1545ac9",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: hexproof restricts opponents, not the controller.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "9b02db0a0252f84223c467bec3eb73a8aad88c9f2c6dfdcd3a628f8d5152b0fd",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the attacker remains blocked with no blocker and has no trample, so it assigns no player damage.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "c23ac87ce5416e4b1601e3246fd33ff578a6b1d09366ea7a08abf21bfd9a77ef",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: a token that left the battlefield cannot return and ceases to exist at the next state-based-action check.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "ceeb1e6a9e3f7758f4867ec34ca68e2c94dec7ccbdc69c380ff49d1bef8d17c0",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: sacrificing the creature does not invoke the tap/untap summoning-sickness restriction.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "81fdbd0cfe27e6671fa3089b2c5358d785c479f98d008fbecf0a6e87bf18de86",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the legend state-based action happens before priority, so there is no response window.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "294f889e0005cf369ce9c3c90ca3099f685846456069ab61c4a2136a41622bbd",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct clarification request asks for protection quality and removal details before ruling.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the prior criterion and citation review because answer text and complete supplied source sets match the reviewed baseline exactly. Not independent judge validation."
+    }
+  ]
+}
