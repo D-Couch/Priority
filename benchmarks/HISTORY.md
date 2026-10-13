@@ -66,6 +66,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [reasoning-off-parallel1-currentprompt](results/reasoning-off-parallel1-currentprompt/report.md) | gameplay-v1 | `b48a519ad9` | 18/20 | 18 | 0 | 96.2% | 3.90 |
 | [final-guardrails-low-gameplay](results/final-guardrails-low-gameplay/report.md) | gameplay-v1 | `f27585c076` | 18/20 | 18 | 0 | 96.2% | 7.85 |
 | [reasoning-off-guardrails-gameplay](results/reasoning-off-guardrails-gameplay/report.md) | gameplay-v1 | `9a634be925` | 15/20 | 15 | 0 | 96.2% | 3.79 |
+| [restored-prompt-low-gameplay](results/restored-prompt-low-gameplay/report.md) | gameplay-v1 | `22f5a005af` | 20/20 | 20 | 0 | 96.2% | 7.44 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
