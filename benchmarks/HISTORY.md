@@ -58,6 +58,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [low-prompt3500-gameplay](results/low-prompt3500-gameplay/report.md) | gameplay-v1 | `7934e33ec5` | 18/20 | 18 | 0 | 93.8% | 8.50 |
 | [cached-card-alias-gameplay](results/cached-card-alias-gameplay/report.md) | gameplay-v1 | `321272a4b9` | 20/20 | 20 | 0 | 96.2% | 10.94 |
 | [cached-card-alias-gameplay-repeat](results/cached-card-alias-gameplay-repeat/report.md) | gameplay-v1 | `321272a4b9` | 20/20 | 20 | 0 | 96.2% | 10.90 |
+| [parallel1-gameplay](results/parallel1-gameplay/report.md) | gameplay-v1 | `a8b3cb0f59` | 20/20 | 20 | 0 | 96.2% | 6.92 |
+| [parallel1-gameplay-repeat](results/parallel1-gameplay-repeat/report.md) | gameplay-v1 | `a8b3cb0f59` | 20/20 | 20 | 0 | 96.2% | 6.89 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
