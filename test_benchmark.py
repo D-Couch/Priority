@@ -156,4 +156,18 @@ class BenchmarkTests(unittest.TestCase):
         new['corpus_sha256']='changed'
         self.assertIn('corpus_sha256',benchmark.validate_comparison(old,new,['retrieval']))
 
+    def test_answer_contract_experiment_requires_explicit_allowance(self):
+        row={'case_id':'case','repeat':1,'sampling':{'temperature':.1},
+             'metrics':{'evidence_recall':1,'all_evidence_found':True,'citations':[],'invalid_citations':[]},
+             'timing':{'total_seconds':1,'first_visible_token_seconds':.2},'diagnostics':{'finish_reason':'stop'},
+             'review':{'fully_correct':True,'rubric_score':1,'unsupported_or_contradictory_claims':False,'citations_supported':True,'outcome':'correct'}}
+        common={'status':'complete','expected_attempts':1,'answer_contract_sha256':'before','suite_sha256':'s','references_sha256':'r','corpus_sha256':'c',
+                'label':'before','git':{'commit':'a'},'model':'qwen','model_runtime':{},'seeds':[42],'repeats':1,'mode':'full','case_order':['case'],'warmup':True,'results':[row]}
+        old=copy.deepcopy(common)
+        new=copy.deepcopy(old);new['label']='after';new['git']={'commit':'b'};new['answer_contract_sha256']='after'
+        self.assertIn('answer_contract',benchmark.validate_comparison(old,new))
+        self.assertEqual(benchmark.validate_comparison(old,new,['answer_contract']),[])
+        report=benchmark.compare(old,new,['answer_contract'])
+        self.assertIn('`answer_contract_sha256`: before → after',report)
+
 if __name__=='__main__':unittest.main()

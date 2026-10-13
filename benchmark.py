@@ -233,7 +233,7 @@ def write_history():
 
 
 MODEL_RUNTIME_FIELDS = {'model_runtime.parallel':'parallel', 'model_runtime.eval_batch_size':'eval_batch_size', 'model_runtime.physical_batch_size':'physical_batch_size', 'model_runtime.speculative_draft_max_tokens':'speculative_draft_max_tokens'}
-EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens', *MODEL_RUNTIME_FIELDS}
+EXPERIMENT_FIELDS = {'answer_contract', 'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens', *MODEL_RUNTIME_FIELDS}
 
 
 def validate_comparison(old, new, allow_changes=()):
@@ -253,6 +253,7 @@ def validate_comparison(old, new, allow_changes=()):
     elif old.get('model_runtime')!=new.get('model_runtime'):
         issues.append('model_runtime')
     if 'retrieval' not in allow_changes and old.get('retrieval',{'mode':'lexical'}) != new.get('retrieval',{'mode':'lexical'}):issues.append('retrieval')
+    if 'answer_contract' not in allow_changes and old.get('answer_contract_sha256') != new.get('answer_contract_sha256'):issues.append('answer_contract')
     if 'context_budget.max_prompt_tokens' not in allow_changes and old.get('context_budget') != new.get('context_budget'):issues.append('context_budget')
     unknown = set(allow_changes) - EXPERIMENT_FIELDS
     if unknown:
@@ -302,6 +303,9 @@ def compare(old, new, allow_changes=()):
     if allow_changes:
         lines[4:4] = ['Declared experimental variables: '+', '.join(sorted(allow_changes))+'. All other checked settings remain matched.','']
         for field in sorted(allow_changes):
+            if field == 'answer_contract':
+                lines[4:4] = [f"- `answer_contract_sha256`: {old.get('answer_contract_sha256', 'not recorded')} → {new.get('answer_contract_sha256', 'not recorded')}"]
+                continue
             if field == 'retrieval':
                 lines[4:4] = [f"- `retrieval`: {old.get('retrieval', {'mode':'lexical'})} → {new.get('retrieval')}"]
                 continue
@@ -408,6 +412,7 @@ def run_benchmark(args):
          'model_runtime':runtime() if args.mode=='full' else {},
          'environment':{'python':platform.python_version(),'sqlite':sqlite3.sqlite_version,'os':platform.system(),'machine':platform.machine()},
          'implementation_sha256':{p:sha(ROOT/p) for p in ['knowledge.py','server.py','generation.py','context_budget.py','vector_search.py','requirements.txt','benchmark.py']},
+         'answer_contract_sha256':hashlib.sha256(context_budget.ANSWER_CONTRACT.encode()).hexdigest(),
          'retrieval':__import__('vector_search').configuration(),
          'context_budget':{'max_prompt_tokens':context_budget.MAX_PROMPT_TOKENS},
          'mode':args.mode,'repeats':args.repeats,'seeds':seeds,'case_order':[c['id'] for c in suite['cases']],
