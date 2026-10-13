@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "general-questions-v2-focused-packing-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted review against the frozen v2 rubric and supplied rule excerpts; not independently reviewed by a Magic judge.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "25394efbde9c851e29a382a5b5fb960583bc694db10c928b65c26fb2844e9e48",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Direct practical answer with equal-chance methods, distinguishes MTR 3.9 die-roll guidance, and states only legal targets belong in the pool. Citations support the die-roll and target-legality claims."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "8b5a313d694ce73f6ae4217547350a3054854b19c4b9287a6aada9a9d1356e05",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly distinguishes copiable values from counters and continuous effects; CR 707.2 supports the answer."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "35c15ab857f62252b3bfe98e18d965c0e651b3fc3cc88ebdcc096b48a992eff3",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains that fight damage occurs once per creature and is not combat damage, so double strike does not add another fight damage event."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "f7a52c663a1bf988b1666589460c2c1651fa92a7b85db154ec7b00469efc60d3",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The general explanation and example are accurate. However, it cites CR 614.6/614.7 for whether replaced events happen, while the main claim about who chooses and re-evaluation is only attributed in plain text to Rules 616.1/616.1f and not given clickable source citations."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "34ceb7dec816dd135fb23ac19a025f3895e53c2df3c23021684f0a414f633c9f",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correctly excludes a creature made illegal by protection and now retrieves CR 702.16b. The final sentence overgeneralizes MTR 3.9: the supplied rule applies to die-roll game actions, not every tournament randomization method or random-target effect. This remains an unsupported scope claim despite full expected-evidence recall."
+    }
+  ]
+}
