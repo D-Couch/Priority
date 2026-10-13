@@ -101,6 +101,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [poison-loyalty-retrieval-seed42](results/poison-loyalty-retrieval-seed42/report.md) | mechanics-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 95.0% | 6.80 |
 | [poison-loyalty-retrieval-seed43](results/poison-loyalty-retrieval-seed43/report.md) | mechanics-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 95.0% | 6.34 |
 | [poison-loyalty-gameplay-seed42](results/poison-loyalty-gameplay-seed42/report.md) | gameplay-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 100.0% | 7.21 |
+| [blocked-trample-heldout-seed42](results/blocked-trample-heldout-seed42/report.md) | heldout-v1 | `076f5948b2` | 30/32 | 30 | 0 | 83.6% | 7.45 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
