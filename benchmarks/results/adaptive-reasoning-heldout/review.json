@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "run_id": "adaptive-reasoning-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted; 31 answers exactly match previously reviewed outputs at the selected effort; h23 was reviewed against its frozen rubric and sources. Not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "ba94d2324d9541e29527c8b454957e0636fb2ea3dc16629e4f7e0b55b8e40789",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "d587b48ab65c42380068706753efb2d3adde2e90b10dcce4385c77240e94b1b0",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "9e54494992943458c0bb7fb66fc41381d982b68e1e8caccb46a8ef2aabf84d1d",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "cbdaa89ce51bbcfc30d8c33cbf55e9c506f80f469767705ee3bc0922cb6fbb1c",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "e6cc9e0fab907adc32774b4683b12cf12b9d6244d0ea5d305e6f180ec5c1a7f7",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "22b42ad9c9d0711c146a96a7abec1bddb8fb445ed20ad31f43465b01610caf38",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "d72f21e262f38ba8012e5040c742cdd5f20601b88a82d40344a6df589be32fcf",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "7e0c19401bb4fea4ba09c5feb642fcfb193279b9f7cc00280e850320ce397d79",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "45b51b786b263fa8ba7947853088213b731ac49bf5fcef6fe87121ba0ad4e434",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "738bc6200f075ed593706f6e6a17740b76361d936167c45e619816fbf42d69ff",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "f6331e73dffda517ab79352d037f33e4b65786f3a1c0ceba5738014f20421c35",
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "7f022009c5d0eb8312b8be28863730f889a4522d923d49c9b516411612efc281",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "89a598f67d327388954b2b498c506de1fd1ac8c3254df0426231aba0f6241202",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "c746bb6d8bb7f1649b0db81716950155905883adab5e845da4d4fa9c32641ef3",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "9aa2f50e856e3f9822222a2c894e216a930d3722538721b88cbcfdd81a6bbeb4",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "ff83c3797b8da503ba439fb18d36a92e344807ccc857d33e85aff32a751d8d97",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "40c7082bcd0c6440f0ec7f83e443b30a38325a4a11964a5a540b8f8d1775cf7c",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "7dccf05c74be7607e733e5add61fc7350a40733b8d888d0f51e7ac764c8402ac",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "d7d1182f8ff70cae5101c7cb1123471749b96895b036a44794e2955e3b097ea2",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "43ef709307c3ef8aa6d78079371521fe7712bce00ee09b287df2d339f466855d",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "ce98d2882e868e42d3afd567fc8388f7be56fce093333862f3d197232d461a49",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "2bf702c970f2745c066ab592992566c5a1c7f2c4782685cb6d1d865cd3715aee",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "8e65f593057ce7b76ce839299bcff00f4297cb110c068fb571ea3c0bd0971e79",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The damage amounts, one damage event, and survivor are right, but says the 4/4 has \u201c1 damage on it.\u201d It actually has 3 damage marked; this is a contradictory extra rules claim."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "ced9fba7d45c67821e6b9bce7ca4fb4fffb5e4ee6ab529c677a69039e4009bf7",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "c738bfcdf3dd232d66107b31042a25f8a74d3387ce96f30571482c6d452b4589",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "d078efc7c09092edd29cb5ce8aabc142295e138c046de469aa43e7cfb92ad3f4",
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "85431b3009769a07ce378d6ae2acf6a56b972260cf0d967000cf18a080e9dc58",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "9049be3853486691791b65cd17d39ac5d90e1def751d33b526f0945fa3623e0c",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "bc37ace2d3b9b5735716b660d0642004521175541ff5d13174d2986122f8cbd8",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The material ruling addresses the scenario and its cited rule/card text supports the substantive claims.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "c0fddb401170a809c534f2e231089c48a127a2235452ddda2aa3866d83eac184",
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Does not ask for trample or other relevant details and gives an unconditional zero-damage answer. Both clarification criteria fail; the combat rule citation alone does not establish the scenario\u2019s unspecified facts.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "6802ce79504eec3f674135689d03001711a64c8653198989a04d03094cc9c6d0",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Gives a definitive answer without identifying the copy effect or the creature/enchantment. Both clarification criteria fail despite the general statement about counters/effects.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "07e853a6bbbf1ffd6cd78a7e93d69f94a1a8acdccccccc5a329ab2056325fd2b",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly asks for facts explicitly required by this scenario rubric; this is an appropriate clarification, not an unsupported refusal.",
+      "review_method": "AI-assisted; prior case-by-case review reapplied because answer text and complete ordered source set exactly match the previously reviewed run at the same reasoning effort. Not independent human Judge validation."
+    }
+  ]
+}

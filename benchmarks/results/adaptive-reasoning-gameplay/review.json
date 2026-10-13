@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "run_id": "adaptive-reasoning-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted; low/off outputs reuse matching reviewed answers and sources; the LM Studio prompt-template transport failure is explicitly marked unanswered. Not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "4708c110c742b8b422b0b84b9a74c3655f567f729c66e516a67453ee544cd7e1",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "7f4f43b98192b674caecfe21d62ad0664b5a96d39325b0fa9900af17296b2bbf",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "ec9959939d62c4761fcd0adf02959a3430be925e7240a55ecba2790fe5f9fa9d",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "35afa1cf063f9b5f7dc448b0eb2088145c3be4ea6906f6f4e4602b898ca7e964",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "54ceafbc4e29998f178fa3bfdbffca0bc22d4250dfc2ebe0db06a6504e84b2cc",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "592ba170a594ee9906f0d9b9d099627a1f20508575b183c4c81bd51769fb3caa",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "724c566d900fa14b5c4c652d1ad7de9bd251e23f3714cbb0bf1a18bba1746e2e",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "8a5ee88fa29e01c391ddd035fe812ade51e6ab5749b14204acc414ec32c5db30",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "d43a44fe30c2d26decfeacab6f1b41ac942f14158a36d0b99f265c62cb885888",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "criteria": {
+        "10-rest-in-peace.1": false,
+        "10-rest-in-peace.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "No answer was returned because LM Studio failed before inference with HTTP 502 during prompt-template processing."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "b4357c9716bd70dc8ebcc09e1637ba90312a8cff72a9dd4225d8fa518a8cbe09",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "adcac7068d73d050d215753eab0e352e5ac1a5fee9aa5548f5e2093767267f74",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "e9ed6938a3a0a4e0aa9675efc3e0084664d403c96c058f0ea7563370c41b2724",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "7795f1f71017d8b493fb43ae35fe8629caf6355abb4a2f29545eeb0683a60920",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "a4a1ac3859b5a3a6bf28c813007c70b321bde14dd24867064c89909aee804956",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "bf45ee2ddd09e7f89fecb78c720e4fd1058fc47b37d877802271664f97990f14",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "838348a9b89bd74a99ac79a2d30860939e899e81928930adb97a603301c8eebd",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored criteria for the stated scenario; cited rule/card identifiers support its material rules claims.",
+      "reviewer": "Codex",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "835ab8ac0b07c2395d8a402c00dac41d5a3a040f45eecc341d973acf0c88a35a",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "ba8b559261b972ae875c3f68b897c35c765ba59f117ce8746dd9117f296aee29",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer satisfies the authored rubric for the stated scenario; cited rule/card identifiers support its material claims.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "aaa4ab64d4ff4b688718f03cb66172d9716cb05a911778551227b5be4e800aa1",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Appropriately requests missing protection and removal details; this satisfies the scenario rubric and is a clarification, not an incorrect abstention.",
+      "review_method": "AI-assisted; re-applied the corresponding reviewed low/off-effort case evaluation because the answer text and complete ordered source set exactly match that run. Not independent human Judge validation.",
+      "reviewer": "Codex"
+    }
+  ]
+}

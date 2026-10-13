@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "run_id": "adaptive-reasoning-seed43",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted, case-by-case review against the frozen gameplay rubric and supplied sources; not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "4708c110c742b8b422b0b84b9a74c3655f567f729c66e516a67453ee544cd7e1",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "6f3ac699e2ab22a5ac5f2dbd4decbe1b9cb13e36516d2b9df4088feb1d03c197",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The direct ruling is correct, but CR 117.3b concerns priority after resolution, not the caster receiving priority after casting; the cited passage does not support this point."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "730c29d9502d35355321780a4474414e5a87ef9bd12acf9db92c6605c5bd416f",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "b68e5ccf8304fed2d97061614254b3774b74c9ad85142d582447d32f14102024",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "66c23ced6009023c6b45879759c87b4751533996f1cd88df07e9fd767dcab722",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "bfd895b6bfbc9f408681bbc1d385176e5829d81e272dfaeaa934d447c547a49c",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "6600faf8f3dac0a688c02b8f2d17dc39a26dc7f60ba04cc39897ab3529b1db4d",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "96ea135a2aaa572a8be1feee67f38d2d448479970b9d1ed05119b3655eada0d9",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "86c77e5e0843e737793eca8a621de8cba93bbc2939bf3e27fb40f216cef75552",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "588676b640d376218d5d7b88d4e35dbbc9ae4be54f4e8603995a185fd74cc111",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "510bca02196dad99e68d0069064aef642ce213a8999330a4166006124dc44573",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "06a899232f789ee88eb59b20f457d80319e01b49ffe5efef87e5fa07fcd4c337",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "2ad9bec3e24cd054243434a8e36251c0a0a5079dc943113fa19c05a2729daee9",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "5680f1d470145aae4619d0ff131c042c71631923d94ba5c410c3874b1831416b",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "479a80db6716e4eec10916ba244cb15e7582bee4c462e69b51fc11d10fd263ed",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "d0575e00f97dcba479e3c79b1ff86d51a3ca6fa3bd82f7b3771994fa66c3f2d7",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "b1ce3ce834e1b05c0bbf509d2b22d1937c714a8cbcfd76e174b0824e11bc5c02",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported.",
+      "review_method": "AI-assisted; reused the reviewed low-effort answer because text and ordered supplied source set exactly match the matched-seed low run. Not independent human Judge validation."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "ed994f258a4c4a03209e8531c0073428f6ece0b7ac7ecf21ee492104ed1665f5",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "4ccdf1f2cc0a960a7489bf0e9427e227663aa8c30b96c2fd97c6bdada4b7f6e2",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says state-based actions occur before priority, but omits that the legend rule requires keeping one of the legendary permanents."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "60f156329c090305f1ff69231b2201d986e48f1d7963a16ab1fa65d97ce788e3",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed against both frozen criteria and supplied rule/card excerpts; the answer is complete and supported."
+    }
+  ]
+}
