@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "explicit-clarification-heldout",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex (AI-assisted manual review; no independent human judge)",
+  "review_method": "Manually checked all 32 answers against the frozen rubric and supplied evidence. The two underspecified combat/copy questions still receive definitive answers and fail their clarification criteria. One extra leaving-game answer adds an unsupported destination speculation. No independent human Magic judge validation.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "94ef29569d5d206c19e1d029e5798cf8d1c3188276ea3fc2ff85d4a3233787cd"
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "547b38fdd043af20ddd66c056e37a9493dd77cb58a91a9f3d2e8f86fbd0f12f3"
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "f9d6fa4c7d997d37e76a36ea668ba0651640a59a8c6d55a7bd023e0408734f9c"
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "01eadd60405d174398fc08855d60a713cef31453eeb64ac6203e738ad6a25a7a",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the dies ability does not trigger because Rest in Peace exiles the card instead of putting it into the graveyard; both the rule/card-specific ruling citations support this."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "f974af388e943b8f0e307ae74869cec847a55963e6389f8cf3de5320139886ea"
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "36fbeb300e7744131d4c6417d3d526691001e4febd948799650e10f5a5e52b25"
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "05b21acecbaa4cd8f192a641db2f10a056ac08e45cbd31f854b56c605bf7b52b"
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "d80a2c3242e34510c92d9cb66ba18a58704d47a987fe0ef378f1a6c6b1c7c644"
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "af59beb694e3ceb24348444bb091dd89fccdd554a12ddc3076f2d4f15a1ced10"
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "2463ed849dd3de168b1ef0ed79c671ee7a73b03fcf0a736aa4f7a912d72ee2bd"
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "d289a29b2e1283e84a1a2a0a9b3958165fda8b53071ed6567511f691ec6de15c"
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "8e48bb9f082afb3575dd3964238fafc0a43336d3b1697dcfe5b6ff1d3f6a328a"
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "b08d32d29e3bd630f84055868daf5acb9d9fbc54f792cd0edad832a0a5a58ca3"
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "43481d1a40d202965621e121fb33bcc4e5dba269d810c9f6cbbe5c34507db586"
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "a5d1fb06ce27a5ab7989d20a9fe33c1efb07d7c99a59998410488b177c427e36"
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "e28ec80c6436efbbda2c153b41742a8c20ac60cda0ec5cf41d022b9c37c7ad4c"
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "777feb2ebd0706a1b35835b1cd776c443867abe96f3740ebedd6d66f7aef3bed",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly applies last-known information to the pre-SBA +1/+1 counter, so undying does not trigger; citations 702.93a, 603.10a, and the exact 704.8 example support it."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "6fc36ebca53117242c5ffa7252fb323188f24de602a5e2423ec220a99f199a2f"
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct ruling and explanation: “only as a sorcery” requires sorcery timing, and the stack is not empty while Bolt is pending. The card ruling also supports this restriction.",
+      "answer_sha256": "d5ff6499843341cbf807812604a3f88913ca9f417520447d37cf19dd0a311bca"
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "02240418e7153547adde2b7aa3b7dd57595a9aeec9b5dbba8b68130ab1b02efc"
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "edbed9cbc35b054453ae6540104a2fe827abcb5a16101843adeab9429672e425"
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "c481cc3690559e7bbe5c1257e2c88f3545c0474126b01e4eded97269bfe54bdd"
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer correctly reports that the 4/4 survives with one damage marked; the phrasing is correct and its rule citations support the explanation.",
+      "answer_sha256": "9355d2d9379539dbb8573162d89919da4504354efe57c9154a352abed090cbe4"
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "e00b0b8fca27e44caffe48dfc9d41bb1fb688a21872f0376b9efa5b22ac908c8"
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Core ruling is correct, but the added parenthetical speculates that the object may go to its owner’s graveyard; CR 800.4a says owned objects leave the game and does not support that destination. This is an unsupported extra claim.",
+      "answer_sha256": "942e7d0cc5f3faefb6508d431ff5498eb93d638b47bae6843fa4b7f4a8f41fae"
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "632b6f42bbc75b01255f3e6ac2d30b2d418296228e2b60f2b06ddf44a43085c3"
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "21a4f2a1771d5bb61d04a968b993363241472342ae7fc5410eaa83aedf623cfa",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies the command-zone option as a replacement effect for a move to hand or library, and distinguishes the graveyard/exile SBA in 903.9a."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "259153ec20f331fbb1fc2a4911c2b8ce88185997b64ae67d243c7f4e51b1f2d7",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies the affected opponent as chooser and computes Torbran-first as 10 and Furnace-first as 8; CR 616.1 and the supplied rulings support the order and results."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Answer addresses the stated facts and satisfies the scenario rubric; cited rule/card identifiers support its material rules claims.",
+      "answer_sha256": "4b61aa9a34e63e0062d7c8a6499e9eed6208ea93b66c200e3db12c26b0565e99"
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Still gives an unconditional zero-damage ruling without asking whether the attacker has trample or for other relevant combat details. Both clarification criteria fail.",
+      "answer_sha256": "ee4cf037431cfcd607e72c3f5c4251f6d001ab26cc7c91c624e63196beb8c871"
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Still gives a definitive answer without identifying the copy effect or the creature/enchantment. Both clarification criteria fail.",
+      "answer_sha256": "1378ec2ce08301b41b055ac3f7fd12b0d37c2a6a4ac949dce55e73758898ec6d"
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "99b1e70b45601080d06f455387a087ffc24cd5c23435609f8c3a7142feaeba8a",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Appropriately asks which replacement effects apply and avoids inventing a token total; this satisfies both frozen clarification criteria."
+    }
+  ]
+}

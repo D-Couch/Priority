@@ -85,6 +85,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [prototype-priority-heldout](results/prototype-priority-heldout/report.md) | heldout-v1 | `ad79a4ff68` | 30/32 | 30 | 0 | 82.0% | 7.51 |
 | [prototype-priority-gameplay](results/prototype-priority-gameplay/report.md) | gameplay-v1 | `ad79a4ff68` | 20/20 | 20 | 0 | 100.0% | 6.92 |
 | [answer-contract-baseline-heldout](results/answer-contract-baseline-heldout/report.md) | heldout-v1 | `d5c6fd8959` | 30/32 | 30 | 0 | 82.0% | 7.48 |
+| [explicit-clarification-heldout](results/explicit-clarification-heldout/report.md) | heldout-v1 | `23b765f61e` | 29/32 | 29 | 0 | 81.2% | 7.42 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

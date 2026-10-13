@@ -73,6 +73,8 @@ The original tags are preserved. `pre-vectorization-quality` marks this improved
 
 The latest targeted retrieval change prioritizes the Prototype Cards rules when a question asks about a prototyped card leaving the battlefield. On the 20-case novel suite, the reviewed result rose from 19/20 to 20/20, expected-evidence recall from 82.5% to 87.5%, and median latency was 5.95 seconds (6.36 seconds before). The 20-case gameplay suite stayed at 20/20; all 32 held-out answers and evidence lists were unchanged at 30/32. These are single-seed, AI-assisted development evaluations, not independent judge validation or an accuracy estimate for unseen gameplay. Full per-case comparisons are in [benchmark history](benchmarks/HISTORY.md).
 
+A stronger clarification instruction was tested on the held-out suite and rejected: it remained 29/32 versus 30/32, failed to correct two clarification cases, and introduced another unsupported claim. That prompt change was reverted; the full experiment is preserved in [its report](benchmarks/results/explicit-clarification-heldout/findings.md).
+
 For a fresh Git clone, restore the included database before starting the app:
 
 ```bash
