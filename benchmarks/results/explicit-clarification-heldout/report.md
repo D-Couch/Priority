@@ -1,6 +1,6 @@
 # explicit-clarification-heldout
 
-Status: **complete** · implementation commit `23b765f61e3d1cb7fd96869fd40ae0ff896fe3bf`
+Status: **complete** · implementation commit `a3e979858814881e7b246812582a65e20fd07351`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

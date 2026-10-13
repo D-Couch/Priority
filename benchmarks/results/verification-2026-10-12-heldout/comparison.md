@@ -1,6 +1,6 @@
 # casting-order-contract-heldout → heldout-v1 verification 2026-10-12
 
-Implementation `dea2984bcba395434fdfefe205f61543c45413af` → `0079f3e44cdab453a26a1b3e4f1cefc90c6d0102`
+Implementation `81f897e6d1edc25f37a77b0ca0d0981f1b82d5dd` → `d71b32a9917eaa66c4730550a20706900121fc47`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |

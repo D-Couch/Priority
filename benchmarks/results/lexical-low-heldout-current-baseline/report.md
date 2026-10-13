@@ -1,6 +1,6 @@
 # lexical-low-heldout-current-baseline
 
-Status: **complete** · implementation commit `20e77fc2d4a959fb91b913ed1ef26c82097e4fa9`
+Status: **complete** · implementation commit `a8ac3918d768ba7cf71b203fa2eb85a463101682`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

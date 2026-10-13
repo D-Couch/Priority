@@ -1,6 +1,6 @@
 # reasoning-low-default-gameplay → cached-card-alias-gameplay
 
-Implementation `823c4d85a146b11a5ec44de9477daf0874296a09` → `321272a4b97e6fad2f43ac49a44ddbf27a8ab8f3`
+Implementation `7901fc5fb15b2189b1d8c4d64065b8b19e6ce16e` → `b19440a2776a24fa672a30e18c701274a48d383e`
 
 - `context_budget.max_prompt_tokens`: 4628 → 4628
 Declared experimental variables: context_budget.max_prompt_tokens. All other checked settings remain matched.

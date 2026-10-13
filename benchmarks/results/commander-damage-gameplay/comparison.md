@@ -1,6 +1,6 @@
 # gameplay-v1 verification 2026-10-12 → commander-damage-gameplay
 
-Implementation `61bb104897f1aee2c425c7fec97902b918cbebaa` → `456390538f4da601b9f9f767d9436cec0ee0568c`
+Implementation `0a2a84b83f1500e74d3077e1fde377a41d4b652c` → `5c91e67f8873eb12a855b5ee38158ef342cc27a5`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |

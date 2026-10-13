@@ -1,6 +1,6 @@
 # parallel1-gameplay-repeat → reasoning-off-parallel1-currentprompt
 
-Implementation `a8b3cb0f59bbd86791b00d2200c7887589d12c82` → `b48a519ad9a0cd8a551029f7125486059145149e`
+Implementation `82bd05be6da0be624d97624c27336eeea9b70c85` → `46b65cc53d16a69631805613b4035bdf6b7379eb`
 
 - `sampling.reasoning_effort`: ['"low"'] → ['"none"']
 Declared experimental variables: sampling.reasoning_effort. All other checked settings remain matched.

@@ -1,6 +1,6 @@
 # Casting-order response-contract check
 
-Implementation under test: `dea2984` (`fix: clarify casting order in rulings`). The shared response contract states that a spell goes onto the stack at 601.2a, costs are paid while it is there at 601.2h, it becomes cast at 601.2i, and players receive no priority during casting.
+Implementation under test: `81f897e` (`fix: clarify casting order in rulings`). The shared response contract states that a spell goes onto the stack at 601.2a, costs are paid while it is there at 601.2h, it becomes cast at 601.2i, and players receive no priority during casting.
 
 The seed-42 held-out run scored 25/32 fully correct, compared with 27/32 on the preceding retrieval-only run. Unsupported-claim answers increased 3→5; expected evidence recall was 78.1%, median latency 10.74 s, and p95 17.20 s. h13 remained fully correct with all five relevant casting/priority rules supplied. h01 regressed with an incorrect “put on the stack at the same time” claim, and h30 failed to ask for missing combat details. Because this is a single stochastic run, the aggregate does not establish the contract caused those regressions; it does not show an aggregate improvement either.
 

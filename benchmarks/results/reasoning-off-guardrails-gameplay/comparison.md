@@ -1,6 +1,6 @@
 # final-guardrails-low-gameplay → reasoning-off-guardrails-gameplay
 
-Implementation `f27585c07655d39414635e82775f5dfdc0980d11` → `9a634be9258b7223e5c2683de44141918ceed8f5`
+Implementation `22ed98ddf31574780c627d0ea155d28ecdac5e4c` → `a025a91ec32f03256f8a01632b60c2c8cc0682d1`
 
 - `sampling.reasoning_effort`: ['"low"'] → ['"none"']
 Declared experimental variables: sampling.reasoning_effort. All other checked settings remain matched.

@@ -81,6 +81,20 @@ def validate_suite(suite):
                         raise ValueError('Reference changed: '+key)
 
 
+def validate_benchmark_history():
+    """Ensure every recorded benchmark points to code in the current history."""
+    records = sorted((BENCH/'results').rglob('run.json'))
+    commits = set(git('rev-list', 'HEAD').splitlines())
+    for path in records:
+        run = read(path)
+        commit = run.get('git', {}).get('commit')
+        if not isinstance(commit, str) or not re.fullmatch(r'[0-9a-f]{40}', commit):
+            raise ValueError(f'{path.relative_to(ROOT)}: missing or invalid tested commit')
+        if commit not in commits:
+            raise ValueError(f'{path.relative_to(ROOT)}: tested commit is not in current history: {commit}')
+    return len(records)
+
+
 def source_key(source):
     return 'CARD '+source['title'] if source['kind']=='card' else source['id']
 
@@ -511,7 +525,9 @@ def main():
     elif args.command=='validate':
         SUITE=args.suite.resolve()
         with frozen_corpus():validate_suite(read(SUITE))
+        history_count=validate_benchmark_history()
         print('Validated',len(read(SUITE)['cases']),'scenarios, frozen references, and card IDs.')
+        print('Validated',history_count,'benchmark implementation commits against current Git history.')
     elif args.command=='review':
         path=Path(args.directory);r=read(path/'run.json')
         SUITE=ROOT/r.get('suite_path','benchmarks/scenarios.json')

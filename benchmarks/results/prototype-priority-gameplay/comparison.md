@@ -1,6 +1,6 @@
 # retrieval-core-rules-gameplay → prototype-priority-gameplay
 
-Implementation `4da6c0d7c493da7d4506f78fb5fb5bb97ec7c31e` → `ad79a4ff6898c4d8fb7026fd9aeb08af3a9d7f95`
+Implementation `8005ad57afe915f06d0db76848f09bdef857e195` → `cc0b677e84c8a5353a0aa24968a373276a5a91b2`
 
 - `retrieval`: {'mode': 'lexical'} → {'mode': 'lexical'}
 Declared experimental variables: retrieval. All other checked settings remain matched.

@@ -1,6 +1,6 @@
 # parallel1-gameplay-repeat → adaptive-reasoning-seed42-final
 
-Implementation `a8b3cb0f59bbd86791b00d2200c7887589d12c82` → `0709559bcc29c8dad9e4661e564e98fb9f0c80ab`
+Implementation `82bd05be6da0be624d97624c27336eeea9b70c85` → `d7a6c3ca3fbb70b0583d377058bf65c6e28770e8`
 
 - `sampling.reasoning_effort`: ['"low"'] → ['"low"', '"none"']
 Declared experimental variables: sampling.reasoning_effort. All other checked settings remain matched.

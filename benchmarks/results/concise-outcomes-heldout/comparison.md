@@ -1,6 +1,6 @@
 # leave-game-phrase-heldout → concise-outcomes-heldout
 
-Implementation `b5987a7976395f469801eb6a96635a2aaa8cc789` → `18b40500a9f85ff3ac141891bccab543e0d10c9d`
+Implementation `00e3a79bc7006f3527bfd6dfbd997cc4113806f1` → `608bf3b06dcd8bc05f618d67249afe9a72c2727b`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |

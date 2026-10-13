@@ -1,6 +1,6 @@
 # speculative-depth1-gameplay
 
-Status: **complete** · implementation commit `60d7e1217d85291a2e1d1ba872c590dd8d7833bc`
+Status: **complete** · implementation commit `fa249d800cc539739a75c92f7c634909011bacdd`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

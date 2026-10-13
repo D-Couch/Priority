@@ -1,6 +1,6 @@
 # final-guardrails-low-gameplay
 
-Status: **complete** · implementation commit `f27585c07655d39414635e82775f5dfdc0980d11`
+Status: **complete** · implementation commit `22ed98ddf31574780c627d0ea155d28ecdac5e4c`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

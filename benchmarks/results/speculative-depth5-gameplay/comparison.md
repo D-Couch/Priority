@@ -1,6 +1,6 @@
 # parallel1-gameplay-repeat → speculative-depth5-gameplay
 
-Implementation `a8b3cb0f59bbd86791b00d2200c7887589d12c82` → `f785dd5dca7c4f3169d95c050c8ffbd9245264bf`
+Implementation `82bd05be6da0be624d97624c27336eeea9b70c85` → `b1166fde46382366d447eee50e58ec59f3e55ed2`
 
 - `model_runtime.speculative_draft_max_tokens`: [3] → [5]
 Declared experimental variables: model_runtime.speculative_draft_max_tokens. All other checked settings remain matched.

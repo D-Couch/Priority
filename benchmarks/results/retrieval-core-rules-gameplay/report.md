@@ -1,6 +1,6 @@
 # retrieval-core-rules-gameplay
 
-Status: **complete** · implementation commit `4da6c0d7c493da7d4506f78fb5fb5bb97ec7c31e`
+Status: **complete** · implementation commit `8005ad57afe915f06d0db76848f09bdef857e195`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

@@ -1,6 +1,6 @@
 # reasoning-low-default-gameplay → low-prompt3500-gameplay
 
-Implementation `823c4d85a146b11a5ec44de9477daf0874296a09` → `7934e33ec5e56dfc6e53bf59631cd1d38718f3c4`
+Implementation `7901fc5fb15b2189b1d8c4d64065b8b19e6ce16e` → `a21d18ee1336b3304398bab1727c8b3f114b6a4f`
 
 - `context_budget.max_prompt_tokens`: 4628 → 3500
 Declared experimental variables: context_budget.max_prompt_tokens. All other checked settings remain matched.

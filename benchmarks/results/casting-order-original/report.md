@@ -1,6 +1,6 @@
 # casting-order-original
 
-Status: **complete** · implementation commit `1e5d8960ccecadb7981898d0f27ee71bdc859fad`
+Status: **complete** · implementation commit `2d31122fca1b51b6ac9e46d75a058488395305e6`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

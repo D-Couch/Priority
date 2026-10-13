@@ -1,6 +1,6 @@
 # reasoning-off-heldout
 
-Status: **complete** · implementation commit `f3d0bfb7b980ac1c39bbcac3386a1bb85b567b32`
+Status: **complete** · implementation commit `94782cfa58dad9e250be87d2211a7094c749d0d8`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

@@ -1,6 +1,6 @@
 # adaptive-reasoning-heldout
 
-Status: **complete** · implementation commit `dcf0868a618770f1ceb3a9974f64021cac05e47d`
+Status: **complete** · implementation commit `e466761b9c4b17f6f6cc60d7d0e5210b9fef8dc4`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

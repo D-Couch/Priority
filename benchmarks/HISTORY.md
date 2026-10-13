@@ -32,60 +32,60 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [lexical-seed43-original](results/lexical-seed43-original/report.md) | gameplay-v1 | `4144f33dff` | 20/20 | 20 | 0 | 96.2% | 10.95 |
 | [hybrid-seed43-heldout](results/hybrid-seed43-heldout/report.md) | heldout-v1 | `4144f33dff` | 27/32 | 27 | 0 | 75.5% | 10.74 |
 | [hybrid-seed43-original](results/hybrid-seed43-original/report.md) | gameplay-v1 | `4144f33dff` | 20/20 | 20 | 0 | 96.2% | 11.16 |
-| [leave-game-rule-heldout](results/leave-game-rule-heldout/report.md) | heldout-v1 | `38ff1f08c8` | 0/0 | pending / n/a | 0 | 77.1% | 10.17 |
-| [leave-game-rule-original](results/leave-game-rule-original/report.md) | gameplay-v1 | `38ff1f08c8` | 0/0 | pending / n/a | 0 | 96.2% | 10.93 |
-| [leave-game-phrase-heldout](results/leave-game-phrase-heldout/report.md) | heldout-v1 | `b5987a7976` | 26/32 | 26 | 0 | 78.6% | 9.94 |
-| [leave-game-phrase-original](results/leave-game-phrase-original/report.md) | gameplay-v1 | `b5987a7976` | 20/20 | 20 | 0 | 96.2% | 10.11 |
-| [concise-outcomes-heldout](results/concise-outcomes-heldout/report.md) | heldout-v1 | `18b40500a9` | 24/32 | 24 | 0 | 78.6% | 11.04 |
-| [concise-outcomes-original](results/concise-outcomes-original/report.md) | gameplay-v1 | `18b40500a9` | 20/20 | 20 | 0 | 96.2% | 10.61 |
-| [casting-order-heldout](results/casting-order-heldout/report.md) | heldout-v1 | `1e5d8960cc` | 27/32 | 27 | 0 | 79.7% | 10.40 |
-| [casting-order-original](results/casting-order-original/report.md) | gameplay-v1 | `1e5d8960cc` | 20/20 | 20 | 0 | 96.2% | 10.95 |
-| [novel-v1-baseline](results/novel-v1-baseline/report.md) | novel-v1 | `0841001ac9` | 17/20 | 17 | 0 | 82.5% | 8.21 |
-| [casting-order-contract-heldout](results/casting-order-contract-heldout/report.md) | heldout-v1 | `dea2984bcb` | 25/32 | 25 | 0 | 78.1% | 10.74 |
-| [casting-order-contract-original](results/casting-order-contract-original/report.md) | gameplay-v1 | `dea2984bcb` | 20/20 | 20 | 0 | 96.2% | 11.16 |
-| [gameplay-v1 verification 2026-10-12](results/verification-2026-10-12-gameplay/report.md) | gameplay-v1 | `0079f3e44c` | 20/20 | 20 | 0 | 96.2% | 11.27 |
-| [heldout-v1 verification 2026-10-12](results/verification-2026-10-12-heldout/report.md) | heldout-v1 | `0079f3e44c` | 25/32 | 25 | 0 | 78.1% | 10.30 |
-| [commander-damage-heldout](results/commander-damage-heldout/report.md) | heldout-v1 | `9acdbc3a36` | 26/32 | 26 | 0 | 81.2% | 10.50 |
-| [commander-damage-gameplay](results/commander-damage-gameplay/report.md) | gameplay-v1 | `456390538f` | 20/20 | 20 | 0 | 96.2% | 10.87 |
-| [reasoning-low-heldout](results/reasoning-low-heldout/report.md) | heldout-v1 | `10c549d012` | 29/32 | 29 | 0 | 81.2% | 8.41 |
-| [reasoning-low-gameplay](results/reasoning-low-gameplay/report.md) | gameplay-v1 | `10c549d012` | 19/20 | pending / n/a | n/a | 96.2% | 8.18 |
-| [reasoning-low-gameplay-isolated](results/reasoning-low-gameplay-isolated/report.md) | gameplay-v1 | `879563d751` | 20/20 | 20 | 0 | 96.2% | 8.38 |
-| [reasoning-off-heldout](results/reasoning-off-heldout/report.md) | heldout-v1 | `f3d0bfb7b9` | 26/32 | 26 | 0 | 81.2% | 4.99 |
-| [reasoning-off-gameplay](results/reasoning-off-gameplay/report.md) | gameplay-v1 | `f3d0bfb7b9` | 18/20 | 18 | 0 | 96.2% | 4.94 |
-| [reasoning-low-gameplay-repeat](results/reasoning-low-gameplay-repeat/report.md) | gameplay-v1 | `d4491d1041` | 20/20 | 20 | 0 | 96.2% | 8.40 |
-| [reasoning-low-default-gameplay](results/reasoning-low-default-gameplay/report.md) | gameplay-v1 | `823c4d85a1` | 20/20 | 20 | 0 | 96.2% | 8.49 |
-| [low-prompt2800-gameplay](results/low-prompt2800-gameplay/report.md) | gameplay-v1 | `4995e6077d` | 17/20 | 17 | 0 | 86.2% | 7.80 |
-| [low-prompt3500-gameplay](results/low-prompt3500-gameplay/report.md) | gameplay-v1 | `7934e33ec5` | 18/20 | 18 | 0 | 93.8% | 8.50 |
-| [cached-card-alias-gameplay](results/cached-card-alias-gameplay/report.md) | gameplay-v1 | `321272a4b9` | 20/20 | 20 | 0 | 96.2% | 10.94 |
-| [cached-card-alias-gameplay-repeat](results/cached-card-alias-gameplay-repeat/report.md) | gameplay-v1 | `321272a4b9` | 20/20 | 20 | 0 | 96.2% | 10.90 |
-| [parallel1-gameplay](results/parallel1-gameplay/report.md) | gameplay-v1 | `a8b3cb0f59` | 20/20 | 20 | 0 | 96.2% | 6.92 |
-| [parallel1-gameplay-repeat](results/parallel1-gameplay-repeat/report.md) | gameplay-v1 | `a8b3cb0f59` | 20/20 | 20 | 0 | 96.2% | 6.89 |
-| [evalbatch4096-gameplay](results/evalbatch4096-gameplay/report.md) | gameplay-v1 | `631cfe5be6` | 20/20 | 20 | 0 | 96.2% | 7.43 |
-| [physicalbatch1024-gameplay](results/physicalbatch1024-gameplay/report.md) | gameplay-v1 | `afac0771ae` | 19/20 | 19 | 0 | 96.2% | 7.43 |
-| [speculative-depth5-gameplay](results/speculative-depth5-gameplay/report.md) | gameplay-v1 | `f785dd5dca` | 20/20 | 20 | 0 | 96.2% | 7.37 |
-| [reasoning-off-parallel1-currentprompt](results/reasoning-off-parallel1-currentprompt/report.md) | gameplay-v1 | `b48a519ad9` | 18/20 | 18 | 0 | 96.2% | 3.90 |
-| [final-guardrails-low-gameplay](results/final-guardrails-low-gameplay/report.md) | gameplay-v1 | `f27585c076` | 18/20 | 18 | 0 | 96.2% | 7.85 |
-| [reasoning-off-guardrails-gameplay](results/reasoning-off-guardrails-gameplay/report.md) | gameplay-v1 | `9a634be925` | 15/20 | 15 | 0 | 96.2% | 3.79 |
-| [restored-prompt-low-gameplay](results/restored-prompt-low-gameplay/report.md) | gameplay-v1 | `22f5a005af` | 20/20 | 20 | 0 | 96.2% | 7.44 |
-| [speculative-depth1-gameplay](results/speculative-depth1-gameplay/report.md) | gameplay-v1 | `60d7e1217d` | 20/20 | 20 | 0 | 96.2% | 10.12 |
-| [adaptive-reasoning-gameplay](results/adaptive-reasoning-gameplay/report.md) | gameplay-v1 | `506a4b8dda` | 19/20 | pending / n/a | n/a | 92.5% | 4.58 |
-| [adaptive-reasoning-gameplay-repeat](results/adaptive-reasoning-gameplay-repeat/report.md) | gameplay-v1 | `506a4b8dda` | 20/20 | 20 | 0 | 96.2% | 4.22 |
-| [adaptive-reasoning-heldout](results/adaptive-reasoning-heldout/report.md) | heldout-v1 | `dcf0868a61` | 29/32 | 29 | 0 | 81.2% | 4.26 |
-| [low-reasoning-seed43-parallel1](results/low-reasoning-seed43-parallel1/report.md) | gameplay-v1 | `dcf0868a61` | 20/20 | 20 | 0 | 96.2% | 7.31 |
-| [adaptive-reasoning-seed43](results/adaptive-reasoning-seed43/report.md) | gameplay-v1 | `dcf0868a61` | 19/20 | 19 | 0 | 96.2% | 4.18 |
-| [adaptive-reasoning-seed43-guarded](results/adaptive-reasoning-seed43-guarded/report.md) | gameplay-v1 | `8565fb0bbf` | 20/20 | 20 | 0 | 96.2% | 6.18 |
-| [adaptive-reasoning-seed43-narrow](results/adaptive-reasoning-seed43-narrow/report.md) | gameplay-v1 | `11affa4886` | 19/20 | 19 | 0 | 96.2% | 4.14 |
-| [adaptive-reasoning-seed43-final](results/adaptive-reasoning-seed43-final/report.md) | gameplay-v1 | `0709559bcc` | 20/20 | 20 | 0 | 96.2% | 4.15 |
-| [adaptive-reasoning-seed42-final](results/adaptive-reasoning-seed42-final/report.md) | gameplay-v1 | `0709559bcc` | 20/20 | 20 | 0 | 96.2% | 4.25 |
-| [lexical-low-heldout-current-baseline](results/lexical-low-heldout-current-baseline/report.md) | heldout-v1 | `20e77fc2d4` | 30/32 | 30 | 0 | 81.2% | 7.17 |
-| [retrieval-core-rules-gameplay](results/retrieval-core-rules-gameplay/report.md) | gameplay-v1 | `4da6c0d7c4` | 20/20 | 20 | 0 | 100.0% | 7.39 |
-| [retrieval-core-rules-heldout](results/retrieval-core-rules-heldout/report.md) | heldout-v1 | `4da6c0d7c4` | 30/32 | 30 | 0 | 82.0% | 7.22 |
-| [pre-answer-precision](results/pre-answer-precision/report.md) | novel-v1 | `9a635a80fb` | 19/20 | 19 | 0 | 82.5% | 6.36 |
-| [prototype-priority-novel](results/prototype-priority-novel/report.md) | novel-v1 | `ad79a4ff68` | 20/20 | 20 | 0 | 87.5% | 5.95 |
-| [prototype-priority-heldout](results/prototype-priority-heldout/report.md) | heldout-v1 | `ad79a4ff68` | 30/32 | 30 | 0 | 82.0% | 7.51 |
-| [prototype-priority-gameplay](results/prototype-priority-gameplay/report.md) | gameplay-v1 | `ad79a4ff68` | 20/20 | 20 | 0 | 100.0% | 6.92 |
-| [answer-contract-baseline-heldout](results/answer-contract-baseline-heldout/report.md) | heldout-v1 | `d5c6fd8959` | 30/32 | 30 | 0 | 82.0% | 7.48 |
-| [explicit-clarification-heldout](results/explicit-clarification-heldout/report.md) | heldout-v1 | `23b765f61e` | 29/32 | 29 | 0 | 81.2% | 7.42 |
+| [leave-game-rule-heldout](results/leave-game-rule-heldout/report.md) | heldout-v1 | `c8c6510b8f` | 0/0 | pending / n/a | 0 | 77.1% | 10.17 |
+| [leave-game-rule-original](results/leave-game-rule-original/report.md) | gameplay-v1 | `c8c6510b8f` | 0/0 | pending / n/a | 0 | 96.2% | 10.93 |
+| [leave-game-phrase-heldout](results/leave-game-phrase-heldout/report.md) | heldout-v1 | `00e3a79bc7` | 26/32 | 26 | 0 | 78.6% | 9.94 |
+| [leave-game-phrase-original](results/leave-game-phrase-original/report.md) | gameplay-v1 | `00e3a79bc7` | 20/20 | 20 | 0 | 96.2% | 10.11 |
+| [concise-outcomes-heldout](results/concise-outcomes-heldout/report.md) | heldout-v1 | `608bf3b06d` | 24/32 | 24 | 0 | 78.6% | 11.04 |
+| [concise-outcomes-original](results/concise-outcomes-original/report.md) | gameplay-v1 | `608bf3b06d` | 20/20 | 20 | 0 | 96.2% | 10.61 |
+| [casting-order-heldout](results/casting-order-heldout/report.md) | heldout-v1 | `2d31122fca` | 27/32 | 27 | 0 | 79.7% | 10.40 |
+| [casting-order-original](results/casting-order-original/report.md) | gameplay-v1 | `2d31122fca` | 20/20 | 20 | 0 | 96.2% | 10.95 |
+| [novel-v1-baseline](results/novel-v1-baseline/report.md) | novel-v1 | `b4da0a48c7` | 17/20 | 17 | 0 | 82.5% | 8.21 |
+| [casting-order-contract-heldout](results/casting-order-contract-heldout/report.md) | heldout-v1 | `81f897e6d1` | 25/32 | 25 | 0 | 78.1% | 10.74 |
+| [casting-order-contract-original](results/casting-order-contract-original/report.md) | gameplay-v1 | `81f897e6d1` | 20/20 | 20 | 0 | 96.2% | 11.16 |
+| [gameplay-v1 verification 2026-10-12](results/verification-2026-10-12-gameplay/report.md) | gameplay-v1 | `d71b32a991` | 20/20 | 20 | 0 | 96.2% | 11.27 |
+| [heldout-v1 verification 2026-10-12](results/verification-2026-10-12-heldout/report.md) | heldout-v1 | `d71b32a991` | 25/32 | 25 | 0 | 78.1% | 10.30 |
+| [commander-damage-heldout](results/commander-damage-heldout/report.md) | heldout-v1 | `f2e4d92945` | 26/32 | 26 | 0 | 81.2% | 10.50 |
+| [commander-damage-gameplay](results/commander-damage-gameplay/report.md) | gameplay-v1 | `5c91e67f88` | 20/20 | 20 | 0 | 96.2% | 10.87 |
+| [reasoning-low-heldout](results/reasoning-low-heldout/report.md) | heldout-v1 | `4f916a92da` | 29/32 | 29 | 0 | 81.2% | 8.41 |
+| [reasoning-low-gameplay](results/reasoning-low-gameplay/report.md) | gameplay-v1 | `4f916a92da` | 19/20 | pending / n/a | n/a | 96.2% | 8.18 |
+| [reasoning-low-gameplay-isolated](results/reasoning-low-gameplay-isolated/report.md) | gameplay-v1 | `fbc4053338` | 20/20 | 20 | 0 | 96.2% | 8.38 |
+| [reasoning-off-heldout](results/reasoning-off-heldout/report.md) | heldout-v1 | `94782cfa58` | 26/32 | 26 | 0 | 81.2% | 4.99 |
+| [reasoning-off-gameplay](results/reasoning-off-gameplay/report.md) | gameplay-v1 | `94782cfa58` | 18/20 | 18 | 0 | 96.2% | 4.94 |
+| [reasoning-low-gameplay-repeat](results/reasoning-low-gameplay-repeat/report.md) | gameplay-v1 | `0309b13dd9` | 20/20 | 20 | 0 | 96.2% | 8.40 |
+| [reasoning-low-default-gameplay](results/reasoning-low-default-gameplay/report.md) | gameplay-v1 | `7901fc5fb1` | 20/20 | 20 | 0 | 96.2% | 8.49 |
+| [low-prompt2800-gameplay](results/low-prompt2800-gameplay/report.md) | gameplay-v1 | `be096dc876` | 17/20 | 17 | 0 | 86.2% | 7.80 |
+| [low-prompt3500-gameplay](results/low-prompt3500-gameplay/report.md) | gameplay-v1 | `a21d18ee13` | 18/20 | 18 | 0 | 93.8% | 8.50 |
+| [cached-card-alias-gameplay](results/cached-card-alias-gameplay/report.md) | gameplay-v1 | `b19440a277` | 20/20 | 20 | 0 | 96.2% | 10.94 |
+| [cached-card-alias-gameplay-repeat](results/cached-card-alias-gameplay-repeat/report.md) | gameplay-v1 | `b19440a277` | 20/20 | 20 | 0 | 96.2% | 10.90 |
+| [parallel1-gameplay](results/parallel1-gameplay/report.md) | gameplay-v1 | `82bd05be6d` | 20/20 | 20 | 0 | 96.2% | 6.92 |
+| [parallel1-gameplay-repeat](results/parallel1-gameplay-repeat/report.md) | gameplay-v1 | `82bd05be6d` | 20/20 | 20 | 0 | 96.2% | 6.89 |
+| [evalbatch4096-gameplay](results/evalbatch4096-gameplay/report.md) | gameplay-v1 | `6f1655049d` | 20/20 | 20 | 0 | 96.2% | 7.43 |
+| [physicalbatch1024-gameplay](results/physicalbatch1024-gameplay/report.md) | gameplay-v1 | `fe37f0c810` | 19/20 | 19 | 0 | 96.2% | 7.43 |
+| [speculative-depth5-gameplay](results/speculative-depth5-gameplay/report.md) | gameplay-v1 | `b1166fde46` | 20/20 | 20 | 0 | 96.2% | 7.37 |
+| [reasoning-off-parallel1-currentprompt](results/reasoning-off-parallel1-currentprompt/report.md) | gameplay-v1 | `46b65cc53d` | 18/20 | 18 | 0 | 96.2% | 3.90 |
+| [final-guardrails-low-gameplay](results/final-guardrails-low-gameplay/report.md) | gameplay-v1 | `22ed98ddf3` | 18/20 | 18 | 0 | 96.2% | 7.85 |
+| [reasoning-off-guardrails-gameplay](results/reasoning-off-guardrails-gameplay/report.md) | gameplay-v1 | `a025a91ec3` | 15/20 | 15 | 0 | 96.2% | 3.79 |
+| [restored-prompt-low-gameplay](results/restored-prompt-low-gameplay/report.md) | gameplay-v1 | `c78c4fde8d` | 20/20 | 20 | 0 | 96.2% | 7.44 |
+| [speculative-depth1-gameplay](results/speculative-depth1-gameplay/report.md) | gameplay-v1 | `fa249d800c` | 20/20 | 20 | 0 | 96.2% | 10.12 |
+| [adaptive-reasoning-gameplay](results/adaptive-reasoning-gameplay/report.md) | gameplay-v1 | `9f14ea9b4f` | 19/20 | pending / n/a | n/a | 92.5% | 4.58 |
+| [adaptive-reasoning-gameplay-repeat](results/adaptive-reasoning-gameplay-repeat/report.md) | gameplay-v1 | `9f14ea9b4f` | 20/20 | 20 | 0 | 96.2% | 4.22 |
+| [adaptive-reasoning-heldout](results/adaptive-reasoning-heldout/report.md) | heldout-v1 | `e466761b9c` | 29/32 | 29 | 0 | 81.2% | 4.26 |
+| [low-reasoning-seed43-parallel1](results/low-reasoning-seed43-parallel1/report.md) | gameplay-v1 | `e466761b9c` | 20/20 | 20 | 0 | 96.2% | 7.31 |
+| [adaptive-reasoning-seed43](results/adaptive-reasoning-seed43/report.md) | gameplay-v1 | `e466761b9c` | 19/20 | 19 | 0 | 96.2% | 4.18 |
+| [adaptive-reasoning-seed43-guarded](results/adaptive-reasoning-seed43-guarded/report.md) | gameplay-v1 | `4338abed70` | 20/20 | 20 | 0 | 96.2% | 6.18 |
+| [adaptive-reasoning-seed43-narrow](results/adaptive-reasoning-seed43-narrow/report.md) | gameplay-v1 | `ef46eb58a2` | 19/20 | 19 | 0 | 96.2% | 4.14 |
+| [adaptive-reasoning-seed43-final](results/adaptive-reasoning-seed43-final/report.md) | gameplay-v1 | `d7a6c3ca3f` | 20/20 | 20 | 0 | 96.2% | 4.15 |
+| [adaptive-reasoning-seed42-final](results/adaptive-reasoning-seed42-final/report.md) | gameplay-v1 | `d7a6c3ca3f` | 20/20 | 20 | 0 | 96.2% | 4.25 |
+| [lexical-low-heldout-current-baseline](results/lexical-low-heldout-current-baseline/report.md) | heldout-v1 | `a8ac3918d7` | 30/32 | 30 | 0 | 81.2% | 7.17 |
+| [retrieval-core-rules-gameplay](results/retrieval-core-rules-gameplay/report.md) | gameplay-v1 | `8005ad57af` | 20/20 | 20 | 0 | 100.0% | 7.39 |
+| [retrieval-core-rules-heldout](results/retrieval-core-rules-heldout/report.md) | heldout-v1 | `8005ad57af` | 30/32 | 30 | 0 | 82.0% | 7.22 |
+| [pre-answer-precision](results/pre-answer-precision/report.md) | novel-v1 | `b0ecfbbae8` | 19/20 | 19 | 0 | 82.5% | 6.36 |
+| [prototype-priority-novel](results/prototype-priority-novel/report.md) | novel-v1 | `cc0b677e84` | 20/20 | 20 | 0 | 87.5% | 5.95 |
+| [prototype-priority-heldout](results/prototype-priority-heldout/report.md) | heldout-v1 | `cc0b677e84` | 30/32 | 30 | 0 | 82.0% | 7.51 |
+| [prototype-priority-gameplay](results/prototype-priority-gameplay/report.md) | gameplay-v1 | `cc0b677e84` | 20/20 | 20 | 0 | 100.0% | 6.92 |
+| [answer-contract-baseline-heldout](results/answer-contract-baseline-heldout/report.md) | heldout-v1 | `5eeede0874` | 30/32 | 30 | 0 | 82.0% | 7.48 |
+| [explicit-clarification-heldout](results/explicit-clarification-heldout/report.md) | heldout-v1 | `a3e9798588` | 29/32 | 29 | 0 | 81.2% | 7.42 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

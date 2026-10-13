@@ -1,6 +1,6 @@
 # novel-v1-baseline
 
-Status: **complete** · implementation commit `0841001ac937fac3482a58eafa337fb68e580193`
+Status: **complete** · implementation commit `b4da0a48c7a07cab91ccf15e331f52145fd8e787`
 
 Suite `novel-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

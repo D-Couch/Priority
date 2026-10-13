@@ -1,6 +1,6 @@
 # low-reasoning-seed43-parallel1 → adaptive-reasoning-seed43-narrow
 
-Implementation `dcf0868a618770f1ceb3a9974f64021cac05e47d` → `11affa48860cf11722c41107dfca92198c23205a`
+Implementation `e466761b9c4b17f6f6cc60d7d0e5210b9fef8dc4` → `ef46eb58a2a10b3d37f15080a18077b9a91115f4`
 
 - `sampling.reasoning_effort`: ['"low"'] → ['"low"', '"none"']
 Declared experimental variables: sampling.reasoning_effort. All other checked settings remain matched.

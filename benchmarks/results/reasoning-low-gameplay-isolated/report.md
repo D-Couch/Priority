@@ -1,6 +1,6 @@
 # reasoning-low-gameplay-isolated
 
-Status: **complete** · implementation commit `879563d7510eb81d867967c17fd041dba082158d`
+Status: **complete** · implementation commit `fbc40533382804325e986dd9fe789dd8b27aa75a`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

@@ -1,6 +1,6 @@
 # adaptive-reasoning-seed43-narrow
 
-Status: **complete** · implementation commit `11affa48860cf11722c41107dfca92198c23205a`
+Status: **complete** · implementation commit `ef46eb58a2a10b3d37f15080a18077b9a91115f4`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [43]
 

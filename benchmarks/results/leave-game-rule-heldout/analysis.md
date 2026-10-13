@@ -1,6 +1,6 @@
 # CR 800.4a topic-retrieval experiment
 
-Implementation under test: `38ff1f08c8661d4e03c21214264a7fe5d03cf699` (`fix: retrieve multiplayer leaving-game rule`). The rule-topic pattern matched “leaves the game” and related forms, but the frozen h25 wording is “Bob loses and leaves before Bolt resolves.” The pattern did not match, so CR 800.4a was absent from both candidate and packed evidence. The answer remained an unnecessary abstention with an unsupported section suggestion. This implementation change did not fix the target failure.
+Implementation under test: `c8c6510b8f062571f77bcf9f72dc3ab6844f3da0` (`fix: retrieve multiplayer leaving-game rule`). The rule-topic pattern matched “leaves the game” and related forms, but the frozen h25 wording is “Bob loses and leaves before Bolt resolves.” The pattern did not match, so CR 800.4a was absent from both candidate and packed evidence. The answer remained an unnecessary abstention with an unsupported section suggestion. This implementation change did not fix the target failure.
 
 The complete 32-case inference run had no request errors or truncations. Accuracy and unsupported-claim totals remain unreviewed; history correctly shows them as pending. Evidence recall was 77.1%, median latency 10.17 s, p95 17.38 s. These descriptive measurements are not an accuracy comparison.
 

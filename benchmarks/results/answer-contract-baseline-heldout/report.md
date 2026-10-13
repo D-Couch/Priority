@@ -1,6 +1,6 @@
 # answer-contract-baseline-heldout
 
-Status: **complete** · implementation commit `d5c6fd8959c75cf6ab70d942c4ee1b2c69c6e172`
+Status: **complete** · implementation commit `5eeede087491a842af6217bb0ae9356fe9f37732`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

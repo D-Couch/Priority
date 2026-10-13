@@ -1,6 +1,6 @@
 # commander-damage-gameplay → reasoning-low-default-gameplay
 
-Implementation `456390538f4da601b9f9f767d9436cec0ee0568c` → `823c4d85a146b11a5ec44de9477daf0874296a09`
+Implementation `5c91e67f8873eb12a855b5ee38158ef342cc27a5` → `7901fc5fb15b2189b1d8c4d64065b8b19e6ce16e`
 
 - `sampling.reasoning_effort`: ['"medium"'] → ['"low"']
 Declared experimental variables: sampling.reasoning_effort. All other checked settings remain matched.

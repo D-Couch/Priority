@@ -1,6 +1,6 @@
 # commander-damage-heldout → reasoning-low-heldout
 
-Implementation `9acdbc3a36fabd68f3a42ef9be95f22b06570bcb` → `10c549d012132304dce072f723d402a081d16330`
+Implementation `f2e4d929457865f16046eba4048f1cc788357f4a` → `4f916a92da1eb2a6ee3fe72e59381ad5366dbcf0`
 
 - `sampling.reasoning_effort`: ['"medium"'] → ['"low"']
 Declared experimental variables: sampling.reasoning_effort. All other checked settings remain matched.

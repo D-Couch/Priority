@@ -1,6 +1,6 @@
 # heldout-v1 verification 2026-10-12
 
-Status: **complete** · implementation commit `0079f3e44cdab453a26a1b3e4f1cefc90c6d0102`
+Status: **complete** · implementation commit `d71b32a9917eaa66c4730550a20706900121fc47`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

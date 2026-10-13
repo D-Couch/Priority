@@ -1,6 +1,6 @@
 # lexical-low-heldout-current-baseline → retrieval-core-rules-heldout
 
-Implementation `20e77fc2d4a959fb91b913ed1ef26c82097e4fa9` → `4da6c0d7c493da7d4506f78fb5fb5bb97ec7c31e`
+Implementation `a8ac3918d768ba7cf71b203fa2eb85a463101682` → `8005ad57afe915f06d0db76848f09bdef857e195`
 
 - `retrieval`: {'mode': 'lexical'} → {'mode': 'lexical'}
 Declared experimental variables: retrieval. All other checked settings remain matched.

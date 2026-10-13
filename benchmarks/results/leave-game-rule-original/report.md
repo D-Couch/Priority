@@ -1,6 +1,6 @@
 # leave-game-rule-original
 
-Status: **complete** · implementation commit `38ff1f08c8661d4e03c21214264a7fe5d03cf699`
+Status: **complete** · implementation commit `c8c6510b8f062571f77bcf9f72dc3ab6844f3da0`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

@@ -1,6 +1,6 @@
 # reasoning-off-guardrails-gameplay
 
-Status: **complete** · implementation commit `9a634be9258b7223e5c2683de44141918ceed8f5`
+Status: **complete** · implementation commit `a025a91ec32f03256f8a01632b60c2c8cc0682d1`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

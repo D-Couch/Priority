@@ -1,6 +1,6 @@
 # pre-answer-precision → prototype-priority-novel
 
-Implementation `9a635a80fb672bd199e3b0c2e8dec9cf334c5923` → `ad79a4ff6898c4d8fb7026fd9aeb08af3a9d7f95`
+Implementation `b0ecfbbae839d6e99e2b27b3d94e0d06eb2fb8d9` → `cc0b677e84c8a5353a0aa24968a373276a5a91b2`
 
 - `retrieval`: {'mode': 'lexical'} → {'mode': 'lexical'}
 Declared experimental variables: retrieval. All other checked settings remain matched.

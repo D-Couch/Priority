@@ -1,6 +1,6 @@
 # commander-damage-heldout
 
-Status: **complete** · implementation commit `9acdbc3a36fabd68f3a42ef9be95f22b06570bcb`
+Status: **complete** · implementation commit `f2e4d929457865f16046eba4048f1cc788357f4a`
 
 Suite `heldout-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

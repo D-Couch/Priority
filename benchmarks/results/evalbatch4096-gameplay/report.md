@@ -1,6 +1,6 @@
 # evalbatch4096-gameplay
 
-Status: **complete** · implementation commit `631cfe5be689ce71f617f46ad7637425f1eb47d8`
+Status: **complete** · implementation commit `6f1655049dc7abb47319469312eb0fc169df2494`
 
 Suite `gameplay-v1` · model `qwen/qwen3.8-27b` · 1 repetition(s) · seed(s) [42]
 

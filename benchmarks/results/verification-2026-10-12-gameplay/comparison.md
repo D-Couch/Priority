@@ -1,6 +1,6 @@
 # casting-order-original → gameplay-v1 verification 2026-10-12
 
-Implementation `1e5d8960ccecadb7981898d0f27ee71bdc859fad` → `0079f3e44cdab453a26a1b3e4f1cefc90c6d0102`
+Implementation `2d31122fca1b51b6ac9e46d75a058488395305e6` → `d71b32a9917eaa66c4730550a20706900121fc47`
 
 | Metric | Before | After | Change |
 | --- | --- | --- | --- |

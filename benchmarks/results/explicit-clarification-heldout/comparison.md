@@ -1,6 +1,6 @@
 # answer-contract-baseline-heldout → explicit-clarification-heldout
 
-Implementation `d5c6fd8959c75cf6ab70d942c4ee1b2c69c6e172` → `23b765f61e3d1cb7fd96869fd40ae0ff896fe3bf`
+Implementation `5eeede087491a842af6217bb0ae9356fe9f37732` → `a3e979858814881e7b246812582a65e20fd07351`
 
 - `answer_contract_sha256`: 81b6351dd895ecdffc3e220f9200c6f5cf1cb6fa2d9f2b13269805d48975c67c → 4401ddd2f2c7da15d570530f8add7ea7ae0b4b93c7d4a99dcf40f6ceed08d176
 Declared experimental variables: answer_contract. All other checked settings remain matched.
