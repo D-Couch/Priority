@@ -193,13 +193,14 @@ class KnowledgeTests(unittest.TestCase):
         history=[{'role':'user','content':question}]
         sources=knowledge.retrieve(history,[])
         ids={s['id'] for s in sources}
-        self.assertIn('CR 702.16b',ids)
+        self.assertTrue({'CR 702.16b','CR 115.2','CR 601.2c'}<=ids)
+        self.assertNotIn('MTR 3.9',ids)
         ordered={s['id']:i for i,s in enumerate(sources)}
-        self.assertLess(ordered['CR 702.16'],ordered['CR 601.2c'])
+        self.assertLess(ordered['CR 702.16b'],ordered['CR 115.2'])
         def estimate_tokens(messages):
             return sum(len(message['content']) for message in messages)//4
         _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
-        self.assertIn('CR 702.16b',{s['id'] for s in selected})
+        self.assertTrue({'CR 702.16b','CR 115.2','CR 601.2c'}<={s['id'] for s in selected})
 
 if __name__=='__main__':
     unittest.main()

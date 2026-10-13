@@ -135,7 +135,7 @@ STOP = set('a an the is are was were be been being do does did can could would s
 TOPICS = [
     # Put the specific restriction ahead of general random-target rules so the
     # packer keeps the actual legal-target exception within the prompt budget.
-    (r'protection|protected', ['702.16']),
+    (r'protection|protected', ['702.16b']),
     (r'\brandom(?:ly)?\b|at random|\bdice?\b|\bcoin toss\b', ['601.2c', '115.2']),
     (r'priority|respond|response|stack|instant', ['117', '405', '608']),
     (r'poison(?:ed)?(?: counters?)?|ten poison|poison threshold', ['104.3d']),
@@ -175,7 +175,7 @@ TOPICS = [
 # matches could crowd out the exact rules for mana value, initiative, and copies.
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
                        '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.10',
-                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2', '702.16'}
+                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2', '702.16b'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None
@@ -299,7 +299,9 @@ def _retrieve_lexical(messages, card_ids):
             row = conn.execute('SELECT body FROM rules WHERE number=?', (number,)).fetchone()
             if row:
                 sources.append({'id':'CR '+number, 'kind':'rule', 'title':'Rule '+number, 'text':row['body'], 'url':'/api/rules/'+number})
-        if TOURNAMENT_RULES.exists() and re.search(r'\brandom(?:ly)?\b|at random|\bdice?\b|\bcoin toss\b', question, re.I):
+        asks_die_procedure = re.search(r'\bdice?\b|\bcoin toss\b|\broll(?:ing)? a die\b', question, re.I)
+        asks_broad_paper_randomness = re.search(r'\brandom(?:ly)?\b|at random', question, re.I) and re.search(r'\bpaper\b', question, re.I) and not re.search(r'\btarget\w*\b', question, re.I)
+        if TOURNAMENT_RULES.exists() and (asks_die_procedure or asks_broad_paper_randomness):
             for record in json.loads(TOURNAMENT_RULES.read_text()).values():
                 sources.append({'id':record['id'], 'kind':'tournament_rule', 'title':record['title'],
                                 'text':record['text'], 'url':record['url'], 'effective_date':record['effective_date']})
