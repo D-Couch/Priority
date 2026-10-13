@@ -22,8 +22,9 @@ python3 benchmark.py restore-corpus --output data/knowledge.sqlite
 python3 benchmark.py validate
 python3 -m unittest -v
 
-# Commit implementation changes before measuring them.
-python3 benchmark.py run --label pre-vectorization --output benchmarks/results/pre-vectorization-repeat
+# Commit implementation changes before measuring them. Full inference must use
+# the project venv, which has the LM Studio tokenizer SDK installed.
+.venv/bin/python benchmark.py run --label pre-vectorization --output benchmarks/results/pre-vectorization-repeat
 ```
 
 The restore command refuses to overwrite an existing database. Restoring the live database is optional for benchmark runs because they now use an isolated frozen copy. Each benchmark run extracts and verifies the frozen corpus into an isolated temporary database, so updating the live app cannot alter the benchmark. The temporary copy is removed after the run. The compressed 13 MB snapshot contains the full retrieval corpus, including distractors, so cloning the repo reproduces search conditions without depending on changing downloads. The snapshot and source passages remain attributed to Wizards and Scryfall in the manifest/references; they are external data, not original project code.
@@ -35,7 +36,7 @@ For repeated measurements, add `--repeats 3`; repetitions use seeds 42, 43, and 
 For fast retrieval-only checks without inference:
 
 ```bash
-python3 benchmark.py run --mode retrieval --label retrieval-check --output benchmarks/results/retrieval-check
+.venv/bin/python benchmark.py run --mode retrieval --label retrieval-check --output benchmarks/results/retrieval-check
 ```
 
 Retrieval-only and full runs are not directly comparable. Output directories cannot be reused. The runner checkpoints after every case; interrupted runs are marked incomplete and comparison refuses them.

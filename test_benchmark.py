@@ -1,9 +1,16 @@
 import copy
 import hashlib
+import sys
 import unittest
+from unittest.mock import patch
 import benchmark
 
 class BenchmarkTests(unittest.TestCase):
+    def test_full_benchmark_explains_missing_sdk_interpreter(self):
+        with patch.dict(sys.modules, {'lmstudio': None}):
+            with self.assertRaisesRegex(RuntimeError, 'Python environment issue, not an LM Studio server error'):
+                benchmark.require_local_sdk()
+
     def case(self):
         return {'id':'case','criteria':[{'id':'one'},{'id':'two'}], 'evidence_groups':[{'label':'a','any_of':['CR 1','CR 2']},{'label':'card','any_of':['CARD Example']} ]}
 

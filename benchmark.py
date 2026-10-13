@@ -35,6 +35,17 @@ def read(path):
     return json.loads(Path(path).read_text())
 
 
+def require_local_sdk():
+    try:
+        import lmstudio  # noqa: F401
+    except ImportError as exc:
+        raise RuntimeError(
+            'Full inference benchmarks need the project virtual environment, which contains the LM Studio tokenizer SDK. '
+            'From the project folder, run .venv/bin/python benchmark.py ... . '
+            'This is a Python environment issue, not an LM Studio server error.'
+        ) from exc
+
+
 def write(path, value):
     path = Path(path)
     temporary = path.with_suffix(path.suffix+'.tmp')
@@ -406,6 +417,8 @@ def frozen_corpus():
 
 
 def run_benchmark(args):
+    if args.mode == 'full':
+        require_local_sdk()
     suite=read(SUITE)
     validate_suite(suite)
     manifest=read(BENCH/'corpus/manifest.json')
