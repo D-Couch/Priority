@@ -64,6 +64,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [physicalbatch1024-gameplay](results/physicalbatch1024-gameplay/report.md) | gameplay-v1 | `afac0771ae` | 19/20 | 19 | 0 | 96.2% | 7.43 |
 | [speculative-depth5-gameplay](results/speculative-depth5-gameplay/report.md) | gameplay-v1 | `f785dd5dca` | 20/20 | 20 | 0 | 96.2% | 7.37 |
 | [reasoning-off-parallel1-currentprompt](results/reasoning-off-parallel1-currentprompt/report.md) | gameplay-v1 | `b48a519ad9` | 18/20 | 18 | 0 | 96.2% | 3.90 |
+| [final-guardrails-low-gameplay](results/final-guardrails-low-gameplay/report.md) | gameplay-v1 | `f27585c076` | 18/20 | 18 | 0 | 96.2% | 7.85 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 

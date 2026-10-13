@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "final-guardrails-low-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted, case-by-case review of all 20 answers against frozen gameplay criteria and supplied rule/card excerpts; not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "cc2a1aca56d6cf584819ffd4f991243229be5c7a7af44f28c7817cac4d589329",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "e273d02fe68c9b30e193bfe7cfd2a49af322f51bc04493570233717d23290778",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "56ff3e3e3adda891f65f333ec3339eb7941931bc391759c584dbf474cec9c358",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "69c502664448365180a59c63827d42c2a82b999f8f1b93e202f2d15b4f7a0a4d",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "35f5196176519aae98c028fdd7ef63c6b35fffc46fe0eb94338382c61b123cdd",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "4bb7a6a2dbd006e5ef76986396293ceb1d83055b16ca3109964fc594ea23a242",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "e4d45c811484224ef1a6f9a0377236231c2bea13e70df83d7a090778b8e005e4",
+      "criteria": {
+        "07-zero-toughness.1": false,
+        "07-zero-toughness.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrectly says indestructible lets a 0/0 survive. CR 704.5f puts a creature with toughness 0 or less into its owner\u2019s graveyard; this is not destruction and is not prevented by indestructible."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "6694333d6494e16fb0143eb33b22d75c90b18da7f54ba73f7a422e262d46868e",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "79c99542725c751e1c5470029f224238ea3cd01d96439f7e40c6c85b88b4a95a",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "7cf752e8713f48dc67f28e349d73d71fa7703ac1e3addc808e617987c0a367f8",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "4961ee38a87eaac6fe1c712f605a563357895fccefde68014e4542122527dec2",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "456087c66310353388ee4101be853ff5e38a2fadc6926d8231f8d1f054fb671f",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "8a43e6653f59d788019007475df93c683d2396082cd1e723c026172c467045dd",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "521ea1708b5ba9f087bed187b209912cc96b3e169c3cba0ca86c6273fcf7726e",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "a67b43837a7eb3a25531a78c0c29ba7f550ce2d4ebf09bdfda57418035f02887",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "4adc68a8fe820b737b97ef133de507efae4708cfd0dbbc84ea2ea90de70634c8",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "45e6b96866f76281f7ceb17d58f55e2e6691d0745036983516d17d1e29857f03",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "c6fe9942cfd2fb6410c035ab266da118f45428049c748700ed717ffdd59444f3",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "b708a3c74157481658c1ee3ae7fa5053b16b9539440426922acef396fdf40e7e",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says no instant can be cast before the legend rule is applied, but omits that the state-based action requires keeping one of the legendary permanents."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "e60befd1820e6f02f93f8c291c0a3bae0e093bd602f7c694c818627625e87926",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the ruling against both authored criteria and the supplied rule/card excerpts; material claims are supported."
+    }
+  ]
+}
