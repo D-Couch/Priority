@@ -1,0 +1,20 @@
+{
+  "CR 601.2c": {
+    "text": "The player announces their choice of an appropriate object or player for each target the spell requires. A spell may require some targets only if an alternative or additional cost (such as a kicker cost) or a particular mode was chosen for it; otherwise, the spell is cast as though it did not require those targets. Similarly, a spell may require alternative targets only if an alternative or additional cost was chosen for it. If the spell has a variable number of targets, the player announces how many targets they will choose before they announce those targets. In some cases, the number of targets will be defined by the spell’s text. Once the number of targets the spell has is determined, that number doesn’t change, even if the information used to determine the number of targets does. The same target can’t be chosen multiple times for any one instance of the word “target” on the spell. However, if the spell uses the word “target” in multiple places, the same object or player can be chosen once for each instance of the word “target” (as long as it fits the targeting criteria). If any effects say that an object or player must be chosen as a target, the player chooses targets so that they obey the maximum possible number of such effects without violating any rules or effects that say that an object or player can’t be chosen as a target. The chosen objects and/or players each become a target of that spell. (Any abilities that trigger when those objects and/or players become the target of a spell trigger at this point; they’ll wait to be put on the stack until the spell has finished being cast.)\nExample: If a spell says “Tap two target creatures,” then the same creature can’t be chosen twice; the spell requires two different legal targets. A spell that says “Destroy target artifact and target land,” however, can target the same artifact land twice because it uses the word “target” in multiple places.",
+    "sha256": "050682f3eff2591fac1aa0b4054a27b9ef141e05cd21ae1e9058b3c7ea4ab811",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "CR 115.2": {
+    "text": "Only permanents are legal targets for spells and abilities, unless a spell or ability (a) specifies that it can target an object in another zone or a player, or (b) targets an object that can’t exist on the battlefield, such as a spell or ability. See also rule 115.4.",
+    "sha256": "53d743b3783ebaa2ed95621edb5890d87daa722e67df5a536c4fe47ebc6a2916",
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  },
+  "MTR 3.9": {
+    "text": "For a game action that uses a die roll, any method that simulates the roll is acceptable if every result has an equal chance of occurring. Avoid dice whose values are clustered together, such as spindown life counters.",
+    "sha256": "b9bba9d44c4dc85e9e7abeb5007ac492104d49237c9dd34c832ac66d97bfdc37",
+    "url": "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf",
+    "effective_date": "2026-02-27",
+    "id": "MTR 3.9",
+    "title": "Magic Tournament Rules 3.9 — Die Rolling"
+  }
+}

@@ -28,7 +28,7 @@ import context_budget
 ROOT = Path(__file__).resolve().parent
 BENCH = ROOT / 'benchmarks'
 SUITE = BENCH / 'scenarios.json'
-CITATION = re.compile(r'\[(CR \d{3}(?:\.\d+[a-z]?)?|C\d+)\]')
+CITATION = re.compile(r'\[(CR \d{3}(?:\.\d+[a-z]?)?|MTR \d+\.\d+|C\d+)\]')
 
 
 def read(path):
@@ -75,9 +75,13 @@ def validate_suite(suite):
                     reference = references[key]
                     if key.startswith('CR '):
                         row = conn.execute('SELECT body FROM rules WHERE number=?',(key[3:],)).fetchone()
+                        text = row['body'] if row else None
+                    elif key.startswith('MTR '):
+                        text = read(ROOT/'data/tournament_rules.json').get(key,{}).get('text')
                     else:
                         row = conn.execute('SELECT body FROM cards WHERE name=?',(key[5:],)).fetchone()
-                    if not row or hashlib.sha256(row['body'].encode()).hexdigest() != reference['sha256']:
+                        text = row['body'] if row else None
+                    if text is None or hashlib.sha256(text.encode()).hexdigest() != reference['sha256']:
                         raise ValueError('Reference changed: '+key)
 
 

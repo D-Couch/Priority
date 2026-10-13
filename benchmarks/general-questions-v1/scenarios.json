@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "general-questions-v1",
+  "description": "One frozen conceptual rules question checks that Priority answers general paper-play questions directly instead of requiring a specific card or game state.",
+  "rules_version": "20260925",
+  "cases": [
+    {
+      "id": "g01-random-paper-procedure",
+      "category": "general-rules",
+      "difficulty": "basic",
+      "messages": [
+        {
+          "role": "user",
+          "content": "How does a card that says to perform some action ‘randomly’ actually work in paper Magic?"
+        }
+      ],
+      "cards": [],
+      "card_ids": [],
+      "expected_answer": "Answer generally: identify the eligible options, use a fair physical method that gives each option an equal chance (such as a die or another agreed randomizer), and for random targets include only legal targets. Do not ask which card before providing this general answer. Note that exact card text can refine the procedure.",
+      "criteria": [
+        {
+          "id": "g01-random-paper-procedure.1",
+          "description": "Gives a practical equal-chance paper method without requiring the exact card first."
+        },
+        {
+          "id": "g01-random-paper-procedure.2",
+          "description": "Explains that only legal options are eligible when the random choice is a target."
+        }
+      ],
+      "evidence_groups": [
+        {
+          "label": "MTR 3.9",
+          "any_of": [
+            "MTR 3.9"
+          ]
+        },
+        {
+          "label": "CR 601.2c",
+          "any_of": [
+            "CR 601.2c"
+          ]
+        },
+        {
+          "label": "CR 115.2",
+          "any_of": [
+            "CR 115.2"
+          ]
+        }
+      ]
+    }
+  ]
+}

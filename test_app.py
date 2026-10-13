@@ -175,5 +175,17 @@ class KnowledgeTests(unittest.TestCase):
         self.assertIn('CR 702.19b',{s['id'] for s in sources})
         self.assertIn('CR 702.12a',{s['id'] for s in sources})
 
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_random_paper_question_retrieves_procedure_and_legal_target_rules(self):
+        question='How does a card that says to perform some action randomly actually work in paper Magic?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        ids={s['id'] for s in sources}
+        self.assertTrue({'CR 601.2c','CR 115.2','MTR 3.9'}<=ids)
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertTrue({'CR 601.2c','CR 115.2','MTR 3.9'}<={s['id'] for s in selected})
+
 if __name__=='__main__':
     unittest.main()

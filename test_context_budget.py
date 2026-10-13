@@ -17,6 +17,14 @@ def source(identifier, body, kind='rule'):
 
 
 class ContextBudgetTests(unittest.TestCase):
+    def test_tournament_rule_excerpt_is_packed_before_broad_rules(self):
+        history=[{'role':'user','content':'How does a random die roll work?'}]
+        sources=[{'id':'MTR 3.9','kind':'tournament_rule','title':'Die rolling','text':'Each result has equal chance.'},
+                 {'id':'CR 100','kind':'rule','title':'General','text':'General rules.'}]
+        estimate=lambda messages:sum(len(m['content']) for m in messages)//4
+        _,selected,_=pack_context('system',sources,history,estimate,8192)
+        self.assertEqual([s['id'] for s in selected],['MTR 3.9','CR 100'])
+
     def test_prompt_token_ceiling(self):
         sources = [source(f'CR {100+i}.1', str(i) * 900) for i in range(10)]
         messages, chosen, info = pack_context('Judge', sources,

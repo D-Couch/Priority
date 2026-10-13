@@ -1,0 +1,10 @@
+{
+  "MTR 3.9": {
+    "text": "For a game action that uses a die roll, any method that simulates the roll is acceptable if every result has an equal chance of occurring. Avoid dice whose values are clustered together, such as spindown life counters.",
+    "sha256": "b9bba9d44c4dc85e9e7abeb5007ac492104d49237c9dd34c832ac66d97bfdc37",
+    "url": "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf",
+    "effective_date": "2026-02-27",
+    "id": "MTR 3.9",
+    "title": "Magic Tournament Rules 3.9 \u2014 Die Rolling"
+  }
+}

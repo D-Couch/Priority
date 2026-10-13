@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
 DB = DATA / 'knowledge.sqlite'
+TOURNAMENT_RULES = DATA / 'tournament_rules.json'
 RULES_PAGE = 'https://magic.wizards.com/en/rules'
 
 
@@ -132,6 +133,7 @@ def search_cards(query):
 
 STOP = set('a an the is are was were be been being do does did can could would should will i my me you your it its this that these those if when what how why with without and or but of for to in on at as by from have has had then than any all into get gets still also after before'.split())
 TOPICS = [
+    (r'\brandom(?:ly)?\b|at random|\bdice?\b|\bcoin toss\b', ['601.2c', '115.2']),
     (r'priority|respond|response|stack|instant', ['117', '405', '608']),
     (r'poison(?:ed)?(?: counters?)?|ten poison|poison threshold', ['104.3d']),
     (r'planeswalker|loyalty ability|loyalty counters?', ['606', '606.4', '704.5i', '113.7a']),
@@ -162,7 +164,7 @@ TOPICS = [
 # matches could crowd out the exact rules for mana value, initiative, and copies.
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
                        '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.10',
-                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b'}
+                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None
@@ -286,6 +288,10 @@ def _retrieve_lexical(messages, card_ids):
             row = conn.execute('SELECT body FROM rules WHERE number=?', (number,)).fetchone()
             if row:
                 sources.append({'id':'CR '+number, 'kind':'rule', 'title':'Rule '+number, 'text':row['body'], 'url':'/api/rules/'+number})
+        if TOURNAMENT_RULES.exists() and re.search(r'\brandom(?:ly)?\b|at random|\bdice?\b|\bcoin toss\b', question, re.I):
+            for record in json.loads(TOURNAMENT_RULES.read_text()).values():
+                sources.append({'id':record['id'], 'kind':'tournament_rule', 'title':record['title'],
+                                'text':record['text'], 'url':record['url'], 'effective_date':record['effective_date']})
         return sources
 
 

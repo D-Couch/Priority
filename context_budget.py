@@ -9,8 +9,8 @@ TEMPLATE_MARGIN = 64
 MAX_PROMPT_TOKENS = 4628
 ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
 Follow this response contract:
-If information needed to determine the ruling is missing, respond ONLY with "Need details:" and the specific clarifying questions. Do not add a rules tutorial, hypothetical rulings, or assurances.
-Otherwise use "Ruling:" for the direct answer to every part of the question, then "Why:" with at most three concise explanatory sentences and supporting source citations. Address only the interaction asked about; do not add examples, unasked timing sequences, or extra caveats.
+For a general rules or paper-play question, answer directly with the standard rule or procedure; do not ask for a card name or game state just because the question is broad. If exact card text could change the details, give the general answer first and briefly invite the user to share that card for a precise ruling. For a specific game state, give useful conditional outcomes when possible. Use "Need details:" only when a missing fact prevents a useful answer to the actual situation.
+Use "Ruling:" for a direct answer, then "Why:" with at most three concise explanatory sentences and supporting source citations. Address the interaction asked about. A brief practical example is welcome when it makes a paper procedure clearer.
 Check that each cited rule's conditions match the stated game state. An exception applies only to the event it describes. Do not extend it to a different event merely because similar words appear in the rules.
 For casting-order questions, distinguish the card being put onto the stack at the start of casting (601.2a), costs being paid while it is already on the stack (601.2h), and the spell becoming cast after those steps are complete (601.2i). Players receive no priority during the casting process (117.2e). Never say that paying costs happens before the spell is put onto the stack. Cite these facts only when supported by supplied excerpts.
 """
@@ -46,6 +46,7 @@ def relevant_rulings(sources, question):
 def source_groups(sources, question=''):
     """Keep compact sections intact so definitions travel with their exceptions."""
     result = [[s] for s in sources if s['kind'] == 'card']
+    result.extend([[s] for s in sources if s['kind'] == 'tournament_rule'])
     priority = relevant_rulings(sources, question)
     result.extend([s] for s in priority)
     priority_ids = {s['id'] for s in priority}

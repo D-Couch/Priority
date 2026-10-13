@@ -29,6 +29,12 @@ class BenchmarkTests(unittest.TestCase):
     def test_no_citation_is_not_perfect_precision(self):
         self.assertIsNone(benchmark.measure_evidence(self.case(),[],'No citation')['citation_id_precision'])
 
+    def test_mtr_citations_are_checked_against_supplied_sources(self):
+        sources=[{'id':'MTR 3.9','kind':'tournament_rule','title':'Die Rolling','text':'equal chance'}]
+        result=benchmark.measure_evidence(self.case(),sources,'A fair die roll is acceptable [MTR 3.9].')
+        self.assertEqual(result['citations'],['MTR 3.9'])
+        self.assertEqual(result['invalid_citations'],[])
+
     def test_missing_review_never_counts_as_correct(self):
         run={'expected_attempts':1,'results':[{'metrics':{'evidence_recall':1,'all_evidence_found':True,'citations':[],'invalid_citations':[]},'timing':{'total_seconds':2}}]}
         result=benchmark.summary(run)
