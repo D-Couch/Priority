@@ -24,12 +24,14 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('Do not assume an unstated keyword or game fact',ANSWER_CONTRACT)
         self.assertIn('describe damage to creatures as damage marked rather than toughness lost',ANSWER_CONTRACT)
         self.assertIn('only legal targets belong in the pool',ANSWER_CONTRACT)
-        self.assertIn('Never suggest an unequal sequential coin-flip method',ANSWER_CONTRACT)
+        self.assertIn('Never suggest unequal sequential coin flips',ANSWER_CONTRACT)
         self.assertIn('Do not invent hypothetical card text, game states, or examples',ANSWER_CONTRACT)
-        self.assertIn('shuffled identical slips are a simple method',ANSWER_CONTRACT)
-        self.assertIn('suggest a die only when its faces can be mapped evenly',ANSWER_CONTRACT)
-        self.assertIn('without a hypothetical example or invented outcome',ANSWER_CONTRACT)
-        self.assertIn('state the relevant branches instead of assuming it',ANSWER_CONTRACT)
+        self.assertIn('use shuffled identical slips for arbitrary option counts',ANSWER_CONTRACT)
+        self.assertIn('an evenly mapped die with unused results rerolled',ANSWER_CONTRACT)
+        self.assertIn('give the ordering rule only',ANSWER_CONTRACT)
+        self.assertIn('state the branches',ANSWER_CONTRACT)
+        self.assertIn('For random procedures, say that a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
+        self.assertIn('a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
 
     def test_tournament_rule_excerpt_is_packed_before_broad_rules(self):
         history=[{'role':'user','content':'How does a random die roll work?'}]
