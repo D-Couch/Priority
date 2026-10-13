@@ -98,6 +98,9 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [copy-priority-fix-mechanics-seed43](results/copy-priority-fix-mechanics-seed43/report.md) | mechanics-v1 | `855024db87` | 18/20 | 18 | 0 | 78.3% | 7.14 |
 | [copy-priority-fix-gameplay](results/copy-priority-fix-gameplay/report.md) | gameplay-v1 | `855024db87` | 20/20 | 20 | 0 | 100.0% | 7.15 |
 | [copy-priority-fix-heldout](results/copy-priority-fix-heldout/report.md) | heldout-v1 | `855024db87` | 29/32 | 29 | 0 | 82.0% | 7.43 |
+| [poison-loyalty-retrieval-seed42](results/poison-loyalty-retrieval-seed42/report.md) | mechanics-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 95.0% | 6.80 |
+| [poison-loyalty-retrieval-seed43](results/poison-loyalty-retrieval-seed43/report.md) | mechanics-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 95.0% | 6.34 |
+| [poison-loyalty-gameplay-seed42](results/poison-loyalty-gameplay-seed42/report.md) | gameplay-v1 | `7b7297d9aa` | 20/20 | 20 | 0 | 100.0% | 7.21 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
