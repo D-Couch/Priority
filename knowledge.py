@@ -145,11 +145,12 @@ TOPICS = [
     (r'attack|block|combat|first strike|double strike|trample', ['508', '509', '510', '702.4', '702.7', '702.19']),
     (r'trigger|enters|entering', ['603']),
     (r'copy|copies|copied|clone', ['707']),
+    (r'\bprototyp(?:e|ed|ing)\b', ['718.3', '718.4']),
     (r'counterspell|cast|casting|cost|mana', ['601']),
     (r'token|tokens', ['111']),
     (r'\b(?:loses?|lost) and leaves?\b|\bleaves? the game\b|\bleaving the game\b|\bleave the game\b|\beliminated\b', ['800.4a']),
 ]
-HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3'}
+HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None

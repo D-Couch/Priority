@@ -72,6 +72,17 @@ class KnowledgeTests(unittest.TestCase):
         self.assertIn('CR 903.10a',{s['id'] for s in sources})
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_prototype_rules_are_prioritized_for_zone_characteristics(self):
+        questions = [
+            'An artifact creature cast as a prototype dies. What characteristics does it have in my graveyard?',
+            'I cast this as a prototyped spell and it left the battlefield. Does its smaller power and toughness remain in the graveyard?',
+        ]
+        for question in questions:
+            with self.subTest(question=question):
+                ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
+                self.assertTrue({'CR 718.3','CR 718.4'} <= ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_card_attachment_has_oracle_text(self):
         card=next(c for c in knowledge.search_cards('Lightning Bolt') if c['name']=='Lightning Bolt')
         sources=knowledge.retrieve([{'role':'user','content':'Can this target a creature?'}],[card['id']])
