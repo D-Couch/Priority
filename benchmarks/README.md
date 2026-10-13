@@ -78,6 +78,8 @@ Run `./setup.sh` once from the project root, then `source .venv/bin/activate` be
 
 The vector-free baseline now has two reviewed 20/20 runs, seeds 42 and 43, with identical prompt and implementation hashes. These are repeated development cases, not 40 distinct questions. Before introducing embeddings, freeze a separate set of unseen cases and paraphrases and compare both sets. Do not weaken existing criteria or discard a regression to improve the headline score.
 
+For this single-user app, configure LM Studio's Max Concurrent Predictions as 1: the app serves one generation at a time, so extra slots do not help its workload. Two seed-42 runs at parallel=1 measured 6.92s and 6.89s median, with 20/20 correct and complete; the matched parallel=4 run measured 10.90s. The comparator supports this controlled test with `--allow-change model_runtime.parallel` and rejects other runtime changes.
+
 Reporting-only changes recompute the history from saved results without rerunning inference or modifying historical artifacts. Unknown historical completion telemetry is displayed as unavailable, rather than counted as zero successful completions. Append-only review-note corrections are linked from the history.
 
 ## Additional frozen suites

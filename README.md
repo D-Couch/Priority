@@ -16,6 +16,8 @@ A React chat interface backed by Python and your existing LM Studio model. React
 
 To use another port, run `./start.sh --port 8090`.
 
+For a single-user setup, set LM Studio's **Max Concurrent Predictions** to **1** in the model loader's advanced settings. The judge app serves one generation at a time, and benchmark runs found this setting faster for individual answers while preserving the 20/20 gameplay score. Use a higher value only when you need concurrent model requests.
+
 ## Ask a question
 
 Describe the game state, whose turn it is, and what has already happened. Use **Attach cards** to search and select up to eight exact cards. You can also write `[[Lightning Bolt]]` in a question. Full multiword card names with matching capitalization are detected automatically; attach cards to avoid ambiguity.
