@@ -133,13 +133,15 @@ def search_cards(query):
 
 STOP = set('a an the is are was were be been being do does did can could would should will i my me you your it its this that these those if when what how why with without and or but of for to in on at as by from have has had then than any all into get gets still also after before'.split())
 TOPICS = [
+    # Put the specific restriction ahead of general random-target rules so the
+    # packer keeps the actual legal-target exception within the prompt budget.
+    (r'protection|protected', ['702.16']),
     (r'\brandom(?:ly)?\b|at random|\bdice?\b|\bcoin toss\b', ['601.2c', '115.2']),
     (r'priority|respond|response|stack|instant', ['117', '405', '608']),
     (r'poison(?:ed)?(?: counters?)?|ten poison|poison threshold', ['104.3d']),
     (r'planeswalker|loyalty ability|loyalty counters?', ['606', '606.4', '704.5i', '113.7a']),
     (r'ability.{0,50}(?:source|permanent).{0,50}(?:leav|graveyard|destroy)|(?:source|permanent).{0,50}(?:leav|graveyard|destroy).{0,50}abilit', ['113.7a']),
     (r'blocked.{0,60}(?:damage|opponent|player)|(?:damage|opponent|player).{0,60}blocked', ['510', '702.19b']),
-    (r'protection|protected', ['702.16']),
     (r'hexproof', ['702.11']),
     (r'shroud', ['702.18']),
     (r'ward', ['702.21']),
@@ -173,7 +175,7 @@ TOPICS = [
 # matches could crowd out the exact rules for mana value, initiative, and copies.
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
                        '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.10',
-                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2'}
+                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2', '702.16'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None

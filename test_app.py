@@ -194,6 +194,8 @@ class KnowledgeTests(unittest.TestCase):
         sources=knowledge.retrieve(history,[])
         ids={s['id'] for s in sources}
         self.assertIn('CR 702.16b',ids)
+        ordered={s['id']:i for i,s in enumerate(sources)}
+        self.assertLess(ordered['CR 702.16'],ordered['CR 601.2c'])
         def estimate_tokens(messages):
             return sum(len(message['content']) for message in messages)//4
         _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
