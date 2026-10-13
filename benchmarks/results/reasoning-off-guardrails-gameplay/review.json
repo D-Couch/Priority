@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "reasoning-off-guardrails-gameplay",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted, case-by-case review of all 20 answers against frozen gameplay criteria and supplied rule/card excerpts; not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "4708c110c742b8b422b0b84b9a74c3655f567f729c66e516a67453ee544cd7e1",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "0eb04276374ea9d8b58e52c047501997f310620d0d760abf0416f44a7b305230",
+      "criteria": {
+        "02-hold-priority.1": false,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrectly says the caster does not receive priority after casting. Rule 117.3c says the caster receives priority again; the cited 117.3d does not support this ruling."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "0636108133f79ec3dcb3ea5d7ebf99eb2a837c96f5d4fca7f2aa950c52cdd0b0",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "c0f8110b1d1e3ecf0000f65666658d43d5b7cb7659cb1738afcb9e8bd1340754",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "e6ef3cb7f9e802f0443bbedb8031fee5d3fda1d2cc51dfd7174a3c84cb8413af",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "7dd7d2d7c5590defa9a74d9e722d7f778960845d0ddcfbbf76ad55198cb7f260",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "c67ee3176a175cbe04001df406387aa6f5de229e21459d6885a52fa2b53a494a",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "7003eee57314d0e2f52280baabe36c99d7708a473546291c70c254301f3fd845",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "9fcd87d67b4af55b4f027d79f35daba7810c221d2404b37b2cce88dc0be5bf24",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "f0d17c9bafa06fee1f8ff3752c4218b2da25842c37f62c8f4475eb8f88e03db8",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "3f0eb7ae5831e8e52598313494b34a9fa5a64ac5330b9f33f7b62b9f29b62aa6",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The four-token result and no-loop conclusion are right, but says the replacement effects apply independently rather than sequentially. Replacement effects are applied to the event and then the modified event as applicable."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "5a86848b6c0ddf52e3300c04d530539c157257c3290a0af534ed3159985320dd",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "cf8936d08363d118a7687510b85e6dbd504baab7623fff5c539dd524f23f9306",
+      "criteria": {
+        "13-apnap.1": false,
+        "13-apnap.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Reverses APNAP resolution: Bob\u2019s ability is placed on top of Alice\u2019s and resolves first. The explanation also incorrectly places Alice\u2019s ability on top."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "120fe0f45add8e93ac8aed44a79145846c69a0bc940d3436eeae0ea780327028",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "12fb9661be4ed4497d4246cbb80712a6904b459eafafb9c6c45620698bb3b95b",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "1b107a36f8963e261670f46b922b621bff202348f2df52abb8a3354e0192beb5",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "d43fd50eb801d7275e0c3937fd6db442a20e2e715ed05ec4eeccbdff4b6c4a79",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "c927a2b3051f8607d389c5bef0fc22c82f3d6b29062733aebab50bd954a38576",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the answer against both authored criteria and the supplied rule/card excerpts; the ruling is supported."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "03d9eef9aaf8a6142f4f119110fedaed7953116f91795f08ecb6cba9e995aa2e",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says state-based actions are completed before priority, but omits that the legend rule requires choosing and keeping one of the legendary permanents."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "e91ca49c61a212f0b0bfec04f3177cf28fde1d36704daaa9bc1bf72cb068c281",
+      "criteria": {
+        "20-clarify-interaction.1": false,
+        "20-clarify-interaction.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Gives an unconditional ruling without knowing the protection quality or removal spell. Protection can stop some removal, including spells that target with the protected quality."
+    }
+  ]
+}
