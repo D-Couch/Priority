@@ -74,6 +74,7 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [low-reasoning-seed43-parallel1](results/low-reasoning-seed43-parallel1/report.md) | gameplay-v1 | `dcf0868a61` | 20/20 | 20 | 0 | 96.2% | 7.31 |
 | [adaptive-reasoning-seed43](results/adaptive-reasoning-seed43/report.md) | gameplay-v1 | `dcf0868a61` | 19/20 | 19 | 0 | 96.2% | 4.18 |
 | [adaptive-reasoning-seed43-guarded](results/adaptive-reasoning-seed43-guarded/report.md) | gameplay-v1 | `8565fb0bbf` | 20/20 | 20 | 0 | 96.2% | 6.18 |
+| [adaptive-reasoning-seed43-narrow](results/adaptive-reasoning-seed43-narrow/report.md) | gameplay-v1 | `11affa4886` | 19/20 | 19 | 0 | 96.2% | 4.14 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
