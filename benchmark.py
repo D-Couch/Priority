@@ -232,21 +232,24 @@ def write_history():
     (BENCH/'HISTORY.md').write_text('\n'.join(lines))
 
 
-EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens', 'model_runtime.parallel'}
+MODEL_RUNTIME_FIELDS = {'model_runtime.parallel':'parallel', 'model_runtime.eval_batch_size':'eval_batch_size'}
+EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens', *MODEL_RUNTIME_FIELDS}
 
 
 def validate_comparison(old, new, allow_changes=()):
     issues=[]
     for key in ['suite_sha256','references_sha256','corpus_sha256','model','seeds','repeats','mode','case_order','warmup']:
         if old.get(key)!=new.get(key):issues.append(key)
-    if 'model_runtime.parallel' in allow_changes:
-        def without_parallel(run):
+    runtime_fields = {MODEL_RUNTIME_FIELDS[field] for field in allow_changes if field in MODEL_RUNTIME_FIELDS}
+    if runtime_fields:
+        def without_runtime_fields(run):
             runtime=copy.deepcopy(run.get('model_runtime') or {})
             for model in runtime.values():
                 for config in model.get('loaded_configs',[]) if isinstance(model,dict) else []:
-                    if isinstance(config,dict):config.pop('parallel',None)
+                    if isinstance(config,dict):
+                        for field in runtime_fields:config.pop(field,None)
             return runtime
-        if without_parallel(old)!=without_parallel(new):issues.append('model_runtime')
+        if without_runtime_fields(old)!=without_runtime_fields(new):issues.append('model_runtime')
     elif old.get('model_runtime')!=new.get('model_runtime'):
         issues.append('model_runtime')
     if 'retrieval' not in allow_changes and old.get('retrieval',{'mode':'lexical'}) != new.get('retrieval',{'mode':'lexical'}):issues.append('retrieval')
@@ -303,14 +306,15 @@ def compare(old, new, allow_changes=()):
                 after=recorded_prompt_limit(new)
                 lines[4:4] = [f"- `{field}`: {before} → {after}"]
                 continue
-            if field == 'model_runtime.parallel':
-                def parallel_values(run):
+            if field in MODEL_RUNTIME_FIELDS:
+                runtime_key=MODEL_RUNTIME_FIELDS[field]
+                def runtime_values(run):
                     values=[]
                     for model in (run.get('model_runtime') or {}).values():
                         if isinstance(model,dict):
-                            values.extend(config['parallel'] for config in model.get('loaded_configs',[]) if isinstance(config,dict) and 'parallel' in config)
+                            values.extend(config[runtime_key] for config in model.get('loaded_configs',[]) if isinstance(config,dict) and runtime_key in config)
                     return sorted(set(values))
-                lines[4:4] = [f"- `{field}`: {parallel_values(old)} → {parallel_values(new)}"]
+                lines[4:4] = [f"- `{field}`: {runtime_values(old)} → {runtime_values(new)}"]
                 continue
             key=field.removeprefix('sampling.')
             values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
