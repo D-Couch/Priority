@@ -103,6 +103,22 @@ class KnowledgeTests(unittest.TestCase):
         self.assertTrue({'CR 726.2','CR 726.5'} <= ids)
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_poison_loss_and_planeswalker_ability_rules_are_prioritized(self):
+        questions = [
+            ('I have nine poison counters and gain one more. When do I lose?', {'CR 104.3d'}),
+            ('My planeswalker has three loyalty counters. Does a −3 loyalty ability still resolve if the planeswalker is put into the graveyard before the ability resolves?',
+             {'CR 606.4','CR 704.5i','CR 113.7a'}),
+        ]
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages) // 4
+        for question, expected in questions:
+            with self.subTest(question=question):
+                history=[{'role':'user','content':question}]
+                sources=knowledge.retrieve(history,[])
+                _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+                self.assertTrue(expected <= {s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_spell_copy_rule_is_prioritized(self):
         question='When an instant is copied, is the copy cast, and does it retain the original mode?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
