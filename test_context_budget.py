@@ -1,5 +1,5 @@
 import unittest
-from context_budget import pack_context, make_messages, OUTPUT_TOKENS, TEMPLATE_MARGIN, MAX_PROMPT_TOKENS
+from context_budget import pack_context, make_messages, OUTPUT_TOKENS, TEMPLATE_MARGIN, MAX_PROMPT_TOKENS, ANSWER_CONTRACT
 
 
 def count(messages):
@@ -17,6 +17,10 @@ def source(identifier, body, kind='rule'):
 
 
 class ContextBudgetTests(unittest.TestCase):
+    def test_general_random_rules_guidance_limits_mtr_scope_and_requires_legal_target_pool(self):
+        self.assertIn('do not present MTR 3.9 as governing every random effect',ANSWER_CONTRACT)
+        self.assertIn('only legal targets belong in the pool',ANSWER_CONTRACT)
+
     def test_tournament_rule_excerpt_is_packed_before_broad_rules(self):
         history=[{'role':'user','content':'How does a random die roll work?'}]
         sources=[{'id':'MTR 3.9','kind':'tournament_rule','title':'Die rolling','text':'Each result has equal chance.'},
