@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "run_id": "adaptive-reasoning-seed42-final",
+  "suite_sha256": "25290f46113e50ce7f490bd6f48f656bf1e7e204cd80a5b34e5b945d277fbacf",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted, case-by-case review of every answer against the frozen criteria and supplied rule/card/ruling excerpts; not independent human Judge validation.",
+  "results": [
+    {
+      "case_id": "01-mana",
+      "repeat": 1,
+      "answer_sha256": "4708c110c742b8b422b0b84b9a74c3655f567f729c66e516a67453ee544cd7e1",
+      "criteria": {
+        "01-mana.1": true,
+        "01-mana.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "02-hold-priority",
+      "repeat": 1,
+      "answer_sha256": "27e1d90e3c612e57e33edc10ce96938ee56393bdac6fd5deb0b4bf265fc4a553",
+      "criteria": {
+        "02-hold-priority.1": true,
+        "02-hold-priority.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "03-illegal-target",
+      "repeat": 1,
+      "answer_sha256": "ec9959939d62c4761fcd0adf02959a3430be925e7240a55ecba2790fe5f9fa9d",
+      "criteria": {
+        "03-illegal-target.1": true,
+        "03-illegal-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "04-partial-targets",
+      "repeat": 1,
+      "answer_sha256": "35afa1cf063f9b5f7dc448b0eb2088145c3be4ea6906f6f4e4602b898ca7e964",
+      "criteria": {
+        "04-partial-targets.1": true,
+        "04-partial-targets.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "05-trample-indestructible",
+      "repeat": 1,
+      "answer_sha256": "54ceafbc4e29998f178fa3bfdbffca0bc22d4250dfc2ebe0db06a6504e84b2cc",
+      "criteria": {
+        "05-trample-indestructible.1": true,
+        "05-trample-indestructible.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "06-deathtouch-trample",
+      "repeat": 1,
+      "answer_sha256": "592ba170a594ee9906f0d9b9d099627a1f20508575b183c4c81bd51769fb3caa",
+      "criteria": {
+        "06-deathtouch-trample.1": true,
+        "06-deathtouch-trample.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "07-zero-toughness",
+      "repeat": 1,
+      "answer_sha256": "724c566d900fa14b5c4c652d1ad7de9bd251e23f3714cbb0bf1a18bba1746e2e",
+      "criteria": {
+        "07-zero-toughness.1": true,
+        "07-zero-toughness.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "08-commander-dies",
+      "repeat": 1,
+      "answer_sha256": "6d55ddc646269c66f2c1eb0c41984c39e0c7defcfaa647d2440472a885ed3115",
+      "criteria": {
+        "08-commander-dies.1": true,
+        "08-commander-dies.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "09-commander-tax",
+      "repeat": 1,
+      "answer_sha256": "d43a44fe30c2d26decfeacab6f1b41ac942f14158a36d0b99f265c62cb885888",
+      "criteria": {
+        "09-commander-tax.1": true,
+        "09-commander-tax.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "10-rest-in-peace",
+      "repeat": 1,
+      "answer_sha256": "4b171648647c5f290a8a6c65a236eb0f12d010913aa5390ed972e04d07560517",
+      "criteria": {
+        "10-rest-in-peace.1": true,
+        "10-rest-in-peace.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "11-token-doublers",
+      "repeat": 1,
+      "answer_sha256": "b4357c9716bd70dc8ebcc09e1637ba90312a8cff72a9dd4225d8fa518a8cbe09",
+      "criteria": {
+        "11-token-doublers.1": true,
+        "11-token-doublers.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "12-replacement-choice",
+      "repeat": 1,
+      "answer_sha256": "adcac7068d73d050d215753eab0e352e5ac1a5fee9aa5548f5e2093767267f74",
+      "criteria": {
+        "12-replacement-choice.1": true,
+        "12-replacement-choice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "13-apnap",
+      "repeat": 1,
+      "answer_sha256": "e9ed6938a3a0a4e0aa9675efc3e0084664d403c96c058f0ea7563370c41b2724",
+      "criteria": {
+        "13-apnap.1": true,
+        "13-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "14-humility-anthem",
+      "repeat": 1,
+      "answer_sha256": "7795f1f71017d8b493fb43ae35fe8629caf6355abb4a2f29545eeb0683a60920",
+      "criteria": {
+        "14-humility-anthem.1": true,
+        "14-humility-anthem.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "15-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "a4a1ac3859b5a3a6bf28c813007c70b321bde14dd24867064c89909aee804956",
+      "criteria": {
+        "15-own-hexproof.1": true,
+        "15-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "16-first-strike-blocker",
+      "repeat": 1,
+      "answer_sha256": "1b107a36f8963e261670f46b922b621bff202348f2df52abb8a3354e0192beb5",
+      "criteria": {
+        "16-first-strike-blocker.1": true,
+        "16-first-strike-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "17-token-blink",
+      "repeat": 1,
+      "answer_sha256": "df1dab729e595c407180a45efc8fd6c285f37c7c68e7462961452c49c0fc5ca7",
+      "criteria": {
+        "17-token-blink.1": true,
+        "17-token-blink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "18-summoning-sacrifice",
+      "repeat": 1,
+      "answer_sha256": "835ab8ac0b07c2395d8a402c00dac41d5a3a040f45eecc341d973acf0c88a35a",
+      "criteria": {
+        "18-summoning-sacrifice.1": true,
+        "18-summoning-sacrifice.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "19-legend-response",
+      "repeat": 1,
+      "answer_sha256": "685b1ce9c32edbb8ce4dc4a23ae605b3720fea9df4f2e9fdb880bf9f6bf354be",
+      "criteria": {
+        "19-legend-response.1": true,
+        "19-legend-response.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    },
+    {
+      "case_id": "20-clarify-interaction",
+      "repeat": 1,
+      "answer_sha256": "aaa4ab64d4ff4b688718f03cb66172d9716cb05a911778551227b5be4e800aa1",
+      "criteria": {
+        "20-clarify-interaction.1": true,
+        "20-clarify-interaction.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Reviewed the full answer against each frozen rubric criterion and the supplied source excerpts; the ruling is complete, supported, and contains no contradictory claim."
+    }
+  ]
+}
