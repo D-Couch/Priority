@@ -75,6 +75,14 @@ class BenchmarkTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Unsupported'):
             benchmark.validate_comparison(old,new,['corpus_sha256'])
 
+    def test_parallel_runtime_experiment_allows_only_parallel_count_change(self):
+        old={'status':'complete','expected_attempts':1,'model_runtime':{'/api/v1/models':{'loaded_configs':[{'context_length':8192,'parallel':4,'flash_attention':True}]}},'results':[{'sampling':{'temperature':.1}}]}
+        new=copy.deepcopy(old);new['model_runtime']['/api/v1/models']['loaded_configs'][0]['parallel']=1
+        self.assertIn('model_runtime',benchmark.validate_comparison(old,new))
+        self.assertEqual(benchmark.validate_comparison(old,new,['model_runtime.parallel']),[])
+        new['model_runtime']['/api/v1/models']['loaded_configs'][0]['context_length']=4096
+        self.assertIn('model_runtime',benchmark.validate_comparison(old,new,['model_runtime.parallel']))
+
     def test_review_bound_to_answer_and_checks_each_criterion(self):
         run={'run_id':'r','suite_sha256':'s','results':[{'case_id':'case','repeat':1,'answer':'No.'}]}
         review={'run_id':'r','suite_sha256':'s','reviewer':'test','review_method':'fixture','results':[{'case_id':'case','repeat':1,'answer_sha256':hashlib.sha256(b'No.').hexdigest(),'criteria':{'one':True,'two':False},'unsupported_or_contradictory_claims':False,'abstained':False,'notes':'Second requirement missing.'}]}

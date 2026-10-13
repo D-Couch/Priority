@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Versioned end-to-end benchmark; use the real chat handler, never feed it labels."""
 import argparse
+import copy
 from contextlib import closing, contextmanager
 from datetime import datetime, timezone
 import gzip
@@ -231,13 +232,23 @@ def write_history():
     (BENCH/'HISTORY.md').write_text('\n'.join(lines))
 
 
-EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens'}
+EXPERIMENT_FIELDS = {'sampling.reasoning_effort', 'sampling.max_tokens', 'retrieval', 'context_budget.max_prompt_tokens', 'model_runtime.parallel'}
 
 
 def validate_comparison(old, new, allow_changes=()):
     issues=[]
-    for key in ['suite_sha256','references_sha256','corpus_sha256','model','model_runtime','seeds','repeats','mode','case_order','warmup']:
+    for key in ['suite_sha256','references_sha256','corpus_sha256','model','seeds','repeats','mode','case_order','warmup']:
         if old.get(key)!=new.get(key):issues.append(key)
+    if 'model_runtime.parallel' in allow_changes:
+        def without_parallel(run):
+            runtime=copy.deepcopy(run.get('model_runtime') or {})
+            for model in runtime.values():
+                for config in model.get('loaded_configs',[]) if isinstance(model,dict) else []:
+                    if isinstance(config,dict):config.pop('parallel',None)
+            return runtime
+        if without_parallel(old)!=without_parallel(new):issues.append('model_runtime')
+    elif old.get('model_runtime')!=new.get('model_runtime'):
+        issues.append('model_runtime')
     if 'retrieval' not in allow_changes and old.get('retrieval',{'mode':'lexical'}) != new.get('retrieval',{'mode':'lexical'}):issues.append('retrieval')
     if 'context_budget.max_prompt_tokens' not in allow_changes and old.get('context_budget') != new.get('context_budget'):issues.append('context_budget')
     unknown = set(allow_changes) - EXPERIMENT_FIELDS
@@ -291,6 +302,15 @@ def compare(old, new, allow_changes=()):
                 before=recorded_prompt_limit(old)
                 after=recorded_prompt_limit(new)
                 lines[4:4] = [f"- `{field}`: {before} → {after}"]
+                continue
+            if field == 'model_runtime.parallel':
+                def parallel_values(run):
+                    values=[]
+                    for model in (run.get('model_runtime') or {}).values():
+                        if isinstance(model,dict):
+                            values.extend(config['parallel'] for config in model.get('loaded_configs',[]) if isinstance(config,dict) and 'parallel' in config)
+                    return sorted(set(values))
+                lines[4:4] = [f"- `{field}`: {parallel_values(old)} → {parallel_values(new)}"]
                 continue
             key=field.removeprefix('sampling.')
             values=lambda run: sorted({json.dumps((r.get('sampling') or {}).get(key,'server default')) for r in run['results']})
