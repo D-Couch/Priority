@@ -1,5 +1,6 @@
 import unittest
 import re
+import context_budget
 import knowledge
 import server
 
@@ -106,6 +107,21 @@ class KnowledgeTests(unittest.TestCase):
         question='When an instant is copied, is the copy cast, and does it retain the original mode?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
         self.assertIn('CR 707.10',ids)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_specific_mechanics_survive_context_packing(self):
+        questions = [
+            ('I cast a spell with casualty 2 and sacrifice a 2/2 as its additional cost. Does the spell get copied?', 'CR 702.153a'),
+            ('If I copy an instant spell already on the stack, does the copy count as casting it?', 'CR 707.10'),
+        ]
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages) // 4
+        for question, expected in questions:
+            with self.subTest(question=question):
+                history=[{'role':'user','content':question}]
+                sources=knowledge.retrieve(history,[])
+                _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+                self.assertIn(expected,{s['id'] for s in selected})
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_card_attachment_has_oracle_text(self):

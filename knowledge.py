@@ -146,7 +146,9 @@ TOPICS = [
     (r'trigger|enters|entering', ['603']),
     (r'\bmana value\b|converted mana cost', ['202.3', '202.3e', '202.3f', '107.3a']),
     (r'\binitiative\b|undercity|venture into the dungeon', ['726.2', '726.5']),
-    (r'copy|copies|copied|clone', ['707', '707.10']),
+    (r'casualty', ['702.153', '702.153a']),
+    (r'(?:copy|copies|copied|copying).{0,45}(?:spell|instant|sorcery)|(?:spell|instant|sorcery).{0,45}(?:copy|copies|copied|copying)', ['707.10']),
+    (r'copy|copies|copied|clone', ['707']),
     (r'\bprototyp(?:e|ed|ing)\b', ['718.3', '718.4']),
     (r'counterspell|cast|casting|cost|mana', ['601']),
     (r'token|tokens', ['111']),
@@ -155,7 +157,7 @@ TOPICS = [
 # These rules were promoted after frozen-suite misses showed that broad FTS
 # matches could crowd out the exact rules for mana value, initiative, and copies.
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
-                       '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '707.10'}
+                       '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.10'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None
