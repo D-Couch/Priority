@@ -56,6 +56,17 @@ class KnowledgeTests(unittest.TestCase):
         self.assertFalse(any(s['kind']=='card' for s in sources))
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_commander_hand_replacement_rule_survives_context_packing(self):
+        question='An effect would return my commander from the battlefield to my hand. May I choose the command zone instead, and is that a replacement effect or a later state-based action?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        self.assertIn('CR 903.9b',{s['id'] for s in sources})
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 903.9b',{s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_replacement_retrieves_general_event_consequence(self):
         question='Rest in Peace replaces a creature going to a graveyard with exile. Does a dies ability trigger?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}

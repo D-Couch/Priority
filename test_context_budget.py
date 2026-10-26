@@ -33,6 +33,8 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('distinguish whether the ability triggers from whether its effect succeeds',ANSWER_CONTRACT)
         self.assertIn('do not describe damage as reducing toughness',ANSWER_CONTRACT)
         self.assertIn('without predicting which option they will choose',ANSWER_CONTRACT)
+        self.assertIn('say the exact effect text is needed to determine the result',ANSWER_CONTRACT)
+        self.assertIn('do not add hypothetical outcomes or examples',ANSWER_CONTRACT)
         self.assertIn('state the branches',ANSWER_CONTRACT)
         self.assertIn('For random procedures, say that a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
         self.assertIn('a random target must be legal [CR 115.2]',ANSWER_CONTRACT)

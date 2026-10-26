@@ -175,7 +175,7 @@ TOPICS = [
 # matches could crowd out the exact rules for mana value, initiative, and copies.
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
                        '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.10',
-                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2', '702.16b'}
+                       '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2', '702.16b', '903.9b'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None
