@@ -133,6 +133,7 @@ def search_cards(query):
 
 STOP = set('a an the is are was were be been being do does did can could would should will i my me you your it its this that these those if when what how why with without and or but of for to in on at as by from have has had then than any all into get gets still also after before'.split())
 TOPICS = [
+    (r'\bcommander\b.{0,100}(?:hand|library)|(?:hand|library).{0,100}\bcommander\b', ['903.9b']),
     # Put the specific restriction ahead of general random-target rules so the
     # packer keeps the actual legal-target exception within the prompt budget.
     (r'protection|protected', ['702.16b']),

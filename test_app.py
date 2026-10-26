@@ -65,6 +65,7 @@ class KnowledgeTests(unittest.TestCase):
             return sum(len(message['content']) for message in messages)//4
         _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
         self.assertIn('CR 903.9b',{s['id'] for s in selected})
+        self.assertEqual(sources[0]['id'],'CR 903.9b')
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_replacement_retrieves_general_event_consequence(self):

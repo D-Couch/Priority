@@ -11,7 +11,7 @@ ANSWER_CONTRACT = """END REFERENCE EXCERPTS.
 Follow this response contract:
 For a general rules or paper-play question, answer directly with the standard rule or procedure; do not ask for a card name or game state just because the question is broad. If exact card text could change the details, give the general answer first and briefly invite the user to share that card for a precise ruling. For a specific game state, give useful conditional outcomes when possible. Use "Need details:" only when a missing fact prevents a useful answer to the actual situation.
 For random procedures, distinguish the Tournament Rules guidance for die-roll game actions from other random choices; do not present MTR 3.9 as governing every random effect. Only discuss MTR 3.9 for questions about die rolls or when the user asks about tournament die-roll procedure. For random-target questions, do not add unrelated die-roll or tournament guidance. Explain that the eligible choice pool comes from the card/effect. If the random choice is a target, explicitly state that only legal targets belong in the pool and cite the supplied Comprehensive Rules.
-Keep simple general answers to one short paragraph. Do not invent hypothetical card text, game states, or examples unless requested. For replacement questions without exact effects, give the ordering and re-evaluation rules only, say the exact effect text is needed to determine the result, and do not add hypothetical outcomes or examples. If a result depends on an unstated ability such as trample, state the branches. For random procedures, say that a random target must be legal [CR 115.2]; give no hypothetical example. Every option must have equal chance: use shuffled identical slips for arbitrary option counts, or an evenly mapped die with unused results rerolled. Never suggest unequal sequential coin flips.
+Keep simple general answers to one short paragraph. Do not invent hypothetical card text, game states, or examples unless requested. For replacement questions without exact effects, give the ordering and re-evaluation rules only, then ask for the exact effect text and starting event details needed to determine the result. Do not add hypothetical outcomes or examples. If a result depends on an unstated ability such as trample, state the branches. For random procedures, say that a random target must be legal [CR 115.2]; give no hypothetical example. Every option must have equal chance: use shuffled identical slips for arbitrary option counts, or an evenly mapped die with unused results rerolled. Never suggest unequal sequential coin flips.
 Use "Ruling:" for a direct answer, then "Why:" with at most three concise explanatory sentences and supporting source citations. Cite the specific supplied rule that establishes each central claim, using its bracketed source ID; do not substitute a merely related rule. Never mention a rule number in plain prose without its bracketed citation: write "[CR 616.1]" rather than "Rule 616.1." Address the interaction asked about. For general conceptual questions, prefer the direct rule or procedure over a hypothetical example.
 Check that each cited rule's conditions match the stated game state. An exception applies only to the event it describes. Do not extend it to a different event merely because similar words appear in the rules.
 Do not assume an unstated keyword or game fact. If a missing detail changes the result, state the relevant conditional outcomes instead of choosing one as fact. Avoid exhaustive claims such as "only," "always," or "never" unless the supplied rules establish them. For damage to creatures, say damage is marked; do not describe damage as reducing toughness or leaving less toughness unless an effect actually changes toughness. When another player has a rules choice, state the legal options without predicting which option they will choose. Do not say an object that leaves the game goes to a graveyard unless the rules say that it does.
@@ -54,6 +54,7 @@ def source_groups(sources, question=''):
     priority = relevant_rulings(sources, question)
     result.extend([s] for s in priority)
     priority_ids = {s['id'] for s in priority}
+    from knowledge import HIGH_PRIORITY_RULES
     for semantic_only in (False, True):
         sections = {}
         for source in sources:
@@ -63,7 +64,14 @@ def source_groups(sources, question=''):
             # Each keyword is its own section; the entire keyword chapter is too large.
             section = re.sub(r'[a-z]$', '', number) if number.startswith('702.') else number.split('.')[0]
             sections.setdefault(section, []).append(source)
-        for section in sections.values():
+        ordered_sections = sorted(
+            sections.values(),
+            key=lambda group: not any(
+                source['id'].removeprefix('CR ') in HIGH_PRIORITY_RULES
+                for source in group
+            ),
+        )
+        for section in ordered_sections:
             if sum(len(s['text']) for s in section) <= 6000:
                 result.append(section)
                 continue
@@ -71,7 +79,14 @@ def source_groups(sources, question=''):
             families = {}
             for source in section:
                 families.setdefault(re.sub(r'[a-z]$', '', source['id']), []).append(source)
-            for group in families.values():
+            ordered_families = sorted(
+                families.values(),
+                key=lambda group: not any(
+                    source['id'].removeprefix('CR ') in HIGH_PRIORITY_RULES
+                    for source in group
+                ),
+            )
+            for group in ordered_families:
                 if len(group) <= 8 and sum(len(s['text']) for s in group) <= 3500:
                     result.append(group)
                 else:

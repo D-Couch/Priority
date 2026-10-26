@@ -29,12 +29,11 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('use shuffled identical slips for arbitrary option counts',ANSWER_CONTRACT)
         self.assertIn('an evenly mapped die with unused results rerolled',ANSWER_CONTRACT)
         self.assertIn('give the ordering and re-evaluation rules only',ANSWER_CONTRACT)
-        self.assertIn('do not add hypothetical outcomes',ANSWER_CONTRACT)
+        self.assertIn('Do not add hypothetical outcomes or examples',ANSWER_CONTRACT)
         self.assertIn('distinguish whether the ability triggers from whether its effect succeeds',ANSWER_CONTRACT)
         self.assertIn('do not describe damage as reducing toughness',ANSWER_CONTRACT)
         self.assertIn('without predicting which option they will choose',ANSWER_CONTRACT)
-        self.assertIn('say the exact effect text is needed to determine the result',ANSWER_CONTRACT)
-        self.assertIn('do not add hypothetical outcomes or examples',ANSWER_CONTRACT)
+        self.assertIn('ask for the exact effect text and starting event details',ANSWER_CONTRACT)
         self.assertIn('state the branches',ANSWER_CONTRACT)
         self.assertIn('For random procedures, say that a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
         self.assertIn('a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
@@ -90,6 +89,22 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertEqual([s['id'] for s in chosen], ['CR 401.1'])
         _, chosen, _ = pack_context('Judge', sources, [{'role': 'user', 'content': '?'}], count, capacity(600))
         self.assertEqual([s['id'] for s in chosen], [s['id'] for s in sources])
+
+    def test_high_priority_rule_sections_are_packed_before_broad_sections(self):
+        from context_budget import source_groups
+        sources = [
+            source('CR 614.1', 'x' * 1200),
+            source('CR 704.1', 'y' * 1200),
+            source('CR 903.9b', 'The commander replacement rule.'),
+            source('CR 903.9a', 'The commander graveyard rule.'),
+            source('CR 903.9', 'Commander state actions.'),
+        ]
+        groups = source_groups(sources)
+        self.assertEqual(groups[0][0]['id'], 'CR 903.9b')
+        history = [{'role':'user','content':'An effect would return my commander to my hand. Can I put it in the command zone?'}]
+        estimate = lambda messages: sum(len(m['content']) for m in messages) // 4
+        _, selected, _ = pack_context('system', sources, history, estimate, 8192)
+        self.assertIn('CR 903.9b', {s['id'] for s in selected})
 
     def test_short_rule_family_is_not_split(self):
         sources = [source('CR 101.1', 'Parent'), source('CR 101.1a', 'Child' * 30)]
