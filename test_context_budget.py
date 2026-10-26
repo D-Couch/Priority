@@ -28,7 +28,9 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('Do not invent hypothetical card text, game states, or examples',ANSWER_CONTRACT)
         self.assertIn('use shuffled identical slips for arbitrary option counts',ANSWER_CONTRACT)
         self.assertIn('an evenly mapped die with unused results rerolled',ANSWER_CONTRACT)
-        self.assertIn('give the ordering rule only',ANSWER_CONTRACT)
+        self.assertIn('give the ordering and re-evaluation rules only',ANSWER_CONTRACT)
+        self.assertIn('do not add hypothetical outcomes',ANSWER_CONTRACT)
+        self.assertIn('distinguish whether the ability triggers from whether its effect succeeds',ANSWER_CONTRACT)
         self.assertIn('state the branches',ANSWER_CONTRACT)
         self.assertIn('For random procedures, say that a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
         self.assertIn('a random target must be legal [CR 115.2]',ANSWER_CONTRACT)
@@ -42,11 +44,15 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertEqual([s['id'] for s in selected],['MTR 3.9','CR 100'])
 
     def test_prompt_token_ceiling(self):
-        sources = [source(f'CR {100+i}.1', str(i) * 900) for i in range(10)]
+        sources = [source(f'CR {100+i}.1', str(i) * 2000) for i in range(10)]
+        # Approximate tokenizer output; the other boundary tests intentionally
+        # use a pessimistic byte counter to exercise tight-context behavior.
+        def token_count(messages):
+            return count(messages) // 4
         messages, chosen, info = pack_context('Judge', sources,
-            [{'role': 'user', 'content': 'Question'}], count,
+            [{'role': 'user', 'content': 'Question'}], token_count,
             MAX_PROMPT_TOKENS + OUTPUT_TOKENS + TEMPLATE_MARGIN + 1000)
-        self.assertLessEqual(count(messages), MAX_PROMPT_TOKENS)
+        self.assertLessEqual(token_count(messages), MAX_PROMPT_TOKENS)
         self.assertLess(len(chosen), len(sources))
         self.assertEqual(info['max_prompt_tokens'], MAX_PROMPT_TOKENS)
 

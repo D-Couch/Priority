@@ -140,7 +140,7 @@ TOPICS = [
     (r'priority|respond|response|stack|instant', ['117', '405', '608']),
     (r'poison(?:ed)?(?: counters?)?|ten poison|poison threshold', ['104.3d']),
     (r'planeswalker|loyalty ability|loyalty counters?', ['606', '606.4', '704.5i', '113.7a']),
-    (r'ability.{0,50}(?:source|permanent).{0,50}(?:leav|graveyard|destroy)|(?:source|permanent).{0,50}(?:leav|graveyard|destroy).{0,50}abilit', ['113.7a']),
+    (r'ability.{0,80}(?:source|permanent).{0,80}(?:leav|graveyard|destroy)|(?:source|permanent).{0,80}(?:leav|graveyard|destroy).{0,80}abilit|(?:trigger(?:ed)?|abilit\w*).{0,100}(?:destroy\w*|remov\w*|leav\w*|dies?|graveyard).{0,100}(?:before|after|while|once).{0,60}(?:resolv\w*|stack)|(?:destroy\w*|remov\w*|leav\w*|dies?|graveyard).{0,100}(?:before|after|while|once).{0,60}(?:resolv\w*|stack).{0,100}(?:trigger(?:ed)?|abilit\w*)', ['113.7a']),
     (r'blocked.{0,60}(?:damage|opponent|player)|(?:damage|opponent|player).{0,60}blocked', ['510', '702.19b']),
     (r'hexproof', ['702.11']),
     (r'shroud', ['702.18']),
