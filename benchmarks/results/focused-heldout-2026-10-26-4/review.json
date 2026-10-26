@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-heldout-2026-10-26-4",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted criterion-by-criterion review against frozen scenarios and actual packed excerpts; semantic citation and unsupported-claim checks; no independent Magic judge validation.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "e14ca6cab75a9904da4c19730c4b602b2d9077ec2f52d21d2759eb2853ca07ab",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly places triggers in Alice/Bob/Charlie order and resolves in reverse. The supplied stack rules support this sequence."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "d44ab725a8af8d868e915394bb56ebd00795a340483dff95edea809c60ef8464",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly says the win does not occur after life drops below 40; CR 603.4 and the card ruling support the recheck."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "2f99456edbcce6b7a3560096cf95038cedccbdd8ae8043b5695069cf7bcdb3d9",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; directly cites CR 113.7a and correctly explains the optional search at resolution."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "f73b6ac95453a2a7c070c7e395c8f8f60c78a764f4c3194278d2fa981ea6c219",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; the supplied Rest in Peace ruling directly confirms dies abilities do not trigger when the event is replaced with exile."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "445f12aeb1ffc8abde9673c2f229db56d1d737262a42aedcc8d6cf20dc159d13",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly counts all three deaths; the supplied Blood Artist ruling directly confirms this."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "3a4864991049b0daa7fb3e78443929ee49c3d345990214017e461b0738ddd593",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; prevented damage is not dealt and does not cause lifelink gain."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "f1d48c898d1cb3bba72905ac898e661e5b1375351d8d9f1ac062641ba826d7f3",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states infect gives poison counters while lifelink still grants life."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "b59513c7f3cb23eae10335db7171e1ce35abba80da11430d39f1cb6a1dc7e2dd",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; protection does not prevent the nontargeting destroy effect."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "62e3f1522f0aa0595a157874c49ad285c68510013d5e53cfab6d788e82d9817f",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states the Aura is put into its owner’s graveyard as a state-based action."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "9cb8e9ac2c15d6d8d515e1570bb9603bbd6ca66608df02f893f0f1511b283a18",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; hexproof restricts opponents, not the controller."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "36bc4db924f24ad02cbe905cfb29157cd4ae3295ee093dfe5ece0f451f546769",
+      "criteria": {
+        "h11-ward-uncounterable.1": false,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct conclusion and interaction, but it does not explicitly say Ward triggers, which frozen criterion 1 requires."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "b20a3c16bf787764991c462d9dfca0132639ea4a8d39518e4478a7550b29a6ef",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; turning face up is a special action and the supplied Willbender ruling supports redirection."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "4667a2b498dacd9038924ce37204789a1c9b74b5415f0a797cad41f8687e7931",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; costs are paid during casting before opponents receive priority."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "7a617e36c2e9b22b78d9924c36c9d15183932aaf28edb15b5be889ba33e9f61f",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; flashback exiles the spell when it leaves the stack even when countered."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "9cb25408042b7cc9611e11e922d5e6913a796ec48af92feabbd3c6e393d43dec",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; rebound applies as the spell resolves, so a countered spell does not rebound."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "d523d51c88cdc07294fe072db3cca635128534985fa745cff3aaeb371d8fe6bc",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; the existing -1/-1 counter prevents persist from triggering."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "d7cc25da77e754e7d5bb0e2bdc3c231eca7d4d9ead0da70218bced3c0c4366ac",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; last known information sees the +1/+1 counter before simultaneous state-based actions."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "0b37ddf3003e8d9d4c22129cadd1d5391237c35bd4e64384d8870aa9e4bb7747",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; Cloudshift returns a new object and the supplied ruling says it is not the old Bolt target."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "f54feb79203bdfae89bdad1d8853d3df4a7ab624a0473df4887590e04a060de3",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The no-response conclusion is correct, but the extra claim that the bonus only helps when the creature’s unequipped toughness is 3 or less is incorrect; the +10 toughness itself makes that conditional statement false for ordinary creature toughness values."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "c540b0ec4b54c74211a1eab7cccfe0d4203d87f71e9b2b225a9556cb2076ea8b",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; the supplied Smuggler’s Copter ruling directly supports using a newly controlled creature to pay crew."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "b6a8aeea76a4149d7f75fec824e6cfd9f03a90502c0034b7e36964b71b238a64",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; the Vehicle cannot attack without haste after becoming a creature this turn."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "43725dd3518957cfdf0e2dfea41105fce803ff475f591054e0817614644888b3",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer gives the correct result and criteria, but provides no citations despite making rules claims; citation support is absent."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "9e3638e45de6f0a1a1d3b8f53287745c4c9d0f41c48eaaad7850efe6cce5759b",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct and precise: the 4/4 survives with 3 damage marked; double strike does not affect fight damage."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "0e602063faefc6cbea5926bb6a743ae2f9074392e70404c9d2a86231708ff336",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; Bob’s owned Aura leaves and its control-changing effect ends."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "b11f306eeb94823c93d28121f9f6cb8b9dbae4aa10dda4ec33ac70ecbc4ac528",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The conclusion is correct, but CR 800.4a was omitted from packed evidence. The answer itself admits the supplied excerpts lack the controlling rule and gives uncited rules claims; count as unsupported and citation-unsupported."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "2b9894ecd500150dfbf6a83a3ff5872734bb9888e4c208e406775338b710b92b",
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; commander damage tracks damage from the same commander across controller changes."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "ced3b46fc5527f37a4b9a5c6b6bbc8809d88f32f17d1a5fe731c1d3dccddaed0",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; CR 903.9b directly establishes the command-zone replacement option for a hand destination."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "b24f83e4e99bae39db630d115f2de05daeb880fe5f34889cf8ad38898c381622",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct chooser and both possible totals, but the unsupported claim that the opponent will choose 10 contradicts the expected self-protective choice and is not established by the rules."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "0f02782045a6152aa3fb114872fe5db81ff306ea460a6b1b598322666d65852e",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; an empty library alone is not a loss absent an attempted draw."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "4adeef64c2d66b9e641b4c456c634e93daae51514fea2872ed6bc6e8fc56f926",
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Both conditional branches are useful and correct, but strict frozen criterion 1 asks for missing stats/abilities; it remains false under the unchanged rubric and is product-aligned."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "3fbe3a7d9e47991b1ca55c381e05e3a71d5f09bb679b31e543420e5d79281f50",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The general answer is substantively right and product-aligned, but the packed evidence omitted CR 707.2 and the answer cites only adjacent rules that do not establish the counter/continuous-effect boundary. Both frozen criteria require specifics; citation support fails."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "a3cc23fa941316f5842891264646123ea76ccee0fd2730013bf34493b7b4d7b9",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; states order and re-evaluation, asks for exact effect text, and gives no hypothetical outcome."
+    }
+  ]
+}
