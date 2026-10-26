@@ -134,6 +134,8 @@ Each implementation change is committed before its full benchmark; reviewed resu
 | [focused-general-v2-2026-10-26-4](results/focused-general-v2-2026-10-26-4/report.md) | general-questions-v2 | `a2be46ded1` | 5/5 | 5 | 0 | 90.0% | 8.22 |
 | [focused-heldout-2026-10-26-5](results/focused-heldout-2026-10-26-5/report.md) | heldout-v1 | `355b3487af` | 26/32 | 26 | 0 | 80.6% | 7.47 |
 | [focused-general-v2-2026-10-26-5](results/focused-general-v2-2026-10-26-5/report.md) | general-questions-v2 | `355b3487af` | 5/5 | 5 | 0 | 100.0% | 9.20 |
+| [focused-heldout-2026-10-26-6](results/focused-heldout-2026-10-26-6/report.md) | heldout-v1 | `ede0095c1c` | 28/32 | 28 | 0 | 80.6% | 7.65 |
+| [focused-general-v2-2026-10-26-6](results/focused-general-v2-2026-10-26-6/report.md) | general-questions-v2 | `ede0095c1c` | 4/5 | 4 | 0 | 100.0% | 8.08 |
 
 Completion is n/a when historical finish telemetry is missing. Correctness is AI-assisted rubric review, not independent human validation. These are development cases; a single seeded run does not establish accuracy on unseen questions.
 
