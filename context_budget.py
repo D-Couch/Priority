@@ -73,7 +73,14 @@ def source_groups(sources, question=''):
         )
         for section in ordered_sections:
             if sum(len(s['text']) for s in section) <= 6000:
-                result.append(section)
+                priority_rules = [
+                    source for source in section
+                    if source['id'].removeprefix('CR ') in HIGH_PRIORITY_RULES
+                ]
+                result.extend([source] for source in priority_rules)
+                remainder = [source for source in section if source not in priority_rules]
+                if remainder:
+                    result.append(remainder)
                 continue
             # Large chapters fall back to short subrule families, then individual rules.
             families = {}
@@ -90,7 +97,10 @@ def source_groups(sources, question=''):
                 if len(group) <= 8 and sum(len(s['text']) for s in group) <= 3500:
                     result.append(group)
                 else:
-                    result.extend([s] for s in group)
+                    result.extend([s] for s in sorted(
+                        group,
+                        key=lambda source: source['id'].removeprefix('CR ') not in HIGH_PRIORITY_RULES,
+                    ))
     result.extend([s] for s in sources if s['kind'] == 'ruling' and s['id'] not in priority_ids)
     return result
 

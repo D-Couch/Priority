@@ -68,6 +68,40 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(sources[0]['id'],'CR 903.9b')
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_copy_values_rule_survives_context_packing(self):
+        question='I copy a creature. Does my copy get its counters and the bonus from its enchantment?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        self.assertIn('CR 707.2',{s['id'] for s in sources})
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 707.2',{s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_player_leaving_rule_survives_context_packing(self):
+        question='In a three-player game, Bob controls a Lightning Bolt he owns on the stack targeting Alice. Bob loses and leaves before Bolt resolves. Does Bolt still resolve?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        self.assertIn('CR 800.4a',{s['id'] for s in sources})
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 800.4a',{s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_sorcery_timing_rule_is_retrieved_for_equip_response(self):
+        card=next(c for c in knowledge.search_cards('Colossus Hammer') if c['name']=='Colossus Hammer')
+        question='An opponent casts Lightning Bolt at my creature during my main phase. Can I activate Colossus Hammer’s normal equip ability in response to save it?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[card['id']])
+        self.assertIn('CR 307.5',{s['id'] for s in sources})
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 307.5',{s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_replacement_retrieves_general_event_consequence(self):
         question='Rest in Peace replaces a creature going to a graveyard with exile. Does a dies ability trigger?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
