@@ -102,6 +102,17 @@ class KnowledgeTests(unittest.TestCase):
         self.assertIn('CR 307.5',{s['id'] for s in selected})
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_opposite_counters_rule_survives_context_packing(self):
+        question='My creature has one +1/+1 counter and receives one -1/-1 counter while a -1/-1 effect makes it 0/0. Do the counters cancel before undying checks?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        self.assertIn('CR 704.5q',{s['id'] for s in sources})
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        self.assertIn('CR 704.5q',{s['id'] for s in selected})
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_replacement_retrieves_general_event_consequence(self):
         question='Rest in Peace replaces a creature going to a graveyard with exile. Does a dies ability trigger?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}
