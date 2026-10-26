@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-general-v2-2026-10-26-2",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted criterion-by-criterion review against frozen scenarios and actual packed excerpts; semantic citation and unsupported-claim checks; no independent Magic judge validation.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "70f383dee3f40661e953c1e65391ebb6e337fc70098205b90277fb05b1ec0ebb",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly gives equal-chance methods, limits MTR 3.9 to die-roll actions, and states random targets must be legal."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "a9f5ea416ba6a897be871d8c5d5b7e9619efe0b984e8b81a273e21b4d273a941",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly distinguishes copiable values from counters and the Aura’s continuous effect."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "cfc1f13e24e82bf52e890af1f57f3b2a137dd8b23e15fc31e74d0f77761adbe2",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains fight damage is not combat damage and double strike does not add a second event."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "19a728cc142b8796b74c195b5d375061071c8a66dcb53e821c5b1bb99521dec2",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies who chooses and that applicability is reevaluated after applying one effect."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "50c1971e22d6bf8315530f253f8fd7f9254d095b999c325daeb7f29d0406be0b",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct; protection makes the creature an illegal target and random selection does not bypass legality."
+    }
+  ]
+}
