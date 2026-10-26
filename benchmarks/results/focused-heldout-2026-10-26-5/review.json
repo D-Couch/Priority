@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-heldout-2026-10-26-5",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted criterion-by-criterion review against frozen scenarios and actual packed excerpts; semantic citation and unsupported-claim checks; no independent Magic judge validation.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "fda7d84e1a8a552bc697e337750ce4ac58493615ebebe73e0cb008fc3f8b42a2",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Outcome order is right, but CR 805.7 is the team-game rule and does not support ordinary three-player APNAP; CR 603.3b/101.4 were absent from packed evidence."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "d44ab725a8af8d868e915394bb56ebd00795a340483dff95edea809c60ef8464",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states the intervening-if check at trigger and resolution; CR 603.4 and the card ruling were supplied."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "0b768700e453357e0c62ec4e39383522365df1ebd03db0b4751193493d340ba0",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the ability already on the stack resolves independently of its removed source."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "62c805a60d35fa8c9459e84cc06712b5023f251ef0656f4a67eb007134992ba1",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Rest in Peace replaces the graveyard move, so the dies ability does not trigger."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "96e955429fb685edd511b0fc70b746be47299d57da119635dee3e9a06c158431",
+      "criteria": {
+        "h05-simultaneous-death.1": false,
+        "h05-simultaneous-death.2": false
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Incorrectly says two triggers. Blood Artist triggers for itself and the other two creatures; the supplied card ruling says each of those creatures. The frozen three-trigger rubric is correct."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "3a4864991049b0daa7fb3e78443929ee49c3d345990214017e461b0738ddd593",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: prevented damage is not dealt, so lifelink gains no life."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "f1d48c898d1cb3bba72905ac898e661e5b1375351d8d9f1ac062641ba826d7f3",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly accounts for infect and lifelink on the same damage event."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "6b664db175f19d13016b3d201d7ffcf88f1aa31eddc100513233cbd637f4ad1f",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Wrath does not target, so protection does not prevent its destruction effect."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "62e3f1522f0aa0595a157874c49ad285c68510013d5e53cfab6d788e82d9817f",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly states the Aura is put into its owner’s graveyard by a state-based action."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "bc1094fc0d708f161d26633bd521fff295c9296f5b0d14125b27201dc2cde809",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: hexproof restricts opponents’ spells and abilities, not the controller’s."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "4f3f6de5d8dbd1d99f0cbdc7d881cbc9772456b8c84837e0b192101c037d844c",
+      "criteria": {
+        "h11-ward-uncounterable.1": false,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct conclusion, but it does not explicitly state Ward triggers, as frozen criterion 1 requires."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "b08d304bd8bd83b9530d05caa35856bdde95f66006fae960b1f35952f45ab4ee",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly allows the face-up special action and the resulting trigger to change Grip’s target to another legal target."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "295c340c2470f0ee4f064226239e2eb165165845d9dd6dab230d8faeef439380",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the sacrifice is paid during casting before opponents receive priority."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "d93cd0fc40a663721347c7a2fd3033a605cb529ff0fa81bc9547a43bfef69ab8",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: a countered flashback spell is exiled and does not resolve its draw effect."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "999b8b35605d531d1580e1e23e78124e5a7521702baf6a38c18577b8c8ff8b76",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: rebound does not apply if the spell does not resolve."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "f1bf8afe049cbb53309c4aed9a2854c6ca93d9ff14508b91bc23fa1d0a397d6d",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies the existing -1/-1 counter as blocking persist."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "d7cc25da77e754e7d5bb0e2bdc3c231eca7d4d9ead0da70218bced3c0c4366ac",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": false,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct undying outcome, but the added note says counters are not removed; the +1/+1 and -1/-1 counters cancel simultaneously under CR 704.5q. That rule was not packed."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "f029aea05a3bc4e7622d9a3b885994e4e0b9e839f59a6e2eb411684f3547a2f1",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Cloudshift returns a new object, leaving Lightning Bolt without a legal target."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "b48e865ec92a125c943a925bb92b7199f626017dfe9ac849098cea5e45f95d34",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: equip’s sorcery timing requires an empty stack; CR 307.5 was packed."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "c540b0ec4b54c74211a1eab7cccfe0d4203d87f71e9b2b225a9556cb2076ea8b",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: crew taps a creature to pay another permanent’s cost; it is not activating that creature’s own tap ability."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "b6a8aeea76a4149d7f75fec824e6cfd9f03a90502c0034b7e36964b71b238a64",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: the Vehicle itself has not been controlled since the turn began and has no haste."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "43725dd3518957cfdf0e2dfea41105fce803ff475f591054e0817614644888b3",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: tapping a declared blocker neither removes it from combat nor prevents combat damage."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "9e3638e45de6f0a1a1d3b8f53287745c4c9d0f41c48eaaad7850efe6cce5759b",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: fight damage is not combat damage, so double strike does not add another event."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "b91d5fba2b2dd5e9fbcb4c3348ba1923e299d6d21e7032699d301002a1bcd9f9",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly applies the player-leaves rule to the Aura and returns control to the owner."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "9f3fa2b6a210c91e45cda8c813a89756c15c60764ddedef3c1eb1727329af0a2",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: Bob-owned Lightning Bolt leaves the game with Bob before resolving."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "2b9894ecd500150dfbf6a83a3ff5872734bb9888e4c208e406775338b710b92b",
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: commander damage is tracked by commander identity across control changes."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "8407dbd8c7c00efbd1d915ebd2a835d58412c5bdb32f4fd6da7e3c26bdade020",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies the hand replacement option as a replacement effect, distinct from the graveyard/exile state-based action."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "25cfb43c31a2e1003aacf6c82c69c2e5bac07886d7dfd4dd4891a5a451dd8658",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "Correct chooser and both totals. The prediction that the opponent will choose 8 is not established by the rules and is unnecessary."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "8510da36eaca51bc05bc81dbc56eb3c419a50494e522a935128b867fff500ac4",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correct: losing requires an attempted draw from an empty library."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "4adeef64c2d66b9e641b4c456c634e93daae51514fea2872ed6bc6e8fc56f926",
+      "criteria": {
+        "h30-ambiguous-combat.1": false,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The conditional ruling is useful, but frozen criterion 1 specifically requires asking for attacker/blocker stats and abilities."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "0bb5826736cf90372d6fd4fdf22d855bb7e4b3600bf6ed84858697c2b7403b69",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": true,
+      "abstained": false,
+      "notes": "The answer gives a definitive result without knowing the copy effect or relevant card details, contrary to both frozen criteria."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "b662f7815e2fa67cdfbb9bfed5d6a4330cc33c58acc4e61f7637a31716a65071",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Asks for the exact text of both effects and does not invent a token total; the event is already identified as token creation in the question."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "focused-general-v2-2026-10-26-5",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "AI-assisted criterion-by-criterion review against frozen scenarios and actual packed excerpts; semantic citation and unsupported-claim checks; no independent Magic judge validation.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "9fbd00483a9768ce9d1eb4bd7a7ff013d0fe2c4641d9b7b313c55847ff290ea8",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Gives equal-chance physical methods, scopes MTR 3.9 to tournament die-roll guidance, and notes random targets must be legal."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "5582165e28c497eb8e417a2884abf4c2281f1dc23857e08e8c11c6857e02cd3a",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly distinguishes copiable values from counters and external Aura effects under CR 707.2."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "0a10f99ea641af6333f257111e4076f84fc5ba67bceed2d274bb15206e5cfaa5",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly explains fight damage is not combat damage and each creature deals damage once."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "183c58da95e22529436cc881803d0e46a82dd7ff95f12bb8a46b86ae83035b7f",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly identifies the chooser and explains that effects are reevaluated sequentially rather than automatically all applying."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "772e24ce3ae0e325813c02cf93f4a6da2e8d6c1f79b99e28c0f4aef3222c1ebf",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "Correctly excludes an illegal target from random target selection; randomness does not bypass protection."
+    }
+  ]
+}
