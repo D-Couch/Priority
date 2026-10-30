@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "run_id": "h30-h32-final-general-seed42",
+  "suite_sha256": "806d938211b65b56a9e0ab93d9d62e104e1f194c043018d584ddd551c0b07872",
+  "reviewer": "Codex",
+  "review_method": "Codex AI-assisted manual review of each answer against every frozen criterion and the exact rule/card excerpts supplied to the model. Frozen rubric grades are kept separate from product-alignment assessment.",
+  "results": [
+    {
+      "case_id": "g01-random-paper-procedure",
+      "repeat": 1,
+      "answer_sha256": "7334d1688c014e024f16fd869182831963da9d72799da89e73610da4afb55ee0",
+      "criteria": {
+        "g01-random-paper-procedure.1": true,
+        "g01-random-paper-procedure.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "g02-copy-counters-and-bonuses",
+      "repeat": 1,
+      "answer_sha256": "22550b6a8c45062b74e4918e23d3dc3589bec5f34fec592423980c50e96efa42",
+      "criteria": {
+        "g02-copy-counters-and-bonuses.1": true,
+        "g02-copy-counters-and-bonuses.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "g03-fight-and-double-strike",
+      "repeat": 1,
+      "answer_sha256": "0e409cc43d79d7b4c2176f414b6ae67e24388418d0a47c6d6db49d03dd356c03",
+      "criteria": {
+        "g03-fight-and-double-strike.1": true,
+        "g03-fight-and-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "g04-replacement-order-general",
+      "repeat": 1,
+      "answer_sha256": "1853feee8f06416348da8f400cd20b7e3f7839db3c99022db9580cd110e2622f",
+      "criteria": {
+        "g04-replacement-order-general.1": true,
+        "g04-replacement-order-general.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "g05-protection-and-random-target",
+      "repeat": 1,
+      "answer_sha256": "b601d3d1b0f737c60dfe6f0f8513de76afeb54ba1160e1f55b56c504e494ffad",
+      "criteria": {
+        "g05-protection-and-random-target.1": true,
+        "g05-protection-and-random-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    }
+  ]
+}

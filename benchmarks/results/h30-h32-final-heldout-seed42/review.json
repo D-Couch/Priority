@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "h30-h32-final-heldout-seed42",
+  "suite_sha256": "ca1c63daeeb6ef7120182ebeae3a39342f0cbbd7c8b4f59f674d70d1556f5ebe",
+  "reviewer": "Codex",
+  "review_method": "Codex AI-assisted manual review of each answer against every frozen criterion and the exact rule/card excerpts supplied to the model. Frozen rubric grades are kept separate from product-alignment assessment.",
+  "results": [
+    {
+      "case_id": "h01-apnap",
+      "repeat": 1,
+      "answer_sha256": "9bb9272441a5b6630f1d92c58be24a0bf0f4e2e6fd99e061be52f30a05e688c3",
+      "criteria": {
+        "h01-apnap.1": true,
+        "h01-apnap.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h02-intervening-if",
+      "repeat": 1,
+      "answer_sha256": "aaf752dcab3cc806982cabfe66ef4589d1cd886b82c86a47e81e580e459c0c79",
+      "criteria": {
+        "h02-intervening-if.1": true,
+        "h02-intervening-if.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h03-independent-trigger",
+      "repeat": 1,
+      "answer_sha256": "ce1523f69a423926168a3d9e607742def171a2a40465c7fc4c575d5ebd30be98",
+      "criteria": {
+        "h03-independent-trigger.1": true,
+        "h03-independent-trigger.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h04-replacement-death",
+      "repeat": 1,
+      "answer_sha256": "e3e6f1d02a8edce2855e6ee8b65b737bde08b1ab16269cedf62ea7fdfacea5e9",
+      "criteria": {
+        "h04-replacement-death.1": true,
+        "h04-replacement-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h05-simultaneous-death",
+      "repeat": 1,
+      "answer_sha256": "7845ac67ef07e4d9dc9d2420bfd35c692ff559603fd98a50c5a5fc1b1dc795fd",
+      "criteria": {
+        "h05-simultaneous-death.1": true,
+        "h05-simultaneous-death.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h06-lifelink-prevented",
+      "repeat": 1,
+      "answer_sha256": "34d967f6d554d4f579491e32899fab1943bfe83310c7468e935cabd15e7d60de",
+      "criteria": {
+        "h06-lifelink-prevented.1": true,
+        "h06-lifelink-prevented.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h07-infect-lifelink",
+      "repeat": 1,
+      "answer_sha256": "d5802b4476045b241697cf4efd4ebc07e07691b85e6b33aa1d77cd74add54457",
+      "criteria": {
+        "h07-infect-lifelink.1": true,
+        "h07-infect-lifelink.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h08-protection-wrath",
+      "repeat": 1,
+      "answer_sha256": "49ff927833d08af4ce57db212eaf781825eac016be413052f9e2e891f1e434fd",
+      "criteria": {
+        "h08-protection-wrath.1": true,
+        "h08-protection-wrath.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h09-protection-aura",
+      "repeat": 1,
+      "answer_sha256": "fc82f9308fe8f80c583427222bf4ecf7443601d798ecee3404fe6cca1f2845c1",
+      "criteria": {
+        "h09-protection-aura.1": true,
+        "h09-protection-aura.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h10-own-hexproof",
+      "repeat": 1,
+      "answer_sha256": "3c746c77617b271845e0877845f73a916690646f5d4eac7d3524557e096eb8bf",
+      "criteria": {
+        "h10-own-hexproof.1": true,
+        "h10-own-hexproof.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h11-ward-uncounterable",
+      "repeat": 1,
+      "answer_sha256": "367ddb72c54e315c248d12fed1e2df5eb9f10b713d34134476b1b2021134c864",
+      "criteria": {
+        "h11-ward-uncounterable.1": true,
+        "h11-ward-uncounterable.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h12-split-second",
+      "repeat": 1,
+      "answer_sha256": "10a2d13227bbf4a313ccc715ced5bfb1ad6e80878fe2b6026740268a63b058c6",
+      "criteria": {
+        "h12-split-second.1": true,
+        "h12-split-second.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h13-sacrifice-cost",
+      "repeat": 1,
+      "answer_sha256": "f2825643978ec3ba613a7de258f07a72a674ff8ed49cfa24284aebcf88149878",
+      "criteria": {
+        "h13-sacrifice-cost.1": true,
+        "h13-sacrifice-cost.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h14-flashback-countered",
+      "repeat": 1,
+      "answer_sha256": "45d240a7e9f18d2194a874b090aa8ce30a968860959a1f0fafbd43f77835de1d",
+      "criteria": {
+        "h14-flashback-countered.1": true,
+        "h14-flashback-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h15-rebound-countered",
+      "repeat": 1,
+      "answer_sha256": "96bf1642075c6c9af9b6c33dc18fb3314c3f89fc34da97e51e71411a5c919fc3",
+      "criteria": {
+        "h15-rebound-countered.1": true,
+        "h15-rebound-countered.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h16-persist-counter",
+      "repeat": 1,
+      "answer_sha256": "e371edab03fb158d96d6ab7b624e9cca12d05a5dfc6365a2adf4029c11515a97",
+      "criteria": {
+        "h16-persist-counter.1": true,
+        "h16-persist-counter.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h17-undying-simultaneous-sba",
+      "repeat": 1,
+      "answer_sha256": "8ef22d0e2701ec1bdc27064bda821140d236810ff007c52c1f3bbc644dba5851",
+      "criteria": {
+        "h17-undying-simultaneous-sba.1": true,
+        "h17-undying-simultaneous-sba.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h18-blink-target",
+      "repeat": 1,
+      "answer_sha256": "cda799363be52afb3cafe9d0e7370104b25cc92903df2100809a7c0336db5820",
+      "criteria": {
+        "h18-blink-target.1": true,
+        "h18-blink-target.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h19-equip-timing",
+      "repeat": 1,
+      "answer_sha256": "c3f87e19338e8f2411bb9d7b68cd4cf924ac3c3aeb1de3fd91ff69e1346de6a3",
+      "criteria": {
+        "h19-equip-timing.1": true,
+        "h19-equip-timing.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h20-crew-new-creature",
+      "repeat": 1,
+      "answer_sha256": "47657d8fb0da9c60065ddce4e79a2d0eda6c1936c634bfb30208bcd42b8c8a8c",
+      "criteria": {
+        "h20-crew-new-creature.1": true,
+        "h20-crew-new-creature.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h21-new-vehicle",
+      "repeat": 1,
+      "answer_sha256": "43342389a66f4f8ba749ce5a859d54e1a6567e8034a787e3d73f382b1d721171",
+      "criteria": {
+        "h21-new-vehicle.1": true,
+        "h21-new-vehicle.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h22-tapped-blocker",
+      "repeat": 1,
+      "answer_sha256": "d1b7b1cb21742344e7b8f4ae547d01c37a0ff12e8ddbb278a2cb87d986e1a490",
+      "criteria": {
+        "h22-tapped-blocker.1": true,
+        "h22-tapped-blocker.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h23-fight-double-strike",
+      "repeat": 1,
+      "answer_sha256": "fa308bdf041de68ce53e7a4ad8ee7a649969a03aba332ea17557fe0333e5890e",
+      "criteria": {
+        "h23-fight-double-strike.1": true,
+        "h23-fight-double-strike.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h24-leaving-controller",
+      "repeat": 1,
+      "answer_sha256": "2dc3f64ec8153fdd826e2945d9820fbb7c2f6e418518ef371edb5cbb2f9bd650",
+      "criteria": {
+        "h24-leaving-controller.1": true,
+        "h24-leaving-controller.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h25-leaving-stack",
+      "repeat": 1,
+      "answer_sha256": "f506faedf4a7c06fc179c78e05598aca68d01b7324d6c653cb168877c60ca4f4",
+      "criteria": {
+        "h25-leaving-stack.1": true,
+        "h25-leaving-stack.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h26-commander-control",
+      "repeat": 1,
+      "answer_sha256": "8faa6a72783026c9c5548bfacd98010e10b297818d8a245eaff3bd699b0dcde5",
+      "criteria": {
+        "h26-commander-control.1": true,
+        "h26-commander-control.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h27-commander-hand",
+      "repeat": 1,
+      "answer_sha256": "4dfc0c4f98af9498418b1c3c1e1923d42edc516120a3bfd8714e242511a0e3ff",
+      "criteria": {
+        "h27-commander-hand.1": true,
+        "h27-commander-hand.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h28-replacement-order",
+      "repeat": 1,
+      "answer_sha256": "249ad2cca2ceaaa337a6fc832343b8a605061a95cc5feaffb02e9db8d368382d",
+      "criteria": {
+        "h28-replacement-order.1": true,
+        "h28-replacement-order.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h29-empty-library",
+      "repeat": 1,
+      "answer_sha256": "fe577998b0485396d0281751d996162ff345deff86a14efdc5cf1d76d4427bd7",
+      "criteria": {
+        "h29-empty-library.1": true,
+        "h29-empty-library.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h30-ambiguous-combat",
+      "repeat": 1,
+      "answer_sha256": "7965d999c6da405c5cf4e2fc08e77139e6915464511d585ef95ea5e030b28cd9",
+      "criteria": {
+        "h30-ambiguous-combat.1": true,
+        "h30-ambiguous-combat.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    },
+    {
+      "case_id": "h31-ambiguous-copy",
+      "repeat": 1,
+      "answer_sha256": "807f111d9701c504fd14c7ee672c6f3c2ca040a7349e020653f64e139ed522b0",
+      "criteria": {
+        "h31-ambiguous-copy.1": false,
+        "h31-ambiguous-copy.2": false
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The substantive general copy rule and citation are correct, but the frozen rubric requires a clarification and rejects a definitive answer to this underspecified copy question. This rubric miss is separated from product alignment."
+    },
+    {
+      "case_id": "h32-ambiguous-replacements",
+      "repeat": 1,
+      "answer_sha256": "bc1f2b01d651305dfa7d45aa005277eae94376272e98d8a62d840a85a54758f4",
+      "criteria": {
+        "h32-ambiguous-replacements.1": true,
+        "h32-ambiguous-replacements.2": true
+      },
+      "citations_supported": true,
+      "unsupported_or_contradictory_claims": false,
+      "abstained": false,
+      "notes": "The answer meets the frozen criteria and makes no unsupported or contradictory material claim; reviewed against the supplied rule or card excerpts."
+    }
+  ]
+}
