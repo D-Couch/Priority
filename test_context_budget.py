@@ -34,7 +34,10 @@ class ContextBudgetTests(unittest.TestCase):
         self.assertIn('do not describe damage as reducing toughness',ANSWER_CONTRACT)
         self.assertIn('do not predict their choice or motivation',ANSWER_CONTRACT)
         self.assertIn('ask for the exact effect text and starting event details',ANSWER_CONTRACT)
-        self.assertIn('state branches',ANSWER_CONTRACT)
+        self.assertIn('ask for attacker power, blockers, their toughness and marked damage',ANSWER_CONTRACT)
+        self.assertIn('lethal damage must be assigned to each blocker',ANSWER_CONTRACT)
+        self.assertIn('Do not say the source\'s controller chooses',ANSWER_CONTRACT)
+        self.assertIn('affected player, chooses',ANSWER_CONTRACT)
         self.assertIn('Cite [CR 115.2]',ANSWER_CONTRACT)
         self.assertIn('only legal targets belong in the pool',ANSWER_CONTRACT)
 
