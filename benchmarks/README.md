@@ -61,7 +61,7 @@ Comparison rejects changed suite/reference/corpus hashes, model/runtime settings
 
 The original application is preserved at `pre-vectorization-app`. The initial reviewed benchmark is tagged `pre-vectorization`. Keep historical run directories unchanged; a corrected evaluation belongs in a new run/review record with the correction explained. New scenarios or rule versions require a new suite version and a new baseline. This public development set can be overfit; add separate held-out scenarios before claiming general accuracy improvements.
 
-GitHub Actions validates the corpus, regression tests, and suite on pushes/PRs. It does not contact your local LM Studio or claim to run inference on GitHub-hosted runners. Full benchmarks remain local and their reports are committed to Git.
+This repository currently has no GitHub Actions workflow. Run corpus validation, regression tests, and suite validation locally before committing. Full benchmarks require the configured local LM Studio service and are run locally; their reports are committed to Git.
 
 ## Controlled generation experiments
 

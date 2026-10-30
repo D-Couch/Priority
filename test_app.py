@@ -113,6 +113,21 @@ class KnowledgeTests(unittest.TestCase):
         self.assertIn('CR 704.5q',{s['id'] for s in selected})
 
     @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
+    def test_regular_multiplayer_apnap_rules_survive_context_packing(self):
+        question='In a three-player game, turn order is Alice, Bob, Charlie. Each controls one ability that triggers now. In what order do the abilities go on the stack?'
+        history=[{'role':'user','content':question}]
+        sources=knowledge.retrieve(history,[])
+        ids={s['id'] for s in sources}
+        self.assertIn('CR 603.3b',ids)
+        self.assertIn('CR 101.4',ids)
+        def estimate_tokens(messages):
+            return sum(len(message['content']) for message in messages)//4
+        _, selected, _=context_budget.pack_context('Test system',sources,history,estimate_tokens,8192)
+        packed={s['id'] for s in selected}
+        self.assertIn('CR 603.3b',packed)
+        self.assertIn('CR 101.4',packed)
+
+    @unittest.skipUnless(knowledge.DB.exists(),'Download knowledge first')
     def test_replacement_retrieves_general_event_consequence(self):
         question='Rest in Peace replaces a creature going to a graveyard with exile. Does a dies ability trigger?'
         ids={s['id'] for s in knowledge.retrieve([{'role':'user','content':question}],[])}

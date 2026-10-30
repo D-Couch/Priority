@@ -133,6 +133,7 @@ def search_cards(query):
 
 STOP = set('a an the is are was were be been being do does did can could would should will i my me you your it its this that these those if when what how why with without and or but of for to in on at as by from have has had then than any all into get gets still also after before'.split())
 TOPICS = [
+    (r'\b(?:multiple players|multiplayer|turn order|APNAP|active player)\b.{0,180}(?:trigger\w*|abilit\w*)|(?:trigger\w*|abilit\w*).{0,180}\b(?:multiple players|multiplayer|turn order|APNAP|active player)\b', ['603.3b', '101.4', '405.5']),
     (r'\bcommander\b.{0,100}(?:hand|library)|(?:hand|library).{0,100}\bcommander\b', ['903.9b']),
     (r'(?:\+1\s*/\s*\+1|plus-one).{0,120}(?:-1\s*/\s*-1|minus-one)|(?:-1\s*/\s*-1|minus-one).{0,120}(?:\+1\s*/\s*\+1|plus-one)', ['704.5q']),
     (r'(?:cop(?:y|ies|ied|ying)).{0,100}(?:counter|bonus|aura|enchant)|(?:counter|bonus|aura|enchant).{0,100}(?:cop(?:y|ies|ied|ying))', ['707.2']),
@@ -180,7 +181,7 @@ TOPICS = [
 HIGH_PRIORITY_RULES = {'601.2a', '601.2h', '601.2i', '117.2e', '117.3c', '614.6', '704.3', '718.3', '718.4',
                        '202.3', '202.3e', '202.3f', '107.3a', '726.2', '726.5', '702.153', '702.153a', '707.2', '707.10',
                        '104.3d', '606.4', '704.5i', '113.7a', '702.19b', '601.2c', '115.2', '702.16b',
-                       '903.9b', '800.4a', '307.5', '704.5q'}
+                       '903.9b', '800.4a', '307.5', '704.5q', '603.3b', '101.4'}
 
 _CARD_ALIAS_LOCK = threading.Lock()
 _CARD_ALIAS_INDEX = None
